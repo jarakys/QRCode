@@ -51,6 +51,7 @@ public extension UICollectionViewLayout {
     
     private static func utilsAndSocialItemsSection() -> NSCollectionLayoutSection {
         let spacing: CGFloat = 16
+        let itemSpacing: CGFloat = 30
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1.0),
             heightDimension: .fractionalHeight(1.0))
@@ -60,7 +61,7 @@ public extension UICollectionViewLayout {
             widthDimension: .fractionalWidth(1),
             heightDimension: .estimated(90))
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 4)
-        group.interItemSpacing = .fixed(spacing)
+        group.interItemSpacing = .fixed(itemSpacing)
         
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
