@@ -18,7 +18,7 @@ struct MainTapBar: View {
                 .tabItem {
                     Label("History", image: ImageResource.historyIcon)
                 }
-            NavigationStack {
+            NavigationView {
                 CreateView(viewModel: CreateViewModel())
             }
             .tabItem {

@@ -6,20 +6,43 @@
 //
 
 import SwiftUI
+import CompositionalList
 
 struct CreateView: View {
     @StateObject public var viewModel: CreateViewModel
     
     var body: some View {
-        ZStack {
-            List(viewModel.items, id: \.sectionIdentifier) { item in
+        CompositionalList(viewModel.items) { model, indexPath in
+            switch model.type {
+            case .phone, .sms, .url, .email:
+                PersonalCell(model: model)
+                    .cornerRadius(12)
                 
+            default:
+                SocialCell(model: model)
             }
-            .listStyle(.grouped)
-        }
-        .navigationTitle("Create")
-        .navigationBarTitleDisplayMode(.inline)
             
+        }.sectionHeader { sectionIdentifier, kind, indexPath in
+            Text(sectionIdentifier.description.uppercased())
+                .foregroundStyle(.sectionTitle)
+                .font(.system(size: 12))
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
+        .selectedItem { _ in
+            
+        }
+        .customLayout(.composed(sections: viewModel.items))
+        .toolbarTitleDisplayMode(.inline)
+        .navigationTitle("Create")
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing, content: {
+                Button(action: {
+                    viewModel.premiumDidTap()
+                }, label: {
+                    Image(ImageResource.premiumIcon)
+                })
+            })
+        })
     }
 }
 

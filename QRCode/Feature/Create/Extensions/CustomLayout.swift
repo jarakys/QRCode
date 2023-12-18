@@ -13,40 +13,92 @@ public extension UICollectionViewLayout {
             let section = sections[sectionIndex]
             switch section.sectionIdentifier {
             case .personal:
-                return offerSection()
+                return personalItemsSection()
                 
             case .social, .utilities:
-                return titledTopItemsSection()
-                
-            default: return offerSection()
+                return utilsAndSocialItemsSection()
             }
         }
     }
     
-    private static func offerSection() -> NSCollectionLayoutSection {
-        let topNestedItemLeading = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-        topNestedItemLeading.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.9), heightDimension: .fractionalHeight(0.4)), subitems: [topNestedItemLeading])
-
+//    private static func utilsAndSocialItemsSection() -> NSCollectionLayoutSection {
+//        let spacing: CGFloat = 16
+//        let itemSize = NSCollectionLayoutSize(
+//            widthDimension: .absolute(74),
+//            heightDimension: .fractionalHeight(1.0))
+//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//        
+//        let groupSize = NSCollectionLayoutSize(
+//            widthDimension: .fractionalWidth(1),
+//            heightDimension: .estimated(90))
+//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+//        group.interItemSpacing = .fixed(spacing)
+//        
+//        let section = NSCollectionLayoutSection(group: group)
+//        section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+//        section.interGroupSpacing = spacing
+////        section.orthogonalScrollingBehavior = .continuous
+//        
+//        let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+//                                                      heightDimension: .estimated(200))
+//        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+//            layoutSize: headerFooterSize,
+//            elementKind:  UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+//        sectionHeader.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 8)
+//        section.boundarySupplementaryItems = [sectionHeader]
+//        return section
+//    }
+    
+    private static func utilsAndSocialItemsSection() -> NSCollectionLayoutSection {
+        let spacing: CGFloat = 16
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .estimated(90))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 4)
+        group.interItemSpacing = .fixed(spacing)
+        
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        section.orthogonalScrollingBehavior = .groupPaging
+        section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        section.interGroupSpacing = spacing
+//        section.orthogonalScrollingBehavior = .continuous
+        
+        let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                      heightDimension: .estimated(200))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerFooterSize,
+            elementKind:  UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+        sectionHeader.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 8)
+        section.boundarySupplementaryItems = [sectionHeader]
         return section
     }
     
-    private static func titledTopItemsSection() -> NSCollectionLayoutSection {
-        let topNestedItemLeading = NSCollectionLayoutItem(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1)))
-        topNestedItemLeading.contentInsets = NSDirectionalEdgeInsets(top: 8, leading: 8, bottom: 0, trailing: 8)
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: .init(widthDimension: .fractionalWidth(0.45), heightDimension: .absolute(150)), subitems: [topNestedItemLeading])
-
+    private static func personalItemsSection() -> NSCollectionLayoutSection {
+        let spacing: CGFloat = 16
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .absolute(52))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 2)
+        group.interItemSpacing = .fixed(spacing)
+        
         let section = NSCollectionLayoutSection(group: group)
-        section.contentInsets = .init(top: 0, leading: 16, bottom: 0, trailing: 16)
-        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        section.interGroupSpacing = spacing
+        
         let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
-                                                      heightDimension: .estimated(200)) // <- estimated will dynamically adjust to less height if needed.
+                                                      heightDimension: .estimated(200))
         let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
             layoutSize: headerFooterSize,
-            elementKind:  UICollectionView.elementKindSectionHeader, alignment: .top)
+            elementKind:  UICollectionView.elementKindSectionHeader, alignment: .topLeading)
         sectionHeader.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 8)
         section.boundarySupplementaryItems = [sectionHeader]
         return section

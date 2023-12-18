@@ -26,6 +26,8 @@
 		111164462B30624E00F01C5E /* PersonalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164452B30624E00F01C5E /* PersonalCell.swift */; };
 		111164492B30678700F01C5E /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 111164482B30678700F01C5E /* CompositionalList */; };
 		1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111644C2B30684300F01C5E /* CustomLayout.swift */; };
+		1111644F2B3074B200F01C5E /* CreateQRSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111644E2B3074B200F01C5E /* CreateQRSectionType.swift */; };
+		111164512B30760800F01C5E /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164502B30760800F01C5E /* SocialCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		111164422B305D3900F01C5E /* CreateQRCodeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQRCodeSectionModel.swift; sourceTree = "<group>"; };
 		111164452B30624E00F01C5E /* PersonalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalCell.swift; sourceTree = "<group>"; };
 		1111644C2B30684300F01C5E /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
+		1111644E2B3074B200F01C5E /* CreateQRSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQRSectionType.swift; sourceTree = "<group>"; };
+		111164502B30760800F01C5E /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +255,7 @@
 			children = (
 				111164402B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift */,
 				111164422B305D3900F01C5E /* CreateQRCodeSectionModel.swift */,
+				1111644E2B3074B200F01C5E /* CreateQRSectionType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				111164452B30624E00F01C5E /* PersonalCell.swift */,
+				111164502B30760800F01C5E /* SocialCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -353,6 +359,7 @@
 				1111642F2B30523D00F01C5E /* CreateView.swift in Sources */,
 				111164272B30521800F01C5E /* ScanView.swift in Sources */,
 				111164412B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift in Sources */,
+				111164512B30760800F01C5E /* SocialCell.swift in Sources */,
 				1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */,
 				111164342B30525000F01C5E /* SettingsView.swift in Sources */,
 				111164392B30526900F01C5E /* MainTapBar.swift in Sources */,
@@ -362,6 +369,7 @@
 				111164462B30624E00F01C5E /* PersonalCell.swift in Sources */,
 				111164362B30525800F01C5E /* SettingsViewModel.swift in Sources */,
 				111164082B30518200F01C5E /* QRCodeApp.swift in Sources */,
+				1111644F2B3074B200F01C5E /* CreateQRSectionType.swift in Sources */,
 				1111642D2B30523500F01C5E /* HistoryViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -99,7 +99,27 @@ public enum QRCodeFormat {
             
         case .url: return "urlIcon"
             
-        default: return ""
+        case .facebook: return "facebookIcon"
+            
+        case .instagram: return "instagramIcon"
+            
+        case .location: return "locationIcon"
+            
+        case .snapchat: return "snapchatIcon"
+            
+        case .spotify: return "spotifyIcon"
+            
+        case .telegram: return "telegramIcon"
+            
+        case .text: return "textIcon"
+            
+        case .tikTok: return "tikTokIcon"
+            
+        case .twitter: return "twitterIcon"
+            
+        case .wifi: return "wifiIcon"
+            
+        case .whatsApp: return "whatsAppIcon"
         }
     }
 }
