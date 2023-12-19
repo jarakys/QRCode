@@ -12,21 +12,19 @@ struct MainTapBar: View {
         TabView {
             ScanView()
                 .tabItem {
-                    Label("Scan", image: ImageResource.scanIcon)
+                    Label("Scan", image: "scanIcon")
                 }
             HistoryView()
                 .tabItem {
-                    Label("History", image: ImageResource.historyIcon)
+                    Label("History", image: "historyIcon")
                 }
-            NavigationView {
-                CreateView(viewModel: CreateViewModel())
-            }
+            CreateCoordinatorView(viewModel: CreateCoordinatorViewModel())
             .tabItem {
-                Label("Create", image: ImageResource.createIcon)
+                Label("Create", image: "createIcon")
             }
             SettingsView()
                 .tabItem {
-                    Label("Settings", image: ImageResource.settingsIcon)
+                    Label("Settings", image: "settingsIcon")
                 }
         }
     }

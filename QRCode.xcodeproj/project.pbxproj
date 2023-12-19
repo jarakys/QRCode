@@ -28,6 +28,11 @@
 		1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111644C2B30684300F01C5E /* CustomLayout.swift */; };
 		1111644F2B3074B200F01C5E /* CreateQRSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111644E2B3074B200F01C5E /* CreateQRSectionType.swift */; };
 		111164512B30760800F01C5E /* SocialCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164502B30760800F01C5E /* SocialCell.swift */; };
+		111164532B31AE2D00F01C5E /* CreateEventFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164522B31AE2D00F01C5E /* CreateEventFlow.swift */; };
+		111164552B31AE3800F01C5E /* CreateCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164542B31AE3800F01C5E /* CreateCoordinatorViewModel.swift */; };
+		111164572B31AE4900F01C5E /* CreateCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */; };
+		111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164582B31B1F800F01C5E /* CreateFlow.swift */; };
+		1111645C2B31B24900F01C5E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111645B2B31B24900F01C5E /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +57,11 @@
 		1111644C2B30684300F01C5E /* CustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLayout.swift; sourceTree = "<group>"; };
 		1111644E2B3074B200F01C5E /* CreateQRSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQRSectionType.swift; sourceTree = "<group>"; };
 		111164502B30760800F01C5E /* SocialCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialCell.swift; sourceTree = "<group>"; };
+		111164522B31AE2D00F01C5E /* CreateEventFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateEventFlow.swift; sourceTree = "<group>"; };
+		111164542B31AE3800F01C5E /* CreateCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCoordinatorView.swift; sourceTree = "<group>"; };
+		111164582B31B1F800F01C5E /* CreateFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlow.swift; sourceTree = "<group>"; };
+		1111645B2B31B24900F01C5E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,6 +200,7 @@
 			children = (
 				111164442B30624300F01C5E /* Cells */,
 				1111642E2B30523D00F01C5E /* CreateView.swift */,
+				111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -198,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				111164312B30524900F01C5E /* CreateViewModel.swift */,
+				111164542B31AE3800F01C5E /* CreateCoordinatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,6 +249,7 @@
 		1111643B2B3056FA00F01C5E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				1111645A2B31B24500F01C5E /* ViewModels */,
 				1111643C2B30570000F01C5E /* Models */,
 			);
 			path = Common;
@@ -256,6 +269,8 @@
 				111164402B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift */,
 				111164422B305D3900F01C5E /* CreateQRCodeSectionModel.swift */,
 				1111644E2B3074B200F01C5E /* CreateQRSectionType.swift */,
+				111164522B31AE2D00F01C5E /* CreateEventFlow.swift */,
+				111164582B31B1F800F01C5E /* CreateFlow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -275,6 +290,14 @@
 				1111644C2B30684300F01C5E /* CustomLayout.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1111645A2B31B24500F01C5E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1111645B2B31B24900F01C5E /* BaseViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,16 +379,21 @@
 				1111640A2B30518200F01C5E /* ContentView.swift in Sources */,
 				111164432B305D3900F01C5E /* CreateQRCodeSectionModel.swift in Sources */,
 				1111642B2B30522D00F01C5E /* HistoryView.swift in Sources */,
+				111164572B31AE4900F01C5E /* CreateCoordinatorView.swift in Sources */,
 				1111642F2B30523D00F01C5E /* CreateView.swift in Sources */,
+				111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */,
 				111164272B30521800F01C5E /* ScanView.swift in Sources */,
 				111164412B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift in Sources */,
 				111164512B30760800F01C5E /* SocialCell.swift in Sources */,
 				1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */,
 				111164342B30525000F01C5E /* SettingsView.swift in Sources */,
 				111164392B30526900F01C5E /* MainTapBar.swift in Sources */,
+				111164552B31AE3800F01C5E /* CreateCoordinatorViewModel.swift in Sources */,
 				111164292B30522100F01C5E /* ScanViewModel.swift in Sources */,
+				1111645C2B31B24900F01C5E /* BaseViewModel.swift in Sources */,
 				111164322B30524900F01C5E /* CreateViewModel.swift in Sources */,
 				1111643E2B30570500F01C5E /* QRCodeFormat.swift in Sources */,
+				111164532B31AE2D00F01C5E /* CreateEventFlow.swift in Sources */,
 				111164462B30624E00F01C5E /* PersonalCell.swift in Sources */,
 				111164362B30525800F01C5E /* SettingsViewModel.swift in Sources */,
 				111164082B30518200F01C5E /* QRCodeApp.swift in Sources */,
@@ -512,6 +540,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -541,6 +570,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

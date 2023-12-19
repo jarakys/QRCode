@@ -11,7 +11,10 @@ import Combine
 final class CreateViewModel: ObservableObject {
     @Published public var items = [CreateQRCodeSectionModel]()
     
-    init() {
+    private let navigationSender: PassthroughSubject<CreateEventFlow, Never>
+    
+    init(navigationSender: PassthroughSubject<CreateEventFlow, Never>) {
+        self.navigationSender = navigationSender
         items.append(CreateQRCodeSectionModel(cellIdentifiers:
                                                 [CreateQRCodeTemplateModel(type: .phone),
                                                  CreateQRCodeTemplateModel(type: .email),
@@ -39,10 +42,10 @@ final class CreateViewModel: ObservableObject {
     }
     
     public func templateDidTap(item: CreateQRCodeTemplateModel) {
-        
+        navigationSender.send(.create(type: item))
     }
     
     public func premiumDidTap() {
-        
+        navigationSender.send(.premium)
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CompositionalList
+import Combine
 
 struct CreateView: View {
     @StateObject public var viewModel: CreateViewModel
@@ -32,7 +33,7 @@ struct CreateView: View {
             
         }
         .customLayout(.composed(sections: viewModel.items))
-        .toolbarTitleDisplayMode(.inline)
+        .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Create")
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing, content: {
@@ -47,5 +48,5 @@ struct CreateView: View {
 }
 
 #Preview {
-    CreateView(viewModel: CreateViewModel())
+    CreateView(viewModel: CreateViewModel(navigationSender: PassthroughSubject<CreateEventFlow, Never>()))
 }
