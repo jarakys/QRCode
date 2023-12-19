@@ -25,8 +25,8 @@ final class CreateCoordinatorViewModel: BaseViewModel {
             case let .create(type):
                 paths.append(.create(type: type))
                 
-            case let .result(finalString):
-                paths.append(.result(finalString: finalString))
+            case let .result(finalString, type):
+                paths.append(.result(finalString: finalString, type: type))
                 
             case .premium:
                 paths.append(.premium)
@@ -48,7 +48,7 @@ final class CreateCoordinatorViewModel: BaseViewModel {
         CreateContentLinkViewModel(format: type, navigationSender: navigationSender)
     }
     
-    public func resultViewModel() {
-        
+    public func resultViewModel(type: QRCodeFormat, finalString: String) -> CreateResultQRCodeViewModel {
+        CreateResultQRCodeViewModel(qrCodeFormat: type, qrCodeString: finalString)
     }
 }

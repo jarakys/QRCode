@@ -24,7 +24,7 @@ final class CreateContentLinkViewModel: BaseViewModel {
     
     public func createDidTap() {
         let finalString = String(format: format.format, arguments: items.map({ $0.text }))
-        navigationSender.send(.result(finalString: finalString))
+        navigationSender.send(.result(finalString: finalString, type: format))
     }
     
     private func createFormat() {

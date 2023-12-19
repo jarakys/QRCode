@@ -27,7 +27,7 @@ struct TitledTextField: View {
             .cornerRadius(10)
             if let example {
                 Text(example)
-                    .foregroundStyle(.exampleTextField)
+                    .foregroundStyle(.secondaryTextField)
                     .font(.system(size: 11))
                     .frame(maxWidth: .infinity, alignment: .leading)
             }
