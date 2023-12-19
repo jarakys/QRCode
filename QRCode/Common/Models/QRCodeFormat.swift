@@ -77,13 +77,16 @@ public enum QRCodeFormat {
     public var format: String {
         switch self {
         case .phone:
-            return "tel:"
+            return "tel:%@"
         
         case .wifi:
-            return "WIFI:S:pocketables;P:let there be cake;;"
+            return "WIFI:S:%@;P:%@;;"
             
         case .url:
-            return "url:"
+            return "url:%@"
+            
+        case .text:
+            return "%@"
             
         default: return ""
         }

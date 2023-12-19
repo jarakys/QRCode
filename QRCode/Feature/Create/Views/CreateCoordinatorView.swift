@@ -17,8 +17,8 @@ struct CreateCoordinatorView: View {
                     case let .create(type):
                         CreateContentLinkQRCodeView(viewModel: viewModel.createViewModel(type: type.type))
                     
-                    case .result:
-                        Text("Result")
+                    case let .result(finalString):
+                        Text(finalString)
                         
                     case .selection:
                         CreateView(viewModel: viewModel.selectionViewModel())

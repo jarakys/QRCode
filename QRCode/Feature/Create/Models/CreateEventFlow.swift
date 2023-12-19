@@ -10,7 +10,7 @@ import Foundation
 enum CreateEventFlow {
     case selection
     case create(type: CreateQRCodeTemplateModel)
-    case result
+    case result(finalString: String)
     case premium
     case back
     case popToRoot

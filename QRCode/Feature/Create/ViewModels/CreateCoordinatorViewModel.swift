@@ -22,11 +22,11 @@ final class CreateCoordinatorViewModel: BaseViewModel {
             case .selection:
                 paths.append(.selection)
                 
-            case .create(let type):
+            case let .create(type):
                 paths.append(.create(type: type))
                 
-            case .result:
-                paths.append(.result)
+            case let .result(finalString):
+                paths.append(.result(finalString: finalString))
                 
             case .premium:
                 paths.append(.premium)
