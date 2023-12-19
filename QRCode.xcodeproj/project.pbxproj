@@ -33,6 +33,10 @@
 		111164572B31AE4900F01C5E /* CreateCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */; };
 		111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164582B31B1F800F01C5E /* CreateFlow.swift */; };
 		1111645C2B31B24900F01C5E /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111645B2B31B24900F01C5E /* BaseViewModel.swift */; };
+		1111645F2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111645E2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift */; };
+		111164622B31B3C800F01C5E /* TitledTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164612B31B3C800F01C5E /* TitledTextField.swift */; };
+		111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164662B31C5E600F01C5E /* TextViewModel.swift */; };
+		1111646A2B31C60400F01C5E /* CreateContentLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164692B31C60400F01C5E /* CreateContentLinkViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +66,10 @@
 		111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateCoordinatorView.swift; sourceTree = "<group>"; };
 		111164582B31B1F800F01C5E /* CreateFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFlow.swift; sourceTree = "<group>"; };
 		1111645B2B31B24900F01C5E /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		1111645E2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentLinkQRCodeView.swift; sourceTree = "<group>"; };
+		111164612B31B3C800F01C5E /* TitledTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledTextField.swift; sourceTree = "<group>"; };
+		111164662B31C5E600F01C5E /* TextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewModel.swift; sourceTree = "<group>"; };
+		111164692B31C60400F01C5E /* CreateContentLinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateContentLinkViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +124,7 @@
 		111164182B3051B700F01C5E /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				1111645D2B31B2B300F01C5E /* CreateContentQRCode */,
 				111164372B30526000F01C5E /* TapBar */,
 				1111641C2B3051D700F01C5E /* Settings */,
 				1111641B2B3051D000F01C5E /* Create */,
@@ -249,6 +258,7 @@
 		1111643B2B3056FA00F01C5E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				111164602B31B3B900F01C5E /* UI */,
 				1111645A2B31B24500F01C5E /* ViewModels */,
 				1111643C2B30570000F01C5E /* Models */,
 			);
@@ -296,6 +306,32 @@
 			isa = PBXGroup;
 			children = (
 				1111645B2B31B24900F01C5E /* BaseViewModel.swift */,
+				111164662B31C5E600F01C5E /* TextViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1111645D2B31B2B300F01C5E /* CreateContentQRCode */ = {
+			isa = PBXGroup;
+			children = (
+				111164682B31C5FF00F01C5E /* ViewModels */,
+				1111645E2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift */,
+			);
+			path = CreateContentQRCode;
+			sourceTree = "<group>";
+		};
+		111164602B31B3B900F01C5E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				111164612B31B3C800F01C5E /* TitledTextField.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		111164682B31C5FF00F01C5E /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				111164692B31C60400F01C5E /* CreateContentLinkViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -377,10 +413,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1111640A2B30518200F01C5E /* ContentView.swift in Sources */,
+				1111645F2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift in Sources */,
+				111164622B31B3C800F01C5E /* TitledTextField.swift in Sources */,
 				111164432B305D3900F01C5E /* CreateQRCodeSectionModel.swift in Sources */,
 				1111642B2B30522D00F01C5E /* HistoryView.swift in Sources */,
 				111164572B31AE4900F01C5E /* CreateCoordinatorView.swift in Sources */,
 				1111642F2B30523D00F01C5E /* CreateView.swift in Sources */,
+				111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */,
+				1111646A2B31C60400F01C5E /* CreateContentLinkViewModel.swift in Sources */,
 				111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */,
 				111164272B30521800F01C5E /* ScanView.swift in Sources */,
 				111164412B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift in Sources */,
@@ -540,7 +580,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -570,7 +610,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

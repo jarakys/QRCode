@@ -44,8 +44,8 @@ final class CreateCoordinatorViewModel: BaseViewModel {
         CreateViewModel(navigationSender: navigationSender)
     }
     
-    public func createViewModel() {
-        
+    public func createViewModel(type: QRCodeFormat) -> CreateContentLinkViewModel {
+        CreateContentLinkViewModel(format: type, navigationSender: navigationSender)
     }
     
     public func resultViewModel() {

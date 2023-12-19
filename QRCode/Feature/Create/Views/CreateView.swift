@@ -18,9 +18,15 @@ struct CreateView: View {
             case .phone, .sms, .url, .email:
                 PersonalCell(model: model)
                     .cornerRadius(12)
+                    .onTapGesture {
+                        viewModel.templateDidTap(item: model)
+                    }
                 
             default:
                 SocialCell(model: model)
+                    .onTapGesture {
+                        viewModel.templateDidTap(item: model)
+                    }
             }
             
         }.sectionHeader { sectionIdentifier, kind, indexPath in

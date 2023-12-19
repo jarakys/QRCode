@@ -14,8 +14,8 @@ struct CreateCoordinatorView: View {
             CreateView(viewModel: viewModel.selectionViewModel())
                 .navigationDestination(for: CreateFlow.self, destination: { flow in
                     switch flow {
-                    case .create:
-                        Text("Create")
+                    case let .create(type):
+                        CreateContentLinkQRCodeView(viewModel: viewModel.createViewModel(type: type.type))
                     
                     case .result:
                         Text("Result")
