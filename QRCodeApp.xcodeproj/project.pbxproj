@@ -45,7 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		111164042B30518200F01C5E /* QRCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		111164042B30518200F01C5E /* QRCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		111164072B30518200F01C5E /* QRCodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeApp.swift; sourceTree = "<group>"; };
 		111164092B30518200F01C5E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1111640D2B30518300F01C5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,7 +105,7 @@
 		111164052B30518200F01C5E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				111164042B30518200F01C5E /* QRCode.app */,
+				111164042B30518200F01C5E /* QRCodeApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,9 +382,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		111164032B30518200F01C5E /* QRCode */ = {
+		111164032B30518200F01C5E /* QRCodeApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 111164142B30518300F01C5E /* Build configuration list for PBXNativeTarget "QRCode" */;
+			buildConfigurationList = 111164142B30518300F01C5E /* Build configuration list for PBXNativeTarget "QRCodeApp" */;
 			buildPhases = (
 				111164002B30518200F01C5E /* Sources */,
 				111164012B30518200F01C5E /* Frameworks */,
@@ -394,7 +394,7 @@
 			);
 			dependencies = (
 			);
-			name = QRCode;
+			name = QRCodeApp;
 			packageProductDependencies = (
 				111164482B30678700F01C5E /* CompositionalList */,
 				1111647B2B31D8D000F01C5E /* QRCode */,
@@ -403,7 +403,7 @@
 				111164812B31D8D000F01C5E /* QRCodeStatic */,
 			);
 			productName = QRCode;
-			productReference = 111164042B30518200F01C5E /* QRCode.app */;
+			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -421,7 +421,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 111163FF2B30518200F01C5E /* Build configuration list for PBXProject "QRCode" */;
+			buildConfigurationList = 111163FF2B30518200F01C5E /* Build configuration list for PBXProject "QRCodeApp" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -438,7 +438,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				111164032B30518200F01C5E /* QRCode */,
+				111164032B30518200F01C5E /* QRCodeApp */,
 			);
 		};
 /* End PBXProject section */
@@ -676,7 +676,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		111163FF2B30518200F01C5E /* Build configuration list for PBXProject "QRCode" */ = {
+		111163FF2B30518200F01C5E /* Build configuration list for PBXProject "QRCodeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				111164122B30518300F01C5E /* Debug */,
@@ -685,7 +685,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		111164142B30518300F01C5E /* Build configuration list for PBXNativeTarget "QRCode" */ = {
+		111164142B30518300F01C5E /* Build configuration list for PBXNativeTarget "QRCodeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				111164152B30518300F01C5E /* Debug */,
