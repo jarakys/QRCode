@@ -90,8 +90,36 @@ public enum QRCodeFormat: CaseIterable {
             
         case .wifi:
             return "WIFI:S:[^;]+;P:[^;]+;$"
+            
+        case .email:
+            return "mailto"
+            
         
         default: return ""
+        }
+    }
+    
+    public var regexExtract: [String] {
+        switch self {
+        case .phone:
+            return [#"tel:\s?(\d+)"#]
+            
+        case .url:
+            return [#"tel:\s?(\d+)"#]
+            
+        case .text:
+            return [""]
+            
+        case .sms:
+            return [#"smsto:(\d+):"#, #":(.*)"#]
+            
+        case .wifi:
+            return [#"WIFI:S:(.*?);"#, #"P:(.*?);"#]
+            
+        case .email:
+            return [#"mailto:([^\?]+)"#, #"cc=([^&]+)"#, #"body=([^&]+)"#]
+        
+        default: return [""]
         }
     }
     
