@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum QRCodeFormat {
+public enum QRCodeFormat: CaseIterable {
     case phone
     case email
     case sms
@@ -74,6 +74,27 @@ public enum QRCodeFormat {
         }
     }
     
+    public var regexPattern: String {
+        switch self {
+        case .phone:
+            return "tel: [0-9]+$"
+            
+        case .url:
+            return "url: .+$"
+            
+        case .text:
+            return ""
+            
+        case .sms:
+            return "smsto"
+            
+        case .wifi:
+            return "WIFI:S:[^;]+;P:[^;]+;$"
+        
+        default: return ""
+        }
+    }
+    
     public var format: String {
         switch self {
         case .phone:
@@ -87,6 +108,12 @@ public enum QRCodeFormat {
             
         case .text:
             return "%@"
+            
+        case .sms:
+            return "smsto:%@:%@"
+            
+        case .email:
+            return "mailto:%@?cc=%@&body=%@"
             
         default: return ""
         }

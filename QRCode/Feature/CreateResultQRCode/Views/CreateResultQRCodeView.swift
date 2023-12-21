@@ -52,7 +52,12 @@ struct CreateResultQRCodeView: View {
                 .cornerRadius(10)
                 .padding(.horizontal, 16)
                 .padding(.top, 10)
-                
+                HStack {
+                    Text("Ad block")
+                }
+                .frame(height: 80)
+                .background(.white)
+                .padding(.top, 24)
             }
         }
         .contentMargins(.top, 16)
