@@ -7,9 +7,11 @@
 
 import SwiftUI
 import QRCode
+import SimpleToast
 
 struct CreateResultQRCodeView: View {
     @StateObject public var viewModel: CreateResultQRCodeViewModel
+    @State public var showToast = false
     
     var body: some View {
         ScrollView {
@@ -58,6 +60,14 @@ struct CreateResultQRCodeView: View {
                 .frame(height: 80)
                 .background(.white)
                 .padding(.top, 24)
+                ForEach(viewModel.items, id: \.title) { item in
+                    TitledContainerView(title: item.title, value: item.value)
+                        .onTapGesture(perform: { [weak item] in
+                            UIPasteboard.general.string = item?.value
+                            viewModel.eventSender.send(.copied)
+                        })
+                }
+                .padding(.horizontal, 16)
             }
         }
         .contentMargins(.top, 16)
@@ -65,6 +75,17 @@ struct CreateResultQRCodeView: View {
         .background(.secondaryBackground)
         .navigationTitle("Creation Result")
         .padding(.top, 1)
+        .simpleToast(isPresented: $showToast, options: .init(alignment: Alignment.bottom, hideAfter: 0.7), content: {
+            Label("Copied", systemImage: "info.circle")
+                .padding(.all, 8)
+                .background(Color.blue.opacity(0.8))
+                .foregroundColor(Color.white)
+                .cornerRadius(10)
+                .padding(.bottom)
+        })
+        .onReceive(viewModel.eventSender, perform: { item in
+            showToast = item == .copied
+        })
     }
 }
 

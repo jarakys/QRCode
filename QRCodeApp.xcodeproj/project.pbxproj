@@ -48,6 +48,8 @@
 		115562672B344E530055C0EC /* TitledCopyContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562662B344E530055C0EC /* TitledCopyContainerViewModel.swift */; };
 		1155626D2B348D190055C0EC /* FormatMatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155626C2B348D190055C0EC /* FormatMatcher.swift */; };
 		115562702B3491050055C0EC /* String+regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155626F2B3491050055C0EC /* String+regex.swift */; };
+		115562732B35AC530055C0EC /* TitledContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562722B35AC530055C0EC /* TitledContainerView.swift */; };
+		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +90,7 @@
 		115562662B344E530055C0EC /* TitledCopyContainerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledCopyContainerViewModel.swift; sourceTree = "<group>"; };
 		1155626C2B348D190055C0EC /* FormatMatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatMatcher.swift; sourceTree = "<group>"; };
 		1155626F2B3491050055C0EC /* String+regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+regex.swift"; sourceTree = "<group>"; };
+		115562722B35AC530055C0EC /* TitledContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitledContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,7 @@
 				1111647E2B31D8D000F01C5E /* QRCodeDetector in Frameworks */,
 				1111647C2B31D8D000F01C5E /* QRCode in Frameworks */,
 				111164822B31D8D000F01C5E /* QRCodeStatic in Frameworks */,
+				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
 				111164492B30678700F01C5E /* CompositionalList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				111164612B31B3C800F01C5E /* TitledTextField.swift */,
+				115562722B35AC530055C0EC /* TitledContainerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -443,6 +448,7 @@
 				1111647D2B31D8D000F01C5E /* QRCodeDetector */,
 				1111647F2B31D8D000F01C5E /* QRCodeDynamic */,
 				111164812B31D8D000F01C5E /* QRCodeStatic */,
+				115562752B35AE740055C0EC /* SimpleToast */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -475,6 +481,7 @@
 			packageReferences = (
 				111164472B30678700F01C5E /* XCRemoteSwiftPackageReference "CompositionalList" */,
 				1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */,
+				115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */,
 			);
 			productRefGroup = 111164052B30518200F01C5E /* Products */;
 			projectDirPath = "";
@@ -528,6 +535,7 @@
 				1111645C2B31B24900F01C5E /* BaseViewModel.swift in Sources */,
 				111164322B30524900F01C5E /* CreateViewModel.swift in Sources */,
 				1111643E2B30570500F01C5E /* QRCodeFormat.swift in Sources */,
+				115562732B35AC530055C0EC /* TitledContainerView.swift in Sources */,
 				111164532B31AE2D00F01C5E /* CreateEventFlow.swift in Sources */,
 				111164462B30624E00F01C5E /* PersonalCell.swift in Sources */,
 				111164362B30525800F01C5E /* SettingsViewModel.swift in Sources */,
@@ -761,6 +769,14 @@
 				minimumVersion = 17.0.0;
 			};
 		};
+		115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.8.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -788,6 +804,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */;
 			productName = QRCodeStatic;
+		};
+		115562752B35AE740055C0EC /* SimpleToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */;
+			productName = SimpleToast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

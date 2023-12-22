@@ -16,3 +16,5 @@ QRCodeApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata
 QRCodeApp.xcodeproj/project.xcworkspace/xcuserdata/kyrylochernov.xcuserdatad/UserInterfaceState.xcuserstate
 QRCodeApp.xcodeproj/project.xcworkspace/xcuserdata/kyrylochernov.xcuserdatad/UserInterfaceState.xcuserstate
 QRCodeApp.xcodeproj/xcuserdata/kyrylochernov.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+*.xcuserstate
+*.xcbkptlist
