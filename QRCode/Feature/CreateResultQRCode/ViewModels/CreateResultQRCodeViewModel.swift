@@ -37,6 +37,7 @@ final class CreateResultQRCodeViewModel: BaseViewModel {
         self.qrCodeString = qrCodeString
         qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
         super.init()
+//        qrCodeDocument.logoTemplate = .()
         qrCodeDocument.utf8String = self.qrCodeString
         qrCodeDocument.design = .default()
         createFormat()
@@ -54,7 +55,7 @@ final class CreateResultQRCodeViewModel: BaseViewModel {
         navigationSender.send(.changeDesign)
     }
     
-    private func updateQRCodeDocument(qrCodeString: String, design: QRCode.Design) {
+    private func updateQRCodeDocument(qrCodeString: String) {
         qrCodeDocument.update(text: qrCodeString)
         qrCodeDocument.setHasChanged()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [unowned self] in
@@ -72,7 +73,12 @@ final class CreateResultQRCodeViewModel: BaseViewModel {
             case .contentChanged(let items):
                 self.items = items
                 self.qrCodeString = String(format: qrCodeFormat.format, arguments: items.map({ $0.value }))
-                self.updateQRCodeDocument(qrCodeString: self.qrCodeString, design: .default())
+                self.updateQRCodeDocument(qrCodeString: self.qrCodeString)
+                
+            case let .designChanged(model):
+                self.qrCodeDocument.design = model.design
+                self.qrCodeDocument.logoTemplate = model.logo
+                self.qrCodeDocument.setHasChanged()
             }
         }).store(in: &cancellable)
     }

@@ -60,6 +60,14 @@
 		115562882B35C2FB0055C0EC /* ResultEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562872B35C2FB0055C0EC /* ResultEventBus.swift */; };
 		1155628A2B35C3EC0055C0EC /* TextFieldForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562892B35C3EC0055C0EC /* TextFieldForm.swift */; };
 		1155628C2B35C9590055C0EC /* EditQRCodeContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155628B2B35C9590055C0EC /* EditQRCodeContentView.swift */; };
+		115562922B35DBC80055C0EC /* QRCodeDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562912B35DBC80055C0EC /* QRCodeDesign.swift */; };
+		115562962B35F5A70055C0EC /* QRCodeDesignModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562952B35F5A70055C0EC /* QRCodeDesignModel.swift */; };
+		115562992B35F6720055C0EC /* DesignCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562982B35F6720055C0EC /* DesignCellView.swift */; };
+		1155629B2B35F7290055C0EC /* ChangeDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155629A2B35F7290055C0EC /* ChangeDesignView.swift */; };
+		1155629D2B35FB5D0055C0EC /* ChangeDesignCustomLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155629C2B35FB5D0055C0EC /* ChangeDesignCustomLayout.swift */; };
+		115562A02B35FC7C0055C0EC /* ChangeDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155629F2B35FC7C0055C0EC /* ChangeDesignViewModel.swift */; };
+		115562A22B35FC920055C0EC /* ChangeDesignSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A12B35FC920055C0EC /* ChangeDesignSectionModel.swift */; };
+		115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A32B36092A0055C0EC /* SelectableQRCodeDesign.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +119,14 @@
 		115562872B35C2FB0055C0EC /* ResultEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultEventBus.swift; sourceTree = "<group>"; };
 		115562892B35C3EC0055C0EC /* TextFieldForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldForm.swift; sourceTree = "<group>"; };
 		1155628B2B35C9590055C0EC /* EditQRCodeContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQRCodeContentView.swift; sourceTree = "<group>"; };
+		115562912B35DBC80055C0EC /* QRCodeDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDesign.swift; sourceTree = "<group>"; };
+		115562952B35F5A70055C0EC /* QRCodeDesignModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeDesignModel.swift; sourceTree = "<group>"; };
+		115562982B35F6720055C0EC /* DesignCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCellView.swift; sourceTree = "<group>"; };
+		1155629A2B35F7290055C0EC /* ChangeDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDesignView.swift; sourceTree = "<group>"; };
+		1155629C2B35FB5D0055C0EC /* ChangeDesignCustomLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDesignCustomLayout.swift; sourceTree = "<group>"; };
+		1155629F2B35FC7C0055C0EC /* ChangeDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDesignViewModel.swift; sourceTree = "<group>"; };
+		115562A12B35FC920055C0EC /* ChangeDesignSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDesignSectionModel.swift; sourceTree = "<group>"; };
+		115562A32B36092A0055C0EC /* SelectableQRCodeDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableQRCodeDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -394,6 +410,7 @@
 		1111646B2B31D69000F01C5E /* CreateResultQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				1155628D2B35DB5C0055C0EC /* ChangeDesign */,
 				1155627B2B35BBE80055C0EC /* Models */,
 				111164832B31DB9900F01C5E /* Extensions */,
 				1111646D2B31D6AD00F01C5E /* Views */,
@@ -462,6 +479,53 @@
 				115562872B35C2FB0055C0EC /* ResultEventBus.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		1155628D2B35DB5C0055C0EC /* ChangeDesign */ = {
+			isa = PBXGroup;
+			children = (
+				1155629E2B35FC760055C0EC /* ViewModels */,
+				115562972B35F6630055C0EC /* Views */,
+				115562942B35F5A40055C0EC /* Models */,
+				115562902B35DBBA0055C0EC /* Extensions */,
+			);
+			path = ChangeDesign;
+			sourceTree = "<group>";
+		};
+		115562902B35DBBA0055C0EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				115562912B35DBC80055C0EC /* QRCodeDesign.swift */,
+				1155629C2B35FB5D0055C0EC /* ChangeDesignCustomLayout.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		115562942B35F5A40055C0EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				115562952B35F5A70055C0EC /* QRCodeDesignModel.swift */,
+				115562A12B35FC920055C0EC /* ChangeDesignSectionModel.swift */,
+				115562A32B36092A0055C0EC /* SelectableQRCodeDesign.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		115562972B35F6630055C0EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				115562982B35F6720055C0EC /* DesignCellView.swift */,
+				1155629A2B35F7290055C0EC /* ChangeDesignView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1155629E2B35FC760055C0EC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1155629F2B35FC7C0055C0EC /* ChangeDesignViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,10 +617,13 @@
 				1111645F2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift in Sources */,
 				111164622B31B3C800F01C5E /* TitledTextField.swift in Sources */,
 				111164432B305D3900F01C5E /* CreateQRCodeSectionModel.swift in Sources */,
+				1155629B2B35F7290055C0EC /* ChangeDesignView.swift in Sources */,
 				1111642B2B30522D00F01C5E /* HistoryView.swift in Sources */,
 				111164572B31AE4900F01C5E /* CreateCoordinatorView.swift in Sources */,
 				1111642F2B30523D00F01C5E /* CreateView.swift in Sources */,
 				111164872B31DC4300F01C5E /* CreateResultQRCodeViewModel.swift in Sources */,
+				115562A22B35FC920055C0EC /* ChangeDesignSectionModel.swift in Sources */,
+				115562A02B35FC7C0055C0EC /* ChangeDesignViewModel.swift in Sources */,
 				111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */,
 				1111646A2B31C60400F01C5E /* CreateContentLinkViewModel.swift in Sources */,
 				111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */,
@@ -564,6 +631,7 @@
 				115562652B344E450055C0EC /* TitledContainerViewModel.swift in Sources */,
 				111164272B30521800F01C5E /* ScanView.swift in Sources */,
 				111164412B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift in Sources */,
+				115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */,
 				111164512B30760800F01C5E /* SocialCell.swift in Sources */,
 				1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */,
 				111164342B30525000F01C5E /* SettingsView.swift in Sources */,
@@ -583,11 +651,15 @@
 				111164462B30624E00F01C5E /* PersonalCell.swift in Sources */,
 				111164362B30525800F01C5E /* SettingsViewModel.swift in Sources */,
 				115562862B35C2620055C0EC /* EditQRCodeContentViewModel.swift in Sources */,
+				115562922B35DBC80055C0EC /* QRCodeDesign.swift in Sources */,
 				1155628A2B35C3EC0055C0EC /* TextFieldForm.swift in Sources */,
 				111164082B30518200F01C5E /* QRCodeApp.swift in Sources */,
+				1155629D2B35FB5D0055C0EC /* ChangeDesignCustomLayout.swift in Sources */,
 				115562702B3491050055C0EC /* String+regex.swift in Sources */,
 				115562882B35C2FB0055C0EC /* ResultEventBus.swift in Sources */,
 				115562782B35BBB00055C0EC /* PathState.swift in Sources */,
+				115562962B35F5A70055C0EC /* QRCodeDesignModel.swift in Sources */,
+				115562992B35F6720055C0EC /* DesignCellView.swift in Sources */,
 				1111644F2B3074B200F01C5E /* CreateQRSectionType.swift in Sources */,
 				1111642D2B30523500F01C5E /* HistoryViewModel.swift in Sources */,
 				1155627A2B35BBCF0055C0EC /* CreateResultQRCodeCoordinatorViewModel.swift in Sources */,

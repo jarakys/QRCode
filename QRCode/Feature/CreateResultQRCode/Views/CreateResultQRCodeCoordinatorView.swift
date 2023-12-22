@@ -15,7 +15,7 @@ struct CreateResultQRCodeCoordinatorView: View {
             .navigationDestination(for: ResultFlow.self, destination: { flow in
                 switch flow {
                 case .changeDesign:
-                    Text("Change design scree")
+                    ChangeDesignView(viewModel: viewModel.changeDesignViewViewModel())
                     
                 case let .editContent(items):
                     EditQRCodeContentView(viewModel: viewModel.editQRCodeContentViewModel(items: items))

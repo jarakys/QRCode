@@ -9,4 +9,5 @@ import Foundation
 
 enum ResultEventBus {
     case contentChanged(items: [TitledCopyContainerViewModel])
+    case designChanged(model: QRCodeDesignModel)
 }
