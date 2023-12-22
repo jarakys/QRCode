@@ -8,7 +8,7 @@
 import Foundation
 import Combine
 
-final class TextViewModel: TitledContainerViewModel {
+final class TextViewModel: TitledContainerViewModel, Hashable {
     public let placeholder: String
     public let example: String?
     @Published public var text: String
@@ -19,4 +19,13 @@ final class TextViewModel: TitledContainerViewModel {
         self.example = example
         super.init(title: title)
     }
+    
+    static func == (lhs: TextViewModel, rhs: TextViewModel) -> Bool {
+        lhs.title == rhs.title
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        title.hash(into: &hasher)
+    }
 }
+

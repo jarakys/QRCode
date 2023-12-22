@@ -9,20 +9,15 @@ import Foundation
 import Combine
 import QRCode
 
-import UIKit
-
-final class CreateResultQRCodeViewModel: ObservableObject {
+final class CreateResultQRCodeViewModel: BaseViewModel {
     private let qrCodeFormat: QRCodeFormat
-    private let qrCodeString: String
+    private var qrCodeString: String
     @Published public var items = [TitledCopyContainerViewModel]()
     public var eventSender = PassthroughSubject<CreateResultQRCodeViewModel.Event, Never>()
+    public var navigationSender: PassthroughSubject<ResultEventFlow, Never>
+    public var communicationBus: PassthroughSubject<ResultEventBus, Never>
     
-    public lazy var qrCodeDocument: QRCode.Document = { [unowned self] in
-        let document = QRCode.Document(generator: QRCodeGenerator_External())
-        document.utf8String = self.qrCodeString
-        document.design = .default()
-        return document
-    }()
+    @Published private(set) var qrCodeDocument: QRCode.Document
     
     public lazy var title: String = { [unowned self] in
         "QRCode · \(self.qrCodeFormat.description)"
@@ -32,11 +27,54 @@ final class CreateResultQRCodeViewModel: ObservableObject {
         "15.08.2023"
     }()
     
-    init(qrCodeFormat: QRCodeFormat,
+    init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
+         communicationBus: PassthroughSubject<ResultEventBus, Never>,
+         qrCodeFormat: QRCodeFormat,
          qrCodeString: String) {
+        self.navigationSender = navigationSender
+        self.communicationBus = communicationBus
         self.qrCodeFormat = qrCodeFormat
         self.qrCodeString = qrCodeString
+        qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
+        super.init()
+        qrCodeDocument.utf8String = self.qrCodeString
+        qrCodeDocument.design = .default()
         createFormat()
+    }
+    
+    public func editContentDidTap() {
+        navigationSender.send(.editContent(items: items
+            .map({
+                TextViewModel(title: $0.title, placeholder: "", example: nil, text: $0.value)
+            })
+        ))
+    }
+    
+    public func changedDesignDidTap() {
+        navigationSender.send(.changeDesign)
+    }
+    
+    private func updateQRCodeDocument(qrCodeString: String, design: QRCode.Design) {
+        qrCodeDocument.update(text: qrCodeString)
+        qrCodeDocument.setHasChanged()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [unowned self] in
+            objectWillChange.send()
+        })
+    }
+    
+    override func bind() {
+        super.bind()
+        
+        communicationBus.sink(receiveValue: { [weak self] event in
+            guard let self else { return }
+            
+            switch event {
+            case .contentChanged(let items):
+                self.items = items
+                self.qrCodeString = String(format: qrCodeFormat.format, arguments: items.map({ $0.value }))
+                self.updateQRCodeDocument(qrCodeString: self.qrCodeString, design: .default())
+            }
+        }).store(in: &cancellable)
     }
     
     private func createFormat() {

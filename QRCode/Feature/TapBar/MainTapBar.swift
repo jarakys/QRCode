@@ -18,7 +18,7 @@ struct MainTapBar: View {
                 .tabItem {
                     Label("History", image: "historyIcon")
                 }
-            CreateCoordinatorView(viewModel: CreateCoordinatorViewModel())
+            MainCreateNavigationView()
             .tabItem {
                 Label("Create", image: "createIcon")
             }

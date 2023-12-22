@@ -14,3 +14,4 @@ class TitledContainerViewModel: ObservableObject {
         self.title = title
     }
 }
+

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 import QRCode
 import SimpleToast
 
@@ -38,6 +39,9 @@ struct CreateResultQRCodeView: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                     .background(Color.white)
+                    .onTapGesture(perform: {
+                        viewModel.changedDesignDidTap()
+                    })
                     Divider()
                         .padding(.leading, 16)
                     HStack(spacing: 10) {
@@ -50,6 +54,9 @@ struct CreateResultQRCodeView: View {
                     .padding(.horizontal, 16)
                     .padding(.vertical, 8)
                     .background(Color.white)
+                    .onTapGesture(perform: {
+                        viewModel.editContentDidTap()
+                    })
                 }
                 .cornerRadius(10)
                 .padding(.horizontal, 16)
@@ -90,5 +97,5 @@ struct CreateResultQRCodeView: View {
 }
 
 #Preview {
-    CreateResultQRCodeView(viewModel: CreateResultQRCodeViewModel(qrCodeFormat: .telegram, qrCodeString: "tetet"))
+    CreateResultQRCodeView(viewModel: CreateResultQRCodeViewModel(navigationSender: PassthroughSubject<ResultEventFlow, Never>(), communicationBus: PassthroughSubject<ResultEventBus, Never>(), qrCodeFormat: .telegram, qrCodeString: "tetet"))
 }

@@ -12,17 +12,7 @@ struct CreateContentLinkQRCodeView: View {
     @StateObject public var viewModel: CreateContentLinkViewModel
     var body: some View {
         VStack {
-            ScrollView {
-                VStack(spacing: 16) {
-                    ForEach(viewModel.items, id: \.title) { item in
-                        TitledTextField(title: item.title, placeholder: item.placeholder, example: item.example, text: .init(get: {
-                            item.text
-                        }, set: { text in
-                            item.text = text
-                        }))
-                    }
-                }
-            }
+            TextFieldForm(items: viewModel.items)
             .scrollDismissesKeyboard(.interactively)
             .contentMargins(.top, 32, for: .scrollContent)
             .padding(.top, 1)
