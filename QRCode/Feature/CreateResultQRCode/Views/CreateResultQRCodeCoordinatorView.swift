@@ -19,6 +19,9 @@ struct CreateResultQRCodeCoordinatorView: View {
                     
                 case let .editContent(items):
                     EditQRCodeContentView(viewModel: viewModel.editQRCodeContentViewModel(items: items))
+                    
+                case .detailedChangeDesing:
+                    DetailedChangeDesignView(viewModel: DetailedChangeDesignViewModel(qrCodeString: "Hello", qrCodeDesign: .default, navigationSender: viewModel.navigationSender, communicationBus: .init()))
                 }
             })
             .onReceive(viewModel.navigationSender, perform: { event in
@@ -31,6 +34,9 @@ struct CreateResultQRCodeCoordinatorView: View {
                     
                 case let .editContent(items):
                     pathsState.append(ResultFlow.editContent(items: items))
+                    
+                case .detailedChangeDesign:
+                    pathsState.append(ResultFlow.detailedChangeDesing)
                 }
             })
     }

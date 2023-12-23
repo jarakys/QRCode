@@ -8,14 +8,17 @@
 import Foundation
 import Combine
 
-class SelectableQRCodeDesign: ObservableObject {
-    public var item: QRCodeDesign
+class SelectableItemViewModel<T>: ObservableObject {
     @Published public var isSelected: Bool
+    public var item: T
     
-    init(item: QRCodeDesign, isSelected: Bool) {
-        self.item = item
+    init(isSelected: Bool, item: T) {
         self.isSelected = isSelected
+        self.item = item
     }
+}
+
+class SelectableQRCodeDesign: SelectableItemViewModel<QRCodeDesign> {
 }
 
 extension SelectableQRCodeDesign: Hashable {

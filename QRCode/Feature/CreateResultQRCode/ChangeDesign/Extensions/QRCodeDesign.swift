@@ -8,7 +8,11 @@
 import Foundation
 import QRCode
 
-enum QRCodeDesign: String, CaseIterable {
+protocol DesignIconProtocol {
+    var designIcon: String { get }
+}
+
+enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
     case `default`
     case twitter
     case facebook

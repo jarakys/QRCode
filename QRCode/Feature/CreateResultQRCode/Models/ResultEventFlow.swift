@@ -11,4 +11,5 @@ enum ResultEventFlow {
     case editContent(items: [TextViewModel])
     case back
     case changeDesign
+    case detailedChangeDesign
 }

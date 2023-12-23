@@ -68,6 +68,9 @@
 		115562A02B35FC7C0055C0EC /* ChangeDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1155629F2B35FC7C0055C0EC /* ChangeDesignViewModel.swift */; };
 		115562A22B35FC920055C0EC /* ChangeDesignSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A12B35FC920055C0EC /* ChangeDesignSectionModel.swift */; };
 		115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A32B36092A0055C0EC /* SelectableQRCodeDesign.swift */; };
+		115562A82B374C680055C0EC /* DetailedChangeDesignSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A72B374C680055C0EC /* DetailedChangeDesignSectionModel.swift */; };
+		115562AA2B3755190055C0EC /* DetailedChangDesignSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A92B3755190055C0EC /* DetailedChangDesignSectionType.swift */; };
+		115562AC2B3755300055C0EC /* DesignElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562AB2B3755300055C0EC /* DesignElements.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -127,6 +130,9 @@
 		1155629F2B35FC7C0055C0EC /* ChangeDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDesignViewModel.swift; sourceTree = "<group>"; };
 		115562A12B35FC920055C0EC /* ChangeDesignSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeDesignSectionModel.swift; sourceTree = "<group>"; };
 		115562A32B36092A0055C0EC /* SelectableQRCodeDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableQRCodeDesign.swift; sourceTree = "<group>"; };
+		115562A72B374C680055C0EC /* DetailedChangeDesignSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignSectionModel.swift; sourceTree = "<group>"; };
+		115562A92B3755190055C0EC /* DetailedChangDesignSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangDesignSectionType.swift; sourceTree = "<group>"; };
+		115562AB2B3755300055C0EC /* DesignElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignElements.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +416,7 @@
 		1111646B2B31D69000F01C5E /* CreateResultQRCode */ = {
 			isa = PBXGroup;
 			children = (
+				115562A52B374C470055C0EC /* DetailedChangeDesign */,
 				1155628D2B35DB5C0055C0EC /* ChangeDesign */,
 				1155627B2B35BBE80055C0EC /* Models */,
 				111164832B31DB9900F01C5E /* Extensions */,
@@ -528,6 +535,24 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		115562A52B374C470055C0EC /* DetailedChangeDesign */ = {
+			isa = PBXGroup;
+			children = (
+				115562A62B374C5D0055C0EC /* Models */,
+			);
+			path = DetailedChangeDesign;
+			sourceTree = "<group>";
+		};
+		115562A62B374C5D0055C0EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				115562A72B374C680055C0EC /* DetailedChangeDesignSectionModel.swift */,
+				115562A92B3755190055C0EC /* DetailedChangDesignSectionType.swift */,
+				115562AB2B3755300055C0EC /* DesignElements.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -612,6 +637,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1111640A2B30518200F01C5E /* ContentView.swift in Sources */,
+				115562AA2B3755190055C0EC /* DetailedChangDesignSectionType.swift in Sources */,
 				115562672B344E530055C0EC /* TitledCopyContainerViewModel.swift in Sources */,
 				1155627F2B35BBF70055C0EC /* ResultEventFlow.swift in Sources */,
 				1111645F2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift in Sources */,
@@ -632,6 +658,7 @@
 				111164272B30521800F01C5E /* ScanView.swift in Sources */,
 				111164412B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift in Sources */,
 				115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */,
+				115562AC2B3755300055C0EC /* DesignElements.swift in Sources */,
 				111164512B30760800F01C5E /* SocialCell.swift in Sources */,
 				1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */,
 				111164342B30525000F01C5E /* SettingsView.swift in Sources */,
@@ -646,6 +673,7 @@
 				1111643E2B30570500F01C5E /* QRCodeFormat.swift in Sources */,
 				1155627D2B35BBEC0055C0EC /* ResultFlow.swift in Sources */,
 				115562732B35AC530055C0EC /* TitledContainerView.swift in Sources */,
+				115562A82B374C680055C0EC /* DetailedChangeDesignSectionModel.swift in Sources */,
 				115562832B35C18D0055C0EC /* MainCreateNavigationView.swift in Sources */,
 				111164532B31AE2D00F01C5E /* CreateEventFlow.swift in Sources */,
 				111164462B30624E00F01C5E /* PersonalCell.swift in Sources */,

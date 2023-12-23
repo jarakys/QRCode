@@ -8,6 +8,12 @@
 import UIKit
 
 public extension UICollectionViewLayout {
+    static func composed() -> UICollectionViewLayout {
+        return UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
+            testSection()
+        }
+    }
+    
     static func composed(sections: [CreateQRCodeSectionModel]) -> UICollectionViewLayout {
         return UICollectionViewCompositionalLayout { sectionIndex, layoutEnvironment in
             let section = sections[sectionIndex]
@@ -94,6 +100,35 @@ public extension UICollectionViewLayout {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
         section.interGroupSpacing = spacing
+        
+        let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                                      heightDimension: .estimated(200))
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: headerFooterSize,
+            elementKind:  UICollectionView.elementKindSectionHeader, alignment: .topLeading)
+        sectionHeader.contentInsets = .init(top: 0, leading: 8, bottom: 0, trailing: 8)
+        section.boundarySupplementaryItems = [sectionHeader]
+        return section
+    }
+    
+    private static func testSection() -> NSCollectionLayoutSection {
+        let spacing: CGFloat = 16
+        let itemSpacing: CGFloat = 30
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1.0),
+            heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        
+        let groupSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(1),
+            heightDimension: .estimated(60))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 5)
+        group.interItemSpacing = .fixed(itemSpacing)
+        
+        let section = NSCollectionLayoutSection(group: group)
+        section.contentInsets = .init(top: spacing, leading: spacing, bottom: spacing, trailing: spacing)
+        section.interGroupSpacing = spacing
+//        section.orthogonalScrollingBehavior = .continuous
         
         let headerFooterSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
                                                       heightDimension: .estimated(200))

@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct DesignCellView: View {
-    @StateObject var model: SelectableQRCodeDesign
+struct DesignCellView<T: DesignIconProtocol>: View {
+    @StateObject var model: SelectableItemViewModel<T>
     var body: some View {
         ZStack {
             Image(model.item.designIcon)
-                .padding(.all, 16)
+                .padding(.all, 8)
         }
         .background(.white)
         .cornerRadius(16)
@@ -24,5 +24,5 @@ struct DesignCellView: View {
 }
 
 #Preview {
-    DesignCellView(model: .init(item: .default, isSelected: false))
+    DesignCellView(model: .init(isSelected: false, item: QRCodeDesign.default))
 }

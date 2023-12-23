@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 final class ChangeDesignViewModel: BaseViewModel {
-    @Published public var items = [ChangeDesignSectionModel(cellIdentifiers: QRCodeDesign.allCases.map({ SelectableQRCodeDesign(item: $0, isSelected: $0 == .default) }), sectionIdentifier: 1)]
+    @Published public var items = [ChangeDesignSectionModel(cellIdentifiers: QRCodeDesign.allCases.map({ SelectableQRCodeDesign(isSelected: $0 == .default, item: $0) }), sectionIdentifier: 1)]
     @Published public var selectedItem: SelectableQRCodeDesign?
     
     private let navigationSender: PassthroughSubject<ResultEventFlow, Never>
@@ -34,8 +34,9 @@ final class ChangeDesignViewModel: BaseViewModel {
             navigationSender.send(.back)
             return
         }
+        navigationSender.send(.detailedChangeDesign)
         communicationBus.send(.designChanged(model: QRCodeDesignModel(logo: selectedItem.item.logo, design: selectedItem.item.qrCodeDesign)))
-        navigationSender.send(.back)
+//        navigationSender.send(.back)
     }
     
     public func cancel() {

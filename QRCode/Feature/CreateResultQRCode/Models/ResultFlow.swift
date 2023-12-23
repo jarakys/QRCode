@@ -10,4 +10,5 @@ import Foundation
 enum ResultFlow: Hashable {
     case editContent(items: [TextViewModel])
     case changeDesign
+    case detailedChangeDesing
 }
