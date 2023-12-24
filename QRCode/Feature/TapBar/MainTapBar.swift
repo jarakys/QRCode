@@ -19,13 +19,10 @@ struct MainTapBar: View {
                     Label("History", image: "historyIcon")
                 }
             MainCreateNavigationView()
-            .tabItem {
-                Label("Create", image: "createIcon")
-            }
-            NavigationStack {
-                SettingsView(viewModel: SettingsViewModel())
-            }
-            
+                .tabItem {
+                    Label("Create", image: "createIcon")
+                }
+            MainSettingsNavigationView()
                 .tabItem {
                     Label("Settings", image: "settingsIcon")
                 }

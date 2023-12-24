@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct SettingsView: View {
     @StateObject public var viewModel: SettingsViewModel
@@ -21,7 +22,7 @@ struct SettingsView: View {
         .listStyle(.insetGrouped)
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.automatic)
-        .toolbarBackground(.blue, for: .navigationBar)
+        .toolbarBackground(Color.primaryApp, for: .navigationBar)
     }
     
     @ViewBuilder
@@ -72,5 +73,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(viewModel: SettingsViewModel())
+    SettingsView(viewModel: SettingsViewModel(navigationSender: PassthroughSubject<SettingsEventFlow, Never>()))
 }

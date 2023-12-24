@@ -26,7 +26,7 @@ struct InAppCellView: View {
                         .foregroundStyle(.white)
                 }
                 .frame(maxWidth: .infinity)
-                .background(Color.qrCodeEyeEmail)
+                .background(.primaryApp)
                 .cornerRadius(10)
                 
             }

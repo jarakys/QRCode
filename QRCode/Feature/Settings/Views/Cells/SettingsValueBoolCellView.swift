@@ -24,7 +24,7 @@ struct SettingsValueBoolCellView: View {
             }
             .frame(maxWidth: .infinity)
             Toggle("", isOn: $model.value)
-                .tint(.blue)
+                .tint(.primaryApp)
                 .frame(width: 48)
         }
     }

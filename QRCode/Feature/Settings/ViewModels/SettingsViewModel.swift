@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 enum SettingsItemType: Hashable {
     case inApp(SettingsItemSubtitleModel)
@@ -24,7 +25,10 @@ enum SettingsItemType: Hashable {
 final class SettingsViewModel: ObservableObject {
     @Published public var sections: [SettingsSectionModel<SettingsItemProtocolEraser>]
     
-    init() {
+    private let navigationSender: PassthroughSubject<SettingsEventFlow, Never>
+    
+    init(navigationSender: PassthroughSubject<SettingsEventFlow, Never>) {
+        self.navigationSender = navigationSender
         self.sections = [
             SettingsSectionModel(type: .payment, items: [
                 .inApp(SettingsItemSubtitleModel(title: "Get unlimited access to all functions of the app", subtitle: "Try for free", icon: "inAppIcon"))

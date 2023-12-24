@@ -86,6 +86,10 @@
 		115562CA2B3848340055C0EC /* SettingsValueStringCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562C92B3848340055C0EC /* SettingsValueStringCellView.swift */; };
 		115562CC2B3849FF0055C0EC /* SettingsValueBoolCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562CB2B3849FF0055C0EC /* SettingsValueBoolCellView.swift */; };
 		115562CE2B384E690055C0EC /* SettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562CD2B384E690055C0EC /* SettingsCellView.swift */; };
+		115562D02B3853FF0055C0EC /* SettingsEventFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562CF2B3853FF0055C0EC /* SettingsEventFlow.swift */; };
+		115562D32B3854260055C0EC /* MainSettingsNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562D22B3854260055C0EC /* MainSettingsNavigationView.swift */; };
+		115562D52B3854370055C0EC /* SettingsCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */; };
+		115562D72B38547F0055C0EC /* SettingsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,6 +167,10 @@
 		115562C92B3848340055C0EC /* SettingsValueStringCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsValueStringCellView.swift; sourceTree = "<group>"; };
 		115562CB2B3849FF0055C0EC /* SettingsValueBoolCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsValueBoolCellView.swift; sourceTree = "<group>"; };
 		115562CD2B384E690055C0EC /* SettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellView.swift; sourceTree = "<group>"; };
+		115562CF2B3853FF0055C0EC /* SettingsEventFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEventFlow.swift; sourceTree = "<group>"; };
+		115562D22B3854260055C0EC /* MainSettingsNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsNavigationView.swift; sourceTree = "<group>"; };
+		115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +319,7 @@
 				1111642E2B30523D00F01C5E /* CreateView.swift */,
 				111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */,
 				115562822B35C18D0055C0EC /* MainCreateNavigationView.swift */,
+				115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -320,6 +329,7 @@
 			children = (
 				111164312B30524900F01C5E /* CreateViewModel.swift */,
 				111164542B31AE3800F01C5E /* CreateCoordinatorViewModel.swift */,
+				115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -329,6 +339,7 @@
 			children = (
 				115562C62B37A2630055C0EC /* Cells */,
 				111164332B30525000F01C5E /* SettingsView.swift */,
+				115562D22B3854260055C0EC /* MainSettingsNavigationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -588,14 +599,9 @@
 		115562AE2B379BAC0055C0EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				115562CF2B3853FF0055C0EC /* SettingsEventFlow.swift */,
+				115562D12B3854020055C0EC /* CellModels */,
 				115562B52B379BD70055C0EC /* Protocols */,
-				115562AF2B379BB30055C0EC /* SettingsSectionType.swift */,
-				115562B12B379BC10055C0EC /* SettingsSectionModel.swift */,
-				115562BC2B379C0A0055C0EC /* SettingsItemModel.swift */,
-				115562BE2B379C160055C0EC /* SettingsItemSubtitleModel.swift */,
-				115562C02B379C200055C0EC /* SettingsItemValueModel.swift */,
-				115562C22B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift */,
-				115562C42B379C360055C0EC /* SettingsItemProtocolEraser.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -620,6 +626,20 @@
 				115562CD2B384E690055C0EC /* SettingsCellView.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		115562D12B3854020055C0EC /* CellModels */ = {
+			isa = PBXGroup;
+			children = (
+				115562AF2B379BB30055C0EC /* SettingsSectionType.swift */,
+				115562B12B379BC10055C0EC /* SettingsSectionModel.swift */,
+				115562BC2B379C0A0055C0EC /* SettingsItemModel.swift */,
+				115562BE2B379C160055C0EC /* SettingsItemSubtitleModel.swift */,
+				115562C02B379C200055C0EC /* SettingsItemValueModel.swift */,
+				115562C22B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift */,
+				115562C42B379C360055C0EC /* SettingsItemProtocolEraser.swift */,
+			);
+			path = CellModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -718,6 +738,7 @@
 				1111642F2B30523D00F01C5E /* CreateView.swift in Sources */,
 				111164872B31DC4300F01C5E /* CreateResultQRCodeViewModel.swift in Sources */,
 				115562A22B35FC920055C0EC /* ChangeDesignSectionModel.swift in Sources */,
+				115562D02B3853FF0055C0EC /* SettingsEventFlow.swift in Sources */,
 				115562A02B35FC7C0055C0EC /* ChangeDesignViewModel.swift in Sources */,
 				111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */,
 				115562B72B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift in Sources */,
@@ -745,6 +766,7 @@
 				1155628C2B35C9590055C0EC /* EditQRCodeContentView.swift in Sources */,
 				115562B22B379BC10055C0EC /* SettingsSectionModel.swift in Sources */,
 				1155626D2B348D190055C0EC /* FormatMatcher.swift in Sources */,
+				115562D32B3854260055C0EC /* MainSettingsNavigationView.swift in Sources */,
 				1111645C2B31B24900F01C5E /* BaseViewModel.swift in Sources */,
 				111164322B30524900F01C5E /* CreateViewModel.swift in Sources */,
 				115562812B35BC420055C0EC /* CreateResultQRCodeCoordinatorView.swift in Sources */,
@@ -755,6 +777,7 @@
 				115562732B35AC530055C0EC /* TitledContainerView.swift in Sources */,
 				115562A82B374C680055C0EC /* DetailedChangeDesignSectionModel.swift in Sources */,
 				115562832B35C18D0055C0EC /* MainCreateNavigationView.swift in Sources */,
+				115562D52B3854370055C0EC /* SettingsCoordinatorViewModel.swift in Sources */,
 				111164532B31AE2D00F01C5E /* CreateEventFlow.swift in Sources */,
 				115562C12B379C200055C0EC /* SettingsItemValueModel.swift in Sources */,
 				115562CC2B3849FF0055C0EC /* SettingsValueBoolCellView.swift in Sources */,
@@ -775,6 +798,7 @@
 				1111644F2B3074B200F01C5E /* CreateQRSectionType.swift in Sources */,
 				1111642D2B30523500F01C5E /* HistoryViewModel.swift in Sources */,
 				1155627A2B35BBCF0055C0EC /* CreateResultQRCodeCoordinatorViewModel.swift in Sources */,
+				115562D72B38547F0055C0EC /* SettingsCoordinatorView.swift in Sources */,
 				111164702B31D6C300F01C5E /* CreateResultQRCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
