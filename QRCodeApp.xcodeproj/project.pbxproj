@@ -71,6 +71,21 @@
 		115562A82B374C680055C0EC /* DetailedChangeDesignSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A72B374C680055C0EC /* DetailedChangeDesignSectionModel.swift */; };
 		115562AA2B3755190055C0EC /* DetailedChangDesignSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562A92B3755190055C0EC /* DetailedChangDesignSectionType.swift */; };
 		115562AC2B3755300055C0EC /* DesignElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562AB2B3755300055C0EC /* DesignElements.swift */; };
+		115562B02B379BB30055C0EC /* SettingsSectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562AF2B379BB30055C0EC /* SettingsSectionType.swift */; };
+		115562B22B379BC10055C0EC /* SettingsSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562B12B379BC10055C0EC /* SettingsSectionModel.swift */; };
+		115562B42B379BCC0055C0EC /* SettingsItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562B32B379BCC0055C0EC /* SettingsItemProtocol.swift */; };
+		115562B72B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562B62B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift */; };
+		115562B92B379BED0055C0EC /* SettingsItemValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562B82B379BED0055C0EC /* SettingsItemValueProtocol.swift */; };
+		115562BB2B379BF80055C0EC /* SettingsItemValueSubtitleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562BA2B379BF80055C0EC /* SettingsItemValueSubtitleProtocol.swift */; };
+		115562BD2B379C0A0055C0EC /* SettingsItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562BC2B379C0A0055C0EC /* SettingsItemModel.swift */; };
+		115562BF2B379C160055C0EC /* SettingsItemSubtitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562BE2B379C160055C0EC /* SettingsItemSubtitleModel.swift */; };
+		115562C12B379C200055C0EC /* SettingsItemValueModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562C02B379C200055C0EC /* SettingsItemValueModel.swift */; };
+		115562C32B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562C22B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift */; };
+		115562C52B379C360055C0EC /* SettingsItemProtocolEraser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562C42B379C360055C0EC /* SettingsItemProtocolEraser.swift */; };
+		115562C82B37A26E0055C0EC /* InAppCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562C72B37A26E0055C0EC /* InAppCellView.swift */; };
+		115562CA2B3848340055C0EC /* SettingsValueStringCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562C92B3848340055C0EC /* SettingsValueStringCellView.swift */; };
+		115562CC2B3849FF0055C0EC /* SettingsValueBoolCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562CB2B3849FF0055C0EC /* SettingsValueBoolCellView.swift */; };
+		115562CE2B384E690055C0EC /* SettingsCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562CD2B384E690055C0EC /* SettingsCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -133,6 +148,21 @@
 		115562A72B374C680055C0EC /* DetailedChangeDesignSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignSectionModel.swift; sourceTree = "<group>"; };
 		115562A92B3755190055C0EC /* DetailedChangDesignSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangDesignSectionType.swift; sourceTree = "<group>"; };
 		115562AB2B3755300055C0EC /* DesignElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignElements.swift; sourceTree = "<group>"; };
+		115562AF2B379BB30055C0EC /* SettingsSectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionType.swift; sourceTree = "<group>"; };
+		115562B12B379BC10055C0EC /* SettingsSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSectionModel.swift; sourceTree = "<group>"; };
+		115562B32B379BCC0055C0EC /* SettingsItemProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemProtocol.swift; sourceTree = "<group>"; };
+		115562B62B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemSubtitleProtocol.swift; sourceTree = "<group>"; };
+		115562B82B379BED0055C0EC /* SettingsItemValueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemValueProtocol.swift; sourceTree = "<group>"; };
+		115562BA2B379BF80055C0EC /* SettingsItemValueSubtitleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemValueSubtitleProtocol.swift; sourceTree = "<group>"; };
+		115562BC2B379C0A0055C0EC /* SettingsItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemModel.swift; sourceTree = "<group>"; };
+		115562BE2B379C160055C0EC /* SettingsItemSubtitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemSubtitleModel.swift; sourceTree = "<group>"; };
+		115562C02B379C200055C0EC /* SettingsItemValueModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemValueModel.swift; sourceTree = "<group>"; };
+		115562C22B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemValueSubtitleModel.swift; sourceTree = "<group>"; };
+		115562C42B379C360055C0EC /* SettingsItemProtocolEraser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemProtocolEraser.swift; sourceTree = "<group>"; };
+		115562C72B37A26E0055C0EC /* InAppCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppCellView.swift; sourceTree = "<group>"; };
+		115562C92B3848340055C0EC /* SettingsValueStringCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsValueStringCellView.swift; sourceTree = "<group>"; };
+		115562CB2B3849FF0055C0EC /* SettingsValueBoolCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsValueBoolCellView.swift; sourceTree = "<group>"; };
+		115562CD2B384E690055C0EC /* SettingsCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +265,7 @@
 		1111641C2B3051D700F01C5E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				115562AE2B379BAC0055C0EC /* Models */,
 				111164242B30520400F01C5E /* ViewModels */,
 				111164232B30520100F01C5E /* Views */,
 			);
@@ -296,6 +327,7 @@
 		111164232B30520100F01C5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				115562C62B37A2630055C0EC /* Cells */,
 				111164332B30525000F01C5E /* SettingsView.swift */,
 			);
 			path = Views;
@@ -553,6 +585,43 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		115562AE2B379BAC0055C0EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				115562B52B379BD70055C0EC /* Protocols */,
+				115562AF2B379BB30055C0EC /* SettingsSectionType.swift */,
+				115562B12B379BC10055C0EC /* SettingsSectionModel.swift */,
+				115562BC2B379C0A0055C0EC /* SettingsItemModel.swift */,
+				115562BE2B379C160055C0EC /* SettingsItemSubtitleModel.swift */,
+				115562C02B379C200055C0EC /* SettingsItemValueModel.swift */,
+				115562C22B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift */,
+				115562C42B379C360055C0EC /* SettingsItemProtocolEraser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		115562B52B379BD70055C0EC /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				115562B32B379BCC0055C0EC /* SettingsItemProtocol.swift */,
+				115562B62B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift */,
+				115562B82B379BED0055C0EC /* SettingsItemValueProtocol.swift */,
+				115562BA2B379BF80055C0EC /* SettingsItemValueSubtitleProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		115562C62B37A2630055C0EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				115562C72B37A26E0055C0EC /* InAppCellView.swift */,
+				115562C92B3848340055C0EC /* SettingsValueStringCellView.swift */,
+				115562CB2B3849FF0055C0EC /* SettingsValueBoolCellView.swift */,
+				115562CD2B384E690055C0EC /* SettingsCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -651,31 +720,46 @@
 				115562A22B35FC920055C0EC /* ChangeDesignSectionModel.swift in Sources */,
 				115562A02B35FC7C0055C0EC /* ChangeDesignViewModel.swift in Sources */,
 				111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */,
+				115562B72B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift in Sources */,
+				115562BD2B379C0A0055C0EC /* SettingsItemModel.swift in Sources */,
 				1111646A2B31C60400F01C5E /* CreateContentLinkViewModel.swift in Sources */,
 				111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */,
 				111164852B31DBAA00F01C5E /* QRCode.Design+designs.swift in Sources */,
+				115562C52B379C360055C0EC /* SettingsItemProtocolEraser.swift in Sources */,
+				115562BB2B379BF80055C0EC /* SettingsItemValueSubtitleProtocol.swift in Sources */,
 				115562652B344E450055C0EC /* TitledContainerViewModel.swift in Sources */,
 				111164272B30521800F01C5E /* ScanView.swift in Sources */,
+				115562BF2B379C160055C0EC /* SettingsItemSubtitleModel.swift in Sources */,
 				111164412B305D2F00F01C5E /* CreateQRCodeTemplateModel.swift in Sources */,
 				115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */,
 				115562AC2B3755300055C0EC /* DesignElements.swift in Sources */,
+				115562B92B379BED0055C0EC /* SettingsItemValueProtocol.swift in Sources */,
 				111164512B30760800F01C5E /* SocialCell.swift in Sources */,
+				115562B42B379BCC0055C0EC /* SettingsItemProtocol.swift in Sources */,
+				115562CE2B384E690055C0EC /* SettingsCellView.swift in Sources */,
 				1111644D2B30684300F01C5E /* CustomLayout.swift in Sources */,
 				111164342B30525000F01C5E /* SettingsView.swift in Sources */,
 				111164392B30526900F01C5E /* MainTapBar.swift in Sources */,
 				111164552B31AE3800F01C5E /* CreateCoordinatorViewModel.swift in Sources */,
 				111164292B30522100F01C5E /* ScanViewModel.swift in Sources */,
 				1155628C2B35C9590055C0EC /* EditQRCodeContentView.swift in Sources */,
+				115562B22B379BC10055C0EC /* SettingsSectionModel.swift in Sources */,
 				1155626D2B348D190055C0EC /* FormatMatcher.swift in Sources */,
 				1111645C2B31B24900F01C5E /* BaseViewModel.swift in Sources */,
 				111164322B30524900F01C5E /* CreateViewModel.swift in Sources */,
 				115562812B35BC420055C0EC /* CreateResultQRCodeCoordinatorView.swift in Sources */,
+				115562C32B379C2B0055C0EC /* SettingsItemValueSubtitleModel.swift in Sources */,
 				1111643E2B30570500F01C5E /* QRCodeFormat.swift in Sources */,
 				1155627D2B35BBEC0055C0EC /* ResultFlow.swift in Sources */,
+				115562C82B37A26E0055C0EC /* InAppCellView.swift in Sources */,
 				115562732B35AC530055C0EC /* TitledContainerView.swift in Sources */,
 				115562A82B374C680055C0EC /* DetailedChangeDesignSectionModel.swift in Sources */,
 				115562832B35C18D0055C0EC /* MainCreateNavigationView.swift in Sources */,
 				111164532B31AE2D00F01C5E /* CreateEventFlow.swift in Sources */,
+				115562C12B379C200055C0EC /* SettingsItemValueModel.swift in Sources */,
+				115562CC2B3849FF0055C0EC /* SettingsValueBoolCellView.swift in Sources */,
+				115562B02B379BB30055C0EC /* SettingsSectionType.swift in Sources */,
+				115562CA2B3848340055C0EC /* SettingsValueStringCellView.swift in Sources */,
 				111164462B30624E00F01C5E /* PersonalCell.swift in Sources */,
 				111164362B30525800F01C5E /* SettingsViewModel.swift in Sources */,
 				115562862B35C2620055C0EC /* EditQRCodeContentViewModel.swift in Sources */,

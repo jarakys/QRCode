@@ -22,7 +22,10 @@ struct MainTapBar: View {
             .tabItem {
                 Label("Create", image: "createIcon")
             }
-            SettingsView()
+            NavigationStack {
+                SettingsView(viewModel: SettingsViewModel())
+            }
+            
                 .tabItem {
                     Label("Settings", image: "settingsIcon")
                 }
