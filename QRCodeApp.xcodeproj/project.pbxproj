@@ -38,10 +38,6 @@
 		111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164662B31C5E600F01C5E /* TextViewModel.swift */; };
 		1111646A2B31C60400F01C5E /* CreateContentLinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164692B31C60400F01C5E /* CreateContentLinkViewModel.swift */; };
 		111164702B31D6C300F01C5E /* CreateResultQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1111646F2B31D6C300F01C5E /* CreateResultQRCodeView.swift */; };
-		1111647C2B31D8D000F01C5E /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 1111647B2B31D8D000F01C5E /* QRCode */; };
-		1111647E2B31D8D000F01C5E /* QRCodeDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 1111647D2B31D8D000F01C5E /* QRCodeDetector */; };
-		111164802B31D8D000F01C5E /* QRCodeDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 1111647F2B31D8D000F01C5E /* QRCodeDynamic */; };
-		111164822B31D8D000F01C5E /* QRCodeStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 111164812B31D8D000F01C5E /* QRCodeStatic */; };
 		111164852B31DBAA00F01C5E /* QRCode.Design+designs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164842B31DBAA00F01C5E /* QRCode.Design+designs.swift */; };
 		111164872B31DC4300F01C5E /* CreateResultQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111164862B31DC4300F01C5E /* CreateResultQRCodeViewModel.swift */; };
 		115562652B344E450055C0EC /* TitledContainerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562642B344E450055C0EC /* TitledContainerViewModel.swift */; };
@@ -103,6 +99,10 @@
 		115562F32B38AA850055C0EC /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562F22B38AA850055C0EC /* String+localized.swift */; };
 		115562F52B38AB6F0055C0EC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 115562F42B38AB6F0055C0EC /* Localizable.xcstrings */; };
 		115562F72B38B6EB0055C0EC /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562F62B38B6EB0055C0EC /* NavigationBarModifier.swift */; };
+		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
+		115562FD2B38BD150055C0EC /* QRCode in Frameworks */ = {isa = PBXBuildFile; productRef = 115562FC2B38BD150055C0EC /* QRCode */; };
+		115562FF2B38BD150055C0EC /* QRCodeDetector in Frameworks */ = {isa = PBXBuildFile; productRef = 115562FE2B38BD150055C0EC /* QRCodeDetector */; };
+		115563012B38BD150055C0EC /* QRCodeStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 115563002B38BD150055C0EC /* QRCodeStatic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -204,11 +204,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111164802B31D8D000F01C5E /* QRCodeDynamic in Frameworks */,
-				1111647E2B31D8D000F01C5E /* QRCodeDetector in Frameworks */,
-				1111647C2B31D8D000F01C5E /* QRCode in Frameworks */,
-				111164822B31D8D000F01C5E /* QRCodeStatic in Frameworks */,
+				115562FF2B38BD150055C0EC /* QRCodeDetector in Frameworks */,
+				115562FD2B38BD150055C0EC /* QRCode in Frameworks */,
+				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
 				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
+				115563012B38BD150055C0EC /* QRCodeStatic in Frameworks */,
 				111164492B30678700F01C5E /* CompositionalList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -739,11 +739,11 @@
 			name = QRCodeApp;
 			packageProductDependencies = (
 				111164482B30678700F01C5E /* CompositionalList */,
-				1111647B2B31D8D000F01C5E /* QRCode */,
-				1111647D2B31D8D000F01C5E /* QRCodeDetector */,
-				1111647F2B31D8D000F01C5E /* QRCodeDynamic */,
-				111164812B31D8D000F01C5E /* QRCodeStatic */,
 				115562752B35AE740055C0EC /* SimpleToast */,
+				115562F92B38BC2C0055C0EC /* KeychainSwift */,
+				115562FC2B38BD150055C0EC /* QRCode */,
+				115562FE2B38BD150055C0EC /* QRCodeDetector */,
+				115563002B38BD150055C0EC /* QRCodeStatic */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -775,8 +775,9 @@
 			mainGroup = 111163FB2B30518200F01C5E;
 			packageReferences = (
 				111164472B30678700F01C5E /* XCRemoteSwiftPackageReference "CompositionalList" */,
-				1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */,
 				115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */,
+				115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				115562FB2B38BD150055C0EC /* XCRemoteSwiftPackageReference "QRCode" */,
 			);
 			productRefGroup = 111164052B30518200F01C5E /* Products */;
 			projectDirPath = "";
@@ -1109,20 +1110,28 @@
 				kind = branch;
 			};
 		};
-		1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/dagronf/QRCode";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 17.0.0;
-			};
-		};
 		115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 0.8.1;
+			};
+		};
+		115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+		115562FB2B38BD150055C0EC /* XCRemoteSwiftPackageReference "QRCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dagronf/QRCode.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 17.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1133,30 +1142,30 @@
 			package = 111164472B30678700F01C5E /* XCRemoteSwiftPackageReference "CompositionalList" */;
 			productName = CompositionalList;
 		};
-		1111647B2B31D8D000F01C5E /* QRCode */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */;
-			productName = QRCode;
-		};
-		1111647D2B31D8D000F01C5E /* QRCodeDetector */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */;
-			productName = QRCodeDetector;
-		};
-		1111647F2B31D8D000F01C5E /* QRCodeDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */;
-			productName = QRCodeDynamic;
-		};
-		111164812B31D8D000F01C5E /* QRCodeStatic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1111647A2B31D8D000F01C5E /* XCRemoteSwiftPackageReference "QRCode" */;
-			productName = QRCodeStatic;
-		};
 		115562752B35AE740055C0EC /* SimpleToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */;
 			productName = SimpleToast;
+		};
+		115562F92B38BC2C0055C0EC /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+		115562FC2B38BD150055C0EC /* QRCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115562FB2B38BD150055C0EC /* XCRemoteSwiftPackageReference "QRCode" */;
+			productName = QRCode;
+		};
+		115562FE2B38BD150055C0EC /* QRCodeDetector */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115562FB2B38BD150055C0EC /* XCRemoteSwiftPackageReference "QRCode" */;
+			productName = QRCodeDetector;
+		};
+		115563002B38BD150055C0EC /* QRCodeStatic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 115562FB2B38BD150055C0EC /* XCRemoteSwiftPackageReference "QRCode" */;
+			productName = QRCodeStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
