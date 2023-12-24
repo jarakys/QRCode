@@ -90,6 +90,15 @@
 		115562D32B3854260055C0EC /* MainSettingsNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562D22B3854260055C0EC /* MainSettingsNavigationView.swift */; };
 		115562D52B3854370055C0EC /* SettingsCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */; };
 		115562D72B38547F0055C0EC /* SettingsCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */; };
+		115562DE2B3855B70055C0EC /* SelectLanguageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562DD2B3855B70055C0EC /* SelectLanguageViewModel.swift */; };
+		115562E02B3855FF0055C0EC /* SelectableItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562DF2B3855FF0055C0EC /* SelectableItemViewModel.swift */; };
+		115562E22B389D700055C0EC /* LanguageType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562E12B389D700055C0EC /* LanguageType.swift */; };
+		115562E42B389D7D0055C0EC /* LanguageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562E32B389D7D0055C0EC /* LanguageModel.swift */; };
+		115562E62B389D890055C0EC /* SettingsEventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562E52B389D890055C0EC /* SettingsEventBus.swift */; };
+		115562E82B389DDE0055C0EC /* SelectLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562E72B389DDE0055C0EC /* SelectLanguageView.swift */; };
+		115562EB2B389F1C0055C0EC /* LanguageCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562EA2B389F1C0055C0EC /* LanguageCellView.swift */; };
+		115562ED2B389F6A0055C0EC /* SettingFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562EC2B389F6A0055C0EC /* SettingFlow.swift */; };
+		115562EF2B389F7C0055C0EC /* SettingsItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562EE2B389F7C0055C0EC /* SettingsItemType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -171,6 +180,15 @@
 		115562D22B3854260055C0EC /* MainSettingsNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSettingsNavigationView.swift; sourceTree = "<group>"; };
 		115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorViewModel.swift; sourceTree = "<group>"; };
 		115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinatorView.swift; sourceTree = "<group>"; };
+		115562DD2B3855B70055C0EC /* SelectLanguageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageViewModel.swift; sourceTree = "<group>"; };
+		115562DF2B3855FF0055C0EC /* SelectableItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableItemViewModel.swift; sourceTree = "<group>"; };
+		115562E12B389D700055C0EC /* LanguageType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageType.swift; sourceTree = "<group>"; };
+		115562E32B389D7D0055C0EC /* LanguageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageModel.swift; sourceTree = "<group>"; };
+		115562E52B389D890055C0EC /* SettingsEventBus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsEventBus.swift; sourceTree = "<group>"; };
+		115562E72B389DDE0055C0EC /* SelectLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLanguageView.swift; sourceTree = "<group>"; };
+		115562EA2B389F1C0055C0EC /* LanguageCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageCellView.swift; sourceTree = "<group>"; };
+		115562EC2B389F6A0055C0EC /* SettingFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingFlow.swift; sourceTree = "<group>"; };
+		115562EE2B389F7C0055C0EC /* SettingsItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsItemType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,6 +291,7 @@
 		1111641C2B3051D700F01C5E /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				115562D82B3855310055C0EC /* SelectLanguage */,
 				115562AE2B379BAC0055C0EC /* Models */,
 				111164242B30520400F01C5E /* ViewModels */,
 				111164232B30520100F01C5E /* Views */,
@@ -319,7 +338,6 @@
 				1111642E2B30523D00F01C5E /* CreateView.swift */,
 				111164562B31AE4900F01C5E /* CreateCoordinatorView.swift */,
 				115562822B35C18D0055C0EC /* MainCreateNavigationView.swift */,
-				115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,7 +347,6 @@
 			children = (
 				111164312B30524900F01C5E /* CreateViewModel.swift */,
 				111164542B31AE3800F01C5E /* CreateCoordinatorViewModel.swift */,
-				115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -337,6 +354,7 @@
 		111164232B30520100F01C5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				115562D62B38547F0055C0EC /* SettingsCoordinatorView.swift */,
 				115562C62B37A2630055C0EC /* Cells */,
 				111164332B30525000F01C5E /* SettingsView.swift */,
 				115562D22B3854260055C0EC /* MainSettingsNavigationView.swift */,
@@ -347,6 +365,7 @@
 		111164242B30520400F01C5E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				115562D42B3854370055C0EC /* SettingsCoordinatorViewModel.swift */,
 				111164352B30525800F01C5E /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
@@ -425,6 +444,7 @@
 				111164662B31C5E600F01C5E /* TextViewModel.swift */,
 				115562642B344E450055C0EC /* TitledContainerViewModel.swift */,
 				115562662B344E530055C0EC /* TitledCopyContainerViewModel.swift */,
+				115562DF2B3855FF0055C0EC /* SelectableItemViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -599,9 +619,13 @@
 		115562AE2B379BAC0055C0EC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				115562E32B389D7D0055C0EC /* LanguageModel.swift */,
+				115562E52B389D890055C0EC /* SettingsEventBus.swift */,
 				115562CF2B3853FF0055C0EC /* SettingsEventFlow.swift */,
 				115562D12B3854020055C0EC /* CellModels */,
 				115562B52B379BD70055C0EC /* Protocols */,
+				115562EC2B389F6A0055C0EC /* SettingFlow.swift */,
+				115562EE2B389F7C0055C0EC /* SettingsItemType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -640,6 +664,49 @@
 				115562C42B379C360055C0EC /* SettingsItemProtocolEraser.swift */,
 			);
 			path = CellModels;
+			sourceTree = "<group>";
+		};
+		115562D82B3855310055C0EC /* SelectLanguage */ = {
+			isa = PBXGroup;
+			children = (
+				115562DB2B38554B0055C0EC /* ViewModels */,
+				115562DA2B3855430055C0EC /* Models */,
+				115562D92B38553F0055C0EC /* Views */,
+			);
+			path = SelectLanguage;
+			sourceTree = "<group>";
+		};
+		115562D92B38553F0055C0EC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				115562E92B389F160055C0EC /* Cells */,
+				115562E72B389DDE0055C0EC /* SelectLanguageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		115562DA2B3855430055C0EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				115562E12B389D700055C0EC /* LanguageType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		115562DB2B38554B0055C0EC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				115562DD2B3855B70055C0EC /* SelectLanguageViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		115562E92B389F160055C0EC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				115562EA2B389F1C0055C0EC /* LanguageCellView.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -726,9 +793,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				1111640A2B30518200F01C5E /* ContentView.swift in Sources */,
+				115562E82B389DDE0055C0EC /* SelectLanguageView.swift in Sources */,
 				115562AA2B3755190055C0EC /* DetailedChangDesignSectionType.swift in Sources */,
 				115562672B344E530055C0EC /* TitledCopyContainerViewModel.swift in Sources */,
 				1155627F2B35BBF70055C0EC /* ResultEventFlow.swift in Sources */,
+				115562E42B389D7D0055C0EC /* LanguageModel.swift in Sources */,
 				1111645F2B31B2C800F01C5E /* CreateContentLinkQRCodeView.swift in Sources */,
 				111164622B31B3C800F01C5E /* TitledTextField.swift in Sources */,
 				111164432B305D3900F01C5E /* CreateQRCodeSectionModel.swift in Sources */,
@@ -738,11 +807,13 @@
 				1111642F2B30523D00F01C5E /* CreateView.swift in Sources */,
 				111164872B31DC4300F01C5E /* CreateResultQRCodeViewModel.swift in Sources */,
 				115562A22B35FC920055C0EC /* ChangeDesignSectionModel.swift in Sources */,
+				115562E22B389D700055C0EC /* LanguageType.swift in Sources */,
 				115562D02B3853FF0055C0EC /* SettingsEventFlow.swift in Sources */,
 				115562A02B35FC7C0055C0EC /* ChangeDesignViewModel.swift in Sources */,
 				111164672B31C5E600F01C5E /* TextViewModel.swift in Sources */,
 				115562B72B379BDD0055C0EC /* SettingsItemSubtitleProtocol.swift in Sources */,
 				115562BD2B379C0A0055C0EC /* SettingsItemModel.swift in Sources */,
+				115562E02B3855FF0055C0EC /* SelectableItemViewModel.swift in Sources */,
 				1111646A2B31C60400F01C5E /* CreateContentLinkViewModel.swift in Sources */,
 				111164592B31B1F800F01C5E /* CreateFlow.swift in Sources */,
 				111164852B31DBAA00F01C5E /* QRCode.Design+designs.swift in Sources */,
@@ -755,6 +826,8 @@
 				115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */,
 				115562AC2B3755300055C0EC /* DesignElements.swift in Sources */,
 				115562B92B379BED0055C0EC /* SettingsItemValueProtocol.swift in Sources */,
+				115562EB2B389F1C0055C0EC /* LanguageCellView.swift in Sources */,
+				115562EF2B389F7C0055C0EC /* SettingsItemType.swift in Sources */,
 				111164512B30760800F01C5E /* SocialCell.swift in Sources */,
 				115562B42B379BCC0055C0EC /* SettingsItemProtocol.swift in Sources */,
 				115562CE2B384E690055C0EC /* SettingsCellView.swift in Sources */,
@@ -793,12 +866,15 @@
 				115562702B3491050055C0EC /* String+regex.swift in Sources */,
 				115562882B35C2FB0055C0EC /* ResultEventBus.swift in Sources */,
 				115562782B35BBB00055C0EC /* PathState.swift in Sources */,
+				115562DE2B3855B70055C0EC /* SelectLanguageViewModel.swift in Sources */,
 				115562962B35F5A70055C0EC /* QRCodeDesignModel.swift in Sources */,
 				115562992B35F6720055C0EC /* DesignCellView.swift in Sources */,
 				1111644F2B3074B200F01C5E /* CreateQRSectionType.swift in Sources */,
 				1111642D2B30523500F01C5E /* HistoryViewModel.swift in Sources */,
 				1155627A2B35BBCF0055C0EC /* CreateResultQRCodeCoordinatorViewModel.swift in Sources */,
 				115562D72B38547F0055C0EC /* SettingsCoordinatorView.swift in Sources */,
+				115562ED2B389F6A0055C0EC /* SettingFlow.swift in Sources */,
+				115562E62B389D890055C0EC /* SettingsEventBus.swift in Sources */,
 				111164702B31D6C300F01C5E /* CreateResultQRCodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

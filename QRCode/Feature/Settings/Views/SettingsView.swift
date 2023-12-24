@@ -58,6 +58,9 @@ struct SettingsView: View {
             SettingsValueStringCellView(icon: settingsItemValueModel.icon,
                                         title: settingsItemValueModel.title,
                                         value: settingsItemValueModel.value)
+            .onTapGesture {
+                viewModel.languageDidTap()
+            }
             
         case let .aboutUs(settingsItemModel):
             SettingsCellView(model: settingsItemModel)

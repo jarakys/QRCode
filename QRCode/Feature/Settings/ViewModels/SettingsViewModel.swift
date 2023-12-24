@@ -8,20 +8,6 @@
 import Foundation
 import Combine
 
-enum SettingsItemType: Hashable {
-    case inApp(SettingsItemSubtitleModel)
-    case license(SettingsItemValueModel<String>)
-    case qrScans(SettingsItemValueModel<String>)
-    case qrCreation(SettingsItemValueModel<String>)
-    case vibrate(SettingsItemValueSubtitleModel<Bool>)
-    case beep(SettingsItemValueSubtitleModel<Bool>)
-    case language(SettingsItemValueModel<String>)
-    case aboutUs(SettingsItemModel)
-    case termsAndConditions(SettingsItemModel)
-    case privacyPolicy(SettingsItemModel)
-    
-}
-
 final class SettingsViewModel: ObservableObject {
     @Published public var sections: [SettingsSectionModel<SettingsItemProtocolEraser>]
     
@@ -61,7 +47,7 @@ final class SettingsViewModel: ObservableObject {
     }
     
     public func languageDidTap() {
-        
+        navigationSender.send(.language)
     }
     
     public func aboutUsDidTap() {

@@ -10,8 +10,13 @@ import Combine
 
 final class SettingsCoordinatorViewModel: ObservableObject {
     public let navigationSender = PassthroughSubject<SettingsEventFlow, Never>()
+    public let communicationBus = PassthroughSubject<SettingsEventBus, Never>()
     
     lazy var selectionViewModel: SettingsViewModel = { [unowned self] in
         SettingsViewModel(navigationSender: navigationSender)
     }()
+    
+    public func selectLanguageViewModel() -> SelectLanguageViewModel {
+        SelectLanguageViewModel(communicationBus: communicationBus)
+    }
 }

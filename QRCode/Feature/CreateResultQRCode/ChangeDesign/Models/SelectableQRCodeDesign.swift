@@ -8,16 +8,6 @@
 import Foundation
 import Combine
 
-class SelectableItemViewModel<T>: ObservableObject {
-    @Published public var isSelected: Bool
-    public var item: T
-    
-    init(isSelected: Bool, item: T) {
-        self.isSelected = isSelected
-        self.item = item
-    }
-}
-
 class SelectableQRCodeDesign: SelectableItemViewModel<QRCodeDesign> {
 }
 
