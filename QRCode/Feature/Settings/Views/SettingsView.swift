@@ -23,6 +23,12 @@ struct SettingsView: View {
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.automatic)
         .toolbarBackground(Color.primaryApp, for: .navigationBar)
+        .onReceive(viewModel.eventSender, perform: { event in
+            guard event == .languageDidTap else { return }
+            guard let settingsURL = URL(string: "App-Prefs:root=com.applage.ios.qrcode.QRCode") else { return }
+            guard UIApplication.shared.canOpenURL(settingsURL) else { return }
+            UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+        })
     }
     
     @ViewBuilder
@@ -76,5 +82,5 @@ struct SettingsView: View {
 }
 
 #Preview {
-    SettingsView(viewModel: SettingsViewModel(navigationSender: PassthroughSubject<SettingsEventFlow, Never>()))
+    SettingsView(viewModel: SettingsViewModel(navigationSender: PassthroughSubject<SettingsEventFlow, Never>(), communicationBus: PassthroughSubject<SettingsEventBus, Never>()))
 }

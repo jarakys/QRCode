@@ -112,6 +112,21 @@
                   endingLineNumber = "26"
                   offsetFromSymbolStart = "72">
                </Location>
+               <Location
+                  uuid = "20C5F93C-8D62-4C3B-8A6E-850C5A6B28AF - d69b700fdbaa77e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 (QRCodeApp.SelectableQRCodeDesign) -&gt; () in QRCodeApp.ChangeDesignView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ChangeDesign/Views/ChangeDesignView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "123"
+                  endingLineNumber = "123"
+                  offsetFromSymbolStart = "72">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -159,6 +174,21 @@
                   startingLineNumber = "81"
                   endingLineNumber = "81"
                   offsetFromSymbolStart = "828">
+               </Location>
+               <Location
+                  uuid = "DD17271D-8957-4D20-A30F-F694FAFA7B36 - 5d9e2208be521589"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "776">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -208,6 +238,21 @@
                   endingLineNumber = "80"
                   offsetFromSymbolStart = "768">
                </Location>
+               <Location
+                  uuid = "446A2D8D-3E16-43D3-82E4-A0E03D9FA192 - 5d9e2208be5215d6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "80"
+                  endingLineNumber = "80"
+                  offsetFromSymbolStart = "716">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -225,6 +270,38 @@
             endingLineNumber = "79"
             landmarkName = "bind()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2AA5A9E9-D694-4E47-A124-9C81BCD4E38A - 5d9e2208be5215f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "696">
+               </Location>
+               <Location
+                  uuid = "2AA5A9E9-D694-4E47-A124-9C81BCD4E38A - 5d9e2208be5215f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "648">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -273,6 +350,38 @@
             endingLineNumber = "39"
             landmarkName = "qrCodeDesign"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "9BE2A26B-CD03-4B33-A202-568E1B1655AF - fd1f5f765022311c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.QRCodeDesign.qrCodeDesign.getter : QRCode.QRCode.Design"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ChangeDesign/Extensions/QRCodeDesign.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "9BE2A26B-CD03-4B33-A202-568E1B1655AF - fd1f5f7650223090"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.QRCodeDesign.qrCodeDesign.getter : QRCode.QRCode.Design"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/ChangeDesign/Extensions/QRCodeDesign.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

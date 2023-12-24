@@ -10,7 +10,7 @@ import Foundation
 class SettingsItemValueModel<T: Hashable>: SettingsItemValueProtocol, ObservableObject {
     let title: String
     let icon: String
-    var value: T
+    @Published var value: T
     
     init(title: String, icon: String, value: T) {
         self.title = title
