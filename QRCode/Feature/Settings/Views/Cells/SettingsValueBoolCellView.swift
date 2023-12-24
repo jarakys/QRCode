@@ -27,5 +27,7 @@ struct SettingsValueBoolCellView: View {
                 .tint(.primaryApp)
                 .frame(width: 48)
         }
+        .padding(.horizontal, 16)
+        .background(.white)
     }
 }

@@ -102,6 +102,7 @@
 		115562F12B38A3550055C0EC /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562F02B38A3550055C0EC /* UserDefaultsService.swift */; };
 		115562F32B38AA850055C0EC /* String+localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562F22B38AA850055C0EC /* String+localized.swift */; };
 		115562F52B38AB6F0055C0EC /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 115562F42B38AB6F0055C0EC /* Localizable.xcstrings */; };
+		115562F72B38B6EB0055C0EC /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115562F62B38B6EB0055C0EC /* NavigationBarModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -195,6 +196,7 @@
 		115562F02B38A3550055C0EC /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		115562F22B38AA850055C0EC /* String+localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+localized.swift"; sourceTree = "<group>"; };
 		115562F42B38AB6F0055C0EC /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		115562F62B38B6EB0055C0EC /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +474,7 @@
 				111164612B31B3C800F01C5E /* TitledTextField.swift */,
 				115562722B35AC530055C0EC /* TitledContainerView.swift */,
 				115562892B35C3EC0055C0EC /* TextFieldForm.swift */,
+				115562F62B38B6EB0055C0EC /* NavigationBarModifier.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -837,6 +840,7 @@
 				115562A42B36092A0055C0EC /* SelectableQRCodeDesign.swift in Sources */,
 				115562AC2B3755300055C0EC /* DesignElements.swift in Sources */,
 				115562B92B379BED0055C0EC /* SettingsItemValueProtocol.swift in Sources */,
+				115562F72B38B6EB0055C0EC /* NavigationBarModifier.swift in Sources */,
 				115562EB2B389F1C0055C0EC /* LanguageCellView.swift in Sources */,
 				115562EF2B389F7C0055C0EC /* SettingsItemType.swift in Sources */,
 				111164512B30760800F01C5E /* SocialCell.swift in Sources */,

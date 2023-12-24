@@ -34,6 +34,13 @@ final class SettingsViewModel: BaseViewModel {
         return SettingsItemValueModel(title: String(localized: "Products scans remaining"), icon: "remainIcon", value: "3 of 5")
     }()
     
+    private var currentLanguage: String {
+        guard let preferredLanguage = Locale.preferredLanguages.first else { return "EnglishMock" }
+        let language = Locale(identifier: preferredLanguage)
+        guard let languageName = Locale.current.localizedString(forLanguageCode: language.language.languageCode?.identifier ?? "en") else { return "EnglishMock" }
+        return languageName
+    }
+    
     init(navigationSender: PassthroughSubject<SettingsEventFlow, Never>,
          communicationBus: PassthroughSubject<SettingsEventBus, Never>) {
         self.navigationSender = navigationSender
@@ -51,7 +58,7 @@ final class SettingsViewModel: BaseViewModel {
             SettingsSectionModel(type: .settings, items: [
                 .vibrate(vibrationItem),
                 .beep(beepItem),
-                .language(SettingsItemValueModel(title: String(localized: "Language"), icon: "languageIcon", value: "English"))
+                .language(SettingsItemValueModel(title: String(localized: "Language"), icon: "languageIcon", value: currentLanguage))
             ]),
             SettingsSectionModel(type: .contact, items: [
                 .aboutUs(SettingsItemModel(title: String(localized: "About us"), icon: "aboutIcon")),
@@ -76,6 +83,10 @@ final class SettingsViewModel: BaseViewModel {
     
     public func languageDidTap() {
         eventSender.send(.languageDidTap)
+    }
+    
+    public func premiumDidTap() {
+        
     }
     
     public func aboutUsDidTap() {

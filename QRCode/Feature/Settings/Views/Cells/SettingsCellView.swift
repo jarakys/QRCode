@@ -18,5 +18,6 @@ struct SettingsCellView: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
             Image(ImageResource.rightArrowIcon)
         }
+        .padding(.horizontal, 16)
     }
 }

@@ -22,6 +22,7 @@ struct SettingsValueStringCellView: View {
                 .font(.system(size: 17))
                 .foregroundStyle(.secondaryTitle)
         }
+        .padding(.horizontal, 16)
         .background(.white)
     }
 }

@@ -18,17 +18,18 @@ struct SettingsView: View {
                     cellFabic(item: item)
                 }
             })
+            .listRowInsets(EdgeInsets())
         }
         .listStyle(.insetGrouped)
         .navigationTitle("Settings")
         .navigationBarTitleDisplayMode(.automatic)
-        .toolbarBackground(Color.primaryApp, for: .navigationBar)
         .onReceive(viewModel.eventSender, perform: { event in
             guard event == .languageDidTap else { return }
             guard let settingsURL = URL(string: "App-Prefs:root=com.applage.ios.qrcode.QRCode") else { return }
             guard UIApplication.shared.canOpenURL(settingsURL) else { return }
             UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
         })
+        .navigationBarColor(backgroundColor: .primaryApp, titleColor: .white)
     }
     
     @ViewBuilder
