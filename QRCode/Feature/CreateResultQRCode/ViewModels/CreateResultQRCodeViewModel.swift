@@ -91,23 +91,23 @@ final class CreateResultQRCodeViewModel: BaseViewModel {
         
         switch format {
         case .email:
-            items.append(TitledCopyContainerViewModel(title: "To", value: value[0]))
-            items.append(TitledCopyContainerViewModel(title: "CC", value: value[1]))
-            items.append(TitledCopyContainerViewModel(title: "Text", value: value[2]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "To"), value: value[0]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "CC"), value: value[1]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Text"), value: value[2]))
             
         case .sms:
-            items.append(TitledCopyContainerViewModel(title: "Phone", value: value[0]))
-            items.append(TitledCopyContainerViewModel(title: "Text", value: value[1]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Phone"), value: value[0]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Text"), value: value[1]))
             
         case .url:
-            items.append(TitledCopyContainerViewModel(title: "Link", value: value[0]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Link"), value: value[0]))
             
         case .wifi:
-            items.append(TitledCopyContainerViewModel(title: "Network name", value: value[0]))
-            items.append(TitledCopyContainerViewModel(title: "Password", value: value[1]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Network name"), value: value[0]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Password"), value: value[1]))
         
         case .phone:
-            items.append(TitledCopyContainerViewModel(title: "Phone", value: value[0]))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Phone"), value: value[0]))
             
         default: break
         }

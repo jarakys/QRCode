@@ -16,16 +16,16 @@ enum SettingsSectionType {
     var description: String {
         switch self {
         case .payment:
-            return "In App"
+            return String(localized: "In App")
             
         case .general:
-            return "General"
+            return String(localized: "General")
             
         case .settings:
-            return "Settings"
+            return String(localized: "Settings")
             
         case .contact:
-            return "Contact"
+            return String(localized: "Contact")
         }
     }
 }

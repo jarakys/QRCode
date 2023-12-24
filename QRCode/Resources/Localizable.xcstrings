@@ -13,6 +13,9 @@
     "Beep" : {
 
     },
+    "Body" : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "en" : {
@@ -23,6 +26,9 @@
         }
       }
     },
+    "CC" : {
+
+    },
     "Change Design" : {
       "localizations" : {
         "en" : {
@@ -32,6 +38,12 @@
           }
         }
       }
+    },
+    "Color" : {
+
+    },
+    "Contact" : {
+
     },
     "Copied" : {
       "localizations" : {
@@ -73,7 +85,19 @@
         }
       }
     },
+    "Email" : {
+
+    },
+    "Example:https:qrcode" : {
+
+    },
+    "Facebook" : {
+
+    },
     "Free" : {
+
+    },
+    "General" : {
 
     },
     "Get unlimited access to all functions of the app" : {
@@ -92,6 +116,12 @@
         }
       }
     },
+    "In App" : {
+
+    },
+    "Instagram" : {
+
+    },
     "Language" : {
       "localizations" : {
         "en" : {
@@ -103,6 +133,36 @@
       }
     },
     "License" : {
+
+    },
+    "Link" : {
+
+    },
+    "Location" : {
+
+    },
+    "Logo" : {
+
+    },
+    "Marker" : {
+
+    },
+    "Network" : {
+
+    },
+    "Network name" : {
+
+    },
+    "Password" : {
+
+    },
+    "Personal" : {
+
+    },
+    "Phone" : {
+
+    },
+    "Phone number" : {
 
     },
     "Premium" : {
@@ -164,6 +224,24 @@
         }
       }
     },
+    "SMS" : {
+
+    },
+    "Snapchat" : {
+
+    },
+    "Social" : {
+
+    },
+    "Spotify" : {
+
+    },
+    "Telegram" : {
+
+    },
+    "tell us more details..." : {
+
+    },
     "Templates" : {
       "localizations" : {
         "en" : {
@@ -177,13 +255,37 @@
     "Terms and conditions" : {
 
     },
+    "Text" : {
+
+    },
+    "Tik Tok" : {
+
+    },
+    "To" : {
+
+    },
     "Try for free" : {
+
+    },
+    "Twitter" : {
+
+    },
+    "URL" : {
+
+    },
+    "Utilities" : {
 
     },
     "Vibrate" : {
 
     },
     "Vibrate when QR is found" : {
+
+    },
+    "WhatsApp" : {
+
+    },
+    "WIFI" : {
 
     }
   },

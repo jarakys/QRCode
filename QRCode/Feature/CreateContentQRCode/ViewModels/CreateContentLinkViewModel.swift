@@ -30,26 +30,26 @@ final class CreateContentLinkViewModel: BaseViewModel {
     private func createFormat() {
         switch format {
         case .phone:
-            items.append(TextViewModel(title: "Phone number", placeholder: "Phone", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Phone number"), placeholder: String(localized: "Phone"), example: nil, text: ""))
             
         case .email:
-            items.append(TextViewModel(title: "To", placeholder: "user@gmail.com", example: nil, text: ""))
-            items.append(TextViewModel(title: "CC", placeholder: "user@gmail.com", example: nil, text: ""))
-            items.append(TextViewModel(title: "Text", placeholder: "tell us more details...", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "To"), placeholder: "user@gmail.com", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "CC"), placeholder: "user@gmail.com", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Text"), placeholder: String(localized: "tell us more details..."), example: nil, text: ""))
             
         case .sms:
-            items.append(TextViewModel(title: "Phone", placeholder: "Phone", example: nil, text: ""))
-            items.append(TextViewModel(title: "Text", placeholder: "tell us more details...", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Phone"), placeholder: String(localized: "Phone"), example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Text"), placeholder: String(localized: "tell us more details..."), example: nil, text: ""))
             
         case .url:
-            items.append(TextViewModel(title: "Link", placeholder: "https:", example: "Example:https:qrcode", text: ""))
+            items.append(TextViewModel(title: String(localized: "Link"), placeholder: "https:", example: String(localized: "Example:https:qrcode"), text: ""))
             
         case .text:
-            items.append(TextViewModel(title: "Text", placeholder: "tell us more details...", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Text"), placeholder: String(localized: "tell us more details..."), example: nil, text: ""))
             
         case .wifi:
-            items.append(TextViewModel(title: "Network name", placeholder: "Network", example: nil, text: ""))
-            items.append(TextViewModel(title: "Password", placeholder: "Password", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Network name"), placeholder: String(localized: "Network"), example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Password"), placeholder: String(localized: "Password"), example: nil, text: ""))
             
         case .location:
             break

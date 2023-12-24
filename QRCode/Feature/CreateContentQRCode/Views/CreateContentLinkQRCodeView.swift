@@ -14,7 +14,7 @@ struct CreateContentLinkQRCodeView: View {
         VStack {
             TextFieldForm(items: viewModel.items)
             .scrollDismissesKeyboard(.interactively)
-            .contentMargins(.top, 32, for: .scrollContent)
+//            .contentMargins(.top, 32, for: .scrollContent)
             .padding(.top, 1)
             Button(action: {
                 viewModel.createDidTap()

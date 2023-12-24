@@ -16,16 +16,16 @@ enum DetailedChangDesignSectionType: Hashable {
     var description: String {
         switch self {
         case .body:
-            return "Body"
+            return String(localized: "Body")
             
         case .marker:
-            return "Marker"
+            return String(localized: "Marker")
             
         case .logoMask:
-            return "Logo"
+            return String(localized: "Logo")
             
         case .color:
-            return "Color"
+            return String(localized: "Color")
         }
     }
 }

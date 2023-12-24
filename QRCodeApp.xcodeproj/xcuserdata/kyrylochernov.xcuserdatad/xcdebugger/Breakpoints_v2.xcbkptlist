@@ -318,6 +318,38 @@
             endingLineNumber = "90"
             landmarkName = "facebook()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "18FD2723-8D13-4D9E-8B95-0C5A0DE5D52A - 3225f0ba2d0b6345"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static QRCode.QRCode.Design.facebook() -&gt; QRCode.QRCode.Design"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/Extensions/QRCode.Design+designs.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "18FD2723-8D13-4D9E-8B95-0C5A0DE5D52A - 3225f0ba2d0b6345"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static QRCode.QRCode.Design.facebook() -&gt; QRCode.QRCode.Design"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/Extensions/QRCode.Design+designs.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "90"
+                  endingLineNumber = "90"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -334,6 +366,38 @@
             endingLineNumber = "91"
             landmarkName = "facebook()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "2885AFD3-64E9-4E84-B4DE-14304CBD24E0 - 3225f0ba2d0b6322"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static QRCode.QRCode.Design.facebook() -&gt; QRCode.QRCode.Design"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/Extensions/QRCode.Design+designs.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "2885AFD3-64E9-4E84-B4DE-14304CBD24E0 - 3225f0ba2d0b6322"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static QRCode.QRCode.Design.facebook() -&gt; QRCode.QRCode.Design"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCode/Feature/CreateResultQRCode/Extensions/QRCode.Design+designs.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "91"
+                  endingLineNumber = "91"
+                  offsetFromSymbolStart = "272">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy

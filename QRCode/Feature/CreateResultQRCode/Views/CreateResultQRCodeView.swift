@@ -77,7 +77,7 @@ struct CreateResultQRCodeView: View {
                 .padding(.horizontal, 16)
             }
         }
-        .contentMargins(.top, 16)
+//        .contentMargins(.top, 16)
         .frame(maxWidth: .infinity)
         .background(.secondaryBackground)
         .navigationTitle("Creation Result")

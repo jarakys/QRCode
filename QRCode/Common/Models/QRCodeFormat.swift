@@ -27,50 +27,49 @@ public enum QRCodeFormat: CaseIterable {
     public var description: String {
         switch self {
         case .phone:
-            return "Phone"
+            return String(localized: "Phone")
             
         case .email:
-            return "Email"
+            return String(localized: "Email")
             
         case .sms:
-            return "SMS"
+            return String(localized: "SMS")
             
         case .url:
-            return "URL"
+            return String(localized: "URL")
             
         case .text:
-            return "Text"
+            return String(localized: "Text")
             
         case .wifi:
-            return "WIFI"
+            return String(localized: "WIFI")
             
         case .location:
-            return "Location"
+            return String(localized: "Location")
             
         case .telegram:
-            return "Telegram"
+            return String(localized: "Telegram")
             
         case .facebook:
-            return "Facebook"
+            return String(localized: "Facebook")
             
         case .instagram:
-            return "Instagram"
+            return String(localized: "Instagram")
             
         case .twitter:
-            return "Twitter"
+            return String(localized: "Twitter")
             
         case .whatsApp:
-            return "WhatsApp"
+            return String(localized: "WhatsApp")
             
         case .tikTok:
-            
-            return "Tik Tok"
+            return String(localized: "Tik Tok")
             
         case .spotify:
-            return "Spotify"
+            return String(localized: "Spotify")
             
         case .snapchat:
-            return "Snapchat"
+            return String(localized: "Snapchat")
         }
     }
     

@@ -15,13 +15,13 @@ public enum CreateQRSectionType {
     var description: String {
         switch self {
         case .personal:
-            return "Personal"
+            return String(localized: "Personal")
             
         case .utilities:
-            return "Utilities"
+            return String(localized: "Utilities")
             
         case .social:
-            return "Social"
+            return String(localized: "Social")
         }
     }
 }
