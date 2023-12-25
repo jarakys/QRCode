@@ -21,7 +21,7 @@
     {
       "identity" : "qrcode",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/dagronf/QRCode.git",
+      "location" : "https://github.com/dagronf/QRCode",
       "state" : {
         "revision" : "13c605cfa866e257ac9d4ac8a47320a0e11fb6e0",
         "version" : "17.0.0"
