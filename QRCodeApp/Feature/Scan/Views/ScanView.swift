@@ -22,7 +22,6 @@ struct ScanView: View {
                 QRCodeScanner(callback: { string in
                     viewModel.setRecognized(string: string)
                 })
-                //                GeometryReader { geometry in
                 VStack {
                     Text("Place QR code or Barcode in frame")
                         .font(.system(size: 15, weight: .semibold))
@@ -40,8 +39,13 @@ struct ScanView: View {
                         }, label: {
                             Image(!viewModel.isFlashOn ? .splashIcon : .splashOffIcon)
                         })
-                        PhotosPicker(selection: $selectedItem, label: {
+                        
+                        PhotosPicker(selection: $selectedItem,
+                                     matching: .images,
+                                     label: {
+                            
                             Image(.galleryIcon)
+                            
                         })
                     }
                     .padding(.all, 8)
@@ -52,8 +56,8 @@ struct ScanView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        //        }
         .toolbarBackground(.white, for: .navigationBar)
+        .toolbarBackground(.white, for: .tabBar)
         .onReceive(viewModel.$isFlashOn, perform: { value in
             try? device?.lockForConfiguration()
             device?.torchMode = value ? AVCaptureDevice.TorchMode.on : AVCaptureDevice.TorchMode.off
@@ -71,6 +75,7 @@ struct ScanView: View {
                 case .success(let success):
                     guard let success else { return }
                     viewModel.detect(on: success)
+                    selectedItem = nil
                     
                 case .failure(let failure):
                     print("error \(failure)")
