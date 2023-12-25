@@ -74,8 +74,10 @@ struct ScanView: View {
                 switch item {
                 case .success(let success):
                     guard let success else { return }
-                    viewModel.detect(on: success)
-                    selectedItem = nil
+                    DispatchQueue.main.async {
+                        viewModel.detect(on: success)
+                        selectedItem = nil
+                    }
                     
                 case .failure(let failure):
                     print("error \(failure)")
