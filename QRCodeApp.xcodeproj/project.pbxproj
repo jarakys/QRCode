@@ -112,6 +112,14 @@
 		114085A72B39BEAB00487E09 /* MainScanNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085A62B39BEAB00487E09 /* MainScanNavigationView.swift */; };
 		114085AA2B39BF7500487E09 /* ScanResultQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085A92B39BF7500487E09 /* ScanResultQRCodeView.swift */; };
 		114085AC2B3A0FB900487E09 /* ShareQRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085AB2B3A0FB900487E09 /* ShareQRImage.swift */; };
+		114085AE2B3AF4FB00487E09 /* MainHistoryNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085AD2B3AF4FB00487E09 /* MainHistoryNavigationView.swift */; };
+		114085B02B3AF71E00487E09 /* HistoryCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085AF2B3AF71E00487E09 /* HistoryCoordinatorView.swift */; };
+		114085B22B3AF73200487E09 /* HistoryCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085B12B3AF73200487E09 /* HistoryCoordinatorViewModel.swift */; };
+		114085B52B3AF76600487E09 /* HistoryFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085B42B3AF76600487E09 /* HistoryFlow.swift */; };
+		114085B72B3AF77200487E09 /* HistoryEventFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085B62B3AF77200487E09 /* HistoryEventFlow.swift */; };
+		114085B92B3AFB7A00487E09 /* HistorySegmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */; };
+		114085BC2B3AFD4800487E09 /* Db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114085BA2B3AFD4800487E09 /* Db.xcdatamodeld */; };
+		114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 /* End PBXBuildFile section */
@@ -233,6 +241,14 @@
 		114085A62B39BEAB00487E09 /* MainScanNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScanNavigationView.swift; sourceTree = "<group>"; };
 		114085A92B39BF7500487E09 /* ScanResultQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultQRCodeView.swift; sourceTree = "<group>"; };
 		114085AB2B3A0FB900487E09 /* ShareQRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareQRImage.swift; sourceTree = "<group>"; };
+		114085AD2B3AF4FB00487E09 /* MainHistoryNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHistoryNavigationView.swift; sourceTree = "<group>"; };
+		114085AF2B3AF71E00487E09 /* HistoryCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinatorView.swift; sourceTree = "<group>"; };
+		114085B12B3AF73200487E09 /* HistoryCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		114085B42B3AF76600487E09 /* HistoryFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryFlow.swift; sourceTree = "<group>"; };
+		114085B62B3AF77200487E09 /* HistoryEventFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEventFlow.swift; sourceTree = "<group>"; };
+		114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySegmentType.swift; sourceTree = "<group>"; };
+		114085BB2B3AFD4800487E09 /* Db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Db.xcdatamodel; sourceTree = "<group>"; };
+		114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +302,7 @@
 			children = (
 				112F35AE2B38D75000016890 /* Localizable.xcstrings */,
 				112F35AF2B38D75000016890 /* Assets.xcassets */,
+				114085BA2B3AFD4800487E09 /* Db.xcdatamodeld */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -301,6 +318,7 @@
 		112F35B22B38D75000016890 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				114085BD2B3AFDC200487E09 /* Managers */,
 				112F35B32B38D75000016890 /* UI */,
 				112F35B82B38D75000016890 /* ViewModels */,
 				112F35BE2B38D75000016890 /* PathState.swift */,
@@ -560,6 +578,7 @@
 		112F35FD2B38D75000016890 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				114085B32B3AF76200487E09 /* Models */,
 				112F35FE2B38D75000016890 /* ViewModels */,
 				112F36002B38D75000016890 /* Views */,
 			);
@@ -570,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				112F35FF2B38D75000016890 /* HistoryViewModel.swift */,
+				114085B12B3AF73200487E09 /* HistoryCoordinatorViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -578,6 +598,8 @@
 			isa = PBXGroup;
 			children = (
 				112F36012B38D75000016890 /* HistoryView.swift */,
+				114085AD2B3AF4FB00487E09 /* MainHistoryNavigationView.swift */,
+				114085AF2B3AF71E00487E09 /* HistoryCoordinatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -815,6 +837,24 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		114085B32B3AF76200487E09 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				114085B42B3AF76600487E09 /* HistoryFlow.swift */,
+				114085B62B3AF77200487E09 /* HistoryEventFlow.swift */,
+				114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		114085BD2B3AFDC200487E09 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -902,16 +942,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */,
 				114085A52B39BE1600487E09 /* ScanCoordinatorViewModel.swift in Sources */,
 				112F36532B38D75000016890 /* SettingsSectionType.swift in Sources */,
 				112F363D2B38D75000016890 /* TitledContainerView.swift in Sources */,
 				112F36752B38D75000016890 /* ChangeDesignViewModel.swift in Sources */,
+				114085B72B3AF77200487E09 /* HistoryEventFlow.swift in Sources */,
 				112F36802B38D75000016890 /* CreateResultQRCodeCoordinatorView.swift in Sources */,
 				112F367D2B38D75000016890 /* DetailedChangeDesignSectionModel.swift in Sources */,
 				112F36712B38D75000016890 /* ResultFlow.swift in Sources */,
 				112F367B2B38D75000016890 /* DesignCellView.swift in Sources */,
 				112F36882B38D75000016890 /* CreateQRCodeTemplateModel.swift in Sources */,
 				112F364F2B38D75000016890 /* SettingsItemSubtitleModel.swift in Sources */,
+				114085BC2B3AFD4800487E09 /* Db.xcdatamodeld in Sources */,
+				114085B52B3AF76600487E09 /* HistoryFlow.swift in Sources */,
 				1140859A2B39BB0D00487E09 /* ScanEventFlow.swift in Sources */,
 				112F365E2B38D75000016890 /* LanguageCellView.swift in Sources */,
 				112F367F2B38D75000016890 /* DesignElements.swift in Sources */,
@@ -924,6 +968,7 @@
 				112F36422B38D75000016890 /* SelectableItemViewModel.swift in Sources */,
 				112F36472B38D75000016890 /* LanguageType.swift in Sources */,
 				112F363E2B38D75000016890 /* BaseViewModel.swift in Sources */,
+				114085AE2B3AF4FB00487E09 /* MainHistoryNavigationView.swift in Sources */,
 				112F36662B38D75000016890 /* MainSettingsNavigationView.swift in Sources */,
 				112F36732B38D75000016890 /* ResultEventBus.swift in Sources */,
 				112F36822B38D75000016890 /* CreateResultQRCodeView.swift in Sources */,
@@ -933,10 +978,12 @@
 				112F36902B38D75000016890 /* ContentView.swift in Sources */,
 				112F367E2B38D75000016890 /* DetailedChangDesignSectionType.swift in Sources */,
 				112F368A2B38D75000016890 /* CustomLayout.swift in Sources */,
+				114085B92B3AFB7A00487E09 /* HistorySegmentType.swift in Sources */,
 				112F363C2B38D75000016890 /* TextFieldForm.swift in Sources */,
 				112F36792B38D75000016890 /* ChangeDesignCustomLayout.swift in Sources */,
 				112F36642B38D75000016890 /* SettingsView.swift in Sources */,
 				112F36602B38D75000016890 /* InAppCellView.swift in Sources */,
+				114085B02B3AF71E00487E09 /* HistoryCoordinatorView.swift in Sources */,
 				112F36762B38D75000016890 /* ChangeDesignSectionModel.swift in Sources */,
 				112F36462B38D75000016890 /* QRCodeFormat.swift in Sources */,
 				112F36892B38D75000016890 /* CreateQRCodeSectionModel.swift in Sources */,
@@ -998,6 +1045,7 @@
 				112F364A2B38D75000016890 /* QRCodeApp.swift in Sources */,
 				1140859F2B39BB4100487E09 /* ScanResultQRCodeViewModel.swift in Sources */,
 				112F366B2B38D75000016890 /* ScanView.swift in Sources */,
+				114085B22B3AF73200487E09 /* HistoryCoordinatorViewModel.swift in Sources */,
 				112F364B2B38D75000016890 /* SettingsViewModel.swift in Sources */,
 				112F36562B38D75000016890 /* SettingsEventBus.swift in Sources */,
 			);
@@ -1272,6 +1320,19 @@
 			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		114085BA2B3AFD4800487E09 /* Db.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				114085BB2B3AFD4800487E09 /* Db.xcdatamodel */,
+			);
+			currentVersion = 114085BB2B3AFD4800487E09 /* Db.xcdatamodel */;
+			path = Db.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 111163FC2B30518200F01C5E /* Project object */;
 }

@@ -14,7 +14,7 @@ struct MainTapBar: View {
                 .tabItem {
                     Label("Scan", image: "scanIcon")
                 }
-            HistoryView()
+            MainHistoryNavigationView()
                 .tabItem {
                     Label("History", image: "historyIcon")
                 }

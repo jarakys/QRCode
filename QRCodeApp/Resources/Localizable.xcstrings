@@ -65,6 +65,9 @@
         }
       }
     },
+    "Created" : {
+
+    },
     "Creation Result" : {
       "localizations" : {
         "en" : {
@@ -75,6 +78,9 @@
         }
       }
     },
+    "Details" : {
+
+    },
     "Edit content" : {
       "localizations" : {
         "en" : {
@@ -84,6 +90,9 @@
           }
         }
       }
+    },
+    "Editable details" : {
+
     },
     "Email" : {
 
@@ -101,9 +110,6 @@
 
     },
     "Get unlimited access to all functions of the app" : {
-
-    },
-    "Hello, World!" : {
 
     },
     "History" : {
@@ -221,6 +227,9 @@
       }
     },
     "Scan Result" : {
+
+    },
+    "Scanned" : {
 
     },
     "Settings" : {

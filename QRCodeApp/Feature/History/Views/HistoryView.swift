@@ -6,13 +6,27 @@
 //
 
 import SwiftUI
+import Combine
 
 struct HistoryView: View {
+    @StateObject public var viewModel: HistoryViewModel
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Picker("", selection: $viewModel.selectedType) {
+                Text(HistorySegmentType.scanned.description)
+                    .tag(0)
+                Text(HistorySegmentType.created.description)
+                    .tag(1)
+            }
+            .pickerStyle(.segmented)
+        }
+        .padding(.horizontal, 16)
+        .padding(.top, 8)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.secondaryBackground)
     }
 }
 
 #Preview {
-    HistoryView()
+    HistoryView(viewModel: HistoryViewModel(navigationSender: PassthroughSubject<HistoryEventFlow, Never>()))
 }
