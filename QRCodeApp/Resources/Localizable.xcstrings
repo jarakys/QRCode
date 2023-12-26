@@ -153,6 +153,9 @@
     "Network name" : {
 
     },
+    "Open in Safari" : {
+
+    },
     "Password" : {
 
     },
@@ -229,6 +232,9 @@
           }
         }
       }
+    },
+    "Share" : {
+
     },
     "SMS" : {
 

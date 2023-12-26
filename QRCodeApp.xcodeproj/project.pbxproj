@@ -111,6 +111,7 @@
 		114085A52B39BE1600487E09 /* ScanCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085A42B39BE1600487E09 /* ScanCoordinatorViewModel.swift */; };
 		114085A72B39BEAB00487E09 /* MainScanNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085A62B39BEAB00487E09 /* MainScanNavigationView.swift */; };
 		114085AA2B39BF7500487E09 /* ScanResultQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085A92B39BF7500487E09 /* ScanResultQRCodeView.swift */; };
+		114085AC2B3A0FB900487E09 /* ShareQRImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085AB2B3A0FB900487E09 /* ShareQRImage.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 /* End PBXBuildFile section */
@@ -231,6 +232,7 @@
 		114085A42B39BE1600487E09 /* ScanCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanCoordinatorViewModel.swift; sourceTree = "<group>"; };
 		114085A62B39BEAB00487E09 /* MainScanNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScanNavigationView.swift; sourceTree = "<group>"; };
 		114085A92B39BF7500487E09 /* ScanResultQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultQRCodeView.swift; sourceTree = "<group>"; };
+		114085AB2B3A0FB900487E09 /* ShareQRImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareQRImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 				112F35B52B38D75000016890 /* TitledTextField.swift */,
 				112F35B62B38D75000016890 /* TextFieldForm.swift */,
 				112F35B72B38D75000016890 /* TitledContainerView.swift */,
+				114085AB2B3A0FB900487E09 /* ShareQRImage.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -951,6 +954,7 @@
 				112F366A2B38D75000016890 /* ScanViewModel.swift in Sources */,
 				112F36432B38D75000016890 /* PathState.swift in Sources */,
 				112F368D2B38D75000016890 /* CreateView.swift in Sources */,
+				114085AC2B3A0FB900487E09 /* ShareQRImage.swift in Sources */,
 				112F365B2B38D75000016890 /* SettingsItemValueSubtitleProtocol.swift in Sources */,
 				112F368B2B38D75000016890 /* PersonalCell.swift in Sources */,
 				112F36522B38D75000016890 /* SettingsItemProtocolEraser.swift in Sources */,
@@ -1138,7 +1142,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1169,7 +1173,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

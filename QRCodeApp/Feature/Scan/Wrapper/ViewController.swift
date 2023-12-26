@@ -59,7 +59,8 @@ class ViewController: UIViewController {
         catch {
             Swift.print("Could not start video capture (error: \(error))")
             Swift.print("Note that the simulator does not have a video capture device, so you need to run this on a 'real' device")
-            fatalError()
+//            fatalError()
+            return
         }
 
         let pl = try! self.detector.makePreviewLayer()
