@@ -907,6 +907,16 @@
 				Base,
 				ar,
 				nl,
+				fr,
+				ru,
+				uk,
+				es,
+				"pt-PT",
+				"zh-Hant",
+				vi,
+				ko,
+				ja,
+				id,
 			);
 			mainGroup = 111163FB2B30518200F01C5E;
 			packageReferences = (

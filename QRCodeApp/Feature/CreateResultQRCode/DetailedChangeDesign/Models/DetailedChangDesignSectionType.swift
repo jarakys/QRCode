@@ -25,7 +25,7 @@ enum DetailedChangDesignSectionType: Hashable {
             return String(localized: "Logo")
             
         case .color:
-            return String(localized: "Color")
+            return String(localized: "Colors")
         }
     }
 }
