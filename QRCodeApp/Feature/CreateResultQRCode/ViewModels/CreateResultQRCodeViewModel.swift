@@ -15,13 +15,13 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
          communicationBus: PassthroughSubject<ResultEventBus, Never>,
+         localStorage: LocalStore,
          qrCodeFormat: QRCodeFormat,
          qrCodeString: String) {
         self.navigationSender = navigationSender
         self.communicationBus = communicationBus
         
-        super.init(qrCodeString: qrCodeString, qrCodeFormat: qrCodeFormat)
-        createFormat()
+        super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
     }
     
     public func editContentDidTap() {

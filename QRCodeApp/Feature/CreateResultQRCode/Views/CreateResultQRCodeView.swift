@@ -97,5 +97,5 @@ struct CreateResultQRCodeView: View {
 }
 
 #Preview {
-    CreateResultQRCodeView(viewModel: CreateResultQRCodeViewModel(navigationSender: PassthroughSubject<ResultEventFlow, Never>(), communicationBus: PassthroughSubject<ResultEventBus, Never>(), qrCodeFormat: .telegram, qrCodeString: "tetet"))
+    CreateResultQRCodeView(viewModel: CreateResultQRCodeViewModel(navigationSender: PassthroughSubject<ResultEventFlow, Never>(), communicationBus: PassthroughSubject<ResultEventBus, Never>(), localStorage: CoreDataManager.shared, qrCodeFormat: .telegram, qrCodeString: "tetet"))
 }

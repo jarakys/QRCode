@@ -17,6 +17,8 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     
     public var eventSender = PassthroughSubject<CreateResultQRCodeViewModel.Event, Never>()
     
+    private let localStorage: LocalStore
+    
     public lazy var title: String = { [unowned self] in
         "QRCode · \(self.qrCodeFormat.description)"
     }()
@@ -25,11 +27,14 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         "15.08.2023"
     }()
     
-    init(qrCodeString: String, qrCodeFormat: QRCodeFormat?) {
+    init(qrCodeString: String,
+         localStorage: LocalStore,
+         qrCodeFormat: QRCodeFormat?) {
         let formatMatcher = FormatMatcher(patterns: QRCodeFormat.allCases.map({ $0.regexPattern }), items: QRCodeFormat.allCases)
         self.qrCodeFormat = qrCodeFormat ?? formatMatcher.matchFormat(inputString: qrCodeString) ?? .text
         self.qrCodeString = qrCodeString
         self.qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
+        self.localStorage = localStorage
         super.init()
         createFormat()
         qrCodeDocument.utf8String = self.qrCodeString
@@ -63,6 +68,20 @@ class BaseResultQRCodeViewModel: BaseViewModel {
             items.append(TitledCopyContainerViewModel(title: String(localized: "Text"), value: qrCodeString))
             
         default: break
+        }
+    }
+    
+    public func addQRCode(isCreated: Bool) {
+        guard let date = qrCodeDocument.pngData(dimension: 1) else { return }
+        do {
+            try localStorage.addQRCode(qrCodeString: qrCodeString,
+                                       type: qrCodeFormat.rawValue,
+                                       subtitle: "",
+                                       date: Date(),
+                                       image: date,
+                                       isCreated: isCreated)
+        } catch {
+            print("setRecognize error \(error)")
         }
     }
 }

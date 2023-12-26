@@ -18,7 +18,8 @@ final class CreateResultQRCodeCoordinatorViewModel: BaseViewModel {
     
     lazy var createResultQRCodeViewModel: CreateResultQRCodeViewModel = {
         CreateResultQRCodeViewModel(navigationSender: navigationSender,
-                                    communicationBus: communicationBus,
+                                    communicationBus: communicationBus, 
+                                    localStorage: CoreDataManager.shared,
                                     qrCodeFormat: qrCodeFormat,
                                     qrCodeString: qrCodeString)
     }()

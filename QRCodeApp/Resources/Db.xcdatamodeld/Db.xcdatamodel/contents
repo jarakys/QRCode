@@ -3,7 +3,9 @@
     <entity name="QRCodeEntity" representedClassName="QRCodeEntity" syncable="YES" codeGenerationType="class">
         <attribute name="date" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="image" attributeType="Binary"/>
+        <attribute name="isCreated" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="qrCodeString" attributeType="String"/>
         <attribute name="subtitle" optional="YES" attributeType="String"/>
-        <attribute name="title" attributeType="String"/>
+        <attribute name="type" attributeType="String"/>
     </entity>
 </model>

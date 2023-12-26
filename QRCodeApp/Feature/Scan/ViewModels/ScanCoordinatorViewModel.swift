@@ -16,6 +16,8 @@ final class ScanCoordinatorViewModel: BaseViewModel {
     }()
     
     public func scanResultQRCodeViewModel(qrCodeString: String) -> ScanResultQRCodeViewModel {
-        ScanResultQRCodeViewModel(qrCodeString: qrCodeString, navigationSender: navigationSender)
+        ScanResultQRCodeViewModel(qrCodeString: qrCodeString, 
+                                  localStorage: CoreDataManager.shared,
+                                  navigationSender: navigationSender)
     }
 }

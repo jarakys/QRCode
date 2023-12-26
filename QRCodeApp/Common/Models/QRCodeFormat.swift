@@ -7,7 +7,7 @@
 
 import Foundation
 
-public enum QRCodeFormat: CaseIterable {
+public enum QRCodeFormat: String, CaseIterable {
     case phone
     case email
     case sms
