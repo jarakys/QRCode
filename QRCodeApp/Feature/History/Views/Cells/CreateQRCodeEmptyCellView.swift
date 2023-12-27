@@ -17,6 +17,7 @@ struct CreateQRCodeEmptyCellView: View {
                 .font(.system(size: 28, weight: .bold))
                 .padding(.top, 22)
             Text("Let’s get started with your\nfirst QR creation:")
+                .multilineTextAlignment(.center)
                 .foregroundStyle(.subtitle)
                 .font(.system(size: 15, weight: .semibold))
                 .padding(.top, 4)

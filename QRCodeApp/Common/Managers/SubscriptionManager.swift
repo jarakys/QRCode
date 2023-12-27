@@ -9,6 +9,8 @@ import Foundation
 import Combine
 
 final class SubscriptionManager: ObservableObject {
+    static let shared = SubscriptionManager()
+    
     @Published public var isPremium: Bool
     
     init() {
