@@ -28,9 +28,6 @@ struct ScanView: View {
                         .foregroundStyle(.titleScan)
                         .frame(maxWidth: .infinity)
                     Spacer()
-                    
-                    Image(.scanFrameIcon)
-                        .frame(width: 166, height: 166)
                     Spacer()
                     HStack(spacing: 16) {
                         Button(action: {

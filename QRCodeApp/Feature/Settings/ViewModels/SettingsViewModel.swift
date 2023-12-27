@@ -40,13 +40,13 @@ final class SettingsViewModel: BaseViewModel {
     }
     
     public var countScans: Int {
-        var countScans = (try? keychainStorage.get(key: .countScans, defaultValue: 0) ) ?? 0
+        var countScans = keychainStorage.get(key: .countScans, defaultValue: 0)
         countScans = countScans > Config.maxScansCount ? Config.maxScansCount : countScans
         return countScans
     }
     
     public var countCreates: Int {
-        var countCreates = (try? keychainStorage.get(key: .countCreates, defaultValue: 0) ) ?? 0
+        var countCreates = keychainStorage.get(key: .countCreates, defaultValue: 0)
         countCreates = countCreates > Config.maxCreatesCount ? Config.maxCreatesCount : countCreates
         return countCreates
     }

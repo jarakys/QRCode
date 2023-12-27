@@ -136,6 +136,7 @@
 		114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
+		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -277,6 +278,7 @@
 		114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySegmentType.swift; sourceTree = "<group>"; };
 		114085BB2B3AFD4800487E09 /* Db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Db.xcdatamodel; sourceTree = "<group>"; };
 		114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -860,6 +862,7 @@
 			isa = PBXGroup;
 			children = (
 				112F36A12B39843400016890 /* ViewController.swift */,
+				11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -1017,6 +1020,7 @@
 				114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */,
 				110DC9E32B3B28930046CBCD /* HistoryQrCodeCellView.swift in Sources */,
 				114085A52B39BE1600487E09 /* ScanCoordinatorViewModel.swift in Sources */,
+				11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */,
 				112F36532B38D75000016890 /* SettingsSectionType.swift in Sources */,
 				112F363D2B38D75000016890 /* TitledContainerView.swift in Sources */,
 				112F36752B38D75000016890 /* ChangeDesignViewModel.swift in Sources */,
