@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */; };
+		110DC9D92B3B1D180046CBCD /* QRCodeEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */; };
+		110DC9DC2B3B1D2E0046CBCD /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */; };
+		110DC9DF2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9DE2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift */; };
+		110DC9E12B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E02B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift */; };
+		110DC9E32B3B28930046CBCD /* HistoryQrCodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E22B3B28930046CBCD /* HistoryQrCodeCellView.swift */; };
+		110DC9E62B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */; };
+		110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E72B3B345F0046CBCD /* SearchBarView.swift */; };
 		111164492B30678700F01C5E /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 111164482B30678700F01C5E /* CompositionalList */; };
 		112F36372B38D75000016890 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AE2B38D75000016890 /* Localizable.xcstrings */; };
 		112F36382B38D75000016890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AF2B38D75000016890 /* Assets.xcassets */; };
@@ -139,6 +147,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeEntitySection.swift; sourceTree = "<group>"; };
+		110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeEntityModel.swift; sourceTree = "<group>"; };
+		110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
+		110DC9DE2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeEmptyCellView.swift; sourceTree = "<group>"; };
+		110DC9E02B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQRCodeEmptyCellView.swift; sourceTree = "<group>"; };
+		110DC9E22B3B28930046CBCD /* HistoryQrCodeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryQrCodeCellView.swift; sourceTree = "<group>"; };
+		110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QRCodeEntity+formattedDate.swift"; sourceTree = "<group>"; };
+		110DC9E72B3B345F0046CBCD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		111164042B30518200F01C5E /* QRCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		112F35AE2B38D75000016890 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		112F35AF2B38D75000016890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -267,6 +283,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110DC9DA2B3B1D270046CBCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		110DC9DD2B3B20700046CBCD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9DE2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift */,
+				110DC9E02B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift */,
+				110DC9E22B3B28930046CBCD /* HistoryQrCodeCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		110DC9E42B3B2F620046CBCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		111163FB2B30518200F01C5E = {
 			isa = PBXGroup;
 			children = (
@@ -337,6 +379,7 @@
 				112F35B62B38D75000016890 /* TextFieldForm.swift */,
 				112F35B72B38D75000016890 /* TitledContainerView.swift */,
 				114085AB2B3A0FB900487E09 /* ShareQRImage.swift */,
+				110DC9E72B3B345F0046CBCD /* SearchBarView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -578,6 +621,8 @@
 		112F35FD2B38D75000016890 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				110DC9E42B3B2F620046CBCD /* Extensions */,
+				110DC9DA2B3B1D270046CBCD /* Services */,
 				114085B32B3AF76200487E09 /* Models */,
 				112F35FE2B38D75000016890 /* ViewModels */,
 				112F36002B38D75000016890 /* Views */,
@@ -597,6 +642,7 @@
 		112F36002B38D75000016890 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				110DC9DD2B3B20700046CBCD /* Cells */,
 				112F36012B38D75000016890 /* HistoryView.swift */,
 				114085AD2B3AF4FB00487E09 /* MainHistoryNavigationView.swift */,
 				114085AF2B3AF71E00487E09 /* HistoryCoordinatorView.swift */,
@@ -843,6 +889,8 @@
 				114085B42B3AF76600487E09 /* HistoryFlow.swift */,
 				114085B62B3AF77200487E09 /* HistoryEventFlow.swift */,
 				114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */,
+				110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */,
+				110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -905,8 +953,6 @@
 			knownRegions = (
 				en,
 				Base,
-				ar,
-				nl,
 			);
 			mainGroup = 111163FB2B30518200F01C5E;
 			packageReferences = (
@@ -943,6 +989,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */,
+				110DC9E32B3B28930046CBCD /* HistoryQrCodeCellView.swift in Sources */,
 				114085A52B39BE1600487E09 /* ScanCoordinatorViewModel.swift in Sources */,
 				112F36532B38D75000016890 /* SettingsSectionType.swift in Sources */,
 				112F363D2B38D75000016890 /* TitledContainerView.swift in Sources */,
@@ -977,6 +1024,7 @@
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
 				112F36902B38D75000016890 /* ContentView.swift in Sources */,
 				112F367E2B38D75000016890 /* DetailedChangDesignSectionType.swift in Sources */,
+				110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */,
 				112F368A2B38D75000016890 /* CustomLayout.swift in Sources */,
 				114085B92B3AFB7A00487E09 /* HistorySegmentType.swift in Sources */,
 				112F363C2B38D75000016890 /* TextFieldForm.swift in Sources */,
@@ -1006,6 +1054,7 @@
 				112F368B2B38D75000016890 /* PersonalCell.swift in Sources */,
 				112F36522B38D75000016890 /* SettingsItemProtocolEraser.swift in Sources */,
 				112F363A2B38D75000016890 /* NavigationBarModifier.swift in Sources */,
+				110DC9E12B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift in Sources */,
 				112F36612B38D75000016890 /* SettingsValueStringCellView.swift in Sources */,
 				112F36492B38D75000016890 /* String+regex.swift in Sources */,
 				112F36452B38D75000016890 /* FormatMatcher.swift in Sources */,
@@ -1017,6 +1066,7 @@
 				112F36582B38D75000016890 /* SettingsItemValueProtocol.swift in Sources */,
 				112F36672B38D75000016890 /* CreateContentLinkViewModel.swift in Sources */,
 				112F365C2B38D75000016890 /* SettingsItemType.swift in Sources */,
+				110DC9E62B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift in Sources */,
 				112F36AA2B3996A400016890 /* QRCode+DetectQRCode.swift in Sources */,
 				112F36572B38D75000016890 /* SettingFlow.swift in Sources */,
 				112F36702B38D75000016890 /* EditQRCodeContentViewModel.swift in Sources */,
@@ -1026,10 +1076,12 @@
 				112F364D2B38D75000016890 /* SettingsItemValueSubtitleModel.swift in Sources */,
 				114085A12B39BC2000487E09 /* ScanFlow.swift in Sources */,
 				112F36782B38D75000016890 /* SelectableQRCodeDesign.swift in Sources */,
+				110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */,
 				114085A72B39BEAB00487E09 /* MainScanNavigationView.swift in Sources */,
 				114085AA2B39BF7500487E09 /* ScanResultQRCodeView.swift in Sources */,
 				112F36A22B39843400016890 /* ViewController.swift in Sources */,
 				112F36862B38D75000016890 /* CreateQRSectionType.swift in Sources */,
+				110DC9DC2B3B1D2E0046CBCD /* HistoryService.swift in Sources */,
 				112F363F2B38D75000016890 /* TitledCopyContainerViewModel.swift in Sources */,
 				112F36722B38D75000016890 /* ResultEventFlow.swift in Sources */,
 				112F368C2B38D75000016890 /* SocialCell.swift in Sources */,
@@ -1039,6 +1091,7 @@
 				112F364E2B38D75000016890 /* SettingsItemModel.swift in Sources */,
 				112F36872B38D75000016890 /* CreateFlow.swift in Sources */,
 				112F36412B38D75000016890 /* TitledContainerViewModel.swift in Sources */,
+				110DC9D92B3B1D180046CBCD /* QRCodeEntityModel.swift in Sources */,
 				112F36692B38D75000016890 /* MainTapBar.swift in Sources */,
 				112F36632B38D75000016890 /* SettingsValueBoolCellView.swift in Sources */,
 				112F36402B38D75000016890 /* TextViewModel.swift in Sources */,
@@ -1048,6 +1101,7 @@
 				114085B22B3AF73200487E09 /* HistoryCoordinatorViewModel.swift in Sources */,
 				112F364B2B38D75000016890 /* SettingsViewModel.swift in Sources */,
 				112F36562B38D75000016890 /* SettingsEventBus.swift in Sources */,
+				110DC9DF2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

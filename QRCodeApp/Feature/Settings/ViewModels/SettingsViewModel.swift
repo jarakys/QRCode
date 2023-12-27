@@ -58,7 +58,7 @@ final class SettingsViewModel: BaseViewModel {
             SettingsSectionModel(type: .settings, items: [
                 .vibrate(vibrationItem),
                 .beep(beepItem),
-                .language(SettingsItemValueModel(title: String(localized: "Language"), icon: "languageIcon", value: currentLanguage))
+                .language(SettingsItemValueModel(title: String(localized: "Language"), icon: "languageIcon", value: ""))
             ]),
             SettingsSectionModel(type: .contact, items: [
                 .aboutUs(SettingsItemModel(title: String(localized: "About us"), icon: "aboutIcon")),

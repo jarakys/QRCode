@@ -22,6 +22,7 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         self.communicationBus = communicationBus
         
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
+        addQRCode(isCreated: true)
     }
     
     public func editContentDidTap() {

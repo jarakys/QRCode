@@ -72,7 +72,7 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     }
     
     public func addQRCode(isCreated: Bool) {
-        guard let date = qrCodeDocument.pngData(dimension: 1) else { return }
+        guard let date = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
         do {
             try localStorage.addQRCode(qrCodeString: qrCodeString,
                                        type: qrCodeFormat.rawValue,
@@ -80,8 +80,9 @@ class BaseResultQRCodeViewModel: BaseViewModel {
                                        date: Date(),
                                        image: date,
                                        isCreated: isCreated)
+            print("addQRCode added")
         } catch {
-            print("setRecognize error \(error)")
+            print("addQRCode error \(error)")
         }
     }
 }

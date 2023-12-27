@@ -38,7 +38,7 @@ class CoreDataManager: LocalStore {
                    date: Date,
                    image: Data,
                    isCreated: Bool) throws {
-        let qrCodeEntity = NSEntityDescription.entity(forEntityName: "QrCodeEntity", in: context)!
+        let qrCodeEntity = NSEntityDescription.entity(forEntityName: "QRCodeEntity", in: context)!
         let qrCode = QRCodeEntity(entity: qrCodeEntity, insertInto: context)
         qrCode.type = type
         qrCode.qrCodeString = qrCodeString
