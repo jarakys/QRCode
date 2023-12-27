@@ -11,7 +11,7 @@ import Combine
 struct HistoryView: View {
     @StateObject public var viewModel: HistoryViewModel
     @State private var multiSelection = Set<UUID>()
-    @Environment(\.editMode) var editMode
+    @State var editMode = EditMode.inactive
     var body: some View {
         VStack {
             pickerView()
@@ -21,9 +21,17 @@ struct HistoryView: View {
             .padding(.top, 16)
             .padding(.bottom, 16)
             if !viewModel.sections.isEmpty {
-                notEmptyState()
+                if viewModel.editType == .move {
+                    notSelectionNotEmtyState()
+                } else {
+                    notEmptyState()
+                }
             } else {
                 emptyState()
+            }
+            if viewModel.shouldShowUnlockButton {
+                unlockButtonView()
+                    .padding(.bottom, 39)
             }
         }
         .padding(.horizontal, 16)
@@ -79,25 +87,57 @@ struct HistoryView: View {
             
         })
         .navigationBarColor(backgroundColor: .white, titleColor: .black)
-        .onReceive(editMode.publisher, perform: { value in
-            viewModel.editListDidTap(isEditing: value.wrappedValue == .active)
+//        .onReceive(editMode, perform: { value
+//            viewModel.editListDidTap(isEditing: value.wrappedValue == .active)
+//        })
+//        .onReceive($editMode, perform: { value in
+//            viewModel.editListDidTap(isEditing: value.wrappedValue == .active)
+//        })
+        .onReceive(viewModel.$sortType, perform: { type in
+            guard type == .manual else { return }
+            editMode = .active
+        })
+        .onChange(of: editMode, perform: { mode in
+            viewModel.editListDidTap(isEditing: mode == .active)
         })
         .actionSheet(isPresented: $viewModel.showAlert) {
-            ActionSheet(
-                title: Text("Sort"),
-                buttons: [
-                    .default(Text("Sort alphabetically")) {
-                        viewModel.setSort(type: .alhabet)
-//                        selection = "Red"
-                    },
-                    .default(Text("Sort manuallly")) {
-                        viewModel.setSort(type: .manual)
-//                        selection = "Green"
-                    },
-                    .cancel(Text("Cancel"))
-                ]
-            )
+            actionSheetView()
         }
+    }
+    
+    private func actionSheetView() -> ActionSheet {
+        return ActionSheet(
+            title: Text("Sort"),
+            buttons: [
+                .default(Text("Sort alphabetically")) {
+                    viewModel.setSort(type: .alhabet)
+//                        selection = "Red"
+                },
+                .default(Text("Sort manuallly")) {
+                    viewModel.setSort(type: .manual)
+//                        selection = "Green"
+                },
+                .cancel(Text("Cancel"))
+            ]
+        )
+    }
+    
+    @ViewBuilder
+    private func unlockButtonView() -> some View {
+        Button(action: {
+            
+        }, label: {
+            HStack(spacing: 8) {
+                Text("Unlock")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(.white)
+                Image(.historyUnlockIcon)
+            }
+            .padding(.vertical, 12)
+            .padding(.horizontal, 72)
+            .background(.primaryApp)
+            .cornerRadius(10)
+        })
     }
 
     @ViewBuilder
@@ -130,28 +170,15 @@ struct HistoryView: View {
         }
     }
     
-    private func notEmptyState() -> some View {
-        List(viewModel.sections, id:\.title, selection: $viewModel.selectedItems) { section in
+    private func notSelectionNotEmtyState() -> some View {
+        List(viewModel.sections, id:\.title) { section in
             Section(content: {
                 ForEach(section.items) { model in
-                    HistoryQrCodeCellView(model: model)
-                        .padding(.vertical, 8)
-                        .padding(.horizontal, 16)
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(
-                            Color.white
-                                .cornerRadius(10)
-                                .padding(.vertical, 4)
-                        )
-                        .onTapGesture {
-                            
-                        }
+                    historyCell(model: model)
                 }
                 .onMove(perform: move)
             }, header: {
-                Text(section.title)
-                    .font(.system(size: 13))
-                    .frame(maxWidth: .infinity, alignment: .leading)
+                historyHeaderView(section: section)
             })
             .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
             .scrollContentBackground(.hidden)
@@ -162,6 +189,28 @@ struct HistoryView: View {
                 .foregroundStyle(.tint)
                 .font(.system(size: 17, weight: .semibold))
         })
+        .environment(\.editMode, $editMode)
+    }
+    
+    private func notEmptyState() -> some View {
+        List(viewModel.sections, id:\.title, selection: $viewModel.selectedItems) { section in
+            Section(content: {
+                ForEach(section.items) { model in
+                    historyCell(model: model)
+                }
+            }, header: {
+                historyHeaderView(section: section)
+            })
+            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0))
+            .scrollContentBackground(.hidden)
+        }
+        .listStyle(.grouped)
+        .toolbar(content: {
+            EditButton()
+                .foregroundStyle(.tint)
+                .font(.system(size: 17, weight: .semibold))
+        })
+        .environment(\.editMode, $editMode)
     }
     
     func move(from source: IndexSet, to destination: Int) {
@@ -172,8 +221,42 @@ struct HistoryView: View {
     func delete(at offsets: IndexSet) {
 //           users.remove(atOffsets: offsets)
        }
+    
+    @ViewBuilder
+    private func historyCell(model: QRCodeEntityModel) -> some View {
+        HistoryQrCodeCellView(model: model)
+            .padding(.vertical, 8)
+            .padding(.horizontal, 16)
+            .listRowSeparator(.hidden)
+            .listRowBackground(
+                Color.white
+                    .cornerRadius(10)
+                    .padding(.vertical, 4)
+            )
+            .onTapGesture {
+                
+            }
+    }
+    
+    @ViewBuilder
+    private func historyHeaderView(section: QRCodeEntitySection) -> some View {
+        HStack {
+            Text(section.title)
+                .font(.system(size: 13, weight: .regular))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .foregroundStyle(.secondaryTitle)
+            if !viewModel.isPremium && section.title == viewModel.lastSection?.title {
+                Spacer()
+                Text("\(viewModel.selectedType == 0 ? viewModel.countCreates : viewModel.countCreates) of 5")
+                    .textCase(.lowercase)
+                    .font(.system(size: 15, weight: .regular))
+                    .foregroundStyle(.secondaryTitle)
+            }
+        }
+        
+    }
 }
 
 #Preview {
-    HistoryView(viewModel: HistoryViewModel(navigationSender: PassthroughSubject<HistoryEventFlow, Never>()))
+    HistoryView(viewModel: HistoryViewModel(subscriptionManager: .init(), navigationSender: PassthroughSubject<HistoryEventFlow, Never>()))
 }

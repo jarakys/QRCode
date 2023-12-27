@@ -12,6 +12,6 @@ final class HistoryCoordinatorViewModel: BaseViewModel {
     public let navigationSender = PassthroughSubject<HistoryEventFlow, Never>()
     
     public lazy var historyViewModel: HistoryViewModel = { [unowned self] in
-        HistoryViewModel(navigationSender: navigationSender)
+        HistoryViewModel(subscriptionManager: SubscriptionManager(), navigationSender: navigationSender)
     }()
 }

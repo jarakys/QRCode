@@ -16,6 +16,9 @@
 		110DC9E62B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */; };
 		110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E72B3B345F0046CBCD /* SearchBarView.swift */; };
 		110DC9EA2B3C443A0046CBCD /* HistorySortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E92B3C443A0046CBCD /* HistorySortType.swift */; };
+		110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9EB2B3C69C30046CBCD /* EditType.swift */; };
+		110DC9EE2B3C6D000046CBCD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */; };
+		110DC9F02B3C6DA70046CBCD /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */; };
 		111164492B30678700F01C5E /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 111164482B30678700F01C5E /* CompositionalList */; };
 		112F36372B38D75000016890 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AE2B38D75000016890 /* Localizable.xcstrings */; };
 		112F36382B38D75000016890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AF2B38D75000016890 /* Assets.xcassets */; };
@@ -157,6 +160,9 @@
 		110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QRCodeEntity+formattedDate.swift"; sourceTree = "<group>"; };
 		110DC9E72B3B345F0046CBCD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		110DC9E92B3C443A0046CBCD /* HistorySortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySortType.swift; sourceTree = "<group>"; };
+		110DC9EB2B3C69C30046CBCD /* EditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditType.swift; sourceTree = "<group>"; };
+		110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
 		111164042B30518200F01C5E /* QRCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		112F35AE2B38D75000016890 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		112F35AF2B38D75000016890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -404,6 +410,7 @@
 			children = (
 				112F35C02B38D75000016890 /* UserDefaultsService.swift */,
 				112F35C12B38D75000016890 /* FormatMatcher.swift */,
+				110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -894,6 +901,7 @@
 				110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */,
 				110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */,
 				110DC9E92B3C443A0046CBCD /* HistorySortType.swift */,
+				110DC9EB2B3C69C30046CBCD /* EditType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -902,6 +910,7 @@
 			isa = PBXGroup;
 			children = (
 				114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */,
+				110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1004,6 +1013,7 @@
 				112F367B2B38D75000016890 /* DesignCellView.swift in Sources */,
 				112F36882B38D75000016890 /* CreateQRCodeTemplateModel.swift in Sources */,
 				112F364F2B38D75000016890 /* SettingsItemSubtitleModel.swift in Sources */,
+				110DC9EE2B3C6D000046CBCD /* KeychainManager.swift in Sources */,
 				114085BC2B3AFD4800487E09 /* Db.xcdatamodeld in Sources */,
 				114085B52B3AF76600487E09 /* HistoryFlow.swift in Sources */,
 				1140859A2B39BB0D00487E09 /* ScanEventFlow.swift in Sources */,
@@ -1024,9 +1034,11 @@
 				112F36822B38D75000016890 /* CreateResultQRCodeView.swift in Sources */,
 				112F36852B38D75000016890 /* CreateEventFlow.swift in Sources */,
 				112F36592B38D75000016890 /* SettingsItemProtocol.swift in Sources */,
+				110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */,
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
 				112F36902B38D75000016890 /* ContentView.swift in Sources */,
 				112F367E2B38D75000016890 /* DetailedChangDesignSectionType.swift in Sources */,
+				110DC9F02B3C6DA70046CBCD /* SubscriptionManager.swift in Sources */,
 				110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */,
 				112F368A2B38D75000016890 /* CustomLayout.swift in Sources */,
 				114085B92B3AFB7A00487E09 /* HistorySegmentType.swift in Sources */,
