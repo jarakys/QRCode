@@ -11,6 +11,7 @@ import Combine
 struct HistoryView: View {
     @StateObject public var viewModel: HistoryViewModel
     @State private var multiSelection = Set<UUID>()
+    @Environment(\.editMode) var editMode
     var body: some View {
         VStack {
             pickerView()
@@ -60,7 +61,7 @@ struct HistoryView: View {
                     })
                     .padding(.zero)
                 })
-            } else  {
+            } else if !viewModel.isEditing  {
                 ToolbarItem(placement: .topBarLeading, content: {
                     Button(action: {
                         viewModel.sortDidTap()
@@ -70,36 +71,35 @@ struct HistoryView: View {
                     .padding(.zero)
                     .frame(width: 28, height: 28)
                 })
+            } else {
+                ToolbarItem(placement: .topBarLeading, content: {
+                    EmptyView()
+                })
             }
             
         })
         .navigationBarColor(backgroundColor: .white, titleColor: .black)
+        .onReceive(editMode.publisher, perform: { value in
+            viewModel.editListDidTap(isEditing: value.wrappedValue == .active)
+        })
+        .actionSheet(isPresented: $viewModel.showAlert) {
+            ActionSheet(
+                title: Text("Sort"),
+                buttons: [
+                    .default(Text("Sort alphabetically")) {
+                        viewModel.setSort(type: .alhabet)
+//                        selection = "Red"
+                    },
+                    .default(Text("Sort manuallly")) {
+                        viewModel.setSort(type: .manual)
+//                        selection = "Green"
+                    },
+                    .cancel(Text("Cancel"))
+                ]
+            )
+        }
     }
-    
-//    @ViewBuilder
-//    private func unselectedToolbarView() -> ToolbarItem<(), EmptyView> {
-//        ToolbarItem(placement: .topBarLeading, content: {
-//            EmptyView()
-//        })
-//       
-//    }
-    
-//    @ViewBuilder
-//    private func selectedToolbarView() -> some View {
-//        ToolbarItem(placement: .topBarLeading, content: {
-//            Button(action: {
-//                viewModel.sortDidTap()
-//            }, label: {
-//                Image(.historySortIcon)
-//            })
-//            .padding(.zero)
-//            .frame(width: 28, height: 28)
-//        })
-//        ToolbarItem(placement: .topBarLeading, content: {
-//            EmptyView()
-//        })
-//    }
-    
+
     @ViewBuilder
     private func pickerView() -> some View {
         Picker("", selection: $viewModel.selectedType) {
@@ -142,9 +142,12 @@ struct HistoryView: View {
                             Color.white
                                 .cornerRadius(10)
                                 .padding(.vertical, 4)
-                                
                         )
+                        .onTapGesture {
+                            
+                        }
                 }
+                .onMove(perform: move)
             }, header: {
                 Text(section.title)
                     .font(.system(size: 13))
@@ -158,11 +161,12 @@ struct HistoryView: View {
             EditButton()
                 .foregroundStyle(.tint)
                 .font(.system(size: 17, weight: .semibold))
-                .onTapGesture {
-                    
-                }
         })
     }
+    
+    func move(from source: IndexSet, to destination: Int) {
+//            users.move(fromOffsets: source, toOffset: destination)
+        }
     
     
     func delete(at offsets: IndexSet) {

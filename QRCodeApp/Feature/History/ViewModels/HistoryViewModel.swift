@@ -17,6 +17,8 @@ final class HistoryViewModel: BaseViewModel {
     @Published public var selectedItems = Set<UUID>()
     @Published public var isSelected: Bool = false
     @Published public var isMultipleSelection: Bool = false
+    @Published public var showAlert: Bool = false
+    @Published public var sortType: HistorySortType = .alhabet
     private let navigationSender: PassthroughSubject<HistoryEventFlow, Never>
     
     private let historyService = HistoryService()
@@ -60,6 +62,10 @@ final class HistoryViewModel: BaseViewModel {
                 print("selectedType changed error \(error)")
             }
         }).store(in: &cancellable)
+        
+        $sortType.sink(receiveValue: { [weak self] value in
+            
+        }).store(in: &cancellable)
     }
     
     public func itemDidTap(item: QRCodeEntityModel) {
@@ -81,8 +87,17 @@ final class HistoryViewModel: BaseViewModel {
         
     }
     
+    public func editListDidTap(isEditing: Bool) {
+        guard self.isEditing != isEditing else { return }
+        self.isEditing = isEditing
+    }
+    
     public func sortDidTap() {
-        
+        showAlert.toggle()
+    }
+    
+    public func setSort(type: HistorySortType) {
+        sortType = type
     }
     
     public func addDidTap() {
