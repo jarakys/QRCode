@@ -19,6 +19,8 @@
 		110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9EB2B3C69C30046CBCD /* EditType.swift */; };
 		110DC9EE2B3C6D000046CBCD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */; };
 		110DC9F02B3C6DA70046CBCD /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */; };
+		110DC9F32B3C751D0046CBCD /* MainTapBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9F22B3C751D0046CBCD /* MainTapBarViewModel.swift */; };
+		110DC9F52B3C76660046CBCD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9F42B3C76660046CBCD /* Config.swift */; };
 		111164492B30678700F01C5E /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 111164482B30678700F01C5E /* CompositionalList */; };
 		112F36372B38D75000016890 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AE2B38D75000016890 /* Localizable.xcstrings */; };
 		112F36382B38D75000016890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AF2B38D75000016890 /* Assets.xcassets */; };
@@ -163,6 +165,8 @@
 		110DC9EB2B3C69C30046CBCD /* EditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditType.swift; sourceTree = "<group>"; };
 		110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		110DC9F22B3C751D0046CBCD /* MainTapBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTapBarViewModel.swift; sourceTree = "<group>"; };
+		110DC9F42B3C76660046CBCD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		111164042B30518200F01C5E /* QRCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		112F35AE2B38D75000016890 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		112F35AF2B38D75000016890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -317,6 +321,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		110DC9F12B3C75180046CBCD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9F22B3C751D0046CBCD /* MainTapBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		111163FB2B30518200F01C5E = {
 			isa = PBXGroup;
 			children = (
@@ -411,6 +423,7 @@
 				112F35C02B38D75000016890 /* UserDefaultsService.swift */,
 				112F35C12B38D75000016890 /* FormatMatcher.swift */,
 				110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */,
+				110DC9F42B3C76660046CBCD /* Config.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -590,6 +603,7 @@
 		112F35F62B38D75000016890 /* TapBar */ = {
 			isa = PBXGroup;
 			children = (
+				110DC9F12B3C75180046CBCD /* ViewModel */,
 				112F35F72B38D75000016890 /* MainTapBar.swift */,
 			);
 			path = TapBar;
@@ -1058,6 +1072,7 @@
 				112F367A2B38D75000016890 /* QRCodeDesign.swift in Sources */,
 				112F36832B38D75000016890 /* CreateViewModel.swift in Sources */,
 				112F36652B38D75000016890 /* SettingsCoordinatorView.swift in Sources */,
+				110DC9F32B3C751D0046CBCD /* MainTapBarViewModel.swift in Sources */,
 				112F368E2B38D75000016890 /* CreateCoordinatorView.swift in Sources */,
 				112F36542B38D75000016890 /* LanguageModel.swift in Sources */,
 				1140859C2B39BB1E00487E09 /* BaseResultQRCodeViewModel.swift in Sources */,
@@ -1076,6 +1091,7 @@
 				112F36452B38D75000016890 /* FormatMatcher.swift in Sources */,
 				112F36622B38D75000016890 /* SettingsCellView.swift in Sources */,
 				112F36512B38D75000016890 /* SettingsItemValueModel.swift in Sources */,
+				110DC9F52B3C76660046CBCD /* Config.swift in Sources */,
 				112F36552B38D75000016890 /* SettingsEventFlow.swift in Sources */,
 				112F366E2B38D75000016890 /* CreateResultQRCodeCoordinatorViewModel.swift in Sources */,
 				112F36682B38D75000016890 /* CreateContentLinkQRCodeView.swift in Sources */,

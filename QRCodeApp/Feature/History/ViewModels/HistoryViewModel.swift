@@ -35,22 +35,22 @@ final class HistoryViewModel: BaseViewModel {
     public var countScans: Int {
         var countScans = (try? keychainStorage.get(key: .countScans, defaultValue: 0) ) ?? 0
         countScans = countScans == 0 ? sections.flatMap({ $0.items }).count : countScans
-        countScans = countScans > 5 ? 5 : countScans
+        countScans = countScans > Config.maxScansCount ? Config.maxScansCount : countScans
         return countScans
     }
     
     public var countCreates: Int {
         var countCreates = (try? keychainStorage.get(key: .countCreates, defaultValue: 0) ) ?? 0
         countCreates = countCreates == 0 ? sections.flatMap({ $0.items }).count : countCreates
-        countCreates = countCreates > 5 ? 5 : countCreates
+        countCreates = countCreates > Config.maxCreatesCount ? Config.maxCreatesCount : countCreates
         return countCreates
     }
     
     public var shouldShowUnlockButton: Bool {
         if selectedType == 0 {
-            return countCreates >= 5
+            return countCreates >= Config.maxCreatesCount
         } else {
-            return countScans >= 4
+            return countScans >=  Config.maxScansCount
         }
     }
     
@@ -122,11 +122,23 @@ final class HistoryViewModel: BaseViewModel {
         }
     }
     
+    public func scanDidTap() {
+        navigationSender.send(.scans)
+    }
+    
+    public func createDidTap() {
+        navigationSender.send(.create)
+    }
+    
     public func deleteDidTap() {
         
     }
     
     public func editDidTap() {
+        
+    }
+    
+    public func unlockDidTap() {
         
     }
     
@@ -144,9 +156,5 @@ final class HistoryViewModel: BaseViewModel {
     
     public func setSort(type: HistorySortType) {
         sortType = type
-    }
-    
-    public func save() {
-        
     }
 }

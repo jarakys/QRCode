@@ -111,11 +111,9 @@ struct HistoryView: View {
             buttons: [
                 .default(Text("Sort alphabetically")) {
                     viewModel.setSort(type: .alhabet)
-//                        selection = "Red"
                 },
                 .default(Text("Sort manuallly")) {
                     viewModel.setSort(type: .manual)
-//                        selection = "Green"
                 },
                 .cancel(Text("Cancel"))
             ]
@@ -125,7 +123,7 @@ struct HistoryView: View {
     @ViewBuilder
     private func unlockButtonView() -> some View {
         Button(action: {
-            
+            viewModel.unlockDidTap()
         }, label: {
             HStack(spacing: 8) {
                 Text("Unlock")
@@ -158,12 +156,12 @@ struct HistoryView: View {
         ScrollView {
             if viewModel.selectedType == 0 {
                 ScanQRCodeEmptyCellView(scanDidTap: {
-                    
+                    viewModel.scanDidTap()
                 })
                 .padding(.top, 23)
             } else {
                 CreateQRCodeEmptyCellView(createDidTap: {
-                    
+                    viewModel.createDidTap()
                 })
                 .padding(.top, 23)
             }

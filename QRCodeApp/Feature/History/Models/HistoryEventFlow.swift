@@ -10,5 +10,7 @@ import Foundation
 enum HistoryEventFlow {
     case details
     case editableDetails
+    case create
+    case scans
     case back
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct HistoryCoordinatorView: View {
     @StateObject public var viewModel: HistoryCoordinatorViewModel
     @EnvironmentObject public var pathsState: PathState
+    @EnvironmentObject public var mainTapBarViewModel: MainTapBarViewModel
     
     var body: some View {
         HistoryView(viewModel: viewModel.historyViewModel)
@@ -32,6 +33,12 @@ struct HistoryCoordinatorView: View {
                     
                 case .editableDetails:
                     pathsState.append(HistoryFlow.editableDetails)
+                    
+                case .create:
+                    mainTapBarViewModel.tabSelection = 2
+                    
+                case .scans:
+                    mainTapBarViewModel.tabSelection = 0
                 }
             })
     }
