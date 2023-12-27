@@ -13,6 +13,8 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     private var navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private var communicationBus: PassthroughSubject<ResultEventBus, Never>
     
+    private let keychainStorage = KeychainManager.shared
+    
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
          communicationBus: PassthroughSubject<ResultEventBus, Never>,
          localStorage: LocalStore,
@@ -23,6 +25,12 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
         addQRCode(isCreated: true)
+        let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
+        do {
+            try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
+        } catch {
+            print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
+        }
     }
     
     public func editContentDidTap() {

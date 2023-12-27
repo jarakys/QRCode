@@ -30,6 +30,9 @@ struct SettingsView: View {
             UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
         })
         .navigationBarColor(backgroundColor: .primaryApp, titleColor: .white)
+        .onAppear {
+            viewModel.reconfigureOnAppear()
+        }
     }
     
     @ViewBuilder

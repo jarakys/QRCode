@@ -34,8 +34,8 @@ class KeychainManager {
         return object
     }
     
-    func get<T:Decodable>(key: LocalStorageKey, defaultValue: T) throws -> T {
-        let object: T = try get(key: key) ?? defaultValue
+    func get<T:Decodable>(key: LocalStorageKey, defaultValue: T) -> T {
+        let object: T = (try? get(key: key)) ?? defaultValue
         return object
     }
 }
