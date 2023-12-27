@@ -49,7 +49,8 @@ final class HistoryService: NSObject, NSFetchedResultsControllerDelegate {
     private func convert(sections: [NSFetchedResultsSectionInfo]) -> [QRCodeEntitySection] {
         let qrCodeSections = sections.map { section in
             let objects = section.objects?.compactMap({ $0 as? QRCodeEntity }) ?? []
-            let qrCodeObjects = objects.compactMap({ QRCodeEntityModel(subtitle: $0.subtitle ?? "",
+            let qrCodeObjects = objects.compactMap({ QRCodeEntityModel(id: $0.uuid!, 
+                                                                       subtitle: $0.subtitle ?? "",
                                                                        qrCodeFormat: QRCodeFormat(rawValue: $0.type ?? "") ?? .phone,
                                                                        image: $0.image!,
                                                                        date: $0.date ?? Date(),

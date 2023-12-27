@@ -8,7 +8,7 @@
 import Foundation
 
 struct QRCodeEntityModel: Hashable, Identifiable {
-    var id = UUID()
+    public let id: UUID
     public let subtitle: String
     public let qrCodeFormat: QRCodeFormat
     public let image: Data

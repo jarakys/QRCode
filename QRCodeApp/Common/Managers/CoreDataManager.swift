@@ -42,11 +42,35 @@ class CoreDataManager: LocalStore {
         let qrCode = QRCodeEntity(entity: qrCodeEntity, insertInto: context)
         qrCode.type = type
         qrCode.qrCodeString = qrCodeString
+        qrCode.uuid = UUID()
         qrCode.date = date
         qrCode.subtitle = subtitle
         qrCode.image = image
         qrCode.isCreated = isCreated
         
+        try context.save()
+    }
+    
+    func removeQRCodes(ids: [UUID]) throws {
+        let entityName = "QRCodeEntity"
+        let idAttributeName = "uuid"
+        
+        for objectId in ids {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            let predicate = NSPredicate(format: "%K == %@", idAttributeName, objectId.debugDescription)
+            fetchRequest.predicate = predicate
+            
+            do {
+                let fetchedObjects = try context.fetch(fetchRequest) as! [NSManagedObject]
+                
+                for object in fetchedObjects {
+                    context.delete(object)
+                }
+                
+            } catch {
+                print("Error deleting objects: \(error)")
+            }
+        }
         try context.save()
     }
 }

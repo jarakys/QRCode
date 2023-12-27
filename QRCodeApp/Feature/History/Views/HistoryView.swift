@@ -42,49 +42,54 @@ struct HistoryView: View {
         .navigationTitle("History")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(content: {
-            if viewModel.isSelected {
-                ToolbarItem(placement: .topBarLeading, content: {
-                    Button(action: {
-                        viewModel.deleteDidTap()
-                    }, label: {
-                        Image(.hisotryTrashIcon)
+            if !viewModel.sections.isEmpty {
+                if viewModel.isSelected {
+                    ToolbarItem(placement: .topBarLeading, content: {
+                        Button(action: {
+                            viewModel.deleteDidTap()
+                        }, label: {
+                            Image(.hisotryTrashIcon)
+                        })
+                        .padding(.zero)
                     })
-                    .padding(.zero)
-                })
-                if !viewModel.isMultipleSelection {
+                    if !viewModel.isMultipleSelection {
+                        ToolbarItem(placement: .topBarLeading, content: {
+                            Button(action: {
+                                viewModel.editDidTap()
+                            }, label: {
+                                Image(.historyEditIcon)
+                            })
+                            .padding(.zero)
+                        })
+                    }
                     ToolbarItem(placement: .topBarLeading, content: {
                         Button(action: {
                             viewModel.editDidTap()
                         }, label: {
-                            Image(.historyEditIcon)
+                            Image(.historyShareIcon)
                         })
                         .padding(.zero)
                     })
+                } else if !viewModel.isEditing  {
+                    ToolbarItem(placement: .topBarLeading, content: {
+                        Button(action: {
+                            viewModel.sortDidTap()
+                        }, label: {
+                            Image(.historySortIcon)
+                        })
+                        .padding(.zero)
+                        .frame(width: 28, height: 28)
+                    })
+                } else {
+                    ToolbarItem(placement: .topBarLeading, content: {
+                        EmptyView()
+                    })
                 }
-                ToolbarItem(placement: .topBarLeading, content: {
-                    Button(action: {
-                        viewModel.editDidTap()
-                    }, label: {
-                        Image(.historyShareIcon)
-                    })
-                    .padding(.zero)
-                })
-            } else if !viewModel.isEditing  {
-                ToolbarItem(placement: .topBarLeading, content: {
-                    Button(action: {
-                        viewModel.sortDidTap()
-                    }, label: {
-                        Image(.historySortIcon)
-                    })
-                    .padding(.zero)
-                    .frame(width: 28, height: 28)
-                })
             } else {
                 ToolbarItem(placement: .topBarLeading, content: {
                     EmptyView()
                 })
             }
-            
         })
         .navigationBarColor(backgroundColor: .white, titleColor: .black)
 //        .onReceive(editMode, perform: { value

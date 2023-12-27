@@ -131,7 +131,12 @@ final class HistoryViewModel: BaseViewModel {
     }
     
     public func deleteDidTap() {
-        
+        let items = sections.flatMap({ $0.items }).filter({ selectedItems.contains($0.id) })
+        do {
+            try CoreDataManager.shared.removeQRCodes(ids: items.map({ $0.id }))
+        } catch {
+            print("deleteDidTap error \(error)")
+        }
     }
     
     public func editDidTap() {
