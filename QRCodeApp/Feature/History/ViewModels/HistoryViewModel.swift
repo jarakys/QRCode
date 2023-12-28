@@ -180,6 +180,7 @@ final class HistoryViewModel: BaseViewModel {
     }
     
     public func itemDidTap(model: QRCodeEntityModel) {
+        guard !isEditing else { return }
         navigationSender.send(.details(model: model))
     }
     
