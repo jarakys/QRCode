@@ -110,10 +110,46 @@ final class HistoryViewModel: BaseViewModel {
             case .manual:
                 self.editType = .move
                 
-            case .alhabet: break
+            case .alhabet:
+                let searchItems = self.search(searchText: self.searchText)
+                let filteredItems = self.filter(sortType: value, items: searchItems)
+                self.sections = filteredItems
             }
             
         }).store(in: &cancellable)
+        
+        $searchText.sink(receiveValue: { [weak self] text in
+            guard let self else { return }
+            let searchItems = self.search(searchText: text)
+            let filteredItems = self.filter(sortType: self.sortType, items: searchItems)
+            self.sections = filteredItems
+        }).store(in: &cancellable)
+    }
+    
+    private func search(searchText: String) -> [QRCodeEntitySection] {
+        guard !searchText.isEmpty else {
+            return privateItems
+        }
+        let filteredSections = privateItems.map { section in
+            let filteredItems = section.items.filter { $0.qrCodeFormat.description.contains(searchText) }
+            return QRCodeEntitySection(title: section.title, items: filteredItems)
+        }
+        return filteredSections
+    }
+    
+    private func filter(sortType: HistorySortType, items: [QRCodeEntitySection]) -> [QRCodeEntitySection] {
+        return items.map { section in
+            let sortedItems: [QRCodeEntityModel] = {
+                switch sortType {
+                case .alhabet:
+                    return section.items.sorted(by: { $0.qrCodeFormat.description > $1.qrCodeFormat.description })
+                case .manual:
+                    // MARK: Order by order property
+                    return section.items
+                }
+            }()
+            return QRCodeEntitySection(title: section.title, items: sortedItems)
+        }
     }
     
     public func itemDidTap(item: QRCodeEntityModel) {
