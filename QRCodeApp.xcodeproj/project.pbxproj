@@ -301,6 +301,7 @@
 		114CEBB62B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignViewModel.swift; sourceTree = "<group>"; };
 		114CEBB92B3E28020088F3C3 /* DesignElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignElementViewModel.swift; sourceTree = "<group>"; };
 		114CEBBC2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignCellView.swift; sourceTree = "<group>"; };
+		114CEBBE2B3E3CD70088F3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -391,6 +392,7 @@
 		112F35AC2B38D75000016890 /* QRCodeApp */ = {
 			isa = PBXGroup;
 			children = (
+				114CEBBE2B3E3CD70088F3C3 /* Info.plist */,
 				112F35AD2B38D75000016890 /* Resources */,
 				112F35B02B38D75000016890 /* Preview Content */,
 				112F35B22B38D75000016890 /* Common */,
@@ -1387,6 +1389,7 @@
 				DEVELOPMENT_TEAM = CLACNL3XK9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRCodeApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "For QRCode scanning";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -1420,6 +1423,7 @@
 				DEVELOPMENT_TEAM = CLACNL3XK9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QRCodeApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "For QRCode scanning";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
