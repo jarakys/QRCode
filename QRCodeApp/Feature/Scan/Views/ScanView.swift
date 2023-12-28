@@ -28,9 +28,6 @@ struct ScanView: View {
                         .foregroundStyle(.titleScan)
                         .frame(maxWidth: .infinity)
                     Spacer()
-                    
-                    Image(.scanFrameIcon)
-                        .frame(width: 166, height: 166)
                     Spacer()
                     HStack(spacing: 16) {
                         Button(action: {
@@ -56,8 +53,6 @@ struct ScanView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .toolbarBackground(.white, for: .navigationBar)
-        .toolbarBackground(.white, for: .tabBar)
         .onReceive(viewModel.$isFlashOn, perform: { value in
             try? device?.lockForConfiguration()
             device?.torchMode = value ? AVCaptureDevice.TorchMode.on : AVCaptureDevice.TorchMode.off

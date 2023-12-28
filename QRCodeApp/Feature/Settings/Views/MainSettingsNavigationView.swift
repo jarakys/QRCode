@@ -14,6 +14,11 @@ struct MainSettingsNavigationView: View {
         NavigationStack(path: $pathsState.paths) {
             SettingsCoordinatorView(viewModel: SettingsCoordinatorViewModel())
                 .environmentObject(pathsState)
+                .configureNavigationBar {
+                    $0.navigationBar.standardAppearance = StyleConfig.settingsNavBarAppearance
+                    $0.navigationBar.compactAppearance = StyleConfig.settingsNavBarAppearance
+                    $0.navigationBar.scrollEdgeAppearance = StyleConfig.settingsNavBarAppearance
+                }
         }
     }
 }

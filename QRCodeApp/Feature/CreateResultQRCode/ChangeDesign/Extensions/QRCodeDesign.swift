@@ -10,6 +10,7 @@ import QRCode
 
 protocol DesignIconProtocol {
     var designIcon: String { get }
+    var color: String? { get }
 }
 
 enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
@@ -31,6 +32,10 @@ enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
     
     var designIcon: String {
         "\(self.rawValue)DesignIcon"
+    }
+    
+    var color: String? {
+        nil
     }
     
     var qrCodeDesign: QRCode.Design {

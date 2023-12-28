@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */; };
+		110DC9D92B3B1D180046CBCD /* QRCodeEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */; };
+		110DC9DC2B3B1D2E0046CBCD /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */; };
+		110DC9DF2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9DE2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift */; };
+		110DC9E12B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E02B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift */; };
+		110DC9E32B3B28930046CBCD /* HistoryQrCodeCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E22B3B28930046CBCD /* HistoryQrCodeCellView.swift */; };
+		110DC9E62B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */; };
+		110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E72B3B345F0046CBCD /* SearchBarView.swift */; };
+		110DC9EA2B3C443A0046CBCD /* HistorySortType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9E92B3C443A0046CBCD /* HistorySortType.swift */; };
+		110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9EB2B3C69C30046CBCD /* EditType.swift */; };
+		110DC9EE2B3C6D000046CBCD /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */; };
+		110DC9F02B3C6DA70046CBCD /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */; };
+		110DC9F32B3C751D0046CBCD /* MainTapBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9F22B3C751D0046CBCD /* MainTapBarViewModel.swift */; };
+		110DC9F52B3C76660046CBCD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9F42B3C76660046CBCD /* Config.swift */; };
 		111164492B30678700F01C5E /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 111164482B30678700F01C5E /* CompositionalList */; };
 		112F36372B38D75000016890 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AE2B38D75000016890 /* Localizable.xcstrings */; };
 		112F36382B38D75000016890 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 112F35AF2B38D75000016890 /* Assets.xcassets */; };
@@ -122,6 +136,46 @@
 		114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
+		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
+		11EBEA732B3D7E8700515558 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA722B3D7E8700515558 /* StyleConfig.swift */; };
+		11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */; };
+		11EBEA772B3DA12500515558 /* ShareActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA762B3DA12500515558 /* ShareActivityManager.swift */; };
+		11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */; };
+		11EBEA7B2B3DAA5E00515558 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7A2B3DAA5E00515558 /* UITabBarController.swift */; };
+		11EBEA7D2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7C2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift */; };
+		11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */; };
+		11EBEA812B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */; };
+		11EBEA832B3DC4E900515558 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11EBEA822B3DC4E900515558 /* GoogleService-Info.plist */; };
+		11EBEA862B3DC63500515558 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA852B3DC63500515558 /* FirebaseAnalytics */; };
+		11EBEA882B3DC63500515558 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA872B3DC63500515558 /* FirebaseAnalyticsOnDeviceConversion */; };
+		11EBEA8A2B3DC63500515558 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA892B3DC63500515558 /* FirebaseAnalyticsSwift */; };
+		11EBEA8C2B3DC63500515558 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA8B2B3DC63500515558 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		11EBEA8E2B3DC63500515558 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA8D2B3DC63500515558 /* FirebaseAppCheck */; };
+		11EBEA902B3DC63500515558 /* FirebaseAppDistribution-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA8F2B3DC63500515558 /* FirebaseAppDistribution-Beta */; };
+		11EBEA922B3DC63500515558 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA912B3DC63500515558 /* FirebaseAuth */; };
+		11EBEA942B3DC63500515558 /* FirebaseAuthCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA932B3DC63500515558 /* FirebaseAuthCombine-Community */; };
+		11EBEA962B3DC63500515558 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA952B3DC63500515558 /* FirebaseCrashlytics */; };
+		11EBEA982B3DC63500515558 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA972B3DC63500515558 /* FirebaseDatabase */; };
+		11EBEA9A2B3DC63500515558 /* FirebaseDatabaseSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA992B3DC63500515558 /* FirebaseDatabaseSwift */; };
+		11EBEA9C2B3DC63500515558 /* FirebaseDynamicLinks in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA9B2B3DC63500515558 /* FirebaseDynamicLinks */; };
+		11EBEA9E2B3DC63500515558 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA9D2B3DC63500515558 /* FirebaseFirestore */; };
+		11EBEAA02B3DC63500515558 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA9F2B3DC63500515558 /* FirebaseFirestoreCombine-Community */; };
+		11EBEAA22B3DC63500515558 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAA12B3DC63500515558 /* FirebaseFirestoreSwift */; };
+		11EBEAA42B3DC63500515558 /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAA32B3DC63500515558 /* FirebaseFunctions */; };
+		11EBEAA62B3DC63500515558 /* FirebaseFunctionsCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAA52B3DC63500515558 /* FirebaseFunctionsCombine-Community */; };
+		11EBEAA82B3DC63500515558 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAA72B3DC63500515558 /* FirebaseInAppMessaging-Beta */; };
+		11EBEAAA2B3DC63500515558 /* FirebaseInAppMessagingSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAA92B3DC63500515558 /* FirebaseInAppMessagingSwift-Beta */; };
+		11EBEAAC2B3DC63500515558 /* FirebaseInstallations in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAAB2B3DC63500515558 /* FirebaseInstallations */; };
+		11EBEAAE2B3DC63500515558 /* FirebaseMLModelDownloader in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAAD2B3DC63500515558 /* FirebaseMLModelDownloader */; };
+		11EBEAB02B3DC63500515558 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAAF2B3DC63500515558 /* FirebaseMessaging */; };
+		11EBEAB22B3DC63500515558 /* FirebasePerformance in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB12B3DC63500515558 /* FirebasePerformance */; };
+		11EBEAB42B3DC63500515558 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB32B3DC63500515558 /* FirebaseRemoteConfig */; };
+		11EBEAB62B3DC63500515558 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB52B3DC63500515558 /* FirebaseRemoteConfigSwift */; };
+		11EBEAB82B3DC63500515558 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB72B3DC63500515558 /* FirebaseStorage */; };
+		11EBEABA2B3DC63500515558 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB92B3DC63500515558 /* FirebaseStorageCombine-Community */; };
+		11EBEABD2B3DCD9A00515558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEABC2B3DCD9A00515558 /* AppDelegate.swift */; };
+		11EBEABF2B3DD3B600515558 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEABE2B3DD3B600515558 /* ImageUploader.swift */; };
+		11EBEAC12B3DD8A400515558 /* DetailedChangeDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEAC02B3DD8A400515558 /* DetailedChangeDesignView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -139,6 +193,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeEntitySection.swift; sourceTree = "<group>"; };
+		110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeEntityModel.swift; sourceTree = "<group>"; };
+		110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryService.swift; sourceTree = "<group>"; };
+		110DC9DE2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanQRCodeEmptyCellView.swift; sourceTree = "<group>"; };
+		110DC9E02B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateQRCodeEmptyCellView.swift; sourceTree = "<group>"; };
+		110DC9E22B3B28930046CBCD /* HistoryQrCodeCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryQrCodeCellView.swift; sourceTree = "<group>"; };
+		110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QRCodeEntity+formattedDate.swift"; sourceTree = "<group>"; };
+		110DC9E72B3B345F0046CBCD /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
+		110DC9E92B3C443A0046CBCD /* HistorySortType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySortType.swift; sourceTree = "<group>"; };
+		110DC9EB2B3C69C30046CBCD /* EditType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditType.swift; sourceTree = "<group>"; };
+		110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
+		110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
+		110DC9F22B3C751D0046CBCD /* MainTapBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTapBarViewModel.swift; sourceTree = "<group>"; };
+		110DC9F42B3C76660046CBCD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		111164042B30518200F01C5E /* QRCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QRCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		112F35AE2B38D75000016890 /* Localizable.xcstrings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		112F35AF2B38D75000016890 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -249,6 +317,19 @@
 		114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySegmentType.swift; sourceTree = "<group>"; };
 		114085BB2B3AFD4800487E09 /* Db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Db.xcdatamodel; sourceTree = "<group>"; };
 		114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
+		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
+		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
+		11EBEA762B3DA12500515558 /* ShareActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityManager.swift; sourceTree = "<group>"; };
+		11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeView.swift; sourceTree = "<group>"; };
+		11EBEA7A2B3DAA5E00515558 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
+		11EBEA7C2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeViewModel.swift; sourceTree = "<group>"; };
+		11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCreateResultQRCodeViewModel.swift; sourceTree = "<group>"; };
+		11EBEA822B3DC4E900515558 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		11EBEABC2B3DCD9A00515558 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		11EBEABE2B3DD3B600515558 /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
+		11EBEAC02B3DD8A400515558 /* DetailedChangeDesignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -256,10 +337,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EBEAB02B3DC63500515558 /* FirebaseMessaging in Frameworks */,
+				11EBEAA02B3DC63500515558 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				11EBEA982B3DC63500515558 /* FirebaseDatabase in Frameworks */,
 				112F36A42B3984B300016890 /* QRCodeDetector in Frameworks */,
+				11EBEAB82B3DC63500515558 /* FirebaseStorage in Frameworks */,
 				112F36932B38D76500016890 /* QRCode in Frameworks */,
+				11EBEA862B3DC63500515558 /* FirebaseAnalytics in Frameworks */,
+				11EBEA962B3DC63500515558 /* FirebaseCrashlytics in Frameworks */,
+				11EBEA9E2B3DC63500515558 /* FirebaseFirestore in Frameworks */,
+				11EBEA9C2B3DC63500515558 /* FirebaseDynamicLinks in Frameworks */,
+				11EBEABA2B3DC63500515558 /* FirebaseStorageCombine-Community in Frameworks */,
+				11EBEA882B3DC63500515558 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				11EBEAA62B3DC63500515558 /* FirebaseFunctionsCombine-Community in Frameworks */,
+				11EBEAAA2B3DC63500515558 /* FirebaseInAppMessagingSwift-Beta in Frameworks */,
+				11EBEAAE2B3DC63500515558 /* FirebaseMLModelDownloader in Frameworks */,
+				11EBEAA82B3DC63500515558 /* FirebaseInAppMessaging-Beta in Frameworks */,
+				11EBEAB22B3DC63500515558 /* FirebasePerformance in Frameworks */,
+				11EBEA942B3DC63500515558 /* FirebaseAuthCombine-Community in Frameworks */,
+				11EBEA8A2B3DC63500515558 /* FirebaseAnalyticsSwift in Frameworks */,
+				11EBEA9A2B3DC63500515558 /* FirebaseDatabaseSwift in Frameworks */,
 				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
+				11EBEAB42B3DC63500515558 /* FirebaseRemoteConfig in Frameworks */,
 				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
+				11EBEA922B3DC63500515558 /* FirebaseAuth in Frameworks */,
+				11EBEAA42B3DC63500515558 /* FirebaseFunctions in Frameworks */,
+				11EBEAAC2B3DC63500515558 /* FirebaseInstallations in Frameworks */,
+				11EBEAA22B3DC63500515558 /* FirebaseFirestoreSwift in Frameworks */,
+				11EBEA8C2B3DC63500515558 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				11EBEA8E2B3DC63500515558 /* FirebaseAppCheck in Frameworks */,
+				11EBEAB62B3DC63500515558 /* FirebaseRemoteConfigSwift in Frameworks */,
+				11EBEA902B3DC63500515558 /* FirebaseAppDistribution-Beta in Frameworks */,
 				111164492B30678700F01C5E /* CompositionalList in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +375,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		110DC9DA2B3B1D270046CBCD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		110DC9DD2B3B20700046CBCD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9DE2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift */,
+				110DC9E02B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift */,
+				110DC9E22B3B28930046CBCD /* HistoryQrCodeCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		110DC9E42B3B2F620046CBCD /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9E52B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		110DC9F12B3C75180046CBCD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				110DC9F22B3C751D0046CBCD /* MainTapBarViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		111163FB2B30518200F01C5E = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +442,7 @@
 		112F35AD2B38D75000016890 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				11EBEA822B3DC4E900515558 /* GoogleService-Info.plist */,
 				112F35AE2B38D75000016890 /* Localizable.xcstrings */,
 				112F35AF2B38D75000016890 /* Assets.xcassets */,
 				114085BA2B3AFD4800487E09 /* Db.xcdatamodeld */,
@@ -325,6 +468,7 @@
 				112F35BF2B38D75000016890 /* Utils */,
 				112F35C22B38D75000016890 /* Models */,
 				112F35C52B38D75000016890 /* Extensions */,
+				11EBEABC2B3DCD9A00515558 /* AppDelegate.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -337,6 +481,7 @@
 				112F35B62B38D75000016890 /* TextFieldForm.swift */,
 				112F35B72B38D75000016890 /* TitledContainerView.swift */,
 				114085AB2B3A0FB900487E09 /* ShareQRImage.swift */,
+				110DC9E72B3B345F0046CBCD /* SearchBarView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -359,6 +504,10 @@
 			children = (
 				112F35C02B38D75000016890 /* UserDefaultsService.swift */,
 				112F35C12B38D75000016890 /* FormatMatcher.swift */,
+				110DC9ED2B3C6D000046CBCD /* KeychainManager.swift */,
+				110DC9F42B3C76660046CBCD /* Config.swift */,
+				11EBEA722B3D7E8700515558 /* StyleConfig.swift */,
+				11EBEABE2B3DD3B600515558 /* ImageUploader.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -377,6 +526,8 @@
 			children = (
 				112F35C62B38D75000016890 /* String+localized.swift */,
 				112F35C72B38D75000016890 /* String+regex.swift */,
+				11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */,
+				11EBEA7A2B3DAA5E00515558 /* UITabBarController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -538,6 +689,7 @@
 		112F35F62B38D75000016890 /* TapBar */ = {
 			isa = PBXGroup;
 			children = (
+				110DC9F12B3C75180046CBCD /* ViewModel */,
 				112F35F72B38D75000016890 /* MainTapBar.swift */,
 			);
 			path = TapBar;
@@ -578,6 +730,8 @@
 		112F35FD2B38D75000016890 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				110DC9E42B3B2F620046CBCD /* Extensions */,
+				110DC9DA2B3B1D270046CBCD /* Services */,
 				114085B32B3AF76200487E09 /* Models */,
 				112F35FE2B38D75000016890 /* ViewModels */,
 				112F36002B38D75000016890 /* Views */,
@@ -590,6 +744,9 @@
 			children = (
 				112F35FF2B38D75000016890 /* HistoryViewModel.swift */,
 				114085B12B3AF73200487E09 /* HistoryCoordinatorViewModel.swift */,
+				11EBEA7C2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift */,
+				11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */,
+				11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -597,9 +754,11 @@
 		112F36002B38D75000016890 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				110DC9DD2B3B20700046CBCD /* Cells */,
 				112F36012B38D75000016890 /* HistoryView.swift */,
 				114085AD2B3AF4FB00487E09 /* MainHistoryNavigationView.swift */,
 				114085AF2B3AF71E00487E09 /* HistoryCoordinatorView.swift */,
+				11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -716,6 +875,7 @@
 				112F36202B38D75000016890 /* CreateResultQRCodeCoordinatorView.swift */,
 				112F36212B38D75000016890 /* EditQRCodeContentView.swift */,
 				112F36222B38D75000016890 /* CreateResultQRCodeView.swift */,
+				11EBEAC02B3DD8A400515558 /* DetailedChangeDesignView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -791,6 +951,7 @@
 			isa = PBXGroup;
 			children = (
 				112F36A12B39843400016890 /* ViewController.swift */,
+				11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */,
 			);
 			path = Wrapper;
 			sourceTree = "<group>";
@@ -843,6 +1004,10 @@
 				114085B42B3AF76600487E09 /* HistoryFlow.swift */,
 				114085B62B3AF77200487E09 /* HistoryEventFlow.swift */,
 				114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */,
+				110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */,
+				110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */,
+				110DC9E92B3C443A0046CBCD /* HistorySortType.swift */,
+				110DC9EB2B3C69C30046CBCD /* EditType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -851,6 +1016,8 @@
 			isa = PBXGroup;
 			children = (
 				114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */,
+				110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */,
+				11EBEA762B3DA12500515558 /* ShareActivityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -878,6 +1045,33 @@
 				115562F92B38BC2C0055C0EC /* KeychainSwift */,
 				112F36922B38D76500016890 /* QRCode */,
 				112F36A32B3984B300016890 /* QRCodeDetector */,
+				11EBEA852B3DC63500515558 /* FirebaseAnalytics */,
+				11EBEA872B3DC63500515558 /* FirebaseAnalyticsOnDeviceConversion */,
+				11EBEA892B3DC63500515558 /* FirebaseAnalyticsSwift */,
+				11EBEA8B2B3DC63500515558 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				11EBEA8D2B3DC63500515558 /* FirebaseAppCheck */,
+				11EBEA8F2B3DC63500515558 /* FirebaseAppDistribution-Beta */,
+				11EBEA912B3DC63500515558 /* FirebaseAuth */,
+				11EBEA932B3DC63500515558 /* FirebaseAuthCombine-Community */,
+				11EBEA952B3DC63500515558 /* FirebaseCrashlytics */,
+				11EBEA972B3DC63500515558 /* FirebaseDatabase */,
+				11EBEA992B3DC63500515558 /* FirebaseDatabaseSwift */,
+				11EBEA9B2B3DC63500515558 /* FirebaseDynamicLinks */,
+				11EBEA9D2B3DC63500515558 /* FirebaseFirestore */,
+				11EBEA9F2B3DC63500515558 /* FirebaseFirestoreCombine-Community */,
+				11EBEAA12B3DC63500515558 /* FirebaseFirestoreSwift */,
+				11EBEAA32B3DC63500515558 /* FirebaseFunctions */,
+				11EBEAA52B3DC63500515558 /* FirebaseFunctionsCombine-Community */,
+				11EBEAA72B3DC63500515558 /* FirebaseInAppMessaging-Beta */,
+				11EBEAA92B3DC63500515558 /* FirebaseInAppMessagingSwift-Beta */,
+				11EBEAAB2B3DC63500515558 /* FirebaseInstallations */,
+				11EBEAAD2B3DC63500515558 /* FirebaseMLModelDownloader */,
+				11EBEAAF2B3DC63500515558 /* FirebaseMessaging */,
+				11EBEAB12B3DC63500515558 /* FirebasePerformance */,
+				11EBEAB32B3DC63500515558 /* FirebaseRemoteConfig */,
+				11EBEAB52B3DC63500515558 /* FirebaseRemoteConfigSwift */,
+				11EBEAB72B3DC63500515558 /* FirebaseStorage */,
+				11EBEAB92B3DC63500515558 /* FirebaseStorageCombine-Community */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -924,6 +1118,7 @@
 				115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */,
 				115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				112F36912B38D76500016890 /* XCRemoteSwiftPackageReference "QRCode" */,
+				11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 111164052B30518200F01C5E /* Products */;
 			projectDirPath = "";
@@ -940,6 +1135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				112F36382B38D75000016890 /* Assets.xcassets in Resources */,
+				11EBEA832B3DC4E900515558 /* GoogleService-Info.plist in Resources */,
 				112F36392B38D75000016890 /* Preview Assets.xcassets in Resources */,
 				112F36372B38D75000016890 /* Localizable.xcstrings in Resources */,
 			);
@@ -952,18 +1148,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11EBEAC12B3DD8A400515558 /* DetailedChangeDesignView.swift in Sources */,
 				114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */,
+				110DC9E32B3B28930046CBCD /* HistoryQrCodeCellView.swift in Sources */,
 				114085A52B39BE1600487E09 /* ScanCoordinatorViewModel.swift in Sources */,
+				11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */,
 				112F36532B38D75000016890 /* SettingsSectionType.swift in Sources */,
 				112F363D2B38D75000016890 /* TitledContainerView.swift in Sources */,
 				112F36752B38D75000016890 /* ChangeDesignViewModel.swift in Sources */,
 				114085B72B3AF77200487E09 /* HistoryEventFlow.swift in Sources */,
+				11EBEABD2B3DCD9A00515558 /* AppDelegate.swift in Sources */,
 				112F36802B38D75000016890 /* CreateResultQRCodeCoordinatorView.swift in Sources */,
 				112F367D2B38D75000016890 /* DetailedChangeDesignSectionModel.swift in Sources */,
 				112F36712B38D75000016890 /* ResultFlow.swift in Sources */,
 				112F367B2B38D75000016890 /* DesignCellView.swift in Sources */,
 				112F36882B38D75000016890 /* CreateQRCodeTemplateModel.swift in Sources */,
 				112F364F2B38D75000016890 /* SettingsItemSubtitleModel.swift in Sources */,
+				110DC9EE2B3C6D000046CBCD /* KeychainManager.swift in Sources */,
 				114085BC2B3AFD4800487E09 /* Db.xcdatamodeld in Sources */,
 				114085B52B3AF76600487E09 /* HistoryFlow.swift in Sources */,
 				1140859A2B39BB0D00487E09 /* ScanEventFlow.swift in Sources */,
@@ -981,16 +1182,25 @@
 				114085AE2B3AF4FB00487E09 /* MainHistoryNavigationView.swift in Sources */,
 				112F36662B38D75000016890 /* MainSettingsNavigationView.swift in Sources */,
 				112F36732B38D75000016890 /* ResultEventBus.swift in Sources */,
+				11EBEA772B3DA12500515558 /* ShareActivityManager.swift in Sources */,
 				112F36822B38D75000016890 /* CreateResultQRCodeView.swift in Sources */,
 				112F36852B38D75000016890 /* CreateEventFlow.swift in Sources */,
+				11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */,
 				112F36592B38D75000016890 /* SettingsItemProtocol.swift in Sources */,
+				110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */,
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
+				11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */,
+				11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */,
 				112F36902B38D75000016890 /* ContentView.swift in Sources */,
 				112F367E2B38D75000016890 /* DetailedChangDesignSectionType.swift in Sources */,
+				110DC9F02B3C6DA70046CBCD /* SubscriptionManager.swift in Sources */,
+				110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */,
 				112F368A2B38D75000016890 /* CustomLayout.swift in Sources */,
 				114085B92B3AFB7A00487E09 /* HistorySegmentType.swift in Sources */,
 				112F363C2B38D75000016890 /* TextFieldForm.swift in Sources */,
 				112F36792B38D75000016890 /* ChangeDesignCustomLayout.swift in Sources */,
+				11EBEA732B3D7E8700515558 /* StyleConfig.swift in Sources */,
+				11EBEA7B2B3DAA5E00515558 /* UITabBarController.swift in Sources */,
 				112F36642B38D75000016890 /* SettingsView.swift in Sources */,
 				112F36602B38D75000016890 /* InAppCellView.swift in Sources */,
 				114085B02B3AF71E00487E09 /* HistoryCoordinatorView.swift in Sources */,
@@ -1005,6 +1215,7 @@
 				112F367A2B38D75000016890 /* QRCodeDesign.swift in Sources */,
 				112F36832B38D75000016890 /* CreateViewModel.swift in Sources */,
 				112F36652B38D75000016890 /* SettingsCoordinatorView.swift in Sources */,
+				110DC9F32B3C751D0046CBCD /* MainTapBarViewModel.swift in Sources */,
 				112F368E2B38D75000016890 /* CreateCoordinatorView.swift in Sources */,
 				112F36542B38D75000016890 /* LanguageModel.swift in Sources */,
 				1140859C2B39BB1E00487E09 /* BaseResultQRCodeViewModel.swift in Sources */,
@@ -1014,19 +1225,23 @@
 				114085AC2B3A0FB900487E09 /* ShareQRImage.swift in Sources */,
 				112F365B2B38D75000016890 /* SettingsItemValueSubtitleProtocol.swift in Sources */,
 				112F368B2B38D75000016890 /* PersonalCell.swift in Sources */,
+				110DC9EA2B3C443A0046CBCD /* HistorySortType.swift in Sources */,
 				112F36522B38D75000016890 /* SettingsItemProtocolEraser.swift in Sources */,
 				112F363A2B38D75000016890 /* NavigationBarModifier.swift in Sources */,
+				110DC9E12B3B23330046CBCD /* CreateQRCodeEmptyCellView.swift in Sources */,
 				112F36612B38D75000016890 /* SettingsValueStringCellView.swift in Sources */,
 				112F36492B38D75000016890 /* String+regex.swift in Sources */,
 				112F36452B38D75000016890 /* FormatMatcher.swift in Sources */,
 				112F36622B38D75000016890 /* SettingsCellView.swift in Sources */,
 				112F36512B38D75000016890 /* SettingsItemValueModel.swift in Sources */,
+				110DC9F52B3C76660046CBCD /* Config.swift in Sources */,
 				112F36552B38D75000016890 /* SettingsEventFlow.swift in Sources */,
 				112F366E2B38D75000016890 /* CreateResultQRCodeCoordinatorViewModel.swift in Sources */,
 				112F36682B38D75000016890 /* CreateContentLinkQRCodeView.swift in Sources */,
 				112F36582B38D75000016890 /* SettingsItemValueProtocol.swift in Sources */,
 				112F36672B38D75000016890 /* CreateContentLinkViewModel.swift in Sources */,
 				112F365C2B38D75000016890 /* SettingsItemType.swift in Sources */,
+				110DC9E62B3B2F6D0046CBCD /* QRCodeEntity+formattedDate.swift in Sources */,
 				112F36AA2B3996A400016890 /* QRCode+DetectQRCode.swift in Sources */,
 				112F36572B38D75000016890 /* SettingFlow.swift in Sources */,
 				112F36702B38D75000016890 /* EditQRCodeContentViewModel.swift in Sources */,
@@ -1034,12 +1249,15 @@
 				112F368F2B38D75000016890 /* MainCreateNavigationView.swift in Sources */,
 				112F363B2B38D75000016890 /* TitledTextField.swift in Sources */,
 				112F364D2B38D75000016890 /* SettingsItemValueSubtitleModel.swift in Sources */,
+				11EBEABF2B3DD3B600515558 /* ImageUploader.swift in Sources */,
 				114085A12B39BC2000487E09 /* ScanFlow.swift in Sources */,
 				112F36782B38D75000016890 /* SelectableQRCodeDesign.swift in Sources */,
+				110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */,
 				114085A72B39BEAB00487E09 /* MainScanNavigationView.swift in Sources */,
 				114085AA2B39BF7500487E09 /* ScanResultQRCodeView.swift in Sources */,
 				112F36A22B39843400016890 /* ViewController.swift in Sources */,
 				112F36862B38D75000016890 /* CreateQRSectionType.swift in Sources */,
+				110DC9DC2B3B1D2E0046CBCD /* HistoryService.swift in Sources */,
 				112F363F2B38D75000016890 /* TitledCopyContainerViewModel.swift in Sources */,
 				112F36722B38D75000016890 /* ResultEventFlow.swift in Sources */,
 				112F368C2B38D75000016890 /* SocialCell.swift in Sources */,
@@ -1049,15 +1267,19 @@
 				112F364E2B38D75000016890 /* SettingsItemModel.swift in Sources */,
 				112F36872B38D75000016890 /* CreateFlow.swift in Sources */,
 				112F36412B38D75000016890 /* TitledContainerViewModel.swift in Sources */,
+				110DC9D92B3B1D180046CBCD /* QRCodeEntityModel.swift in Sources */,
 				112F36692B38D75000016890 /* MainTapBar.swift in Sources */,
 				112F36632B38D75000016890 /* SettingsValueBoolCellView.swift in Sources */,
 				112F36402B38D75000016890 /* TextViewModel.swift in Sources */,
+				11EBEA7D2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift in Sources */,
 				112F364A2B38D75000016890 /* QRCodeApp.swift in Sources */,
 				1140859F2B39BB4100487E09 /* ScanResultQRCodeViewModel.swift in Sources */,
 				112F366B2B38D75000016890 /* ScanView.swift in Sources */,
 				114085B22B3AF73200487E09 /* HistoryCoordinatorViewModel.swift in Sources */,
 				112F364B2B38D75000016890 /* SettingsViewModel.swift in Sources */,
 				112F36562B38D75000016890 /* SettingsEventBus.swift in Sources */,
+				110DC9DF2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift in Sources */,
+				11EBEA812B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1188,10 +1410,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QRCodeApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				DEVELOPMENT_TEAM = CLACNL3XK9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "For QRCode scanning";
@@ -1206,8 +1429,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.applage.ios.qrcode.QRCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrscanread.qrcodereaderscanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1219,10 +1443,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"QRCodeApp/Preview Content\"";
-				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
+				DEVELOPMENT_TEAM = CLACNL3XK9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "For QRCode scanning";
@@ -1237,8 +1462,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.applage.ios.qrcode.QRCode;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qrscanread.qrcodereaderscanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1301,6 +1527,14 @@
 				minimumVersion = 20.0.0;
 			};
 		};
+		11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1328,6 +1562,141 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		11EBEA852B3DC63500515558 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		11EBEA872B3DC63500515558 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		11EBEA892B3DC63500515558 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		11EBEA8B2B3DC63500515558 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		11EBEA8D2B3DC63500515558 /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		11EBEA8F2B3DC63500515558 /* FirebaseAppDistribution-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAppDistribution-Beta";
+		};
+		11EBEA912B3DC63500515558 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		11EBEA932B3DC63500515558 /* FirebaseAuthCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseAuthCombine-Community";
+		};
+		11EBEA952B3DC63500515558 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		11EBEA972B3DC63500515558 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		11EBEA992B3DC63500515558 /* FirebaseDatabaseSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabaseSwift;
+		};
+		11EBEA9B2B3DC63500515558 /* FirebaseDynamicLinks */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDynamicLinks;
+		};
+		11EBEA9D2B3DC63500515558 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		11EBEA9F2B3DC63500515558 /* FirebaseFirestoreCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreCombine-Community";
+		};
+		11EBEAA12B3DC63500515558 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		11EBEAA32B3DC63500515558 /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+		11EBEAA52B3DC63500515558 /* FirebaseFunctionsCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFunctionsCombine-Community";
+		};
+		11EBEAA72B3DC63500515558 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		11EBEAA92B3DC63500515558 /* FirebaseInAppMessagingSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessagingSwift-Beta";
+		};
+		11EBEAAB2B3DC63500515558 /* FirebaseInstallations */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseInstallations;
+		};
+		11EBEAAD2B3DC63500515558 /* FirebaseMLModelDownloader */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMLModelDownloader;
+		};
+		11EBEAAF2B3DC63500515558 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		11EBEAB12B3DC63500515558 /* FirebasePerformance */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebasePerformance;
+		};
+		11EBEAB32B3DC63500515558 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		11EBEAB52B3DC63500515558 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		11EBEAB72B3DC63500515558 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		11EBEAB92B3DC63500515558 /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 

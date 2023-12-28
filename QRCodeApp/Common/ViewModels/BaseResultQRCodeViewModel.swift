@@ -10,14 +10,17 @@ import Combine
 import QRCode
 
 class BaseResultQRCodeViewModel: BaseViewModel {
+    @Published public var isLoading: Bool = false
     @Published public var items = [TitledCopyContainerViewModel]()
     @Published private(set) var qrCodeDocument: QRCode.Document
     public let qrCodeFormat: QRCodeFormat
     public var qrCodeString: String
+    public var isSaved = false
+    public var path: String?
     
     public var eventSender = PassthroughSubject<CreateResultQRCodeViewModel.Event, Never>()
     
-    private let localStorage: LocalStore
+    private(set) var localStorage: LocalStore
     
     public lazy var title: String = { [unowned self] in
         "QRCode · \(self.qrCodeFormat.description)"
@@ -39,6 +42,29 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         createFormat()
         qrCodeDocument.utf8String = self.qrCodeString
         qrCodeDocument.design = .default()
+    }
+    
+    public func share() {
+        guard isSaved else {
+            Task { @MainActor [weak self] in
+                await self?.saveQRCode()
+                self?.share()
+            }
+            return
+        }
+        guard let data = qrCodeDocument.uiImage(.init(width: 240, height: 240))?.pngData() else { return }
+        ShareActivityManager.share(datas: [data])
+    }
+    
+    public func shareInSafary(completion: @escaping (String) -> Void) {
+        guard let path else {
+            Task { @MainActor [weak self] in
+                await self?.saveQRCode()
+                self?.shareInSafary(completion: completion)
+            }
+            return
+        }
+        completion(path)
     }
     
     public func createFormat() {
@@ -71,17 +97,22 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         }
     }
     
-    public func addQRCode(isCreated: Bool) {
-        guard let date = qrCodeDocument.pngData(dimension: 1) else { return }
+    public func saveQRCode() async {
+        fatalError("Not implemented")
+    }
+    
+    public func addQRCode(isCreated: Bool, path: String) {
+        guard let date = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
         do {
             try localStorage.addQRCode(qrCodeString: qrCodeString,
                                        type: qrCodeFormat.rawValue,
-                                       subtitle: "",
+                                       subtitle: path,
                                        date: Date(),
                                        image: date,
                                        isCreated: isCreated)
+            print("addQRCode added")
         } catch {
-            print("setRecognize error \(error)")
+            print("addQRCode error \(error)")
         }
     }
 }

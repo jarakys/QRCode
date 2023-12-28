@@ -9,9 +9,15 @@ import Foundation
 import Combine
 import QRCode
 
-final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
-    private var navigationSender: PassthroughSubject<ResultEventFlow, Never>
+class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
+    public var navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private var communicationBus: PassthroughSubject<ResultEventBus, Never>
+    
+    public let keychainStorage = KeychainManager.shared
+    
+    public var isDeletable: Bool {
+        false
+    }
     
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
          communicationBus: PassthroughSubject<ResultEventBus, Never>,
@@ -22,6 +28,11 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         self.communicationBus = communicationBus
         
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+            self.qrCodeDocument.logoTemplate = .wifi()
+            self.qrCodeDocument.setHasChanged()
+        })
     }
     
     public func editContentDidTap() {
@@ -33,15 +44,58 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     }
     
     public func changedDesignDidTap() {
-        navigationSender.send(.changeDesign)
+        navigationSender.send(.changeDesign(qrCodeString: qrCodeString))
+    }
+    
+    public func doneDidTap() {
+        guard !isSaved else { 
+            navigationSender.send(.backToMain)
+            return
+        }
+        Task { @MainActor [weak self] in
+            await self?.saveQRCode()
+            self?.navigationSender.send(.backToMain)
+        }
+    }
+    
+    override func saveQRCode() async {
+        isSaved = true
+        await MainActor.run(body: {
+            isLoading = true
+        })
+        guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        do {
+            let result = try await ImageUploader.upload(data: data)
+            self.path = result
+            addQRCode(isCreated: true, path: result)
+            let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
+            do {
+                try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
+            } catch {
+                print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
+            }
+            await MainActor.run(body: {
+                isLoading = false
+            })
+        } catch {
+            await MainActor.run(body: {
+                isLoading = false
+            })
+            print("ImageUploader.upload error \(error)")
+        }
     }
     
     private func updateQRCodeDocument(qrCodeString: String) {
         qrCodeDocument.update(text: qrCodeString)
+        qrCodeDocument.utf8String = qrCodeString
         qrCodeDocument.setHasChanged()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [unowned self] in
             objectWillChange.send()
         })
+    }
+    
+    public func deleteDidTap() {
+        
     }
     
     override func bind() {

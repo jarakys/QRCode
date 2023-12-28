@@ -10,16 +10,18 @@ import SwiftUI
 struct HistoryCoordinatorView: View {
     @StateObject public var viewModel: HistoryCoordinatorViewModel
     @EnvironmentObject public var pathsState: PathState
+    @EnvironmentObject public var mainTapBarViewModel: MainTapBarViewModel
     
     var body: some View {
         HistoryView(viewModel: viewModel.historyViewModel)
             .navigationDestination(for: HistoryFlow.self, destination: { flow in
                 switch flow {
-                case .details:
-                    Text("Details")
+                case let .details(model):
+                    HistoryResultQRCodeView(viewModel: viewModel.historyResultQRCodeViewModel(model: model))
                     
-                case .editableDetails:
-                    Text("Editable details")
+                case let .editableDetails(model):
+                    CreateResultQRCodeCoordinatorView(viewModel: viewModel.createResultQRCodeCoordinatorViewModel(model: model))
+                        .environmentObject(pathsState)
                 }
             })
             .onReceive(viewModel.navigationSender, perform: { event in
@@ -27,11 +29,17 @@ struct HistoryCoordinatorView: View {
                 case .back:
                     pathsState.back()
                     
-                case .details:
-                    pathsState.append(HistoryFlow.details)
+                case let .details(model):
+                    pathsState.append(HistoryFlow.details(item: model))
                     
-                case .editableDetails:
-                    pathsState.append(HistoryFlow.editableDetails)
+                case let .editableDetails(model):
+                    pathsState.append(HistoryFlow.editableDetails(item: model))
+                    
+                case .create:
+                    mainTapBarViewModel.tabSelection = 2
+                    
+                case .scans:
+                    mainTapBarViewModel.tabSelection = 0
                 }
             })
     }

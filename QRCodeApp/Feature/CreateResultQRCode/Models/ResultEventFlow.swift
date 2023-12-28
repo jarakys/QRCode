@@ -10,6 +10,7 @@ import Foundation
 enum ResultEventFlow {
     case editContent(items: [TextViewModel])
     case back
-    case changeDesign
-    case detailedChangeDesign
+    case backToMain
+    case changeDesign(qrCodeString: String)
+    case detailedChangeDesign(qrCodeString: String, qrCodeDesign: QRCodeDesign)
 }

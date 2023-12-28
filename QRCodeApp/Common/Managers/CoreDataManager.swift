@@ -15,6 +15,12 @@ protocol LocalStore {
                    date: Date, 
                    image: Data,
                    isCreated: Bool) throws
+    func updateQRCode(id: UUID,
+                      path: String,
+                      qrCodeString: String,
+                      image: Data) throws
+    
+    func deleteQRCode(id: UUID) throws
 }
 
 class CoreDataManager: LocalStore {
@@ -32,21 +38,70 @@ class CoreDataManager: LocalStore {
         context = container.viewContext
     }
     
+    func updateQRCode(id: UUID, 
+                      path: String,
+                      qrCodeString: String,
+                      image: Data) throws {
+        let fetchRequest: NSFetchRequest<QRCodeEntity> = QRCodeEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "uuid == %@", id as CVarArg)
+        
+        let entities = try context.fetch(fetchRequest)
+        
+        if let entityToUpdate = entities.first {
+            // Update the properties of the entity
+            entityToUpdate.image = image
+            entityToUpdate.qrCodeString = qrCodeString
+            entityToUpdate.subtitle = path
+            
+            // Save the changes to the context
+            try context.save()
+        }
+            
+    }
+    
     func addQRCode(qrCodeString: String,
                    type: String,
                    subtitle: String,
                    date: Date,
                    image: Data,
                    isCreated: Bool) throws {
-        let qrCodeEntity = NSEntityDescription.entity(forEntityName: "QrCodeEntity", in: context)!
+        let qrCodeEntity = NSEntityDescription.entity(forEntityName: "QRCodeEntity", in: context)!
         let qrCode = QRCodeEntity(entity: qrCodeEntity, insertInto: context)
         qrCode.type = type
         qrCode.qrCodeString = qrCodeString
+        qrCode.uuid = UUID()
         qrCode.date = date
         qrCode.subtitle = subtitle
         qrCode.image = image
         qrCode.isCreated = isCreated
         
+        try context.save()
+    }
+    
+    func deleteQRCode(id: UUID) throws {
+        try removeQRCodes(ids: [id])
+    }
+    
+    func removeQRCodes(ids: [UUID]) throws {
+        let entityName = "QRCodeEntity"
+        let idAttributeName = "uuid"
+        
+        for objectId in ids {
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: entityName)
+            let predicate = NSPredicate(format: "%K == %@", idAttributeName, objectId.debugDescription)
+            fetchRequest.predicate = predicate
+            
+            do {
+                let fetchedObjects = try context.fetch(fetchRequest) as! [NSManagedObject]
+                
+                for object in fetchedObjects {
+                    context.delete(object)
+                }
+                
+            } catch {
+                print("Error deleting objects: \(error)")
+            }
+        }
         try context.save()
     }
 }

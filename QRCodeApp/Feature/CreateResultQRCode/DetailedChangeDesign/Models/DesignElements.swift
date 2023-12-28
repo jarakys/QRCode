@@ -20,13 +20,18 @@ enum DesignElements: Hashable, DesignIconProtocol {
     
     case logo(image: String)
     
+    case colorMaskBackground(color: String)
+    case colorMaskLeaf
+    case colorMaskPixels
+    case colorMaskEye
+    
     private var iconName: String {
         switch self {
         case .circleBody:
             return "circleBody"
             
         case .squareBody:
-            return "circleBody"
+            return "squareBody"
             
         case .roundedBody:
             return "roundedBody"
@@ -46,9 +51,30 @@ enum DesignElements: Hashable, DesignIconProtocol {
         case .roundedPointingInMarker:
             return "roundedPointingInMarker"
             
+        case .colorMaskBackground:
+            return "colorMaskBackground"
+            
+        case .colorMaskLeaf:
+            return "colorMaskLeaf"
+            
+        case .colorMaskPixels:
+            return "colorMaskPixels"
+            
+        case .colorMaskEye:
+            return "colorMaskEye"
+            
         case .logo:
             return ""
            
+        }
+    }
+    
+    var color: String? {
+        switch self {
+        case let .colorMaskBackground(color):
+            return color
+            
+        default: return nil
         }
     }
     

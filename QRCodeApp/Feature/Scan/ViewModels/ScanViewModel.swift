@@ -15,6 +15,8 @@ final class ScanViewModel: BaseViewModel {
     private let navigationSender: PassthroughSubject<ScanEventFlow, Never>
     public let eventSender = PassthroughSubject<ScanViewModel.Event, Never>()
     
+    private let keychainStorage = KeychainManager.shared
+    
     init(navigationSender: PassthroughSubject<ScanEventFlow, Never>) {
         self.navigationSender = navigationSender
         super.init()
@@ -27,6 +29,12 @@ final class ScanViewModel: BaseViewModel {
     public func setRecognized(string: String) {
         print(string)
         navigationSender.send(.result(qrCodeString: string))
+        let scanCounts = keychainStorage.get(key: .countScans, defaultValue: 0)
+        do {
+            try keychainStorage.set(key: .countScans, value: scanCounts + 1)
+        } catch {
+            print("setRecognized keychainStorage countScans error: \(error)")
+        }
         guard UserDefaultsService.shared.get(key: .vibrationSelected, defaultValue: true) else { return }
         eventSender.send(.vibrate)
     }

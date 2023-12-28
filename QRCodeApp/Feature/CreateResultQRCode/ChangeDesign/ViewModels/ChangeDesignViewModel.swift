@@ -14,11 +14,14 @@ final class ChangeDesignViewModel: BaseViewModel {
     
     private let navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private let communicationBus: PassthroughSubject<ResultEventBus, Never>
+    private let qrCodeString: String
     
-    init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
+    init(qrCodeString: String,
+         navigationSender: PassthroughSubject<ResultEventFlow, Never>,
          communicationBus: PassthroughSubject<ResultEventBus, Never>) {
         self.navigationSender = navigationSender
         self.communicationBus = communicationBus
+        self.qrCodeString = qrCodeString
         super.init()
         selectedItem = items.first?.cellIdentifiers.first
     }
@@ -34,7 +37,7 @@ final class ChangeDesignViewModel: BaseViewModel {
             navigationSender.send(.back)
             return
         }
-        navigationSender.send(.detailedChangeDesign)
+        navigationSender.send(.detailedChangeDesign(qrCodeString: qrCodeString, qrCodeDesign: selectedItem.item))
         communicationBus.send(.designChanged(model: QRCodeDesignModel(logo: selectedItem.item.logo, design: selectedItem.item.qrCodeDesign)))
 //        navigationSender.send(.back)
     }

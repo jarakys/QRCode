@@ -50,7 +50,6 @@ struct CreateView: View {
                 })
             })
         })
-        .toolbarBackground(Color.white, for: .navigationBar)
     }
 }
 
