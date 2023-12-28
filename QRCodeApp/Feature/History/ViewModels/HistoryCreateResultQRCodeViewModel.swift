@@ -16,11 +16,11 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
     }
     
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
-                  communicationBus: PassthroughSubject<ResultEventBus, Never>,
-                  localStorage: LocalStore,
-                  qrCodeFormat: QRCodeFormat,
-                  qrCodeString: String,
-                  id: UUID) {
+         communicationBus: PassthroughSubject<ResultEventBus, Never>,
+         localStorage: LocalStore,
+         qrCodeFormat: QRCodeFormat,
+         qrCodeString: String,
+         id: UUID) {
         self.id = id
         super.init(navigationSender: navigationSender,
                    communicationBus: communicationBus,
