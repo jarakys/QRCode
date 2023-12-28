@@ -38,6 +38,9 @@ struct CreateResultQRCodeCoordinatorView: View {
                 case let .detailedChangeDesign(qrCodeString, qrCodeDesign):
                     pathsState.append(ResultFlow.detailedChangeDesing(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign))
                     
+                case .backToRoot:
+                    pathsState.paths.removeLast(pathsState.paths.count - 1)
+                    
                 case .backToMain:
                     pathsState.popToRoot()
                 }

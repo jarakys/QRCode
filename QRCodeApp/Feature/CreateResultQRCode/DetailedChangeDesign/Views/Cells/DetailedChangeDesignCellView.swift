@@ -26,7 +26,6 @@ struct DetailedChangeDesignCellView<T: DesignIconProtocol>: View {
             }
         }
         .overlay(
-            
             RoundedRectangle(cornerRadius: 8)
                 .stroke(model.isSelected ? .blue : .white, lineWidth: model.item.color != nil ? 0 : 2)
         )

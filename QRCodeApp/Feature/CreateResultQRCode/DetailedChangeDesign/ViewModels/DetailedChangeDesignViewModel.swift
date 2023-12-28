@@ -175,11 +175,12 @@ final class DetailedChangeDesignViewModel: BaseViewModel {
     }
     
     public func save() {
-        
+        communicationBus.send(.detailedDesignSave(design: qrDocument.design, logo: qrDocument.logoTemplate))
+        navigationSender.send(.backToRoot)
     }
     
     public func cancel() {
-        navigationSender.send(.back)
+        navigationSender.send(.backToMain)
     }
     
     private func applyBody(item: DesignElements) {

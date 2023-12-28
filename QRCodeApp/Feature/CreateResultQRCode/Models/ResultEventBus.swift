@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import QRCode
 
 enum ResultEventBus {
     case contentChanged(items: [TitledCopyContainerViewModel])
     case designChanged(model: QRCodeDesignModel)
+    case detailedDesignSave(design: QRCode.Design, logo: QRCode.LogoTemplate?)
 }

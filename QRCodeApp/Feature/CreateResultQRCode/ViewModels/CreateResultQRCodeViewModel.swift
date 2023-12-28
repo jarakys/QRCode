@@ -114,6 +114,11 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
                 self.qrCodeDocument.design = model.design
                 self.qrCodeDocument.logoTemplate = model.logo
                 self.qrCodeDocument.setHasChanged()
+                
+            case let .detailedDesignSave(design, logo):
+                self.qrCodeDocument.design = design
+                self.qrCodeDocument.logoTemplate = logo
+                self.qrCodeDocument.setHasChanged()
             }
         }).store(in: &cancellable)
     }

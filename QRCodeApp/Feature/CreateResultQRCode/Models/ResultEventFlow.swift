@@ -11,6 +11,7 @@ enum ResultEventFlow {
     case editContent(items: [TextViewModel])
     case back
     case backToMain
+    case backToRoot
     case changeDesign(qrCodeString: String)
     case detailedChangeDesign(qrCodeString: String, qrCodeDesign: QRCodeDesign)
 }
