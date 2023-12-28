@@ -48,6 +48,7 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
         Task {
             await saveQRCode()
             update()
+            navigationSender.send(.back)
         }
     }
     

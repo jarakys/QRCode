@@ -21,6 +21,10 @@ final class DetailedChangeDesignViewModel: ObservableObject {
     private let qrCodeString: String
     private let qrCodeDesign: QRCodeDesign
     
+    private var selectedBody: DesignElementViewModel
+    private var selectedMarker: DesignElementViewModel
+    private var selectedLogo: DesignElementViewModel?
+    
     public lazy var qrDocument: QRCode.Document = { [unowned self] in
         let qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
         qrCodeDocument.utf8String = qrCodeString
@@ -38,18 +42,21 @@ final class DetailedChangeDesignViewModel: ObservableObject {
         self.qrCodeString = qrCodeString
         self.qrCodeDesign = qrCodeDesign
         
+        selectedBody = DesignElementViewModel(isSelected: true, item: .squareBody)
+        selectedMarker = DesignElementViewModel(isSelected: true, item: .squareMarker)
+        
         items = [
             DetailedChangeDesignSectionModel(sectionIdentifier: .body,
                                              cellIdentifiers:
                                                 [
-                                                    DesignElementViewModel(isSelected: true, item: .squareBody),
+                                                    selectedBody,
                                                     DesignElementViewModel(isSelected: false, item: .roundedBody),
                                                     DesignElementViewModel(isSelected: false, item: .circleBody)
                                                 ]),
             DetailedChangeDesignSectionModel(sectionIdentifier: .marker,
                                              cellIdentifiers:
                                                 [
-                                                    DesignElementViewModel(isSelected: true, item: .squareMarker),
+                                                    selectedMarker,
                                                     DesignElementViewModel(isSelected: false, item: .roundedMarker),
                                                     DesignElementViewModel(isSelected: false, item: .circleMarker),
 //                                                    DesignElementViewModel(isSelected: false, item: .leafMarker),
@@ -82,10 +89,46 @@ final class DetailedChangeDesignViewModel: ObservableObject {
                                                     DesignElementViewModel(isSelected: false, item: .colorMaskEye)
                                                 ])
         ]
+        
     }
     
     public func didClick(on item: DesignElementViewModel) {
-        
+        switch item.item {
+        case .circleBody, .squareBody, .roundedBody:
+            selectBody(item: item)
+            
+        case .leafMarker, .circleMarker, .squareMarker, .roundedMarker, .roundedPointingInMarker:
+            selectMarker(item: item)
+            
+        case .logo:
+            selectLogo(item: item)
+            
+        case .colorMaskEye, .colorMaskLeaf, .colorMaskPixels, .colorMaskBackground:
+            break
+        }
+    }
+    
+    private func selectBody(item: DesignElementViewModel) {
+        selectedBody.isSelected = false
+        selectedBody = item
+        selectedBody.isSelected = true
+    }
+    
+    private func selectMarker(item: DesignElementViewModel) {
+        selectedMarker.isSelected = false
+        selectedMarker = item
+        selectedMarker.isSelected = true
+    }
+    
+    private func selectLogo(item: DesignElementViewModel) {
+        guard selectedLogo?.item != item.item else {
+            selectedLogo?.isSelected = false
+            selectedLogo = nil
+            return
+        }
+        selectedLogo?.isSelected = false
+        selectedLogo = item
+        selectedLogo?.isSelected = true
     }
     
     public func save() {
@@ -124,7 +167,7 @@ struct DetailedChangeDesignView: View {
             .toolbar(content: {
                 ToolbarItem(placement: .topBarTrailing, content: {
                     Button(action: {
-                        //TODO: Save
+                        viewModel.save()
                     }, label: {
                         Text("Save")
                             .font(.system(size: 17, weight: .semibold))

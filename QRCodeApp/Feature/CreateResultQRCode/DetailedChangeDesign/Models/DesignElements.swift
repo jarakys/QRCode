@@ -31,7 +31,7 @@ enum DesignElements: Hashable, DesignIconProtocol {
             return "circleBody"
             
         case .squareBody:
-            return "circleBody"
+            return "squareBody"
             
         case .roundedBody:
             return "roundedBody"
