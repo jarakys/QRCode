@@ -45,4 +45,7 @@ class CreateResultQRCodeCoordinatorViewModel: BaseViewModel {
                               communicationBus: communicationBus)
     }
     
+    public func detailedChangeDesignViewModel(qrCodeString: String, qrCodeDesign: QRCodeDesign) -> DetailedChangeDesignViewModel {
+        DetailedChangeDesignViewModel(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign, navigationSender: navigationSender, communicationBus: communicationBus)
+    }
 }

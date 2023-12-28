@@ -21,7 +21,7 @@ struct CreateResultQRCodeCoordinatorView: View {
                     EditQRCodeContentView(viewModel: viewModel.editQRCodeContentViewModel(items: items))
                     
                 case let .detailedChangeDesing(qrCodeString, qrCodeDesign):
-                    DetailedChangeDesignView(viewModel: DetailedChangeDesignViewModel(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign, navigationSender: viewModel.navigationSender, communicationBus: .init()))
+                    DetailedChangeDesignView(viewModel: viewModel.detailedChangeDesignViewModel(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign))
                 }
             })
             .onReceive(viewModel.navigationSender, perform: { event in

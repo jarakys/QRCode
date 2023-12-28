@@ -9,6 +9,10 @@ import Foundation
 import Combine
 import QRCode
 
+class QRCodeContainer {
+    static let document = QRCode.Document(generator: QRCodeGenerator_External())
+}
+
 class BaseResultQRCodeViewModel: BaseViewModel {
     @Published public var isLoading: Bool = false
     @Published public var items = [TitledCopyContainerViewModel]()
