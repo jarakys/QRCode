@@ -244,7 +244,7 @@ struct HistoryView: View {
                 .foregroundStyle(.secondaryTitle)
             if !viewModel.isPremium && section.title == viewModel.lastSection?.title {
                 Spacer()
-                Text("\(viewModel.selectedType == 0 ? viewModel.countCreates : viewModel.countCreates) of 5")
+                Text("\(viewModel.selectedType == 0 ? viewModel.countScans : viewModel.countCreates) of 5")
                     .textCase(.lowercase)
                     .font(.system(size: 15, weight: .regular))
                     .foregroundStyle(.secondaryTitle)
