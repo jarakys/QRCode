@@ -21,6 +21,9 @@ final class HistoryViewModel: BaseViewModel {
     @Published public var sortType: HistorySortType = .alhabet
     @Published public var editType: EditType = .selection
     @Published public var isPremium: Bool = false
+    @Published public var shouldEdit = false
+
+    private var privateItems = [QRCodeEntitySection]()
     
     private let keychainStorage: KeychainManager = .shared
     private let subscriptionManager: SubscriptionManager
@@ -48,9 +51,9 @@ final class HistoryViewModel: BaseViewModel {
     
     public var shouldShowUnlockButton: Bool {
         if selectedType == 0 {
-            return countCreates >= Config.maxCreatesCount
+            return countScans >= Config.maxScansCount
         } else {
-            return countScans >=  Config.maxScansCount
+            return countCreates >=  Config.maxCreatesCount
         }
     }
     
@@ -76,14 +79,17 @@ final class HistoryViewModel: BaseViewModel {
         
         historyService.emmiter.receive(on: RunLoop.main).sink(receiveValue: { [weak self] sections in
             guard let self else { return }
+            self.privateItems = sections
             self.sections = sections
             print("section count \(sections)")
-            
+            guard sections.isEmpty else { return }
+            self.shouldEdit = false
         }).store(in: &cancellable)
         
         $selectedType.dropFirst().sink(receiveValue: { [weak self] type in
             guard let self else { return }
             guard let type = HistorySegmentType(rawValue: type) else { return }
+            self.shouldEdit = false
             do {
                 switch type {
                 case .scanned:
@@ -91,7 +97,6 @@ final class HistoryViewModel: BaseViewModel {
                     
                 case .created:
                     try self.historyService.fetch(isCreated: true)
-                    
                 }
             } catch {
                 print("selectedType changed error \(error)")
@@ -134,6 +139,7 @@ final class HistoryViewModel: BaseViewModel {
         let items = sections.flatMap({ $0.items }).filter({ selectedItems.contains($0.id) })
         do {
             try CoreDataManager.shared.removeQRCodes(ids: items.map({ $0.id }))
+            selectedItems.removeAll()
         } catch {
             print("deleteDidTap error \(error)")
         }

@@ -92,15 +92,13 @@ struct HistoryView: View {
             }
         })
         .navigationBarColor(backgroundColor: .white, titleColor: .black)
-//        .onReceive(editMode, perform: { value
-//            viewModel.editListDidTap(isEditing: value.wrappedValue == .active)
-//        })
-//        .onReceive($editMode, perform: { value in
-//            viewModel.editListDidTap(isEditing: value.wrappedValue == .active)
-//        })
         .onReceive(viewModel.$sortType, perform: { type in
             guard type == .manual else { return }
             editMode = .active
+        })
+        .onReceive(viewModel.$shouldEdit, perform: { value in
+            guard !value else { return }
+            editMode = .inactive
         })
         .onChange(of: editMode, perform: { mode in
             viewModel.editListDidTap(isEditing: mode == .active)

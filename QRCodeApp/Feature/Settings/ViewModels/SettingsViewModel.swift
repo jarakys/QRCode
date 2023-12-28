@@ -36,7 +36,7 @@ final class SettingsViewModel: BaseViewModel {
     
     private var qrCodeCreationRemains: SettingsItemValueModel<String> {
         let text = isPremium ? String(localized: "Unlimited") : "\(countCreates) of \(Config.maxCreatesCount)"
-        return SettingsItemValueModel(title: String(localized: "Products scans remaining"), icon: "remainIcon", value: text)
+        return SettingsItemValueModel(title: String(localized: "QR creates remaining"), icon: "remainIcon", value: text)
     }
     
     public var countScans: Int {
