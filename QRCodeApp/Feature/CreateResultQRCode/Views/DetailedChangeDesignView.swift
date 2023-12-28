@@ -10,13 +10,18 @@ import QRCode
 import CompositionalList
 import Combine
 
-final class DetailedChangeDesignViewModel: ObservableObject {
+final class DetailedChangeDesignViewModel: BaseViewModel {
     @Published public var items: [DetailedChangeDesignSectionModel]
     
     private let navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private let communicationBus: PassthroughSubject<ResultEventBus, Never>
     private let qrCodeString: String
     private let qrCodeDesign: QRCodeDesign
+    
+    @Published public var eyeColor: Color = .qrCodeDefault
+    @Published public var leftColor: Color = .qrCodeDefault
+    @Published public var pixelColor: Color = .qrCodeDefault
+    @Published public var backgroundColor: Color = .qrCodeDefault
     
     private var selectedBody: DesignElementViewModel
     private var selectedMarker: DesignElementViewModel
@@ -86,7 +91,36 @@ final class DetailedChangeDesignViewModel: ObservableObject {
                                                     DesignElementViewModel(isSelected: false, item: .colorMaskEye)
                                                 ])
         ]
+    }
+    
+    override func bind() {
+        $eyeColor.sink(receiveValue: { [weak self] color in
+            guard let self else { return }
+            let cgColor = UIColor(color).cgColor
+            self.qrDocument.design.style.pupil = QRCode.FillStyle.Solid(cgColor)
+            self.qrDocument.setHasChanged()
+        }).store(in: &cancellable)
         
+        $leftColor.sink(receiveValue: { [weak self] color in
+            guard let self else { return }
+            let cgColor = UIColor(color).cgColor
+            self.qrDocument.design.style.eye = QRCode.FillStyle.Solid(cgColor)
+            self.qrDocument.setHasChanged()
+        }).store(in: &cancellable)
+        
+        $pixelColor.sink(receiveValue: { [weak self] color in
+            guard let self else { return }
+            let cgColor = UIColor(color).cgColor
+            self.qrDocument.design.style.onPixels = QRCode.FillStyle.Solid(cgColor)
+            self.qrDocument.setHasChanged()
+        }).store(in: &cancellable)
+        
+        $backgroundColor.sink(receiveValue: { [weak self] color in
+            guard let self else { return }
+            let cgColor = UIColor(color).cgColor
+            self.qrDocument.design.style.background = QRCode.FillStyle.Solid(cgColor)
+            self.qrDocument.setHasChanged()
+        }).store(in: &cancellable)
     }
     
     public func didClick(on item: DesignElementViewModel) {
@@ -194,6 +228,7 @@ final class DetailedChangeDesignViewModel: ObservableObject {
 
 struct DetailedChangeDesignView: View {
     @StateObject public var viewModel: DetailedChangeDesignViewModel
+    @State public var color: Color = .green
     
     var body: some View {
         VStack(spacing: 25) {
@@ -201,7 +236,49 @@ struct DetailedChangeDesignView: View {
                 .frame(width: 240, height: 240)
                 .padding(.top, 16)
             CompositionalList(viewModel.items) { model, indexPath in
-                DetailedChangeDesignCellView(model: model)
+                switch model.item {
+                case .colorMaskEye:
+                    ZStack {
+                        ColorPicker("", selection: $viewModel.eyeColor)
+                            .scaleEffect(2)
+                            .padding(.trailing, 20)
+                        DetailedChangeDesignCellView(model: model)
+                            .allowsHitTesting(false)
+                            .disabled(true)
+                    }
+                    
+                case .colorMaskLeaf:
+                    ZStack {
+                        ColorPicker("", selection: $viewModel.leftColor)
+                            .scaleEffect(2)
+                            .padding(.trailing, 20)
+                        DetailedChangeDesignCellView(model: model)
+                            .allowsHitTesting(false)
+                            .disabled(true)
+                    }
+                    
+                case .colorMaskPixels:
+                    ZStack {
+                        ColorPicker("", selection: $viewModel.pixelColor)
+                            .scaleEffect(2)
+                            .padding(.trailing, 20)
+                        DetailedChangeDesignCellView(model: model)
+                            .allowsHitTesting(false)
+                            .disabled(true)
+                    }
+                    
+                case .colorMaskBackground:
+                    ZStack {
+                        ColorPicker("", selection: $viewModel.backgroundColor)
+                            .scaleEffect(2)
+                            .padding(.trailing, 20)
+                        DetailedChangeDesignCellView(model: model)
+                            .allowsHitTesting(false)
+                            .disabled(true)
+                    }
+                    
+                default: DetailedChangeDesignCellView(model: model)
+                }
             }.sectionHeader { sectionIdentifier, kind, indexPath in
                 Text(sectionIdentifier.description)
                     .font(.system(size: 15))

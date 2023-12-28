@@ -19,15 +19,6 @@
       }
     },
     {
-      "identity" : "compositionallist",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jarakys/CompositionalList.git",
-      "state" : {
-        "branch" : "main",
-        "revision" : "2c5c5bcf809f3ae1c7be1d98e27bf635f696d8ee"
-      }
-    },
-    {
       "identity" : "firebase-ios-sdk",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/firebase/firebase-ios-sdk.git",
