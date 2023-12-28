@@ -80,7 +80,9 @@ final class HistoryViewModel: BaseViewModel {
         historyService.emmiter.receive(on: RunLoop.main).sink(receiveValue: { [weak self] sections in
             guard let self else { return }
             self.privateItems = sections
-            self.sections = sections
+            let searchItems = self.search(searchText: self.searchText)
+            let filteredItems = self.filter(sortType: self.sortType, items: searchItems)
+            self.sections = filteredItems
             print("section count \(sections)")
             guard sections.isEmpty else { return }
             self.shouldEdit = false
