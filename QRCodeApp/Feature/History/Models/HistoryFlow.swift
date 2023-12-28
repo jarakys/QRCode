@@ -8,6 +8,6 @@
 import Foundation
 
 enum HistoryFlow: Hashable {
-    case details
-    case editableDetails
+    case details(item: QRCodeEntityModel)
+    case editableDetails(item: QRCodeEntityModel)
 }

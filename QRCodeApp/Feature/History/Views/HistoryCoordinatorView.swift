@@ -16,10 +16,10 @@ struct HistoryCoordinatorView: View {
         HistoryView(viewModel: viewModel.historyViewModel)
             .navigationDestination(for: HistoryFlow.self, destination: { flow in
                 switch flow {
-                case .details:
-                    Text("Details")
+                case let .details(model):
+                    HistoryResultQRCodeView(viewModel: viewModel.historyResultQRCodeViewModel(model: model))
                     
-                case .editableDetails:
+                case let .editableDetails(model):
                     Text("Editable details")
                 }
             })
@@ -28,11 +28,11 @@ struct HistoryCoordinatorView: View {
                 case .back:
                     pathsState.back()
                     
-                case .details:
-                    pathsState.append(HistoryFlow.details)
+                case let .details(model):
+                    pathsState.append(HistoryFlow.details(item: model))
                     
-                case .editableDetails:
-                    pathsState.append(HistoryFlow.editableDetails)
+                case let .editableDetails(model):
+                    pathsState.append(HistoryFlow.editableDetails(item: model))
                     
                 case .create:
                     mainTapBarViewModel.tabSelection = 2

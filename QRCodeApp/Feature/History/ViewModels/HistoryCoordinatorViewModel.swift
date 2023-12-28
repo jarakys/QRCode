@@ -14,4 +14,8 @@ final class HistoryCoordinatorViewModel: BaseViewModel {
     public lazy var historyViewModel: HistoryViewModel = { [unowned self] in
         HistoryViewModel(subscriptionManager: SubscriptionManager.shared, navigationSender: navigationSender)
     }()
+    
+    public func historyResultQRCodeViewModel(model: QRCodeEntityModel) -> HistoryResultQRCodeViewModel {
+        HistoryResultQRCodeViewModel(qrCodeString: model.qrCodeString, localStorage: CoreDataManager.shared, qrCodeFormat: model.qrCodeFormat)
+    }
 }

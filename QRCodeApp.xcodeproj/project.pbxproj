@@ -140,6 +140,7 @@
 		11EBEA732B3D7E8700515558 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA722B3D7E8700515558 /* StyleConfig.swift */; };
 		11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */; };
 		11EBEA772B3DA12500515558 /* ShareActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA762B3DA12500515558 /* ShareActivityManager.swift */; };
+		11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -285,6 +286,7 @@
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
 		11EBEA762B3DA12500515558 /* ShareActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityManager.swift; sourceTree = "<group>"; };
+		11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -679,6 +681,7 @@
 				112F36012B38D75000016890 /* HistoryView.swift */,
 				114085AD2B3AF4FB00487E09 /* MainHistoryNavigationView.swift */,
 				114085AF2B3AF71E00487E09 /* HistoryCoordinatorView.swift */,
+				11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1065,6 +1068,7 @@
 				112F36592B38D75000016890 /* SettingsItemProtocol.swift in Sources */,
 				110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */,
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
+				11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */,
 				112F36902B38D75000016890 /* ContentView.swift in Sources */,
 				112F367E2B38D75000016890 /* DetailedChangDesignSectionType.swift in Sources */,
 				110DC9F02B3C6DA70046CBCD /* SubscriptionManager.swift in Sources */,

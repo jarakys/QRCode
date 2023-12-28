@@ -174,7 +174,13 @@ final class HistoryViewModel: BaseViewModel {
     }
     
     public func editDidTap() {
+        guard let first = privateItems.flatMap({ $0.items }).first(where: { selectedItems.contains($0.id) }) else { return }
+        navigationSender.send(.editableDetails(model: first))
         shouldEdit = false
+    }
+    
+    public func itemDidTap(model: QRCodeEntityModel) {
+        navigationSender.send(.details(model: model))
     }
     
     public func unlockDidTap() {

@@ -55,6 +55,7 @@ final class HistoryService: NSObject, NSFetchedResultsControllerDelegate {
                                                                        image: $0.image!,
                                                                        date: $0.date ?? Date(),
                                                                        isCreated: $0.isCreated, 
+                                                                       qrCodeString: $0.qrCodeString ?? "", 
                                                                        coreEntity: $0)
             })
             let sectionModel = QRCodeEntitySection(title: section.name, items: qrCodeObjects)

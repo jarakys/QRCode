@@ -8,8 +8,8 @@
 import Foundation
 
 enum HistoryEventFlow {
-    case details
-    case editableDetails
+    case details(model: QRCodeEntityModel)
+    case editableDetails(model: QRCodeEntityModel)
     case create
     case scans
     case back

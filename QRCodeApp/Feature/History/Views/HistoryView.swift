@@ -231,7 +231,7 @@ struct HistoryView: View {
                     .padding(.vertical, 4)
             )
             .onTapGesture {
-                
+                viewModel.itemDidTap(model: model)
             }
     }
     
@@ -250,7 +250,6 @@ struct HistoryView: View {
                     .foregroundStyle(.secondaryTitle)
             }
         }
-        
     }
 }
 
