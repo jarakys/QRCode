@@ -99,9 +99,6 @@ struct ScanResultQRCodeView: View {
     }
     
     private func generateQRCodeImage() {
-        let myShare = "QRCode"
-        let image = viewModel.qrCodeDocument.uiImage(.init(width: 240, height: 240))!
-        let activityVC = UIActivityViewController(activityItems: [image, myShare], applicationActivities: nil)
-        UIApplication.shared.windows.first?.rootViewController?.present(activityVC, animated: true, completion: nil)
+        ShareActivityManager.share(images: [viewModel.qrCodeDocument.uiImage(CGSize(width: 240, height: 240))])
     }
 }

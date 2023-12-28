@@ -174,11 +174,18 @@ final class HistoryViewModel: BaseViewModel {
     }
     
     public func editDidTap() {
-        
+        shouldEdit = false
     }
     
     public func unlockDidTap() {
         
+    }
+    
+    public func shareDidTap() {
+        let items = privateItems.flatMap({ $0.items }).filter({ selectedItems.contains($0.id) })
+        let images = items.map({ $0.image })
+        ShareActivityManager.share(datas: images)
+        shouldEdit = false
     }
     
     private func saveAfterMove() {

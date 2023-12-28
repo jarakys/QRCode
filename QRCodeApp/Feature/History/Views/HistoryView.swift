@@ -63,7 +63,7 @@ struct HistoryView: View {
                     }
                     ToolbarItem(placement: .topBarLeading, content: {
                         Button(action: {
-                            viewModel.editDidTap()
+                            viewModel.shareDidTap()
                         }, label: {
                             Image(.historyShareIcon)
                         })

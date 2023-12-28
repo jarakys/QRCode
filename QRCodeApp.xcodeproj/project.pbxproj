@@ -139,6 +139,7 @@
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
 		11EBEA732B3D7E8700515558 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA722B3D7E8700515558 /* StyleConfig.swift */; };
 		11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */; };
+		11EBEA772B3DA12500515558 /* ShareActivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA762B3DA12500515558 /* ShareActivityManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -283,6 +284,7 @@
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
+		11EBEA762B3DA12500515558 /* ShareActivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareActivityManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -934,6 +936,7 @@
 			children = (
 				114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */,
 				110DC9EF2B3C6DA70046CBCD /* SubscriptionManager.swift */,
+				11EBEA762B3DA12500515558 /* ShareActivityManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -1055,6 +1058,7 @@
 				114085AE2B3AF4FB00487E09 /* MainHistoryNavigationView.swift in Sources */,
 				112F36662B38D75000016890 /* MainSettingsNavigationView.swift in Sources */,
 				112F36732B38D75000016890 /* ResultEventBus.swift in Sources */,
+				11EBEA772B3DA12500515558 /* ShareActivityManager.swift in Sources */,
 				112F36822B38D75000016890 /* CreateResultQRCodeView.swift in Sources */,
 				112F36852B38D75000016890 /* CreateEventFlow.swift in Sources */,
 				11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */,
