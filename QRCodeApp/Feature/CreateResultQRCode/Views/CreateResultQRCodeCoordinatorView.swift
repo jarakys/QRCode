@@ -14,14 +14,14 @@ struct CreateResultQRCodeCoordinatorView: View {
         CreateResultQRCodeView(viewModel: viewModel.createResultQRCodeViewModel)
             .navigationDestination(for: ResultFlow.self, destination: { flow in
                 switch flow {
-                case .changeDesign:
-                    ChangeDesignView(viewModel: viewModel.changeDesignViewViewModel())
+                case let .changeDesign(qrCodeString):
+                    ChangeDesignView(viewModel: viewModel.changeDesignViewViewModel(qrCodeString: qrCodeString))
                     
                 case let .editContent(items):
                     EditQRCodeContentView(viewModel: viewModel.editQRCodeContentViewModel(items: items))
                     
-                case .detailedChangeDesing:
-                    DetailedChangeDesignView(viewModel: DetailedChangeDesignViewModel(qrCodeString: "Hello", qrCodeDesign: .default, navigationSender: viewModel.navigationSender, communicationBus: .init()))
+                case let .detailedChangeDesing(qrCodeString, qrCodeDesign):
+                    DetailedChangeDesignView(viewModel: DetailedChangeDesignViewModel(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign, navigationSender: viewModel.navigationSender, communicationBus: .init()))
                 }
             })
             .onReceive(viewModel.navigationSender, perform: { event in
@@ -29,14 +29,14 @@ struct CreateResultQRCodeCoordinatorView: View {
                 case .back:
                     pathsState.back()
                     
-                case .changeDesign:
-                    pathsState.append(ResultFlow.changeDesign)
+                case let .changeDesign(qrCodeString):
+                    pathsState.append(ResultFlow.changeDesign(qrCodeString: qrCodeString))
                     
                 case let .editContent(items):
                     pathsState.append(ResultFlow.editContent(items: items))
                     
-                case .detailedChangeDesign:
-                    pathsState.append(ResultFlow.detailedChangeDesing)
+                case let .detailedChangeDesign(qrCodeString, qrCodeDesign):
+                    pathsState.append(ResultFlow.detailedChangeDesing(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign))
                     
                 case .backToMain:
                     pathsState.popToRoot()

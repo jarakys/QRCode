@@ -51,5 +51,5 @@ struct ChangeDesignView: View {
 }
 
 #Preview {
-    ChangeDesignView(viewModel: ChangeDesignViewModel(navigationSender: PassthroughSubject<ResultEventFlow, Never>(), communicationBus: PassthroughSubject<ResultEventBus, Never>()))
+    ChangeDesignView(viewModel: ChangeDesignViewModel(qrCodeString: "Hello", navigationSender: PassthroughSubject<ResultEventFlow, Never>(), communicationBus: PassthroughSubject<ResultEventBus, Never>()))
 }

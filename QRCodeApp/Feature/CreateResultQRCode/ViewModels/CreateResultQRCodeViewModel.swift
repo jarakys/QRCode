@@ -28,6 +28,11 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         self.communicationBus = communicationBus
         
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+            self.qrCodeDocument.logoTemplate = .wifi()
+            self.qrCodeDocument.setHasChanged()
+        })
     }
     
     public func editContentDidTap() {
@@ -39,7 +44,7 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     }
     
     public func changedDesignDidTap() {
-        navigationSender.send(.changeDesign)
+        navigationSender.send(.changeDesign(qrCodeString: qrCodeString))
     }
     
     public func doneDidTap() {

@@ -23,13 +23,20 @@ final class DetailedChangeDesignViewModel: ObservableObject {
     
     private var selectedBody: DesignElementViewModel
     private var selectedMarker: DesignElementViewModel
-    private var selectedLogo: DesignElementViewModel?
+    public var selectedLogo: DesignElementViewModel?
     
     public lazy var qrDocument: QRCode.Document = { [unowned self] in
         let qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
+        let design = QRCode.Design()
+        design.shape.eye = QRCode.EyeShape.Square()
+        design.shape.onPixels = QRCode.PixelShape.Square()
+        design.style.onPixels = QRCode.FillStyle.Solid(UIColor(resource: ColorResource.qrCodeDefault).cgColor)
+        design.shape.offPixels = QRCode.PixelShape.Square()
+        design.style.offPixels = QRCode.FillStyle.Solid(UIColor.clear.cgColor)
+        design.additionalQuietZonePixels = 1
+        design.style.backgroundFractionalCornerRadius = 2
         qrCodeDocument.utf8String = qrCodeString
-        qrCodeDocument.design = qrCodeDesign.qrCodeDesign
-        qrCodeDocument.logoTemplate = qrCodeDesign.logo
+        qrCodeDocument.design = design
         return qrCodeDocument
     }()
     
@@ -106,21 +113,29 @@ final class DetailedChangeDesignViewModel: ObservableObject {
         case .colorMaskEye, .colorMaskLeaf, .colorMaskPixels, .colorMaskBackground:
             break
         }
+        qrDocument.setHasChanged()
     }
     
     private func selectBody(item: DesignElementViewModel) {
         selectedBody.isSelected = false
         selectedBody = item
         selectedBody.isSelected = true
+        
+        applyBody(item: item.item)
     }
     
     private func selectMarker(item: DesignElementViewModel) {
         selectedMarker.isSelected = false
         selectedMarker = item
         selectedMarker.isSelected = true
+        
+        applyMarker(item: item.item)
     }
     
     private func selectLogo(item: DesignElementViewModel) {
+        defer {
+            applyLogo(item: selectedLogo?.item)
+        }
         guard selectedLogo?.item != item.item else {
             selectedLogo?.isSelected = false
             selectedLogo = nil
@@ -129,6 +144,7 @@ final class DetailedChangeDesignViewModel: ObservableObject {
         selectedLogo?.isSelected = false
         selectedLogo = item
         selectedLogo?.isSelected = true
+        
     }
     
     public func save() {
@@ -137,6 +153,53 @@ final class DetailedChangeDesignViewModel: ObservableObject {
     
     public func cancel() {
         navigationSender.send(.back)
+    }
+    
+    private func applyBody(item: DesignElements) {
+        switch item {
+        case .circleBody:
+            qrDocument.design.shape.onPixels = QRCode.PixelShape.Circle(insetFraction: 0.3)
+            
+        case .squareBody:
+            qrDocument.design.shape.onPixels = QRCode.PixelShape.Square()
+            
+        case .roundedBody:
+            qrDocument.design.shape.onPixels = QRCode.PixelShape.RoundedPath(cornerRadiusFraction: 0.8)
+            
+        default: break
+        }
+    }
+    
+    private func applyMarker(item: DesignElements) {
+        switch item {
+        case .leafMarker:
+            qrDocument.design.shape.eye = QRCode.EyeShape.Leaf()
+            
+        case .circleMarker:
+            qrDocument.design.shape.eye = QRCode.EyeShape.Circle()
+            
+        case .squareMarker:
+            qrDocument.design.shape.eye = QRCode.EyeShape.Square()
+            
+        case .roundedMarker:
+            qrDocument.design.shape.eye = QRCode.EyeShape.RoundedRect()
+        
+        case .roundedPointingInMarker:
+            qrDocument.design.shape.eye = QRCode.EyeShape.RoundedPointingIn()
+            
+        default:
+            break
+        }
+    }
+    
+    private func applyLogo(item: DesignElements?) {
+        guard let item else {
+            qrDocument.logoTemplate = nil
+            return
+        }
+        let icon = item.designIcon
+        guard let cgImage = UIImage(named: icon)?.cgImage else { return }
+        qrDocument.logoTemplate = QRCode.LogoTemplate.CircleCenter(image: cgImage, inset: 10)
     }
 }
 
@@ -148,6 +211,7 @@ struct DetailedChangeDesignView: View {
             QRCodeDocumentUIView(document: viewModel.qrDocument)
                 .frame(width: 240, height: 240)
                 .padding(.top, 16)
+                .id(viewModel.selectedLogo)
             CompositionalList(viewModel.items) { model, indexPath in
                 DetailedChangeDesignCellView(model: model)
             }.sectionHeader { sectionIdentifier, kind, indexPath in
