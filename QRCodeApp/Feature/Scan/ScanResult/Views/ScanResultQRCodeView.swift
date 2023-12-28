@@ -56,7 +56,6 @@ struct ScanResultQRCodeView: View {
         .background(.secondaryBackground)
         .navigationTitle("Scan Result")
         .navigationBarTitleDisplayMode(.inline)
-        .toolbarBackground(.white, for: .navigationBar)
         .padding(.top, 1)
         .simpleToast(isPresented: $showToast, options: .init(alignment: Alignment.bottom, hideAfter: 0.7), content: {
             Label("Copied", systemImage: "info.circle")

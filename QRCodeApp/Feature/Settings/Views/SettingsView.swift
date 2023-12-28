@@ -37,7 +37,6 @@ struct SettingsView: View {
             guard UIApplication.shared.canOpenURL(settingsURL) else { return }
             UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
         })
-        .navigationBarColor(backgroundColor: .primaryApp, titleColor: .white)
         .onAppear {
             viewModel.reconfigureOnAppear()
         }

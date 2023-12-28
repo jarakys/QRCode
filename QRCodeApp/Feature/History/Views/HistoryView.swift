@@ -38,7 +38,6 @@ struct HistoryView: View {
         .padding(.top, 8)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.secondaryBackground)
-        .toolbarBackground(.red, for: .navigationBar)
         .navigationTitle("History")
         .navigationBarTitleDisplayMode(.inline)
         .toolbar(content: {
@@ -52,7 +51,7 @@ struct HistoryView: View {
                         })
                         .padding(.zero)
                     })
-                    if !viewModel.isMultipleSelection {
+                    if !viewModel.isMultipleSelection && viewModel.selectedType == 1 {
                         ToolbarItem(placement: .topBarLeading, content: {
                             Button(action: {
                                 viewModel.editDidTap()
@@ -91,7 +90,7 @@ struct HistoryView: View {
                 })
             }
         })
-        .navigationBarColor(backgroundColor: .white, titleColor: .black)
+//        .navigationBarColor(backgroundColor: .white, titleColor: .black)
         .onReceive(viewModel.$sortType, perform: { type in
             guard type == .manual else { return }
             editMode = .active
