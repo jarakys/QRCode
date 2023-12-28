@@ -188,6 +188,12 @@ final class HistoryViewModel: BaseViewModel {
         
     }
     
+    public func selectAll() {
+        privateItems.flatMap({ $0.items }).forEach({ item in
+            selectedItems.insert(item.id)
+        })
+    }
+    
     public func shareDidTap() {
         let items = privateItems.flatMap({ $0.items }).filter({ selectedItems.contains($0.id) })
         let images = items.map({ $0.image })

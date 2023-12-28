@@ -18,6 +18,8 @@ protocol LocalStore {
     func updateQRCode(id: UUID,
                       qrCodeString: String,
                       image: Data) throws
+    
+    func deleteQRCode(id: UUID) throws
 }
 
 class CoreDataManager: LocalStore {
@@ -71,6 +73,10 @@ class CoreDataManager: LocalStore {
         qrCode.isCreated = isCreated
         
         try context.save()
+    }
+    
+    func deleteQRCode(id: UUID) throws {
+        try removeQRCodes(ids: [id])
     }
     
     func removeQRCodes(ids: [UUID]) throws {

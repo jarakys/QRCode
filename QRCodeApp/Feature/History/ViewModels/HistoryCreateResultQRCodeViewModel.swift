@@ -10,6 +10,11 @@ import Combine
 
 final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
     private let id: UUID
+    
+    override var isDeletable: Bool {
+        true
+    }
+    
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
                   communicationBus: PassthroughSubject<ResultEventBus, Never>,
                   localStorage: LocalStore,
@@ -32,5 +37,14 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
             print("doneDidTap error \(error)")
         }
         navigationSender.send(.back)
+    }
+    
+    override func deleteDidTap() {
+        do {
+            try localStorage.deleteQRCode(id: id)
+            navigationSender.send(.back)
+        } catch {
+            print("deleteDidTap error \(error)")
+        }
     }
 }

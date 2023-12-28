@@ -15,6 +15,10 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     private let keychainStorage = KeychainManager.shared
     
+    public var isDeletable: Bool {
+        false
+    }
+    
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
          communicationBus: PassthroughSubject<ResultEventBus, Never>,
          localStorage: LocalStore,
@@ -55,6 +59,10 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [unowned self] in
             objectWillChange.send()
         })
+    }
+    
+    public func deleteDidTap() {
+        
     }
     
     override func bind() {

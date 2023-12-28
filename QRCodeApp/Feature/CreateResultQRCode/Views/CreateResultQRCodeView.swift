@@ -92,6 +92,15 @@ struct CreateResultQRCodeView: View {
                 .padding(.bottom)
         })
         .toolbar(content: {
+            if viewModel.isDeletable {
+                ToolbarItem(placement: .topBarTrailing, content: {
+                    Button(action: {
+                        viewModel.deleteDidTap()
+                    }, label: {
+                        Image(.hisotryTrashIcon)
+                    })
+                })
+            }
             ToolbarItem(placement: .topBarTrailing, content: {
                 Button(action: {
                     viewModel.doneDidTap()

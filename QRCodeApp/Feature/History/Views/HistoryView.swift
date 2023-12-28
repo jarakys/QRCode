@@ -81,7 +81,13 @@ struct HistoryView: View {
                     })
                 } else {
                     ToolbarItem(placement: .topBarLeading, content: {
-                        EmptyView()
+                        Button(action: {
+                            viewModel.selectAll()
+                        }, label: {
+                            Text("Select all")
+                                .font(.system(size: 17))
+                                .foregroundStyle(.tint)
+                        })
                     })
                 }
             } else {
@@ -90,7 +96,6 @@ struct HistoryView: View {
                 })
             }
         })
-//        .navigationBarColor(backgroundColor: .white, titleColor: .black)
         .onReceive(viewModel.$sortType, perform: { type in
             guard type == .manual else { return }
             editMode = .active
