@@ -72,6 +72,14 @@ final class DetailedChangeDesignViewModel: ObservableObject {
                                                     DesignElementViewModel(isSelected: false, item: .logo(image: "creditCardLogoIcon")),
                                                     DesignElementViewModel(isSelected: false, item: .logo(image: "locationLogoIcon")),
                                                     DesignElementViewModel(isSelected: false, item: .logo(image: "addLogoIcon"))
+                                                ]),
+            DetailedChangeDesignSectionModel(sectionIdentifier: .color,
+                                             cellIdentifiers:
+                                                [
+                                                    DesignElementViewModel(isSelected: false, item: .colorMaskBackground(color: "ColorBackgroundColor")),
+                                                    DesignElementViewModel(isSelected: false, item: .colorMaskLeaf),
+                                                    DesignElementViewModel(isSelected: false, item: .colorMaskPixels),
+                                                    DesignElementViewModel(isSelected: false, item: .colorMaskEye)
                                                 ])
         ]
     }
@@ -111,6 +119,27 @@ struct DetailedChangeDesignView: View {
             }
             .customLayout(.composed())
             .padding(.horizontal, 8)
+            .navigationBarBackButtonHidden(true)
+            .navigationTitle("Templates")
+            .toolbar(content: {
+                ToolbarItem(placement: .topBarTrailing, content: {
+                    Button(action: {
+                        //TODO: Save
+                    }, label: {
+                        Text("Save")
+                            .font(.system(size: 17, weight: .semibold))
+                            .foregroundStyle(.tint)
+                    })
+                })
+                ToolbarItem(placement: .navigationBarLeading, content: {
+                    Button("Cancel", action: {
+                        viewModel.cancel()
+                    })
+                    .foregroundStyle(.tint)
+                    .font(.system(size: 17, weight: .semibold))
+                    .foregroundStyle(.tint)
+                })
+            })
         }
         .background(.secondaryBackground)
     }

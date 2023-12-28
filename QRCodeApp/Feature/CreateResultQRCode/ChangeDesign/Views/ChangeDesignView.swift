@@ -31,6 +31,8 @@ struct ChangeDesignView: View {
                     viewModel.cancel()
                 })
                 .foregroundStyle(.tint)
+                .font(.system(size: 17, weight: .semibold))
+                .foregroundStyle(.tint)
                     
             })
             ToolbarItem(placement: .principal, content: {
