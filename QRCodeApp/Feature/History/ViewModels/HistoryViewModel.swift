@@ -131,7 +131,7 @@ final class HistoryViewModel: BaseViewModel {
             return privateItems
         }
         let filteredSections = privateItems.map { section in
-            let filteredItems = section.items.filter { $0.qrCodeFormat.description.contains(searchText) }
+            let filteredItems = section.items.filter { $0.qrCodeFormat.description.localizedCaseInsensitiveContains(searchText) }
             return QRCodeEntitySection(title: section.title, items: filteredItems)
         }
         return filteredSections
