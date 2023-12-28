@@ -43,9 +43,10 @@ final class DetailedChangeDesignViewModel: BaseViewModel {
         self.communicationBus = communicationBus
         self.qrCodeString = qrCodeString
         self.qrCodeDesign = qrCodeDesign
-        eyeColor = (qrCodeDesign.qrCodeDesign.style.pupil as? QRCode.FillStyle.Solid)?.colorUI() ?? .qrCodeDefault
-        leftColor = (qrCodeDesign.qrCodeDesign.style.eye as? QRCode.FillStyle.Solid)?.colorUI() ?? .qrCodeDefault
-        pixelColor = (qrCodeDesign.qrCodeDesign.style.onPixels as? QRCode.FillStyle.Solid)?.colorUI() ?? .qrCodeDefault
+        let tmpPixedColor = (qrCodeDesign.qrCodeDesign.style.onPixels as? QRCode.FillStyle.Solid)?.colorUI() ?? .qrCodeDefault
+        pixelColor = tmpPixedColor
+        eyeColor = (qrCodeDesign.qrCodeDesign.style.pupil as? QRCode.FillStyle.Solid)?.colorUI() ?? tmpPixedColor
+        leftColor = (qrCodeDesign.qrCodeDesign.style.eye as? QRCode.FillStyle.Solid)?.colorUI() ?? tmpPixedColor
         backgroundColor = (qrCodeDesign.qrCodeDesign.style.background as? QRCode.FillStyle.Solid)?.colorUI() ?? .clear
         
         selectedBody = DesignElementViewModel(isSelected: qrCodeDesign == .default, item: .squareBody)
@@ -180,7 +181,7 @@ final class DetailedChangeDesignViewModel: BaseViewModel {
     }
     
     public func cancel() {
-        navigationSender.send(.backToMain)
+        navigationSender.send(.back)
     }
     
     private func applyBody(item: DesignElements) {
