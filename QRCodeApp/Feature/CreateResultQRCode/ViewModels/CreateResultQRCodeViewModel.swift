@@ -87,6 +87,7 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     private func updateQRCodeDocument(qrCodeString: String) {
         qrCodeDocument.update(text: qrCodeString)
+        qrCodeDocument.utf8String = qrCodeString
         qrCodeDocument.setHasChanged()
         DispatchQueue.main.asyncAfter(deadline: .now() + 1, execute: { [unowned self] in
             objectWillChange.send()
