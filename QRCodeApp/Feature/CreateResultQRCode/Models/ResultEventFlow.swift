@@ -10,6 +10,7 @@ import Foundation
 enum ResultEventFlow {
     case editContent(items: [TextViewModel])
     case back
+    case backToMain
     case changeDesign
     case detailedChangeDesign
 }

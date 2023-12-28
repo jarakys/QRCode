@@ -9,11 +9,14 @@ import Foundation
 import Combine
 
 final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
-    override init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
+    private let id: UUID
+    init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
                   communicationBus: PassthroughSubject<ResultEventBus, Never>,
                   localStorage: LocalStore,
                   qrCodeFormat: QRCodeFormat,
-                  qrCodeString: String) {
+                  qrCodeString: String,
+                  id: UUID) {
+        self.id = id
         super.init(navigationSender: navigationSender,
                    communicationBus: communicationBus,
                    localStorage: localStorage,
@@ -22,6 +25,12 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
     }
     
     override func doneDidTap() {
-        
+        guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        do {
+            try localStorage.updateQRCode(id: id, qrCodeString: qrCodeString, image: data)
+        } catch {
+            print("doneDidTap error \(error)")
+        }
+        navigationSender.send(.back)
     }
 }

@@ -10,7 +10,7 @@ import Combine
 import QRCode
 
 class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
-    private var navigationSender: PassthroughSubject<ResultEventFlow, Never>
+    public var navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private var communicationBus: PassthroughSubject<ResultEventBus, Never>
     
     private let keychainStorage = KeychainManager.shared
@@ -46,6 +46,7 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     public func doneDidTap() {
         addQRCode(isCreated: true)
+        navigationSender.send(.backToMain)
     }
     
     private func updateQRCodeDocument(qrCodeString: String) {

@@ -21,6 +21,7 @@ struct HistoryCoordinatorView: View {
                     
                 case let .editableDetails(model):
                     CreateResultQRCodeCoordinatorView(viewModel: viewModel.createResultQRCodeCoordinatorViewModel(model: model))
+                        .environmentObject(pathsState)
                 }
             })
             .onReceive(viewModel.navigationSender, perform: { event in

@@ -37,6 +37,9 @@ struct CreateResultQRCodeCoordinatorView: View {
                     
                 case .detailedChangeDesign:
                     pathsState.append(ResultFlow.detailedChangeDesing)
+                    
+                case .backToMain:
+                    pathsState.popToRoot()
                 }
             })
     }

@@ -15,6 +15,9 @@ protocol LocalStore {
                    date: Date, 
                    image: Data,
                    isCreated: Bool) throws
+    func updateQRCode(id: UUID,
+                      qrCodeString: String,
+                      image: Data) throws
 }
 
 class CoreDataManager: LocalStore {
@@ -30,6 +33,25 @@ class CoreDataManager: LocalStore {
             }
         })
         context = container.viewContext
+    }
+    
+    func updateQRCode(id: UUID, 
+                      qrCodeString: String,
+                      image: Data) throws {
+        let fetchRequest: NSFetchRequest<QRCodeEntity> = QRCodeEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "uuid == %@", id as CVarArg)
+        
+        let entities = try context.fetch(fetchRequest)
+        
+        if let entityToUpdate = entities.first {
+            // Update the properties of the entity
+            entityToUpdate.image = image
+            entityToUpdate.qrCodeString = qrCodeString
+            
+            // Save the changes to the context
+            try context.save()
+        }
+            
     }
     
     func addQRCode(qrCodeString: String,

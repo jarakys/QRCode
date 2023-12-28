@@ -17,7 +17,7 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     
     public var eventSender = PassthroughSubject<CreateResultQRCodeViewModel.Event, Never>()
     
-    private let localStorage: LocalStore
+    private(set) var localStorage: LocalStore
     
     public lazy var title: String = { [unowned self] in
         "QRCode · \(self.qrCodeFormat.description)"
