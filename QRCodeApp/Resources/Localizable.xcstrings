@@ -4,6 +4,9 @@
     "" : {
 
     },
+    "%lld of 5" : {
+
+    },
     "About us" : {
       "localizations" : {
         "ar" : {
@@ -212,7 +215,7 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Nội dung\n"
+            "value" : "Nội dung"
           }
         },
         "zh-Hant" : {
@@ -270,7 +273,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abbrechen\n"
+            "value" : "Abbrechen"
           }
         },
         "pt-PT" : {
@@ -288,7 +291,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Скасувати\n"
+            "value" : "Скасувати"
           }
         },
         "vi" : {
@@ -425,7 +428,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Кольори\n"
+            "value" : "Кольори"
           }
         }
       }
@@ -497,7 +500,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Crear\n"
+            "value" : "Crear"
           }
         },
         "fr" : {
@@ -539,7 +542,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Создать\n"
+            "value" : "Создать"
           }
         },
         "uk" : {
@@ -561,6 +564,9 @@
           }
         }
       }
+    },
+    "Create QR Code" : {
+
     },
     "Created" : {
       "localizations" : {
@@ -591,7 +597,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "作成\n"
+            "value" : "作成"
           }
         },
         "ko" : {
@@ -673,7 +679,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "作成結果\n"
+            "value" : "作成結果"
           }
         },
         "ko" : {
@@ -720,7 +726,7 @@
         }
       }
     },
-    "Details" : {
+    "Done" : {
 
     },
     "Edit content" : {
@@ -804,9 +810,6 @@
           }
         }
       }
-    },
-    "Editable details" : {
-
     },
     "Email" : {
       "localizations" : {
@@ -892,6 +895,7 @@
       }
     },
     "Free" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -962,7 +966,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "免费\n"
+            "value" : "免费"
           }
         }
       }
@@ -1042,7 +1046,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Obtén acceso ilimitado a todas las funciones de la aplicación\n"
+            "value" : "Obtén acceso ilimitado a todas las funciones de la aplicación"
           }
         },
         "fr" : {
@@ -1130,7 +1134,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Histoire\n"
+            "value" : "Histoire"
           }
         },
         "id" : {
@@ -1290,6 +1294,12 @@
         }
       }
     },
+    "Let’s get started with your\nfirst QR creation:" : {
+
+    },
+    "Let’s get started with your\nfirst QR scan:" : {
+
+    },
     "License" : {
       "localizations" : {
         "ar" : {
@@ -1355,7 +1365,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "许可证\n"
+            "value" : "许可证"
           }
         }
       }
@@ -1413,13 +1423,13 @@
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Liên kết\n"
+            "value" : "Liên kết"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "链接\n"
+            "value" : "链接"
           }
         }
       }
@@ -1465,7 +1475,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Standort\n"
+            "value" : "Standort"
           }
         },
         "pt-PT" : {
@@ -1523,7 +1533,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Abrir en Safari\n"
+            "value" : "Abrir en Safari"
           }
         },
         "fr" : {
@@ -1583,7 +1593,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "在Safari中打开\n"
+            "value" : "在Safari中打开"
           }
         }
       }
@@ -1787,7 +1797,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Телефон\n"
+            "value" : "Телефон"
           }
         },
         "uk" : {
@@ -1805,7 +1815,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "电话\n"
+            "value" : "电话"
           }
         }
       }
@@ -1986,6 +1996,7 @@
       }
     },
     "Products scans remaining" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2014,7 +2025,7 @@
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "残りの製品スキャン\n"
+            "value" : "残りの製品スキャン"
           }
         },
         "ko" : {
@@ -2060,6 +2071,12 @@
           }
         }
       }
+    },
+    "Qr Code · %@" : {
+
+    },
+    "QR creates remaining" : {
+
     },
     "QR scans remaining" : {
       "localizations" : {
@@ -2184,7 +2201,7 @@
         "nl" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Speichern\n"
+            "value" : "Speichern"
           }
         },
         "pt-PT" : {
@@ -2214,7 +2231,7 @@
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "保存\n"
+            "value" : "保存"
           }
         }
       }
@@ -2284,13 +2301,13 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Сканувати\n"
+            "value" : "Сканувати"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Quét\n"
+            "value" : "Quét"
           }
         },
         "zh-Hant" : {
@@ -2300,6 +2317,12 @@
           }
         }
       }
+    },
+    "Scan QR" : {
+
+    },
+    "Scan QR Code" : {
+
     },
     "Scan Result" : {
       "localizations" : {
@@ -2405,6 +2428,12 @@
         }
       }
     },
+    "Search" : {
+
+    },
+    "Select all" : {
+
+    },
     "Settings" : {
       "localizations" : {
         "ar" : {
@@ -2486,7 +2515,7 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Compartir\n"
+            "value" : "Compartir"
           }
         },
         "fr" : {
@@ -2528,7 +2557,7 @@
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Поделиться\n"
+            "value" : "Поделиться"
           }
         },
         "uk" : {
@@ -2647,6 +2676,15 @@
         }
       }
     },
+    "Sort" : {
+
+    },
+    "Sort alphabetically" : {
+
+    },
+    "Sort manuallly" : {
+
+    },
     "Spotify" : {
       "localizations" : {
         "ar" : {
@@ -2735,19 +2773,19 @@
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Modelos\n"
+            "value" : "Modelos"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Шаблоны\n"
+            "value" : "Шаблоны"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Шаблони\n"
+            "value" : "Шаблони"
           }
         },
         "vi" : {
@@ -2857,7 +2895,7 @@
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Texte\n"
+            "value" : "Texte"
           }
         },
         "id" : {
@@ -2893,7 +2931,7 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Текст\n"
+            "value" : "Текст"
           }
         },
         "vi" : {
@@ -2940,13 +2978,13 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Prueba gratis\n"
+            "value" : "Prueba gratis"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Essayez gratuitement\n"
+            "value" : "Essayez gratuitement"
           }
         },
         "id" : {
@@ -2976,19 +3014,19 @@
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Tente gratuitamente\n"
+            "value" : "Tente gratuitamente"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Попробуйте бесплатно.\n"
+            "value" : "Попробуйте бесплатно."
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Спробуйте безкоштовно.\n"
+            "value" : "Спробуйте безкоштовно."
           }
         },
         "vi" : {
@@ -3020,6 +3058,12 @@
           }
         }
       }
+    },
+    "Unlimited" : {
+
+    },
+    "Unlock" : {
+
     },
     "URL" : {
       "localizations" : {
