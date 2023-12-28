@@ -39,7 +39,7 @@ struct CreateResultQRCodeCoordinatorView: View {
                     pathsState.append(ResultFlow.detailedChangeDesing(qrCodeString: qrCodeString, qrCodeDesign: qrCodeDesign))
                     
                 case .backToRoot:
-                    pathsState.paths.removeLast(pathsState.paths.count - 1)
+                    pathsState.paths.removeLast(2)
                     
                 case .backToMain:
                     pathsState.popToRoot()

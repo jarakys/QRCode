@@ -8,11 +8,11 @@
 import Foundation
 
 final class HistoryResultQRCodeCoordinatorViewModel: CreateResultQRCodeCoordinatorViewModel {
-    private let id: UUID
+    private let qrCodeEntityModel: QRCodeEntityModel
     
-    init(id: UUID, qrCodeFormat: QRCodeFormat, qrCodeString: String) {
-        self.id = id
-        super.init(qrCodeFormat: qrCodeFormat, qrCodeString: qrCodeString)
+    init(qrCodeEntityModel: QRCodeEntityModel) {
+        self.qrCodeEntityModel = qrCodeEntityModel
+        super.init(qrCodeFormat: qrCodeEntityModel.qrCodeFormat, qrCodeString: qrCodeEntityModel.qrCodeString)
     }
     
     override func createResultQRCodeViewModelCreation() -> CreateResultQRCodeViewModel {
@@ -21,6 +21,6 @@ final class HistoryResultQRCodeCoordinatorViewModel: CreateResultQRCodeCoordinat
                                            localStorage: CoreDataManager.shared,
                                            qrCodeFormat: qrCodeFormat,
                                            qrCodeString: qrCodeString, 
-                                           id: id)
+                                           qrCodeEntityModel: qrCodeEntityModel)
     }
 }

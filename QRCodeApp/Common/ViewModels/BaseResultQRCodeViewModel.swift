@@ -34,18 +34,24 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         "15.08.2023"
     }()
     
+    public let design: QRCode.Design
+    
     init(qrCodeString: String,
          localStorage: LocalStore,
+         design: QRCode.Design = .default(),
+         logo: QRCode.LogoTemplate? = nil,
          qrCodeFormat: QRCodeFormat?) {
         let formatMatcher = FormatMatcher(patterns: QRCodeFormat.allCases.map({ $0.regexPattern }), items: QRCodeFormat.allCases)
         self.qrCodeFormat = qrCodeFormat ?? formatMatcher.matchFormat(inputString: qrCodeString) ?? .text
         self.qrCodeString = qrCodeString
         self.qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
         self.localStorage = localStorage
+        self.design = design
         super.init()
         createFormat()
         qrCodeDocument.utf8String = self.qrCodeString
-        qrCodeDocument.design = .default()
+        qrCodeDocument.design = design
+        qrCodeDocument.logoTemplate = logo
     }
     
     public func share() {
@@ -107,12 +113,14 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     
     public func addQRCode(isCreated: Bool, path: String) {
         guard let date = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        guard let documentData = try? qrCodeDocument.jsonData() else { return }
         do {
             try localStorage.addQRCode(qrCodeString: qrCodeString,
                                        type: qrCodeFormat.rawValue,
                                        subtitle: path,
                                        date: Date(),
-                                       image: date,
+                                       image: date, 
+                                       qrCodeData: documentData,
                                        isCreated: isCreated)
             print("addQRCode added")
         } catch {

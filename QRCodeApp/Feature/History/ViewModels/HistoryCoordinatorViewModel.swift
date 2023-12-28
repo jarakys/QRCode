@@ -16,10 +16,10 @@ final class HistoryCoordinatorViewModel: BaseViewModel {
     }()
     
     public func historyResultQRCodeViewModel(model: QRCodeEntityModel) -> HistoryResultQRCodeViewModel {
-        HistoryResultQRCodeViewModel(qrCodeString: model.qrCodeString, localStorage: CoreDataManager.shared, path: model.subtitle, qrCodeFormat: model.qrCodeFormat)
+        HistoryResultQRCodeViewModel(localStorage: CoreDataManager.shared, qrCodeEntityModel: model)
     }
     
     public func createResultQRCodeCoordinatorViewModel(model: QRCodeEntityModel) -> CreateResultQRCodeCoordinatorViewModel {
-        HistoryResultQRCodeCoordinatorViewModel(id: model.id, qrCodeFormat: model.qrCodeFormat, qrCodeString: model.qrCodeString)
+        HistoryResultQRCodeCoordinatorViewModel(qrCodeEntityModel: model)
     }
 }

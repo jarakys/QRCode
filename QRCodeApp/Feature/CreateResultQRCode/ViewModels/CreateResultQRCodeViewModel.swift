@@ -22,12 +22,14 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     init(navigationSender: PassthroughSubject<ResultEventFlow, Never>,
          communicationBus: PassthroughSubject<ResultEventBus, Never>,
          localStorage: LocalStore,
+         design: QRCode.Design = .default(),
+         logo: QRCode.LogoTemplate? = nil,
          qrCodeFormat: QRCodeFormat,
          qrCodeString: String) {
         self.navigationSender = navigationSender
         self.communicationBus = communicationBus
         
-        super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
+        super.init(qrCodeString: qrCodeString, localStorage: localStorage, design: design, logo: logo, qrCodeFormat: qrCodeFormat)
     }
     
     public func editContentDidTap() {

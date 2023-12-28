@@ -14,11 +14,13 @@ protocol LocalStore {
                    subtitle: String,
                    date: Date, 
                    image: Data,
+                   qrCodeData: Data,
                    isCreated: Bool) throws
     func updateQRCode(id: UUID,
                       path: String,
                       qrCodeString: String,
-                      image: Data) throws
+                      image: Data,
+                      qrCodeData: Data) throws
     
     func deleteQRCode(id: UUID) throws
 }
@@ -41,22 +43,21 @@ class CoreDataManager: LocalStore {
     func updateQRCode(id: UUID, 
                       path: String,
                       qrCodeString: String,
-                      image: Data) throws {
+                      image: Data,
+                      qrCodeData: Data) throws {
         let fetchRequest: NSFetchRequest<QRCodeEntity> = QRCodeEntity.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "uuid == %@", id as CVarArg)
         
         let entities = try context.fetch(fetchRequest)
         
         if let entityToUpdate = entities.first {
-            // Update the properties of the entity
             entityToUpdate.image = image
             entityToUpdate.qrCodeString = qrCodeString
             entityToUpdate.subtitle = path
+            entityToUpdate.qrCodeData = qrCodeData
             
-            // Save the changes to the context
             try context.save()
         }
-            
     }
     
     func addQRCode(qrCodeString: String,
@@ -64,6 +65,7 @@ class CoreDataManager: LocalStore {
                    subtitle: String,
                    date: Date,
                    image: Data,
+                   qrCodeData: Data,
                    isCreated: Bool) throws {
         let qrCodeEntity = NSEntityDescription.entity(forEntityName: "QRCodeEntity", in: context)!
         let qrCode = QRCodeEntity(entity: qrCodeEntity, insertInto: context)
@@ -74,6 +76,7 @@ class CoreDataManager: LocalStore {
         qrCode.subtitle = subtitle
         qrCode.image = image
         qrCode.isCreated = isCreated
+        qrCode.qrCodeData = qrCodeData
         
         try context.save()
     }

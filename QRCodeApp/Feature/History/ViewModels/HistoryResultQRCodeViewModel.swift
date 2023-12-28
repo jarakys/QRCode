@@ -6,14 +6,23 @@
 //
 
 import Foundation
+import QRCode
 
 final class HistoryResultQRCodeViewModel: BaseResultQRCodeViewModel {
-    init(qrCodeString: String,
-                  localStorage: LocalStore,
-                  path: String?,
-                  qrCodeFormat: QRCodeFormat?) {
-        super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
-        self.path = path
+    let qrCodeEntityModel: QRCodeEntityModel
+    
+    init(localStorage: LocalStore,
+         qrCodeEntityModel: QRCodeEntityModel) {
+        self.qrCodeEntityModel = qrCodeEntityModel
+        var design = QRCode.Design.default()
+        var logo: QRCode.LogoTemplate?
+        if let qrCodeData = qrCodeEntityModel.coreEntity.qrCodeData,
+           let qrDoc = try? QRCode.Document.Create(jsonData: qrCodeData) {
+            design = qrDoc.design
+            logo = qrDoc.logoTemplate
+        }
+        super.init(qrCodeString: qrCodeEntityModel.qrCodeString, localStorage: localStorage, design: design, logo: logo, qrCodeFormat: qrCodeEntityModel.qrCodeFormat)
+        self.path = qrCodeEntityModel.subtitle
     }
     
     override func saveQRCode() async {
