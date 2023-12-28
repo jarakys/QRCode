@@ -25,10 +25,11 @@ struct HistoryQrCodeCellView: View {
                     .font(.system(size: 15, weight: .semibold))
                     .foregroundStyle(.primaryTitle)
                     .frame(maxWidth: .infinity, alignment: .leading)
-                Text("model.subtitle")
+                Text(model.subtitle)
                     .font(.system(size: 13, weight: .semibold))
                     .foregroundStyle(.subtitle)
                     .frame(maxWidth: .infinity, alignment: .leading)
+                    .lineLimit(1)
             }
         }
         .background(.white)

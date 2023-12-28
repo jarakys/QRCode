@@ -29,14 +29,44 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
                    qrCodeString: qrCodeString)
     }
     
-    override func doneDidTap() {
+    private func update() {
         guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        guard let path else { return }
         do {
-            try localStorage.updateQRCode(id: id, qrCodeString: qrCodeString, image: data)
+            try localStorage.updateQRCode(id: id, path: path, qrCodeString: qrCodeString, image: data)
         } catch {
             print("doneDidTap error \(error)")
         }
-        navigationSender.send(.back)
+    }
+    
+    override func doneDidTap() {
+        guard !isSaved else {
+            update()
+            navigationSender.send(.back)
+            return
+        }
+        Task {
+            await saveQRCode()
+            update()
+        }
+    }
+    
+    override func saveQRCode() async {
+        isSaved = true
+        await MainActor.run(body: {
+            isLoading = true
+        })
+        
+        guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        do {
+            let result = try await ImageUploader.upload(data: data)
+            self.path = result
+            await MainActor.run(body: {
+                isLoading = false
+            })
+        } catch {
+            print("ImageUploader.upload error \(error)")
+        }
     }
     
     override func deleteDidTap() {

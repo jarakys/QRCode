@@ -13,7 +13,7 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     public var navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private var communicationBus: PassthroughSubject<ResultEventBus, Never>
     
-    private let keychainStorage = KeychainManager.shared
+    public let keychainStorage = KeychainManager.shared
     
     public var isDeletable: Bool {
         false
@@ -28,12 +28,6 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         self.communicationBus = communicationBus
         
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
-        let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
-        do {
-            try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
-        } catch {
-            print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
-        }
     }
     
     public func editContentDidTap() {
@@ -49,8 +43,34 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     }
     
     public func doneDidTap() {
-        addQRCode(isCreated: true)
-        navigationSender.send(.backToMain)
+        guard !isSaved else { 
+            navigationSender.send(.backToMain)
+            return
+        }
+        Task { @MainActor [weak self] in
+            await self?.saveQRCode()
+            self?.navigationSender.send(.backToMain)
+        }
+    }
+    
+    override func saveQRCode() async {
+        isSaved = true
+        isLoading = true
+        guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        do {
+            let result = try await ImageUploader.upload(data: data)
+            self.path = result
+            addQRCode(isCreated: true, path: result)
+            let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
+            do {
+                try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
+            } catch {
+                print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
+            }
+            isLoading = false
+        } catch {
+            print("ImageUploader.upload error \(error)")
+        }
     }
     
     private func updateQRCodeDocument(qrCodeString: String) {

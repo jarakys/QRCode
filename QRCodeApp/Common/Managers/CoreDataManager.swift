@@ -16,6 +16,7 @@ protocol LocalStore {
                    image: Data,
                    isCreated: Bool) throws
     func updateQRCode(id: UUID,
+                      path: String,
                       qrCodeString: String,
                       image: Data) throws
     
@@ -38,6 +39,7 @@ class CoreDataManager: LocalStore {
     }
     
     func updateQRCode(id: UUID, 
+                      path: String,
                       qrCodeString: String,
                       image: Data) throws {
         let fetchRequest: NSFetchRequest<QRCodeEntity> = QRCodeEntity.fetchRequest()
@@ -49,6 +51,7 @@ class CoreDataManager: LocalStore {
             // Update the properties of the entity
             entityToUpdate.image = image
             entityToUpdate.qrCodeString = qrCodeString
+            entityToUpdate.subtitle = path
             
             // Save the changes to the context
             try context.save()

@@ -14,6 +14,12 @@ struct HistoryResultQRCodeView: View {
     
     var body: some View {
         ZStack {
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .scaleEffect(2)
+                    .zIndex(3)
+            }
             ScrollView {
                 VStack(spacing: 10) {
                     Spacer()
@@ -51,7 +57,7 @@ struct HistoryResultQRCodeView: View {
                     .padding(.bottom, 16)
             }
         }
-        
+        .disabled(viewModel.isLoading)
         .frame(maxWidth: .infinity)
         .background(.secondaryBackground)
         .navigationTitle("Scan Result")
@@ -74,7 +80,9 @@ struct HistoryResultQRCodeView: View {
     public func shareSection() -> some View {
         HStack(alignment: .center) {
             Button(action: {
-                
+                viewModel.shareInSafary(completion: { path in
+                    UIApplication.shared.open(URL(string: path)!)
+                })
             }, label: {
                 Label("Open in Safari", image: "safariIcon")
                     .font(.system(size: 13, weight: .semibold))
@@ -85,7 +93,7 @@ struct HistoryResultQRCodeView: View {
                     .cornerRadius(10)
             })
             Button(action: {
-                generateQRCodeImage()
+                viewModel.share()
             }, label: {
                 Label("Share", image: "shareIcon")
                     .font(.system(size: 13, weight: .semibold))
@@ -96,9 +104,5 @@ struct HistoryResultQRCodeView: View {
                     .cornerRadius(10)
             })
         }
-    }
-    
-    private func generateQRCodeImage() {
-        ShareActivityManager.share(images: [viewModel.qrCodeDocument.uiImage(CGSize(width: 240, height: 240))])
     }
 }
