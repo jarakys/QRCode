@@ -134,6 +134,9 @@
 		114085BC2B3AFD4800487E09 /* Db.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 114085BA2B3AFD4800487E09 /* Db.xcdatamodeld */; };
 		114085BF2B3AFDCC00487E09 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */; };
 		114CEBB42B3E16930088F3C3 /* CompositionalList in Frameworks */ = {isa = PBXBuildFile; productRef = 114CEBB32B3E16930088F3C3 /* CompositionalList */; };
+		114CEBB72B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CEBB62B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift */; };
+		114CEBBA2B3E28020088F3C3 /* DesignElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CEBB92B3E28020088F3C3 /* DesignElementViewModel.swift */; };
+		114CEBBD2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CEBBC2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
@@ -295,6 +298,9 @@
 		114085B82B3AFB7A00487E09 /* HistorySegmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorySegmentType.swift; sourceTree = "<group>"; };
 		114085BB2B3AFD4800487E09 /* Db.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Db.xcdatamodel; sourceTree = "<group>"; };
 		114085BE2B3AFDCC00487E09 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		114CEBB62B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignViewModel.swift; sourceTree = "<group>"; };
+		114CEBB92B3E28020088F3C3 /* DesignElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignElementViewModel.swift; sourceTree = "<group>"; };
+		114CEBBC2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignCellView.swift; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -810,6 +816,8 @@
 		112F361A2B38D75000016890 /* DetailedChangeDesign */ = {
 			isa = PBXGroup;
 			children = (
+				114CEBB82B3E27EC0088F3C3 /* Views */,
+				114CEBB52B3E27B70088F3C3 /* ViewModels */,
 				112F361B2B38D75000016890 /* Models */,
 			);
 			path = DetailedChangeDesign;
@@ -821,6 +829,7 @@
 				112F361C2B38D75000016890 /* DetailedChangeDesignSectionModel.swift */,
 				112F361D2B38D75000016890 /* DetailedChangDesignSectionType.swift */,
 				112F361E2B38D75000016890 /* DesignElements.swift */,
+				114CEBB92B3E28020088F3C3 /* DesignElementViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -831,7 +840,6 @@
 				112F36202B38D75000016890 /* CreateResultQRCodeCoordinatorView.swift */,
 				112F36212B38D75000016890 /* EditQRCodeContentView.swift */,
 				112F36222B38D75000016890 /* CreateResultQRCodeView.swift */,
-				11EBEAC02B3DD8A400515558 /* DetailedChangeDesignView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -978,6 +986,31 @@
 			path = Managers;
 			sourceTree = "<group>";
 		};
+		114CEBB52B3E27B70088F3C3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				114CEBB62B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		114CEBB82B3E27EC0088F3C3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				114CEBBB2B3E28260088F3C3 /* Cells */,
+				11EBEAC02B3DD8A400515558 /* DetailedChangeDesignView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		114CEBBB2B3E28260088F3C3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				114CEBBC2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1109,11 +1142,13 @@
 				112F36772B38D75000016890 /* QRCodeDesignModel.swift in Sources */,
 				112F365F2B38D75000016890 /* SelectLanguageView.swift in Sources */,
 				112F36442B38D75000016890 /* UserDefaultsService.swift in Sources */,
+				114CEBBA2B3E28020088F3C3 /* DesignElementViewModel.swift in Sources */,
 				112F367C2B38D75000016890 /* ChangeDesignView.swift in Sources */,
 				112F36422B38D75000016890 /* SelectableItemViewModel.swift in Sources */,
 				112F36472B38D75000016890 /* LanguageType.swift in Sources */,
 				112F363E2B38D75000016890 /* BaseViewModel.swift in Sources */,
 				114085AE2B3AF4FB00487E09 /* MainHistoryNavigationView.swift in Sources */,
+				114CEBBD2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift in Sources */,
 				112F36662B38D75000016890 /* MainSettingsNavigationView.swift in Sources */,
 				112F36732B38D75000016890 /* ResultEventBus.swift in Sources */,
 				11EBEA772B3DA12500515558 /* ShareActivityManager.swift in Sources */,
@@ -1121,6 +1156,7 @@
 				112F36852B38D75000016890 /* CreateEventFlow.swift in Sources */,
 				11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */,
 				112F36592B38D75000016890 /* SettingsItemProtocol.swift in Sources */,
+				114CEBB72B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift in Sources */,
 				110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */,
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
 				11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */,
