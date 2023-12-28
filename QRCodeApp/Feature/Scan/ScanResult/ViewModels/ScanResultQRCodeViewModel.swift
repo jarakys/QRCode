@@ -8,16 +8,6 @@
 import Foundation
 import Combine
 
-final class HistoryResultQRCodeViewModel: BaseResultQRCodeViewModel {
-//    private let navigationSender:
-    
-    override init(qrCodeString: String, 
-                  localStorage: LocalStore,
-                  qrCodeFormat: QRCodeFormat?) {
-        super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
-    }
-}
-
 final class ScanResultQRCodeViewModel: BaseResultQRCodeViewModel {
     private let navigationSender: PassthroughSubject<ScanEventFlow, Never>
     
