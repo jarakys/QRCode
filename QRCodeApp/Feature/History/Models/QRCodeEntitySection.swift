@@ -7,7 +7,12 @@
 
 import Foundation
 
-struct QRCodeEntitySection {
+class QRCodeEntitySection {
     public let title: String
-    public let items: [QRCodeEntityModel]
+    public var items: [QRCodeEntityModel]
+    
+    init(title: String, items: [QRCodeEntityModel]) {
+        self.title = title
+        self.items = items
+    }
 }

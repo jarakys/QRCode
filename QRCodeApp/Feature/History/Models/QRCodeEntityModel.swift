@@ -14,4 +14,12 @@ struct QRCodeEntityModel: Hashable, Identifiable {
     public let image: Data
     public let date: Date
     public let isCreated: Bool
+    
+    var orderTmp: Int = 0
+    
+    var order: Int {
+        Int(truncating: coreEntity.order ?? 0)
+    }
+    
+    public var coreEntity: QRCodeEntity
 }

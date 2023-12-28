@@ -113,10 +113,11 @@ final class HistoryViewModel: BaseViewModel {
                 self.editType = .move
                 
             case .alhabet:
-                let searchItems = self.search(searchText: self.searchText)
-                let filteredItems = self.filter(sortType: value, items: searchItems)
-                self.sections = filteredItems
+                break
             }
+            let searchItems = self.search(searchText: self.searchText)
+            let filteredItems = self.filter(sortType: value, items: searchItems)
+            self.sections = filteredItems
             
         }).store(in: &cancellable)
         
@@ -145,23 +146,12 @@ final class HistoryViewModel: BaseViewModel {
                 switch sortType {
                 case .alhabet:
                     return section.items.sorted(by: { $0.qrCodeFormat.description > $1.qrCodeFormat.description })
+                    
                 case .manual:
-                    // MARK: Order by order property
-                    return section.items
+                    return section.items.sorted(by: { $0.order < $1.order })
                 }
             }()
             return QRCodeEntitySection(title: section.title, items: sortedItems)
-        }
-    }
-    
-    public func itemDidTap(item: QRCodeEntityModel) {
-        guard let type = HistorySegmentType(rawValue: selectedType) else { return }
-        switch type {
-        case .scanned:
-            print("scanned")
-            
-        case .created:
-            print("created")
         }
     }
     
@@ -191,9 +181,24 @@ final class HistoryViewModel: BaseViewModel {
         
     }
     
+    private func saveAfterMove() {
+        sections.forEach({ section in
+            section.items.enumerated().forEach({ item in
+                print("\(item.element.qrCodeFormat.description) on position \(item.offset)")
+                item.element.coreEntity.order = NSNumber(value: item.offset)
+            })
+        })
+        do {
+            try CoreDataManager.shared.context.save()
+        } catch {
+            print("saveAfterMove error \(error)")
+        }
+    }
+    
     public func editListDidTap(isEditing: Bool) {
         guard self.isEditing != isEditing else { return }
         if !isEditing && sortType == .manual, editType != .selection {
+            saveAfterMove()
             editType = .selection
         }
         self.isEditing = isEditing
@@ -205,5 +210,10 @@ final class HistoryViewModel: BaseViewModel {
     
     public func setSort(type: HistorySortType) {
         sortType = type
+    }
+    
+    public func move(from source: IndexSet, to destination: Int, section: QRCodeEntitySection) {
+        print("destination \(destination)")
+        section.items.move(fromOffsets: source, toOffset: destination)
     }
 }

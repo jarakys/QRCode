@@ -176,7 +176,9 @@ struct HistoryView: View {
                 ForEach(section.items) { model in
                     historyCell(model: model)
                 }
-                .onMove(perform: move)
+                .onMove(perform: { source, destination in
+                    viewModel.move(from: source, to: destination, section: section)
+                })
             }, header: {
                 historyHeaderView(section: section)
             })
@@ -212,11 +214,6 @@ struct HistoryView: View {
         })
         .environment(\.editMode, $editMode)
     }
-    
-    func move(from source: IndexSet, to destination: Int) {
-//            users.move(fromOffsets: source, toOffset: destination)
-        }
-    
     
     func delete(at offsets: IndexSet) {
 //           users.remove(atOffsets: offsets)
