@@ -55,7 +55,9 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     override func saveQRCode() async {
         isSaved = true
-        isLoading = true
+        await MainActor.run(body: {
+            isLoading = true
+        })
         guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
         do {
             let result = try await ImageUploader.upload(data: data)
@@ -67,8 +69,13 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
             } catch {
                 print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
             }
-            isLoading = false
+            await MainActor.run(body: {
+                isLoading = false
+            })
         } catch {
+            await MainActor.run(body: {
+                isLoading = false
+            })
             print("ImageUploader.upload error \(error)")
         }
     }

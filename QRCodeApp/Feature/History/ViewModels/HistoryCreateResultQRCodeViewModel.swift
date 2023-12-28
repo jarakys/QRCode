@@ -65,6 +65,9 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
                 isLoading = false
             })
         } catch {
+            await MainActor.run(body: {
+                isLoading = false
+            })
             print("ImageUploader.upload error \(error)")
         }
     }
