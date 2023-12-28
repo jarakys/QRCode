@@ -79,7 +79,6 @@ struct CreateResultQRCodeView: View {
                 .padding(.horizontal, 16)
             }
         }
-//        .contentMargins(.top, 16)
         .frame(maxWidth: .infinity)
         .background(.secondaryBackground)
         .navigationTitle("Creation Result")
@@ -91,6 +90,17 @@ struct CreateResultQRCodeView: View {
                 .foregroundColor(Color.white)
                 .cornerRadius(10)
                 .padding(.bottom)
+        })
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing, content: {
+                Button(action: {
+                    viewModel.doneDidTap()
+                }, label: {
+                    Text("Done")
+                        .font(.system(size: 17, weight: .semibold))
+                        .foregroundStyle(.tint)
+                })
+            })
         })
         .onReceive(viewModel.eventSender, perform: { item in
             showToast = item == .copied

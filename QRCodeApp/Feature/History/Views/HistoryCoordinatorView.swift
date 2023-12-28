@@ -20,7 +20,7 @@ struct HistoryCoordinatorView: View {
                     HistoryResultQRCodeView(viewModel: viewModel.historyResultQRCodeViewModel(model: model))
                     
                 case let .editableDetails(model):
-                    Text("Editable details")
+                    CreateResultQRCodeCoordinatorView(viewModel: viewModel.createResultQRCodeCoordinatorViewModel(model: model))
                 }
             })
             .onReceive(viewModel.navigationSender, perform: { event in

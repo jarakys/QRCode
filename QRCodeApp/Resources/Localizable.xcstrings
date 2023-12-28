@@ -84,6 +84,9 @@
         }
       }
     },
+    "Done" : {
+
+    },
     "Edit content" : {
       "localizations" : {
         "en" : {
@@ -93,9 +96,6 @@
           }
         }
       }
-    },
-    "Editable details" : {
-
     },
     "Email" : {
 

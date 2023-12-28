@@ -8,25 +8,29 @@
 import Foundation
 import Combine
 
-final class CreateResultQRCodeCoordinatorViewModel: BaseViewModel {
+class CreateResultQRCodeCoordinatorViewModel: BaseViewModel {
     
-    private let qrCodeFormat: QRCodeFormat
-    private let qrCodeString: String
+    public let qrCodeFormat: QRCodeFormat
+    public let qrCodeString: String
     
     public let navigationSender = PassthroughSubject<ResultEventFlow, Never>()
-    private let communicationBus = PassthroughSubject<ResultEventBus, Never>()
+    public let communicationBus = PassthroughSubject<ResultEventBus, Never>()
     
     lazy var createResultQRCodeViewModel: CreateResultQRCodeViewModel = {
-        CreateResultQRCodeViewModel(navigationSender: navigationSender,
-                                    communicationBus: communicationBus, 
-                                    localStorage: CoreDataManager.shared,
-                                    qrCodeFormat: qrCodeFormat,
-                                    qrCodeString: qrCodeString)
+        createResultQRCodeViewModelCreation()
     }()
     
     init(qrCodeFormat: QRCodeFormat, qrCodeString: String) {
         self.qrCodeFormat = qrCodeFormat
         self.qrCodeString = qrCodeString
+    }
+    
+    public func createResultQRCodeViewModelCreation() -> CreateResultQRCodeViewModel {
+        CreateResultQRCodeViewModel(navigationSender: navigationSender,
+                                    communicationBus: communicationBus,
+                                    localStorage: CoreDataManager.shared,
+                                    qrCodeFormat: qrCodeFormat,
+                                    qrCodeString: qrCodeString)
     }
     
     public func editQRCodeContentViewModel(items: [TextViewModel]) -> EditQRCodeContentViewModel {

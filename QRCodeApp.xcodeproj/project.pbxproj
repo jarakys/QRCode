@@ -143,6 +143,8 @@
 		11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */; };
 		11EBEA7B2B3DAA5E00515558 /* UITabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7A2B3DAA5E00515558 /* UITabBarController.swift */; };
 		11EBEA7D2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7C2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift */; };
+		11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */; };
+		11EBEA812B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -291,6 +293,8 @@
 		11EBEA782B3DA5DE00515558 /* HistoryResultQRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeView.swift; sourceTree = "<group>"; };
 		11EBEA7A2B3DAA5E00515558 /* UITabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarController.swift; sourceTree = "<group>"; };
 		11EBEA7C2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeViewModel.swift; sourceTree = "<group>"; };
+		11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryResultQRCodeCoordinatorViewModel.swift; sourceTree = "<group>"; };
+		11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCreateResultQRCodeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -676,6 +680,8 @@
 				112F35FF2B38D75000016890 /* HistoryViewModel.swift */,
 				114085B12B3AF73200487E09 /* HistoryCoordinatorViewModel.swift */,
 				11EBEA7C2B3DAB0E00515558 /* HistoryResultQRCodeViewModel.swift */,
+				11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */,
+				11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -1074,6 +1080,7 @@
 				112F36592B38D75000016890 /* SettingsItemProtocol.swift in Sources */,
 				110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */,
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
+				11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */,
 				11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */,
 				112F36902B38D75000016890 /* ContentView.swift in Sources */,
 				112F367E2B38D75000016890 /* DetailedChangDesignSectionType.swift in Sources */,
@@ -1162,6 +1169,7 @@
 				112F364B2B38D75000016890 /* SettingsViewModel.swift in Sources */,
 				112F36562B38D75000016890 /* SettingsEventBus.swift in Sources */,
 				110DC9DF2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift in Sources */,
+				11EBEA812B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 import QRCode
 
-final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
+class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     private var navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private var communicationBus: PassthroughSubject<ResultEventBus, Never>
     
@@ -24,7 +24,6 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         self.communicationBus = communicationBus
         
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, qrCodeFormat: qrCodeFormat)
-        addQRCode(isCreated: true)
         let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
         do {
             try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
@@ -43,6 +42,10 @@ final class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     public func changedDesignDidTap() {
         navigationSender.send(.changeDesign)
+    }
+    
+    public func doneDidTap() {
+        addQRCode(isCreated: true)
     }
     
     private func updateQRCodeDocument(qrCodeString: String) {
