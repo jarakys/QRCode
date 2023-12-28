@@ -58,6 +58,10 @@ final class SettingsViewModel: BaseViewModel {
         return languageName
     }
     
+    public var firstSection: SettingsSectionModel<SettingsItemProtocolEraser>? {
+        sections.first
+    }
+    
     init(navigationSender: PassthroughSubject<SettingsEventFlow, Never>,
          communicationBus: PassthroughSubject<SettingsEventBus, Never>) {
         self.navigationSender = navigationSender

@@ -16,6 +16,8 @@ struct CreateResultQRCodeView: View {
     
     var body: some View {
         ScrollView {
+            Spacer()
+                .frame(height: 16)
             VStack(spacing: 10) {
                 Text(viewModel.title)
                     .font(.system(size: 15, weight: .semibold))

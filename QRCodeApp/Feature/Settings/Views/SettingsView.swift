@@ -13,9 +13,17 @@ struct SettingsView: View {
     
     var body: some View {
         List(viewModel.sections, id: \.type) { section in
-            Section(section.title, content: {
+            Section(content: {
                 ForEach(section.items, id: \.hashValue) { item in
                     cellFabic(item: item)
+                }
+            }, header: {
+                if section.type == viewModel.firstSection?.type {
+                    Text(section.title)
+                        .padding(.top, 16)
+                        .padding(.bottom, 4)
+                } else {
+                    Text(section.title)
                 }
             })
             .listRowInsets(EdgeInsets())
