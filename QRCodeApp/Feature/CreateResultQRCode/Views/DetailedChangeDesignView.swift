@@ -27,16 +27,9 @@ final class DetailedChangeDesignViewModel: ObservableObject {
     
     public lazy var qrDocument: QRCode.Document = { [unowned self] in
         let qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
-        let design = QRCode.Design()
-        design.shape.eye = QRCode.EyeShape.Square()
-        design.shape.onPixels = QRCode.PixelShape.Square()
-        design.style.onPixels = QRCode.FillStyle.Solid(UIColor(resource: ColorResource.qrCodeDefault).cgColor)
-        design.shape.offPixels = QRCode.PixelShape.Square()
-        design.style.offPixels = QRCode.FillStyle.Solid(UIColor.clear.cgColor)
-        design.additionalQuietZonePixels = 1
-        design.style.backgroundFractionalCornerRadius = 2
         qrCodeDocument.utf8String = qrCodeString
-        qrCodeDocument.design = design
+        qrCodeDocument.design = qrCodeDesign.qrCodeDesign
+        qrCodeDocument.logoTemplate = qrCodeDesign.logo
         return qrCodeDocument
     }()
     
@@ -144,7 +137,6 @@ final class DetailedChangeDesignViewModel: ObservableObject {
         selectedLogo?.isSelected = false
         selectedLogo = item
         selectedLogo?.isSelected = true
-        
     }
     
     public func save() {
@@ -211,7 +203,6 @@ struct DetailedChangeDesignView: View {
             QRCodeDocumentUIView(document: viewModel.qrDocument)
                 .frame(width: 240, height: 240)
                 .padding(.top, 16)
-                .id(viewModel.selectedLogo)
             CompositionalList(viewModel.items) { model, indexPath in
                 DetailedChangeDesignCellView(model: model)
             }.sectionHeader { sectionIdentifier, kind, indexPath in
