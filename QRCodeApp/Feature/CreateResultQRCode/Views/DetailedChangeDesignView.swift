@@ -12,9 +12,6 @@ import Combine
 
 final class DetailedChangeDesignViewModel: ObservableObject {
     @Published public var items: [DetailedChangeDesignSectionModel]
-//    @Published public var selectedBody: DesignElementViewModel!
-//    @Published public var selectedMarker: DesignElementViewModel
-//    @Published public var
     
     private let navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private let communicationBus: PassthroughSubject<ResultEventBus, Never>
@@ -42,8 +39,8 @@ final class DetailedChangeDesignViewModel: ObservableObject {
         self.qrCodeString = qrCodeString
         self.qrCodeDesign = qrCodeDesign
         
-        selectedBody = DesignElementViewModel(isSelected: true, item: .squareBody)
-        selectedMarker = DesignElementViewModel(isSelected: true, item: .squareMarker)
+        selectedBody = DesignElementViewModel(isSelected: qrCodeDesign == .default, item: .squareBody)
+        selectedMarker = DesignElementViewModel(isSelected: qrCodeDesign == .default, item: .squareMarker)
         
         items = [
             DetailedChangeDesignSectionModel(sectionIdentifier: .body,
