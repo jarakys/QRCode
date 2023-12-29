@@ -24,6 +24,7 @@ struct InAppCellView: View {
                     Text(subtitle)
                         .padding(.vertical, 9)
                         .foregroundStyle(.white)
+                        .multilineTextAlignment(.center)
                 }
                 .frame(maxWidth: .infinity)
                 .background(.primaryApp)
