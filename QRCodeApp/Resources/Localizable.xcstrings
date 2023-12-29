@@ -2490,6 +2490,18 @@
             "value" : "Configurações"
           }
         },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Налаштування"
+          }
+        },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
