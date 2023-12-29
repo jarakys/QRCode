@@ -30,10 +30,7 @@ struct CreateView: View {
             }
             
         }.sectionHeader { sectionIdentifier, kind, indexPath in
-            Text(sectionIdentifier.description.uppercased())
-                .foregroundStyle(.sectionTitle)
-                .font(.system(size: 12))
-                .frame(maxWidth: .infinity, alignment: .leading)
+            section(sectionIdentifier: sectionIdentifier)
         }
         .selectedItem { _ in
             
@@ -50,6 +47,22 @@ struct CreateView: View {
                 })
             })
         })
+    }
+    
+    @ViewBuilder
+    private func section(sectionIdentifier: CreateQRSectionType) -> some View {
+        if sectionIdentifier == .personal {
+            Text(sectionIdentifier.description.uppercased())
+                .foregroundStyle(.sectionTitle)
+                .font(.system(size: 12))
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.top, 24)
+        } else {
+            Text(sectionIdentifier.description.uppercased())
+                .foregroundStyle(.sectionTitle)
+                .font(.system(size: 12))
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 }
 
