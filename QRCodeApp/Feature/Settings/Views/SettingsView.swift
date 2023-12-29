@@ -81,12 +81,21 @@ struct SettingsView: View {
             
         case let .aboutUs(settingsItemModel):
             SettingsCellView(model: settingsItemModel)
+                .onTapGesture {
+                    UIApplication.shared.open(URL(string: "https://qrscanread.com")!)
+                }
             
         case let .termsAndConditions(settingsItemModel):
             SettingsCellView(model: settingsItemModel)
+                .onTapGesture {
+                    UIApplication.shared.open(URL(string: "https://qrscanread.com/terms.html")!)
+                }
             
         case let .privacyPolicy(settingsItemModel):
             SettingsCellView(model: settingsItemModel)
+                .onTapGesture {
+                    UIApplication.shared.open(URL(string: "https://qrscanread.com/privacy.html")!)
+                }
             
         }
     }
