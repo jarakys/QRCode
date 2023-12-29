@@ -91,6 +91,7 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
                 self.items = items
                 self.qrCodeString = String(format: qrCodeFormat.format, arguments: items.map({ $0.value }))
                 self.updateQRCodeDocument(qrCodeString: self.qrCodeString)
+                self.update()
                 
             case let .designChanged(model):
                 self.qrCodeDocument.design = model.design
