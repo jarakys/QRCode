@@ -48,15 +48,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        guard isConfigured else { return }
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.captureSession.startRunning()
+        }
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard (captureSession?.isRunning ?? false) == false else { return }
-        if !isConfigured {
-            configureQRCodeReader()
-        }
+        guard !isConfigured else { return }
+        configureQRCodeReader()
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.startRunning()
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.captureSession.stopRunning()
         }
     }
     

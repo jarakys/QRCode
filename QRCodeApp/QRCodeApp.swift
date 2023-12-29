@@ -29,6 +29,16 @@ struct QRCodeApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    let standardAppearance = UITabBarAppearance()
+                    standardAppearance.backgroundColor = UIColor(Color.gray)
+                    standardAppearance.shadowColor = UIColor(Color.black)
+                    standardAppearance.backgroundColor = .white
+                    UITabBar.appearance().barStyle = .default
+                    UITabBar.appearance().barTintColor = .white
+                    UITabBar.appearance().scrollEdgeAppearance = standardAppearance
+                    UITabBar.appearance().standardAppearance = standardAppearance
+                }
         }
     }
 }
