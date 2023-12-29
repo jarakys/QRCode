@@ -42,7 +42,7 @@ final class CreateContentLinkViewModel: BaseViewModel {
             items.append(TextViewModel(title: String(localized: "Text"), placeholder: String(localized: "tell us more details..."), example: nil, text: ""))
             
         case .url:
-            items.append(TextViewModel(title: String(localized: "Link"), placeholder: "https:", example: String(localized: "Example:https:qrcode"), text: ""))
+            items.append(TextViewModel(title: String(localized: "Link"), placeholder: "https:", example: String(localized: "Example:https://qrscanread.com"), text: ""))
             
         case .text:
             items.append(TextViewModel(title: String(localized: "Text"), placeholder: String(localized: "tell us more details..."), example: nil, text: ""))

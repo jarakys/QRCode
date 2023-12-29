@@ -726,9 +726,6 @@
         }
       }
     },
-    "Done" : {
-
-    },
     "Edit content" : {
       "localizations" : {
         "ar" : {
@@ -875,7 +872,7 @@
         }
       }
     },
-    "Example:https:qrcode" : {
+    "Example:https://qrscanread.com" : {
 
     },
     "Facebook" : {
@@ -1520,6 +1517,9 @@
 
     },
     "Network name" : {
+
+    },
+    "Next" : {
 
     },
     "Open in Safari" : {

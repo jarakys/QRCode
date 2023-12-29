@@ -15,7 +15,7 @@ protocol LocalStore {
                    date: Date, 
                    image: Data,
                    qrCodeData: Data,
-                   isCreated: Bool) throws
+                   isCreated: Bool) throws -> UUID
     func updateQRCode(id: UUID,
                       path: String,
                       qrCodeString: String,
@@ -66,12 +66,13 @@ class CoreDataManager: LocalStore {
                    date: Date,
                    image: Data,
                    qrCodeData: Data,
-                   isCreated: Bool) throws {
+                   isCreated: Bool) throws -> UUID {
+        let id = UUID()
         let qrCodeEntity = NSEntityDescription.entity(forEntityName: "QRCodeEntity", in: context)!
         let qrCode = QRCodeEntity(entity: qrCodeEntity, insertInto: context)
         qrCode.type = type
         qrCode.qrCodeString = qrCodeString
-        qrCode.uuid = UUID()
+        qrCode.uuid = id
         qrCode.date = date
         qrCode.subtitle = subtitle
         qrCode.image = image
@@ -79,6 +80,7 @@ class CoreDataManager: LocalStore {
         qrCode.qrCodeData = qrCodeData
         
         try context.save()
+        return id
     }
     
     func deleteQRCode(id: UUID) throws {

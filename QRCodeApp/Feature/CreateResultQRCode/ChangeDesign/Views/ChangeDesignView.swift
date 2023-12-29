@@ -40,7 +40,7 @@ struct ChangeDesignView: View {
                     .font(.system(size: 17, weight: .semibold))
             })
             ToolbarItem(placement: .navigationBarTrailing, content: {
-                Button("Save", action: {
+                Button("Next", action: {
                     viewModel.save()
                 })
                 .fontWeight(.semibold)

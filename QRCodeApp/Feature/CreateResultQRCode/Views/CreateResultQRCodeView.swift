@@ -15,86 +15,77 @@ struct CreateResultQRCodeView: View {
     @State public var showToast = false
     
     var body: some View {
-        ZStack {
-            if viewModel.isLoading {
-                ProgressView()
-                    .scaleEffect(2)
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .zIndex(2)
-            }
-            ScrollView {
-                Spacer()
-                    .frame(height: 16)
-                VStack(spacing: 10) {
-                    Text(viewModel.title)
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(.createResultTitle)
-                    QRCodeDocumentUIView(document: viewModel.qrCodeDocument)
-                        .frame(width: 240, height: 240)
-                    Text(viewModel.dateString)
-                        .font(.system(size: 13))
-                        .foregroundStyle(.titleTextField)
-                    VStack(spacing: 0) {
-                        HStack(spacing: 10) {
-                            Image(ImageResource.changeDesignIcon)
-                            Text("Change Design")
-                                .font(.system(size: 16))
-                                .foregroundStyle(.primaryTitle)
-                            Spacer()
-                            Text("Pro")
-                                .font(.system(size: 17))
-                                .foregroundStyle(.secondaryTextField)
-                        }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(Color.white)
-                        .onTapGesture(perform: {
-                            viewModel.changedDesignDidTap()
-                        })
-                        Divider()
-                            .padding(.leading, 16)
-                        HStack(spacing: 10) {
-                            Image(ImageResource.editContentIcon)
-                            Text("Edit content")
-                                .font(.system(size: 16))
-                                .foregroundStyle(.primaryTitle)
-                            Spacer()
-                        }
-                        .padding(.horizontal, 16)
-                        .padding(.vertical, 8)
-                        .background(Color.white)
-                        .onTapGesture(perform: {
-                            viewModel.editContentDidTap()
-                        })
-                    }
-                    .cornerRadius(10)
-                    .padding(.horizontal, 16)
-                    .padding(.top, 10)
-                    HStack {
-                        Text("Ad block")
-                    }
-                    .frame(height: 80)
-                    .background(.white)
-                    .padding(.top, 24)
-                    ForEach(viewModel.items, id: \.title) { item in
-                        TitledContainerView(title: item.title, value: item.value)
-                            .onTapGesture(perform: { [weak item] in
-                                UIPasteboard.general.string = item?.value
-                                viewModel.eventSender.send(.copied)
-                            })
+        ScrollView {
+            Spacer()
+                .frame(height: 16)
+            VStack(spacing: 10) {
+                Text(viewModel.title)
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(.createResultTitle)
+                QRCodeDocumentUIView(document: viewModel.qrCodeDocument)
+                    .frame(width: 240, height: 240)
+                Text(viewModel.dateString)
+                    .font(.system(size: 13))
+                    .foregroundStyle(.titleTextField)
+                VStack(spacing: 0) {
+                    HStack(spacing: 10) {
+                        Image(ImageResource.changeDesignIcon)
+                        Text("Change Design")
+                            .font(.system(size: 16))
+                            .foregroundStyle(.primaryTitle)
+                        Spacer()
+                        Text("Pro")
+                            .font(.system(size: 17))
+                            .foregroundStyle(.secondaryTextField)
                     }
                     .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(Color.white)
+                    .onTapGesture(perform: {
+                        viewModel.changedDesignDidTap()
+                    })
+                    Divider()
+                        .padding(.leading, 16)
+                    HStack(spacing: 10) {
+                        Image(ImageResource.editContentIcon)
+                        Text("Edit content")
+                            .font(.system(size: 16))
+                            .foregroundStyle(.primaryTitle)
+                        Spacer()
+                    }
+                    .padding(.horizontal, 16)
+                    .padding(.vertical, 8)
+                    .background(Color.white)
+                    .onTapGesture(perform: {
+                        viewModel.editContentDidTap()
+                    })
                 }
-                Spacer()
-                    .frame(height: 100)
+                .cornerRadius(10)
+                .padding(.horizontal, 16)
+                .padding(.top, 10)
+                HStack {
+                    Text("Ad block")
+                }
+                .frame(height: 80)
+                .background(.white)
+                .padding(.top, 24)
+                ForEach(viewModel.items, id: \.title) { item in
+                    TitledContainerView(title: item.title, value: item.value)
+                        .onTapGesture(perform: { [weak item] in
+                            UIPasteboard.general.string = item?.value
+                            viewModel.eventSender.send(.copied)
+                        })
+                }
+                .padding(.horizontal, 16)
             }
-            VStack {
-                Spacer()
-                shareSection()
-                    .padding(.bottom, 16)
-            }
+            Spacer()
+                .frame(height: 100)
         }
-        .disabled(viewModel.isLoading)
+        VStack {
+            Spacer()
+            shareSection()
+                .padding(.bottom, 16)
+        }
         .frame(maxWidth: .infinity)
         .background(.secondaryBackground)
         .navigationTitle("Creation Result")
@@ -117,15 +108,6 @@ struct CreateResultQRCodeView: View {
                     })
                 })
             }
-            ToolbarItem(placement: .topBarTrailing, content: {
-                Button(action: {
-                    viewModel.doneDidTap()
-                }, label: {
-                    Text("Done")
-                        .font(.system(size: 17, weight: .semibold))
-                        .foregroundStyle(.tint)
-                })
-            })
         })
         .onReceive(viewModel.eventSender, perform: { item in
             showToast = item == .copied

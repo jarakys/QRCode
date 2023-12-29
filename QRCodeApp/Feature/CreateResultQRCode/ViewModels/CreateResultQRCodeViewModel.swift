@@ -15,6 +15,8 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     public let keychainStorage = KeychainManager.shared
     
+    public var qrCodeId: UUID?
+    
     public var isDeletable: Bool {
         false
     }
@@ -28,8 +30,18 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
          qrCodeString: String) {
         self.navigationSender = navigationSender
         self.communicationBus = communicationBus
-        
         super.init(qrCodeString: qrCodeString, localStorage: localStorage, design: design, logo: logo, qrCodeFormat: qrCodeFormat)
+        qrCodeAdd()
+    }
+    
+    public func qrCodeAdd() {
+        qrCodeId = addQRCode(isCreated: true, path: "")
+        let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
+        do {
+            try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
+        } catch {
+            print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
+        }
     }
     
     public func editContentDidTap() {
@@ -44,44 +56,6 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
         navigationSender.send(.changeDesign(qrCodeString: qrCodeString))
     }
     
-    public func doneDidTap() {
-        guard !isSaved else { 
-            navigationSender.send(.backToMain)
-            return
-        }
-        Task { @MainActor [weak self] in
-            await self?.saveQRCode()
-            self?.navigationSender.send(.backToMain)
-        }
-    }
-    
-    override func saveQRCode() async {
-        isSaved = true
-        await MainActor.run(body: {
-            isLoading = true
-        })
-        guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
-        do {
-            let result = try await ImageUploader.upload(data: data)
-            self.path = result
-            addQRCode(isCreated: true, path: result)
-            let qrCodeCreatesCount = keychainStorage.get(key: .countCreates, defaultValue: 0)
-            do {
-                try keychainStorage.set(key: .countCreates, value: qrCodeCreatesCount + 1)
-            } catch {
-                print("CreateResultQRCodeViewModel keychainStorage countCreates error: \(error)")
-            }
-            await MainActor.run(body: {
-                isLoading = false
-            })
-        } catch {
-            await MainActor.run(body: {
-                isLoading = false
-            })
-            print("ImageUploader.upload error \(error)")
-        }
-    }
-    
     private func updateQRCodeDocument(qrCodeString: String) {
         qrCodeDocument.update(text: qrCodeString)
         qrCodeDocument.utf8String = qrCodeString
@@ -93,6 +67,17 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
     
     public func deleteDidTap() {
         
+    }
+    
+    public func update() {
+        guard let data = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
+        guard let qrCodeData = try? qrCodeDocument.jsonData() else { return }
+        guard let qrCodeId else { return }
+        do {
+            try localStorage.updateQRCode(id: qrCodeId, path: "", qrCodeString: qrCodeString, image: data, qrCodeData: qrCodeData)
+        } catch {
+            print("doneDidTap error \(error)")
+        }
     }
     
     override func bind() {
@@ -111,11 +96,13 @@ class CreateResultQRCodeViewModel: BaseResultQRCodeViewModel {
                 self.qrCodeDocument.design = model.design
                 self.qrCodeDocument.logoTemplate = model.logo
                 self.qrCodeDocument.setHasChanged()
+                self.update()
                 
             case let .detailedDesignSave(design, logo):
                 self.qrCodeDocument.design = design
                 self.qrCodeDocument.logoTemplate = logo
                 self.qrCodeDocument.setHasChanged()
+                self.update()
             }
         }).store(in: &cancellable)
     }

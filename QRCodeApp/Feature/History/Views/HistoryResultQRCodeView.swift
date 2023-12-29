@@ -14,12 +14,6 @@ struct HistoryResultQRCodeView: View {
     
     var body: some View {
         ZStack {
-            if viewModel.isLoading {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .scaleEffect(2)
-                    .zIndex(3)
-            }
             ScrollView {
                 VStack(spacing: 10) {
                     Spacer()
@@ -57,7 +51,6 @@ struct HistoryResultQRCodeView: View {
                     .padding(.bottom, 16)
             }
         }
-        .disabled(viewModel.isLoading)
         .frame(maxWidth: .infinity)
         .background(.secondaryBackground)
         .navigationTitle("Scan Result")

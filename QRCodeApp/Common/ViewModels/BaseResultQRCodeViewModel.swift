@@ -14,13 +14,10 @@ class QRCodeContainer {
 }
 
 class BaseResultQRCodeViewModel: BaseViewModel {
-    @Published public var isLoading: Bool = false
     @Published public var items = [TitledCopyContainerViewModel]()
     @Published private(set) var qrCodeDocument: QRCode.Document
     public let qrCodeFormat: QRCodeFormat
     public var qrCodeString: String
-    public var isSaved = false
-    public var path: String?
     
     public var eventSender = PassthroughSubject<CreateResultQRCodeViewModel.Event, Never>()
     
@@ -55,26 +52,12 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     }
     
     public func share() {
-        guard isSaved else {
-            Task { @MainActor [weak self] in
-                await self?.saveQRCode()
-                self?.share()
-            }
-            return
-        }
         guard let data = qrCodeDocument.uiImage(.init(width: 240, height: 240))?.pngData() else { return }
         ShareActivityManager.share(datas: [data])
     }
     
     public func shareInSafary(completion: @escaping (String) -> Void) {
-        guard let path else {
-            Task { @MainActor [weak self] in
-                await self?.saveQRCode()
-                self?.shareInSafary(completion: completion)
-            }
-            return
-        }
-        completion(path)
+//        completion(path)
     }
     
     public func createFormat() {
@@ -111,11 +94,12 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         fatalError("Not implemented")
     }
     
-    public func addQRCode(isCreated: Bool, path: String) {
-        guard let date = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return }
-        guard let documentData = try? qrCodeDocument.jsonData() else { return }
+    @discardableResult
+    public func addQRCode(isCreated: Bool, path: String) -> UUID? {
+        guard let date = qrCodeDocument.uiImage(.init(width: 250, height: 250))?.pngData() else { return nil }
+        guard let documentData = try? qrCodeDocument.jsonData() else { return nil }
         do {
-            try localStorage.addQRCode(qrCodeString: qrCodeString,
+            return try localStorage.addQRCode(qrCodeString: qrCodeString,
                                        type: qrCodeFormat.rawValue,
                                        subtitle: path,
                                        date: Date(),
@@ -125,6 +109,7 @@ class BaseResultQRCodeViewModel: BaseViewModel {
             print("addQRCode added")
         } catch {
             print("addQRCode error \(error)")
+            return nil
         }
     }
 }
