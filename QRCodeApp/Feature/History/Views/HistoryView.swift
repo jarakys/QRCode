@@ -155,7 +155,9 @@ struct HistoryView: View {
                 .tag(1)
                 .font(.system(size: 15))
         }
+        .scaleEffect(1.12)
         .pickerStyle(.segmented)
+        .padding(.horizontal, 22)
     }
     
     @ViewBuilder
