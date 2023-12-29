@@ -33,7 +33,7 @@ struct SettingsView: View {
         .navigationBarTitleDisplayMode(.automatic)
         .onReceive(viewModel.eventSender, perform: { event in
             guard event == .languageDidTap else { return }
-            guard let settingsURL = URL(string: "App-Prefs:root=com.applage.ios.qrcode.QRCode") else { return }
+            guard let settingsURL = URL(string: UIApplication.openSettingsURLString) else { return }
             guard UIApplication.shared.canOpenURL(settingsURL) else { return }
             UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
         })
