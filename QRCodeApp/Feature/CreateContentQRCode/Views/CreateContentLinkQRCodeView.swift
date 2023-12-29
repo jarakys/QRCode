@@ -20,10 +20,10 @@ struct CreateContentLinkQRCodeView: View {
             }, label: {
                 Text("Create")
                     .frame(maxWidth: .infinity)
-                    .frame(height: 40)
                     .foregroundStyle(.white)
                     .font(.system(size: 15, weight: .semibold))
-                    .background(.primary)
+                    .padding(.vertical, 16)
+                    .background(.primaryApp)
                     .cornerRadius(10)
                     .padding(.bottom, 24)
             })

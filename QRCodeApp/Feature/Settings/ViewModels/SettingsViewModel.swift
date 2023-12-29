@@ -25,7 +25,7 @@ final class SettingsViewModel: BaseViewModel {
         return SettingsItemValueSubtitleModel(title: String(localized: "Vibrate"), icon: "vibrationIcon", value: isSelected, subtitle: String(localized: "Vibrate when QR is found"))
     }()
     private lazy var beepItem: SettingsItemValueSubtitleModel = {
-        let isSelected = self.localStorageService.get(key: .beepSelected, defaultValue: true)
+        let isSelected = self.localStorageService.get(key: .beepSelected, defaultValue: false)
         return SettingsItemValueSubtitleModel(title: String(localized: "Beep"), icon: "beepIcon", value: isSelected, subtitle: String(localized: "Vibrate when QR is found"))
     }()
     

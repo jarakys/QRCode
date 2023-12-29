@@ -53,7 +53,7 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     
     public func share() {
         guard let data = qrCodeDocument.uiImage(.init(width: 240, height: 240))?.pngData() else { return }
-        ShareActivityManager.share(datas: [data])
+        ShareActivityManager.share(datas: [ShareItemModel(item: data, title: "QRCode · \(qrCodeFormat.description)")])
     }
     
     public func shareInSafary(completion: @escaping (String) -> Void) {

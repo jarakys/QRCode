@@ -196,7 +196,7 @@ final class HistoryViewModel: BaseViewModel {
     
     public func shareDidTap() {
         let items = privateItems.flatMap({ $0.items }).filter({ selectedItems.contains($0.id) })
-        let images = items.map({ $0.image })
+        let images = items.map({ ShareItemModel(item: $0.image, title: "QRCode · \($0.qrCodeFormat.description)")})
         ShareActivityManager.share(datas: images)
         shouldEdit = false
     }
