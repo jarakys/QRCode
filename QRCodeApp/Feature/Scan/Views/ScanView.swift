@@ -12,6 +12,7 @@ import Combine
 struct ScanView: View {
     @StateObject public var viewModel: ScanViewModel
     @State private var selectedItem: PhotosPickerItem?
+    @State var audioPlayer: AVAudioPlayer?
     @State var device = AVCaptureDevice.default(for: .video)
     var body: some View {
         VStack(spacing: 0) {
@@ -62,6 +63,9 @@ struct ScanView: View {
             switch event {
             case .vibrate:
                 AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+            
+            case .sound:
+                playSound()
             }
         })
         .onChange(of: selectedItem) { item in
@@ -82,6 +86,16 @@ struct ScanView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Scan")
+    }
+    
+    private func playSound() {
+        guard let soundURL = Bundle.main.url(forResource: "antic", withExtension: "mp3") else { return }
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: soundURL)
+            audioPlayer?.play()
+        } catch {
+            print("Error loading sound file: \(error.localizedDescription)")
+        }
     }
 }
 

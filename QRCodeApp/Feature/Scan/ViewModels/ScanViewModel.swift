@@ -35,8 +35,14 @@ final class ScanViewModel: BaseViewModel {
         } catch {
             print("setRecognized keychainStorage countScans error: \(error)")
         }
-        guard UserDefaultsService.shared.get(key: .vibrationSelected, defaultValue: true) else { return }
-        eventSender.send(.vibrate)
+        let vibrationSelected = UserDefaultsService.shared.get(key: .vibrationSelected, defaultValue: true)
+        if vibrationSelected {
+            eventSender.send(.vibrate)
+        }
+        let soundSelected = UserDefaultsService.shared.get(key: .beepSelected, defaultValue: false)
+        if soundSelected {
+            eventSender.send(.sound)
+        }
     }
     
     public func detect(on image: Data) {
@@ -49,5 +55,6 @@ final class ScanViewModel: BaseViewModel {
 extension ScanViewModel {
     enum Event {
         case vibrate
+        case sound
     }
 }
