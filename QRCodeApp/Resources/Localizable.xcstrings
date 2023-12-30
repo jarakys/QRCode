@@ -1214,9 +1214,6 @@
         }
       }
     },
-    "In App" : {
-
-    },
     "Instagram" : {
       "localizations" : {
         "ar" : {
@@ -1314,6 +1311,9 @@
           }
         }
       }
+    },
+    "Latitude" : {
+
     },
     "Let’s get started with your\nfirst QR creation:" : {
 
@@ -1532,6 +1532,9 @@
       }
     },
     "Logo" : {
+
+    },
+    "Longitude" : {
 
     },
     "Marker" : {
@@ -3020,6 +3023,9 @@
           }
         }
       }
+    },
+    "TikTok" : {
+
     },
     "To" : {
 

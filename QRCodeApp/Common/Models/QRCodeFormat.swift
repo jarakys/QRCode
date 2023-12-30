@@ -76,10 +76,10 @@ public enum QRCodeFormat: String, CaseIterable {
     public var regexPattern: String {
         switch self {
         case .phone:
-            return "tel: [0-9]+$"
+            return "tel:"
             
         case .url:
-            return "url: .+$"
+            return "url:"
             
         case .text:
             return ""
@@ -93,18 +93,42 @@ public enum QRCodeFormat: String, CaseIterable {
         case .email:
             return "mailto"
             
+        case .location:
+            return "geo"
+            
+        case .telegram:
+            return "https://t\\.me/.*"
         
-        default: return ""
+        case .facebook:
+            return "https://www.facebook.com/"
+            
+        case .instagram:
+            return "https://www.instagram.com/"
+            
+        case .twitter:
+            return "https://twitter.com/"
+            
+        case .whatsApp:
+            return "https://wame/qr/"
+            
+        case .tikTok:
+            return "https://www.tiktok.com/"
+            
+        case .spotify:
+            return "https://open.spotify.com/"
+            
+        case .snapchat:
+            return "https://snapchat.com/"
         }
     }
     
     public var regexExtract: [String] {
         switch self {
         case .phone:
-            return [#"tel:\s?(\d+)"#]
+            return [#"tel:\s?(\S+)"#]
             
         case .url:
-            return [#"tel:\s?(\d+)"#]
+            return [#"url:\s?(\S+)"#]
             
         case .text:
             return [""]
@@ -128,12 +152,12 @@ public enum QRCodeFormat: String, CaseIterable {
             return "tel:%@"
         
         case .wifi:
-            return "WIFI:S:%@;P:%@;;"
+            return "WIFI:S:%@;T:%@;P:%@;H:%@;;"
             
         case .url:
             return "url:%@"
             
-        case .text:
+        case .text, .facebook, .twitter, .tikTok, .snapchat, .telegram, .whatsApp, .spotify, .instagram:
             return "%@"
             
         case .sms:
@@ -142,7 +166,8 @@ public enum QRCodeFormat: String, CaseIterable {
         case .email:
             return "mailto:%@?cc=%@&body=%@"
             
-        default: return ""
+        case .location:
+            return "geo:%@:%@"
         }
     }
     

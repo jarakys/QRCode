@@ -24,7 +24,7 @@ final class CreateContentLinkViewModel: BaseViewModel {
     
     public func createDidTap() {
         let finalString = String(format: format.format, arguments: items.map({ $0.text }))
-        guard !finalString.isEmpty else { return }
+        guard !finalString.isEmpty, !finalString.replacingOccurrences(of: " ", with: "").isEmpty else { return }
         navigationSender.send(.result(finalString: finalString, type: format))
     }
     
@@ -53,23 +53,32 @@ final class CreateContentLinkViewModel: BaseViewModel {
             items.append(TextViewModel(title: String(localized: "Password"), placeholder: String(localized: "Password"), example: nil, text: ""))
             
         case .location:
-            break
+            items.append(TextViewModel(title: String(localized: "Longitude"), placeholder: "Longitude", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Latitude"), placeholder: "Latitude", example: nil, text: ""))
+            
         case .telegram:
-            break
+            items.append(TextViewModel(title: String(localized: "Telegram"), placeholder: "Telegram url", example: nil, text: "https://t.me/"))
+            
         case .facebook:
-            break
+            items.append(TextViewModel(title: String(localized: "Facebook"), placeholder: "Facebook url", example: nil, text: "https://www.facebook.com/"))
+            
         case .instagram:
-            break
+            items.append(TextViewModel(title: String(localized: "Instagram"), placeholder: "Instagram url", example: nil, text: "https://www.instagram.com/"))
+            
         case .twitter:
-            break
+            items.append(TextViewModel(title: "X", placeholder: "Twitter url", example: nil, text: "https://twitter.com/"))
+            
         case .whatsApp:
-            break
+            items.append(TextViewModel(title: String(localized: "WhatsApp"), placeholder: "WhatsApp url", example: nil, text: "https://wa.me/qr/"))
+            
         case .tikTok:
-            break
+            items.append(TextViewModel(title: String(localized: "TikTok"), placeholder: "TikTok url", example: nil, text: "https://vm.tiktok.com/"))
+            
         case .spotify:
-            break
+            items.append(TextViewModel(title: String(localized: "Spotify"), placeholder: "Spotify url", example: nil, text: "https://open.spotify.com/"))
+
         case .snapchat:
-            break
+            items.append(TextViewModel(title: String(localized: "Snapchat"), placeholder: "Snapchat url", example: nil, text: "https://snapchat.com/"))
         }
     }
 }

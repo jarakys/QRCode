@@ -38,8 +38,7 @@ class BaseResultQRCodeViewModel: BaseViewModel {
          design: QRCode.Design = .default(),
          logo: QRCode.LogoTemplate? = nil,
          qrCodeFormat: QRCodeFormat?) {
-        let formatMatcher = FormatMatcher(patterns: QRCodeFormat.allCases.map({ $0.regexPattern }), items: QRCodeFormat.allCases)
-        self.qrCodeFormat = qrCodeFormat ?? formatMatcher.matchFormat(inputString: qrCodeString) ?? .text
+        self.qrCodeFormat = qrCodeFormat ?? FormatMatcher.getFormat(value: qrCodeString, types: QRCodeFormat.allCases)
         self.qrCodeString = qrCodeString
         self.qrCodeDocument = QRCode.Document(generator: QRCodeGenerator_External())
         self.localStorage = localStorage
