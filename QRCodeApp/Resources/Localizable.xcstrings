@@ -226,6 +226,9 @@
         }
       }
     },
+    "By opting to \"Allow tracking,\" you play a key role in enhancing the app experience, benefiting not only yourself but all users.\n\nYour choice will simplify the enjoyment of our app for others, and you can take pride in being a part of this positive influence" : {
+
+    },
     "Cancel" : {
       "localizations" : {
         "ar" : {
@@ -472,6 +475,9 @@
           }
         }
       }
+    },
+    "Continue" : {
+
     },
     "Copied" : {
       "localizations" : {
@@ -872,6 +878,9 @@
         }
       }
     },
+    "Equipped with a myriad of user-friendly features" : {
+
+    },
     "Example:https://qrscanread.com" : {
 
     },
@@ -1107,6 +1116,9 @@
           }
         }
       }
+    },
+    "Help us improve QR code reader & scanner" : {
+
     },
     "History" : {
       "localizations" : {
@@ -2073,6 +2085,9 @@
       }
     },
     "Qr Code · %@" : {
+
+    },
+    "QR code reader & scanner (app name) is designed to cater to all your scanning and QR creation requirements." : {
 
     },
     "QR creates remaining" : {

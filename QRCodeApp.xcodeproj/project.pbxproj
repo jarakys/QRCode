@@ -137,6 +137,10 @@
 		114CEBB72B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CEBB62B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift */; };
 		114CEBBA2B3E28020088F3C3 /* DesignElementViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CEBB92B3E28020088F3C3 /* DesignElementViewModel.swift */; };
 		114CEBBD2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CEBBC2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift */; };
+		114CF8C02B4037C800FDD6CB /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8BF2B4037C800FDD6CB /* TutorialView.swift */; };
+		114CF8C32B403E2900FDD6CB /* TutorialPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8C22B403E2900FDD6CB /* TutorialPageView.swift */; };
+		114CF8C72B403E4600FDD6CB /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8C62B403E4600FDD6CB /* TutorialViewModel.swift */; };
+		114CF8C92B403E5D00FDD6CB /* TutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8C82B403E5D00FDD6CB /* TutorialPage.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
@@ -302,6 +306,10 @@
 		114CEBB92B3E28020088F3C3 /* DesignElementViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignElementViewModel.swift; sourceTree = "<group>"; };
 		114CEBBC2B3E282B0088F3C3 /* DetailedChangeDesignCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedChangeDesignCellView.swift; sourceTree = "<group>"; };
 		114CEBBE2B3E3CD70088F3C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		114CF8BF2B4037C800FDD6CB /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		114CF8C22B403E2900FDD6CB /* TutorialPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageView.swift; sourceTree = "<group>"; };
+		114CF8C62B403E4600FDD6CB /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
+		114CF8C82B403E5D00FDD6CB /* TutorialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPage.swift; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -499,6 +507,7 @@
 		112F35C92B38D75000016890 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				114CF8BE2B4036E200FDD6CB /* Tutorial */,
 				112F35CA2B38D75000016890 /* Settings */,
 				112F35F12B38D75000016890 /* CreateContentQRCode */,
 				112F35F62B38D75000016890 /* TapBar */,
@@ -1013,6 +1022,41 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		114CF8BE2B4036E200FDD6CB /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				114CF8C52B403E4100FDD6CB /* ViewModel */,
+				114CF8C42B403E3C00FDD6CB /* Models */,
+				114CF8C12B403E2200FDD6CB /* Views */,
+				114CF8BF2B4037C800FDD6CB /* TutorialView.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		114CF8C12B403E2200FDD6CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				114CF8C22B403E2900FDD6CB /* TutorialPageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		114CF8C42B403E3C00FDD6CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				114CF8C82B403E5D00FDD6CB /* TutorialPage.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		114CF8C52B403E4100FDD6CB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				114CF8C62B403E4600FDD6CB /* TutorialViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1145,6 +1189,7 @@
 				112F365F2B38D75000016890 /* SelectLanguageView.swift in Sources */,
 				112F36442B38D75000016890 /* UserDefaultsService.swift in Sources */,
 				114CEBBA2B3E28020088F3C3 /* DesignElementViewModel.swift in Sources */,
+				114CF8C72B403E4600FDD6CB /* TutorialViewModel.swift in Sources */,
 				112F367C2B38D75000016890 /* ChangeDesignView.swift in Sources */,
 				112F36422B38D75000016890 /* SelectableItemViewModel.swift in Sources */,
 				112F36472B38D75000016890 /* LanguageType.swift in Sources */,
@@ -1160,6 +1205,7 @@
 				112F36592B38D75000016890 /* SettingsItemProtocol.swift in Sources */,
 				114CEBB72B3E27BD0088F3C3 /* DetailedChangeDesignViewModel.swift in Sources */,
 				110DC9EC2B3C69C30046CBCD /* EditType.swift in Sources */,
+				114CF8C32B403E2900FDD6CB /* TutorialPageView.swift in Sources */,
 				112F365D2B38D75000016890 /* SelectLanguageViewModel.swift in Sources */,
 				11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */,
 				11EBEA792B3DA5DE00515558 /* HistoryResultQRCodeView.swift in Sources */,
@@ -1177,6 +1223,7 @@
 				112F36602B38D75000016890 /* InAppCellView.swift in Sources */,
 				114085B02B3AF71E00487E09 /* HistoryCoordinatorView.swift in Sources */,
 				112F36762B38D75000016890 /* ChangeDesignSectionModel.swift in Sources */,
+				114CF8C02B4037C800FDD6CB /* TutorialView.swift in Sources */,
 				112F36462B38D75000016890 /* QRCodeFormat.swift in Sources */,
 				112F36892B38D75000016890 /* CreateQRCodeSectionModel.swift in Sources */,
 				112F36742B38D75000016890 /* QRCode.Design+designs.swift in Sources */,
@@ -1223,6 +1270,7 @@
 				112F364D2B38D75000016890 /* SettingsItemValueSubtitleModel.swift in Sources */,
 				11EBEABF2B3DD3B600515558 /* ImageUploader.swift in Sources */,
 				114085A12B39BC2000487E09 /* ScanFlow.swift in Sources */,
+				114CF8C92B403E5D00FDD6CB /* TutorialPage.swift in Sources */,
 				112F36782B38D75000016890 /* SelectableQRCodeDesign.swift in Sources */,
 				110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */,
 				114085A72B39BEAB00487E09 /* MainScanNavigationView.swift in Sources */,
