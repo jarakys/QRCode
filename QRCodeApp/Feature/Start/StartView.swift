@@ -55,6 +55,7 @@ struct StartView: View {
                     URL(string: "https://qrscanread.com/privacy.html")!
                 )
                 .font(.system(size: 12))
+                .padding(.bottom, 30)
                 Button(action: {
                     viewModel.startDidTap()
                 }, label: {

@@ -37,12 +37,18 @@ struct QRCodeApp: App {
             if startDidTap == false {
                 StartView(viewModel: StartViewModel(didTap: {
                     UserDefaultsService.shared.set(key: .startDidTap, value: true)
-                    startDidTap = true
+                    withAnimation(.linear) {
+                        startDidTap = true
+                    }
+                    
                 }))
             } else if tutorialPassed == false {
                 TutorialView(viewModel: TutorialViewModel(passedDidTap: {
                     UserDefaultsService.shared.set(key: .tutorialPassed, value: true)
-                    tutorialPassed = true
+                    withAnimation(.linear) {
+                        tutorialPassed = true
+                    }
+                    
                 }))
             } else if showIsPremium {
                 Text("Premium screen")

@@ -6,6 +6,7 @@
 //
 
 import Combine
+import SwiftUI
 
 final class TutorialViewModel: ObservableObject {
     @Published public var currentPage = 0
@@ -22,6 +23,8 @@ final class TutorialViewModel: ObservableObject {
             passedDidTap?()
             return
         }
-        currentPage += 1
+        withAnimation(.linear) {
+            currentPage += 1
+        }
     }
 }

@@ -735,6 +735,9 @@
         }
       }
     },
+    "Custom Designed QR Codes" : {
+
+    },
     "Edit content" : {
       "localizations" : {
         "ar" : {
@@ -1119,6 +1122,12 @@
           }
         }
       }
+    },
+    "Hello, world!" : {
+
+    },
+    "Hello, World!" : {
+
     },
     "Help us improve QR code reader & scanner" : {
 
@@ -1535,6 +1544,9 @@
 
     },
     "Next" : {
+
+    },
+    "No Ads" : {
 
     },
     "Open in Safari" : {
@@ -2091,6 +2103,9 @@
       }
     },
     "Qr Code · %@" : {
+
+    },
+    "QR Code Generation for All Categories" : {
 
     },
     "QR code reader \n& scanner" : {
@@ -3102,6 +3117,12 @@
       }
     },
     "Unlimited" : {
+
+    },
+    "Unlimited Access To All Features" : {
+
+    },
+    "Unlimited Scans QR & Barcodes" : {
 
     },
     "Unlock" : {
