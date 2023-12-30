@@ -226,6 +226,9 @@
         }
       }
     },
+    "By continuing you agree to the" : {
+
+    },
     "By opting to \"Allow tracking,\" you play a key role in enhancing the app experience, benefiting not only yourself but all users.\n\nYour choice will simplify the enjoyment of our app for others, and you can take pride in being a part of this positive influence" : {
 
     },
@@ -2087,6 +2090,9 @@
     "Qr Code · %@" : {
 
     },
+    "QR code reader \n& scanner" : {
+
+    },
     "QR code reader & scanner (app name) is designed to cater to all your scanning and QR creation requirements." : {
 
     },
@@ -2728,6 +2734,9 @@
         }
       }
     },
+    "Start" : {
+
+    },
     "Telegram" : {
       "localizations" : {
         "ar" : {
@@ -2828,6 +2837,9 @@
           }
         }
       }
+    },
+    "Term and Privacy Policy" : {
+
     },
     "Terms and conditions" : {
       "localizations" : {

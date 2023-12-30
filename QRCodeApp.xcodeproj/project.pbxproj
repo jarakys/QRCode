@@ -141,6 +141,7 @@
 		114CF8C32B403E2900FDD6CB /* TutorialPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8C22B403E2900FDD6CB /* TutorialPageView.swift */; };
 		114CF8C72B403E4600FDD6CB /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8C62B403E4600FDD6CB /* TutorialViewModel.swift */; };
 		114CF8C92B403E5D00FDD6CB /* TutorialPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8C82B403E5D00FDD6CB /* TutorialPage.swift */; };
+		114CF8CC2B40420800FDD6CB /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8CB2B40420800FDD6CB /* StartView.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
@@ -310,6 +311,7 @@
 		114CF8C22B403E2900FDD6CB /* TutorialPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageView.swift; sourceTree = "<group>"; };
 		114CF8C62B403E4600FDD6CB /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		114CF8C82B403E5D00FDD6CB /* TutorialPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPage.swift; sourceTree = "<group>"; };
+		114CF8CB2B40420800FDD6CB /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -507,6 +509,7 @@
 		112F35C92B38D75000016890 /* Feature */ = {
 			isa = PBXGroup;
 			children = (
+				114CF8CA2B4041FF00FDD6CB /* Start */,
 				114CF8BE2B4036E200FDD6CB /* Tutorial */,
 				112F35CA2B38D75000016890 /* Settings */,
 				112F35F12B38D75000016890 /* CreateContentQRCode */,
@@ -1057,6 +1060,14 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		114CF8CA2B4041FF00FDD6CB /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				114CF8CB2B40420800FDD6CB /* StartView.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1272,6 +1283,7 @@
 				114085A12B39BC2000487E09 /* ScanFlow.swift in Sources */,
 				114CF8C92B403E5D00FDD6CB /* TutorialPage.swift in Sources */,
 				112F36782B38D75000016890 /* SelectableQRCodeDesign.swift in Sources */,
+				114CF8CC2B40420800FDD6CB /* StartView.swift in Sources */,
 				110DC9E82B3B345F0046CBCD /* SearchBarView.swift in Sources */,
 				114085A72B39BEAB00487E09 /* MainScanNavigationView.swift in Sources */,
 				114085AA2B39BF7500487E09 /* ScanResultQRCodeView.swift in Sources */,

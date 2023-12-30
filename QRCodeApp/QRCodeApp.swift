@@ -28,7 +28,7 @@ struct QRCodeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            TutorialView()
+            StartView()
                 .onAppear {
                     let standardAppearance = UITabBarAppearance()
                     standardAppearance.backgroundColor = UIColor(Color.gray)
