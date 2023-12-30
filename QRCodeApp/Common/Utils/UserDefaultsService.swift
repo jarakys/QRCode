@@ -13,6 +13,8 @@ enum LocalStorageKey: String, CaseIterable {
     case vibrationSelected
     case countScans
     case countCreates
+    case startDidTap
+    case tutorialPassed
 }
 
 protocol LocalStorageService {

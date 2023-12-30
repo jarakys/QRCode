@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TutorialView: View {
-    @StateObject public var viewModel = TutorialViewModel()
+    @StateObject public var viewModel: TutorialViewModel
     var body: some View {
         VStack {
             ZStack(alignment: .bottom) {
@@ -52,5 +52,5 @@ struct TutorialView: View {
 }
 
 #Preview {
-    TutorialView()
+    TutorialView(viewModel: TutorialViewModel(passedDidTap: nil))
 }

@@ -11,15 +11,17 @@ final class TutorialViewModel: ObservableObject {
     @Published public var currentPage = 0
     @Published public var pages = [TutorialPage.intro, .designedFor]
     
+    public var passedDidTap: (() -> Void)?
+    
+    init(passedDidTap: (() -> Void)?) {
+        self.passedDidTap = passedDidTap
+    }
+    
     public func continueDidTap() {
         guard currentPage < pages.count - 1 else {
-            openPremiumDidTap()
+            passedDidTap?()
             return
         }
         currentPage += 1
-    }
-    
-    public func openPremiumDidTap() {
-        
     }
 }

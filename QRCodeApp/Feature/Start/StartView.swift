@@ -8,13 +8,19 @@
 import SwiftUI
 
 final class StartViewModel: ObservableObject {
+    var didTap: (() -> Void)?
+    
+    init(didTap: (() -> Void)?) {
+        self.didTap = didTap
+    }
+    
     public func startDidTap() {
-        
+        didTap?()
     }
 }
 
 struct StartView: View {
-    @StateObject public var viewModel = StartViewModel()
+    @StateObject public var viewModel: StartViewModel
     
     var body: some View {
         ZStack {
