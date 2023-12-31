@@ -15,6 +15,12 @@
             "value" : "من نحن"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Über uns"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -43,12 +49,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "회사 소개"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Über uns"
           }
         },
         "pt-PT" : {
@@ -94,6 +94,12 @@
             "value" : "صوت"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ton"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -122,12 +128,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비프음"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ton"
           }
         },
         "ru" : {
@@ -164,6 +164,12 @@
             "value" : "النص"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Textkörper"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -186,12 +192,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "본문"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Textkörper"
           }
         },
         "pt-PT" : {
@@ -234,6 +234,12 @@
             "value" : "من خلال الاستمرار، فإنك توافق على الشروط وسياسة الخصوصية."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Durch die Fortsetzung stimmen Sie den Nutzungsbedingungen und der Datenschutzrichtlinie zu."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -262,12 +268,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계속 진행하시면 이용 약관과 개인 정보 보호 정책에 동의하시는 것입니다."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Durch die Fortsetzung stimmen Sie den Nutzungsbedingungen und der Datenschutzrichtlinie zu."
           }
         },
         "pt-PT" : {
@@ -310,6 +310,12 @@
             "value" : "من خلال الاختيار لـ \"السماح بالتتبع\" ، فأنت تلعب دورًا حاسمًا في تحسين تجربة التطبيق ، مستفيدًا ليس فقط أنت بل جميع المستخدمين.سيسهل اختيارك الاستمتاع بتطبيقنا للآخرين ، ويمكنك الاعتزاز بكونك جزءًا من هذا التأثير الإيجابي."
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "zu verbessern. Indem Sie sich für die Option \"Nachverfolgung zulassen\" entscheiden, spielen Sie eine Schlüsselrolle bei der Verbesserung der App, wovon nicht nur Sie selbst, sondern alle Nutzer profitieren. Ihre Entscheidung wird die Nutzung unserer App für andere vereinfachen, und Sie können stolz darauf sein, Teil dieses positiven Einflusses zu sein."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -338,12 +344,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "'추적 허용'을 선택함으로써, 당신은 앱 경험을 향상시키는 중요한 역할을 하게 됩니다. 이는 당신뿐만 아니라 모든 사용자들에게 이로움을 가져올 것입니다.\n당신의 선택은 다른 사용자들이 앱을 쉽게 즐길 수 있도록 도와줄 것이며, 이 긍정적인 영향력의 일부가 되어 자부심을 느낄 수 있습니다."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "zu verbessern. Indem Sie sich für die Option \"Nachverfolgung zulassen\" entscheiden, spielen Sie eine Schlüsselrolle bei der Verbesserung der App, wovon nicht nur Sie selbst, sondern alle Nutzer profitieren. Ihre Entscheidung wird die Nutzung unserer App für andere vereinfachen, und Sie können stolz darauf sein, Teil dieses positiven Einflusses zu sein."
           }
         },
         "pt-PT" : {
@@ -386,6 +386,12 @@
             "value" : "إلغاء"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abbrechen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -420,12 +426,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "취소"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Abbrechen"
           }
         },
         "pt-PT" : {
@@ -508,6 +508,12 @@
             "value" : "تغيير التصميم"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Design ändern"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -542,12 +548,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "디자인 변경"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Design ändern"
           }
         },
         "pt-PT" : {
@@ -590,6 +590,12 @@
             "value" : "الألوان"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleurs"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -618,12 +624,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "색상"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Couleurs"
           }
         },
         "pt-PT" : {
@@ -666,6 +666,12 @@
             "value" : "اتصل بنا"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontakt"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -694,12 +700,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "연락처"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kontakt"
           }
         },
         "pt-PT" : {
@@ -745,6 +745,12 @@
             "value" : "استمر"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weitermachen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -773,12 +779,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "계속하다"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weitermachen"
           }
         },
         "pt-PT" : {
@@ -831,6 +831,12 @@
             "value" : "إنشاء"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstellen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -865,12 +871,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "만들기"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erstellen"
           }
         },
         "pt-PT" : {
@@ -913,6 +913,12 @@
             "value" : "إنشاء رموز الاستجابة السريعة (QR)"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstelle einen QR-Code"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -941,12 +947,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "QR 코드 만들기"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erstelle einen QR-Code"
           }
         },
         "pt-PT" : {
@@ -989,6 +989,12 @@
             "value" : "تم الإنشاء"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erstellt"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1017,12 +1023,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "생성"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erstellt"
           }
         },
         "pt-PT" : {
@@ -1065,6 +1065,12 @@
             "value" : "نتيجة الإنشاء"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ergebnis der Erstellung"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1099,12 +1105,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "창작 결과"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ergebnis der Erstellung"
           }
         },
         "pt-PT" : {
@@ -1147,6 +1147,12 @@
             "value" : " \n \t\nرموز QR مصممة حسب الطلب"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ndividuell gestaltete QR-Codes"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1175,12 +1181,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "맞춤형 디자인 QR 코드"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ndividuell gestaltete QR-Codes"
           }
         },
         "pt-PT" : {
@@ -1223,6 +1223,12 @@
             "value" : "تحرير المحتوى"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inhalt bearbeiten"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1257,12 +1263,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "콘텐츠 편집"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Inhalt bearbeiten"
           }
         },
         "pt-PT" : {
@@ -1305,6 +1305,12 @@
             "value" : "البريد الإلكتروني"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-Mail"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1327,12 +1333,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이메일"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "E-Mail"
           }
         },
         "ru" : {
@@ -1363,6 +1363,12 @@
     },
     "Equipped with a myriad of user-friendly features" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ausgestattet mit einer Vielzahl benutzerfreundlicher Funktionen ist"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1391,12 +1397,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다양한 사용자 친화적인 기능을 갖춘"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ausgestattet mit einer Vielzahl benutzerfreundlicher Funktionen ist"
           }
         },
         "pt-PT" : {
@@ -1459,6 +1459,12 @@
             "value" : "مجاني"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kostenlos"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1487,12 +1493,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "무료"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kostenlos"
           }
         },
         "pt-PT" : {
@@ -1535,6 +1535,12 @@
             "value" : "عام"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Allgemein"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1563,12 +1569,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "일반"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Allgemein"
           }
         },
         "pt-PT" : {
@@ -1611,6 +1611,12 @@
             "value" : "احصل على وصول غير محدود إلى جميع وظائف التطبيق"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Erhalte uneingeschränkten Zugriff auf alle Funktionen der App"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1639,12 +1645,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "앱의 모든 기능에 무제한 액세스를 얻으세요"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erhalte uneingeschränkten Zugriff auf alle Funktionen der App"
           }
         },
         "pt-PT" : {
@@ -1693,6 +1693,12 @@
             "value" : "ساعدنا على التحسين\n"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helfen Sie uns, "
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1721,12 +1727,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "개선에 도움을 주세요"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Helfen Sie uns, "
           }
         },
         "pt-PT" : {
@@ -1769,6 +1769,12 @@
             "value" : "التاريخ"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geschichte"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1803,12 +1809,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "역사"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Geschichte"
           }
         },
         "pt-PT" : {
@@ -1867,6 +1867,12 @@
             "value" : "لغة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sprache"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1901,12 +1907,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "언어"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sprache"
           }
         },
         "pt-PT" : {
@@ -1949,6 +1949,12 @@
             "value" : "خط العرض"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Breitengrad"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1977,12 +1983,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위도"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Breitengrad"
           }
         },
         "pt-PT" : {
@@ -2021,7 +2021,80 @@
 
     },
     "Let’s get started with your\nfirst QR scan:" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "لنبدأ مع أول مسح QR الخاص بك:"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lassen Sie uns mit Ihrem ersten QR-Scan beginnen:"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comencemos con tu primer escaneo de QR:"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commençons par votre première numérisation QR:"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mari kita mulai dengan pemindaian QR pertama Anda:"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最初のQRコードスキャンを始めましょう："
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "첫 번째 QR 스캔을 시작해 보세요:"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vamos começar com sua primeira leitura de QR:"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Давайте начнем с вашего первого сканирования QR-кода:"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Давайте почнемо з першого сканування QR-коду:"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hãy bắt đầu với việc quét QR đầu tiên của bạn:"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让我们开始你的第一个QR码扫描：\n"
+          }
+        }
+      }
     },
     "License" : {
       "localizations" : {
@@ -2029,6 +2102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "رخصة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lizenz"
           }
         },
         "es" : {
@@ -2053,12 +2132,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "라이선스"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Lizenz"
           }
         },
         "pt-PT" : {
@@ -2165,6 +2238,12 @@
             "value" : "موقع"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standort"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2193,12 +2272,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "위치"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Standort"
           }
         },
         "pt-PT" : {
@@ -2244,6 +2317,12 @@
             "value" : "خط الطول"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Längengrad"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2272,12 +2351,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "경도"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Längengrad"
           }
         },
         "pt-PT" : {
@@ -2329,6 +2402,12 @@
             "value" : "التالي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weiter"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2357,12 +2436,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "다음"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Weiter"
           }
         },
         "pt-PT" : {
@@ -2405,6 +2478,12 @@
             "value" : "لا يوجد إعلانات"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keine Werbung"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2433,12 +2512,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "광고 없음"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keine Werbung"
           }
         },
         "pt-PT" : {
@@ -2485,6 +2558,12 @@
             "value" : "افتح في سفاري"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In Safari öffnen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2513,12 +2592,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Safari에서 열기"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "In Safari öffnen"
           }
         },
         "pt-PT" : {
@@ -2561,6 +2634,12 @@
             "value" : "كلمة المرور"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passwort"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2589,12 +2668,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "비밀번호"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Passwort"
           }
         },
         "pt-PT" : {
@@ -2637,6 +2710,12 @@
             "value" : "شخصي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Persönlich"
+          }
+        },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2659,12 +2738,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "개인"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Persönlich"
           }
         },
         "pt-PT" : {
@@ -2707,6 +2780,12 @@
             "value" : "هاتف"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telefon"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2735,12 +2814,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "전화"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Telefon"
           }
         },
         "pt-PT" : {
@@ -2786,6 +2859,12 @@
             "value" : "ضع رمز الاستجابة السريعة أو الباركود في الإطار"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platzieren Sie den QR-Code oder Barcode im Rahmen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2814,12 +2893,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "QR 코드 또는 바코드를 프레임 안에 놓으세요."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Platzieren Sie den QR-Code oder Barcode im Rahmen"
           }
         },
         "pt-PT" : {
@@ -2875,6 +2948,12 @@
             "value" : "سياسة الخصوصية"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Datenschutzrichtlinie"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2903,12 +2982,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "개인 정보 보호 정책"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Datenschutzrichtlinie"
           }
         },
         "pt-PT" : {
@@ -2962,6 +3035,12 @@
             "value" : "المسح الضوئي للمنتجات المتبقي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbleibende Produkt-Scans"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2990,12 +3069,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "남은 제품 스캔 횟수"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbleibende Produkt-Scans"
           }
         },
         "pt-PT" : {
@@ -3041,6 +3114,12 @@
             "value" : "إنشاء رمز QR لجميع الفئات"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR-Code-Generierung für alle Kategorien"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3069,12 +3148,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모든 카테고리에 대한 QR 코드 생성"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "QR-Code-Generierung für alle Kategorien"
           }
         },
         "pt-PT" : {
@@ -3120,6 +3193,12 @@
             "value" : "مجهزة بمجموعة واسعة من الميزات السهلة الاستخدام، تم تصميم"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "darauf ausgelegt, alle Ihre Scan- und QR-Erstellungsanforderungen zu erfüllen."
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3148,12 +3227,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "은 스캔 및 QR 생성 요구사항을 모두 충족시키기 위해 설계되었습니다."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "darauf ausgelegt, alle Ihre Scan- und QR-Erstellungsanforderungen zu erfüllen."
           }
         },
         "pt-PT" : {
@@ -3196,6 +3269,12 @@
             "value" : "يولد QR البقية"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR erstellt verbleibendes"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3224,12 +3303,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "남은 QR 생성 개수"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "QR erstellt verbleibendes"
           }
         },
         "pt-PT" : {
@@ -3272,6 +3345,12 @@
             "value" : "المسح الضوئي للرمز الاستجابة السريعة المتبقي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verbleibende QR-Scans"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3300,12 +3379,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "남은 QR 스캔 횟수"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Verbleibende QR-Scans"
           }
         },
         "pt-PT" : {
@@ -3351,6 +3424,12 @@
             "value" : "حفظ"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Speichern"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3385,12 +3464,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "저장"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Speichern"
           }
         },
         "pt-PT" : {
@@ -3433,6 +3506,12 @@
             "value" : "مسح"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scannen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3467,12 +3546,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "스캔"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Scannen"
           }
         },
         "pt-PT" : {
@@ -3515,6 +3588,12 @@
             "value" : "مسح QR"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR-Code scannen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3543,12 +3622,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "QR 스캔"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "QR-Code scannen"
           }
         },
         "pt-PT" : {
@@ -3591,6 +3664,12 @@
             "value" : "مسح رمز الاستجابة السريعة (QR Code)"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR-Code scannen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3619,12 +3698,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "QR 코드 스캔"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "QR-Code scannen"
           }
         },
         "pt-PT" : {
@@ -3661,6 +3734,12 @@
     },
     "Scan Result" : {
       "localizations" : {
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gescannte Ergebnisse"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3671,12 +3750,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Résultat de numérisation"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gescannte Ergebnisse"
           }
         },
         "pt-PT" : {
@@ -3693,6 +3766,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ممسوح"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gescannt"
           }
         },
         "es" : {
@@ -3723,12 +3802,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "스캔"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Gescannt"
           }
         },
         "pt-PT" : {
@@ -3771,6 +3844,12 @@
             "value" : "بحث"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suche"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3799,12 +3878,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "검색"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suche"
           }
         },
         "pt-PT" : {
@@ -3847,6 +3920,12 @@
             "value" : "اختر الكل"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles auswählen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3875,12 +3954,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모두 선택"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alles auswählen"
           }
         },
         "pt-PT" : {
@@ -3923,6 +3996,12 @@
             "value" : "الإعدادات"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einstellungen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -3957,12 +4036,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "설정"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Einstellungen"
           }
         },
         "pt-PT" : {
@@ -4005,6 +4078,12 @@
             "value" : "مشاركة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teilen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4033,12 +4112,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "공유"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Teilen"
           }
         },
         "pt-PT" : {
@@ -4119,6 +4192,12 @@
             "value" : "اجتماعي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sozial"
+          }
+        },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4135,12 +4214,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "소셜"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sozial"
           }
         },
         "ru" : {
@@ -4180,6 +4253,12 @@
             "value" : "ترتيب أبجدي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alphabetisch sortieren"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4208,12 +4287,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "알파벳순으로 정렬"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alphabetisch sortieren"
           }
         },
         "pt-PT" : {
@@ -4256,6 +4329,12 @@
             "value" : "ترتيب يدوي"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Manuell sortieren"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4284,12 +4363,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "수동으로 정렬"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Manuell sortieren"
           }
         },
         "pt-PT" : {
@@ -4348,6 +4421,12 @@
             "value" : "بداية"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4376,12 +4455,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "시작"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start"
           }
         },
         "pt-PT" : {
@@ -4443,6 +4516,12 @@
             "value" : "قوالب"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vorlagen"
+          }
+        },
         "en" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4477,12 +4556,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "템플릿"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vorlagen"
           }
         },
         "pt-PT" : {
@@ -4528,6 +4601,12 @@
             "value" : "الشروط والأحكام"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nutzungsbedingungen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4556,12 +4635,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "이용 약관"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nutzungsbedingungen"
           }
         },
         "pt-PT" : {
@@ -4696,6 +4769,12 @@
             "value" : "جرب مجاناً"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Testen Sie Kostenlos"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4724,12 +4803,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "무료로 시도해보세요."
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Testen Sie Kostenlos"
           }
         },
         "pt-PT" : {
@@ -4791,6 +4864,12 @@
             "value" : "وصول غير محدود إلى جميع الميزات"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unbegrenzter Zugang zu allen Funktionen"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4819,12 +4898,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "모든 기능에 무제한 액세스"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unbegrenzter Zugang zu allen Funktionen"
           }
         },
         "pt-PT" : {
@@ -4867,6 +4940,12 @@
             "value" : " \t\nمسح غير محدود للرموز الشريطية والرموز الاستجابة السريعة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Unbegrenzte Scans von QR- und Barcodes"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4895,12 +4974,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "무제한 스캔 QR 및 바코드"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Unbegrenzte Scans von QR- und Barcodes"
           }
         },
         "pt-PT" : {
@@ -4943,6 +5016,12 @@
             "value" : "فتح القفل"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Entsperren"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -4971,12 +5050,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "잠금 해제"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entsperren"
           }
         },
         "pt-PT" : {
@@ -5035,6 +5108,12 @@
             "value" : "خدمات"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dienstprogramme"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5063,12 +5142,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "유틸리티"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dienstprogramme"
           }
         },
         "pt-PT" : {
@@ -5111,6 +5184,12 @@
             "value" : "اهتزاز"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibration"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5139,12 +5218,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "진동"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vibration"
           }
         },
         "pt-PT" : {
@@ -5187,6 +5260,12 @@
             "value" : "اهتزاز عند العثور على رمز الاستجابة السريعة"
           }
         },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vibration bei QR-Fund"
+          }
+        },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
@@ -5215,12 +5294,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "QR이 발견되면 진동"
-          }
-        },
-        "nl" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vibration bei QR-Fund"
           }
         },
         "pt-PT" : {

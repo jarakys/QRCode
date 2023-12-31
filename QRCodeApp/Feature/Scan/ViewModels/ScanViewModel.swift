@@ -11,6 +11,7 @@ import QRCode
 
 final class ScanViewModel: BaseViewModel {
     @Published public var isFlashOn = false
+    @Published public var isPremium = false
     
     private let navigationSender: PassthroughSubject<ScanEventFlow, Never>
     public let eventSender = PassthroughSubject<ScanViewModel.Event, Never>()
@@ -24,6 +25,12 @@ final class ScanViewModel: BaseViewModel {
     
     public func splashDidTap() {
         isFlashOn.toggle()
+    }
+    
+    override func bind() {
+        super.bind()
+        
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
     }
     
     public func setRecognized(string: String) {

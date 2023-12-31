@@ -146,6 +146,8 @@
 		114CF8D22B404A6C00FDD6CB /* UnlimitedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8D12B404A6C00FDD6CB /* UnlimitedView.swift */; };
 		114CF8D42B4063BB00FDD6CB /* antic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 114CF8D32B4063BB00FDD6CB /* antic.mp3 */; };
 		114CF8D62B416FFA00FDD6CB /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */; };
+		114CF8DC2B4187B000FDD6CB /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */; };
+		114CF8DE2B41896A00FDD6CB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8DD2B41896A00FDD6CB /* BannerView.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
@@ -158,11 +160,6 @@
 		11EBEA7F2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA7E2B3DB0A600515558 /* HistoryResultQRCodeCoordinatorViewModel.swift */; };
 		11EBEA812B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA802B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift */; };
 		11EBEA832B3DC4E900515558 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11EBEA822B3DC4E900515558 /* GoogleService-Info.plist */; };
-		11EBEA862B3DC63500515558 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA852B3DC63500515558 /* FirebaseAnalytics */; };
-		11EBEA8A2B3DC63500515558 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA892B3DC63500515558 /* FirebaseAnalyticsSwift */; };
-		11EBEA962B3DC63500515558 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEA952B3DC63500515558 /* FirebaseCrashlytics */; };
-		11EBEAB82B3DC63500515558 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB72B3DC63500515558 /* FirebaseStorage */; };
-		11EBEABA2B3DC63500515558 /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 11EBEAB92B3DC63500515558 /* FirebaseStorageCombine-Community */; };
 		11EBEABD2B3DCD9A00515558 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEABC2B3DCD9A00515558 /* AppDelegate.swift */; };
 		11EBEABF2B3DD3B600515558 /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEABE2B3DD3B600515558 /* ImageUploader.swift */; };
 		11EBEAC12B3DD8A400515558 /* DetailedChangeDesignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEAC02B3DD8A400515558 /* DetailedChangeDesignView.swift */; };
@@ -320,6 +317,7 @@
 		114CF8D12B404A6C00FDD6CB /* UnlimitedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimitedView.swift; sourceTree = "<group>"; };
 		114CF8D32B4063BB00FDD6CB /* antic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = antic.mp3; sourceTree = "<group>"; };
 		114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
+		114CF8DD2B41896A00FDD6CB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -340,14 +338,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114CF8DC2B4187B000FDD6CB /* GoogleMobileAds in Frameworks */,
 				112F36A42B3984B300016890 /* QRCodeDetector in Frameworks */,
-				11EBEAB82B3DC63500515558 /* FirebaseStorage in Frameworks */,
 				112F36932B38D76500016890 /* QRCode in Frameworks */,
-				11EBEA862B3DC63500515558 /* FirebaseAnalytics in Frameworks */,
 				114CEBB42B3E16930088F3C3 /* CompositionalList in Frameworks */,
-				11EBEA962B3DC63500515558 /* FirebaseCrashlytics in Frameworks */,
-				11EBEABA2B3DC63500515558 /* FirebaseStorageCombine-Community in Frameworks */,
-				11EBEA8A2B3DC63500515558 /* FirebaseAnalyticsSwift in Frameworks */,
 				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
 				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
 			);
@@ -466,6 +460,7 @@
 				112F35B72B38D75000016890 /* TitledContainerView.swift */,
 				114085AB2B3A0FB900487E09 /* ShareQRImage.swift */,
 				110DC9E72B3B345F0046CBCD /* SearchBarView.swift */,
+				114CF8DD2B41896A00FDD6CB /* BannerView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -1118,12 +1113,8 @@
 				115562F92B38BC2C0055C0EC /* KeychainSwift */,
 				112F36922B38D76500016890 /* QRCode */,
 				112F36A32B3984B300016890 /* QRCodeDetector */,
-				11EBEA852B3DC63500515558 /* FirebaseAnalytics */,
-				11EBEA892B3DC63500515558 /* FirebaseAnalyticsSwift */,
-				11EBEA952B3DC63500515558 /* FirebaseCrashlytics */,
-				11EBEAB72B3DC63500515558 /* FirebaseStorage */,
-				11EBEAB92B3DC63500515558 /* FirebaseStorageCombine-Community */,
 				114CEBB32B3E16930088F3C3 /* CompositionalList */,
+				114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -1169,8 +1160,8 @@
 				115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */,
 				115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */,
 				112F36912B38D76500016890 /* XCRemoteSwiftPackageReference "QRCode" */,
-				11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				114CEBB22B3E16930088F3C3 /* XCLocalSwiftPackageReference "../CompositionalList" */,
+				114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 111164052B30518200F01C5E /* Products */;
 			projectDirPath = "";
@@ -1341,6 +1332,7 @@
 				112F366B2B38D75000016890 /* ScanView.swift in Sources */,
 				114085B22B3AF73200487E09 /* HistoryCoordinatorViewModel.swift in Sources */,
 				112F364B2B38D75000016890 /* SettingsViewModel.swift in Sources */,
+				114CF8DE2B41896A00FDD6CB /* BannerView.swift in Sources */,
 				112F36562B38D75000016890 /* SettingsEventBus.swift in Sources */,
 				110DC9DF2B3B207F0046CBCD /* ScanQRCodeEmptyCellView.swift in Sources */,
 				11EBEA812B3DB0B900515558 /* HistoryCreateResultQRCodeViewModel.swift in Sources */,
@@ -1496,6 +1488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qrscanread.qrcodereaderscanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1532,6 +1525,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.qrscanread.qrcodereaderscanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1580,6 +1574,14 @@
 				minimumVersion = 17.0.0;
 			};
 		};
+		114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.14.0;
+			};
+		};
 		115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/sanzaru/SimpleToast.git";
@@ -1594,14 +1596,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 20.0.0;
-			};
-		};
-		11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 10.19.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1621,6 +1615,11 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = CompositionalList;
 		};
+		114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
 		115562752B35AE740055C0EC /* SimpleToast */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 115562742B35AE740055C0EC /* XCRemoteSwiftPackageReference "SimpleToast" */;
@@ -1630,31 +1629,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
-		};
-		11EBEA852B3DC63500515558 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		11EBEA892B3DC63500515558 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		11EBEA952B3DC63500515558 /* FirebaseCrashlytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseCrashlytics;
-		};
-		11EBEAB72B3DC63500515558 /* FirebaseStorage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseStorage;
-		};
-		11EBEAB92B3DC63500515558 /* FirebaseStorageCombine-Community */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 11EBEA842B3DC63500515558 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseStorageCombine-Community";
 		};
 /* End XCSwiftPackageProductDependency section */
 
