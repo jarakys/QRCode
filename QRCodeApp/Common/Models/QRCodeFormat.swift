@@ -91,10 +91,10 @@ public enum QRCodeFormat: String, CaseIterable {
             return nil
             
         case .wifi:
-            return description
+            return nil
             
         case .location:
-            return String(localized: "Maps")
+            return nil
             
         case .telegram:
             return description
@@ -149,10 +149,10 @@ public enum QRCodeFormat: String, CaseIterable {
             return "https://t\\.me/.*"
         
         case .facebook:
-            return "https://www.facebook.com/"
+            return "https://facebook.com/"
             
         case .instagram:
-            return "https://www.instagram.com/"
+            return "https://instagram.com/"
             
         case .twitter:
             return "https://twitter.com/"
@@ -161,7 +161,7 @@ public enum QRCodeFormat: String, CaseIterable {
             return "https://wame/qr/"
             
         case .tikTok:
-            return "https://www.tiktok.com/"
+            return "https://vm.tiktok.com/"
             
         case .spotify:
             return "https://open.spotify.com/"

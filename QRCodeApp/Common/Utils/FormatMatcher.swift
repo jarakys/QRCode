@@ -11,6 +11,6 @@ class FormatMatcher {
     static func getFormat(value: String, types: [QRCodeFormat]) -> QRCodeFormat {
         var typesTmp = types.filter({ $0 != .text })
         typesTmp.append(.text)
-        return typesTmp.first(where: { value.starts(with: $0.regexPattern) }) ?? .text
+        return typesTmp.first(where: { value.replacingOccurrences(of: "www.", with: "").starts(with: $0.regexPattern) }) ?? .text
     }
 }
