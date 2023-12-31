@@ -55,8 +55,8 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         ShareActivityManager.share(datas: [ShareItemModel(item: data, title: "QRCode · \(qrCodeFormat.description)")])
     }
     
-    public func shareInSafary(completion: @escaping (String) -> Void) {
-//        completion(path)
+    public func shareIn(completion: @escaping (String) -> Void) {
+        completion(qrCodeString)
     }
     
     public func createFormat() {
@@ -76,8 +76,9 @@ class BaseResultQRCodeViewModel: BaseViewModel {
             items.append(TitledCopyContainerViewModel(title: String(localized: "Link"), value: value[0]))
             
         case .wifi:
-            items.append(TitledCopyContainerViewModel(title: String(localized: "Network name"), value: value[0]))
-            items.append(TitledCopyContainerViewModel(title: String(localized: "Password"), value: value[1]))
+            break
+//            items.append(TitledCopyContainerViewModel(title: String(localized: "Network name"), value: value[0]))
+//            items.append(TitledCopyContainerViewModel(title: String(localized: "Password"), value: value[1]))
         
         case .phone:
             items.append(TitledCopyContainerViewModel(title: String(localized: "Phone"), value: value[0]))

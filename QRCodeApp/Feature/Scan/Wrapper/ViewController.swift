@@ -153,25 +153,10 @@ class ViewController: UIViewController {
                           y: midYFullImage - maskRect / 2,
                           width: maskRect,
                           height: maskRect)
-        
-        print("mask rect \(rect)")
-        print("feature rect \(feature.bounds)")
     
         print(previewLayer.maskContainer.contains(feature.bounds))
         print("isRectInsideRect \(isRectInsideRect(innerRect: feature.bounds, outerRect: rect)))")
-        if previewLayer.maskContainer.contains(feature.bounds) {
-            print("niggers")
-        }
         return isRectInsideRect(innerRect: feature.bounds, outerRect: rect)
-//        if previewLayer.maskContainer.origin.x <= itemCoordinatesInPreviewLayer.origin.x &&
-//            previewLayer.maskContainer.origin.x + 40 >= itemCoordinatesInPreviewLayer.origin.x &&
-//            previewLayer.maskContainer.origin.y >= itemCoordinatesInPreviewLayer.origin.y &&
-//            previewLayer.maskContainer.origin.y + previewLayer.maskContainer.height >= itemCoordinatesInPreviewLayer.origin.y + itemCoordinatesInPreviewLayer.height
-//        {
-//            return true
-//        } else {
-//            return false
-//        }
     }
     
     func isRectInsideRect(innerRect: CGRect, outerRect: CGRect) -> Bool {

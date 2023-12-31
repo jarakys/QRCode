@@ -479,6 +479,9 @@
         }
       }
     },
+    "Contacts" : {
+
+    },
     "Continue" : {
 
     },
@@ -1537,6 +1540,9 @@
     "Longitude" : {
 
     },
+    "Maps" : {
+
+    },
     "Marker" : {
 
     },
@@ -1552,7 +1558,11 @@
     "No Ads" : {
 
     },
+    "Open in %@" : {
+
+    },
     "Open in Safari" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -2195,6 +2205,9 @@
           }
         }
       }
+    },
+    "Safari" : {
+
     },
     "Save" : {
       "localizations" : {

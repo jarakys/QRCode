@@ -73,6 +73,55 @@ public enum QRCodeFormat: String, CaseIterable {
         }
     }
     
+    public var openIn: String? {
+        switch self {
+        case .phone:
+            return String(localized: "Contacts")
+            
+        case .email:
+            return description
+            
+        case .sms:
+            return description
+            
+        case .url:
+            return String(localized: "Safari")
+            
+        case .text:
+            return nil
+            
+        case .wifi:
+            return description
+            
+        case .location:
+            return String(localized: "Maps")
+            
+        case .telegram:
+            return description
+            
+        case .facebook:
+            return description
+            
+        case .instagram:
+            return description
+            
+        case .twitter:
+            return description
+            
+        case .whatsApp:
+            return description
+            
+        case .tikTok:
+            return description
+            
+        case .spotify:
+            return description
+            
+        case .snapchat:
+            return description
+        }
+    }
+    
     public var regexPattern: String {
         switch self {
         case .phone:
@@ -88,7 +137,7 @@ public enum QRCodeFormat: String, CaseIterable {
             return "smsto"
             
         case .wifi:
-            return "WIFI:S:[^;]+;P:[^;]+;$"
+            return "WIFI:"
             
         case .email:
             return "mailto"
@@ -167,7 +216,7 @@ public enum QRCodeFormat: String, CaseIterable {
             return "mailto:%@?cc=%@&body=%@"
             
         case .location:
-            return "geo:%@:%@"
+            return "geo:%@,%@"
         }
     }
     

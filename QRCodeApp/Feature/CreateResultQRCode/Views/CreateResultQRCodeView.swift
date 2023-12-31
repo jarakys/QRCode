@@ -121,19 +121,21 @@ struct CreateResultQRCodeView: View {
     @ViewBuilder
     public func shareSection() -> some View {
         HStack(alignment: .center) {
-            Button(action: {
-                viewModel.shareInSafary(completion: { path in
-                    UIApplication.shared.open(URL(string: path)!)
+            if let openIn = viewModel.qrCodeFormat.openIn {
+                Button(action: {
+                    viewModel.shareIn(completion: { path in
+                        UIApplication.shared.open(URL(string: path)!)
+                    })
+                }, label: {
+                    Label("Open in \(openIn)", image: "safariIcon")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 12)
+                        .background(.primaryApp)
+                        .cornerRadius(10)
                 })
-            }, label: {
-                Label("Open in Safari", image: "safariIcon")
-                    .font(.system(size: 13, weight: .semibold))
-                    .foregroundStyle(.white)
-                    .padding(.horizontal, 20)
-                    .padding(.vertical, 12)
-                    .background(.primaryApp)
-                    .cornerRadius(10)
-            })
+            }
             Button(action: {
                 viewModel.share()
             }, label: {

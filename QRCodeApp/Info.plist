@@ -4,5 +4,14 @@
 <dict>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>wifi</string>
+		<string>mailto</string>
+		<string>smsto</string>
+		<string>WIFI</string>
+		<string>tel</string>
+		<string>geo</string>
+	</array>
 </dict>
 </plist>
