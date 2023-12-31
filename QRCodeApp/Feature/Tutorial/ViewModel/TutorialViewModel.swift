@@ -7,6 +7,7 @@
 
 import Combine
 import SwiftUI
+import AppTrackingTransparency
 
 final class TutorialViewModel: ObservableObject {
     @Published public var currentPage = 0
@@ -22,6 +23,11 @@ final class TutorialViewModel: ObservableObject {
         guard currentPage < pages.count - 1 else {
             passedDidTap?()
             return
+        }
+        if currentPage == 0 {
+            ATTrackingManager.requestTrackingAuthorization(completionHandler: { status in
+                    print("requestTrackingAuthorization \(status)")
+                })
         }
         withAnimation(.linear) {
             currentPage += 1
