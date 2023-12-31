@@ -166,13 +166,14 @@ extension BaseResultQRCodeViewModel {
     func wifiConfigStringToDictionary(_ configString: String) -> [String: String] {
         var wifiDictionary: [String: String] = [:]
 
-        let components = configString.components(separatedBy: ";")
+        let strippedString = String(configString.dropFirst(5))
+        let components = strippedString.components(separatedBy: ";")
 
         for component in components {
             let keyValueComponents = component.components(separatedBy: ":")
-            if keyValueComponents.count == 3 {
+            if keyValueComponents.count == 2 {
                 let key = keyValueComponents[safe: 0] ?? ""
-                let value = keyValueComponents[safe: 2] ?? ""
+                let value = keyValueComponents[safe: 1] ?? ""
                 wifiDictionary[key.lowercased()] = value
             }
         }
