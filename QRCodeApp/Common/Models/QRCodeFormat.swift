@@ -91,7 +91,7 @@ public enum QRCodeFormat: String, CaseIterable {
             return nil
             
         case .wifi:
-            return description
+            return nil
             
         case .location:
             return String(localized: "Maps")

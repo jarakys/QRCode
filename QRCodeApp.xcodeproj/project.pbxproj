@@ -145,6 +145,7 @@
 		114CF8CF2B404A5700FDD6CB /* Views.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8CE2B404A5700FDD6CB /* Views.swift */; };
 		114CF8D22B404A6C00FDD6CB /* UnlimitedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8D12B404A6C00FDD6CB /* UnlimitedView.swift */; };
 		114CF8D42B4063BB00FDD6CB /* antic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 114CF8D32B4063BB00FDD6CB /* antic.mp3 */; };
+		114CF8D62B416FFA00FDD6CB /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
@@ -318,6 +319,7 @@
 		114CF8CE2B404A5700FDD6CB /* Views.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Views.swift; sourceTree = "<group>"; };
 		114CF8D12B404A6C00FDD6CB /* UnlimitedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlimitedView.swift; sourceTree = "<group>"; };
 		114CF8D32B4063BB00FDD6CB /* antic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = antic.mp3; sourceTree = "<group>"; };
+		114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -391,6 +393,7 @@
 		111163FB2B30518200F01C5E = {
 			isa = PBXGroup;
 			children = (
+				114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */,
 				112F35AC2B38D75000016890 /* QRCodeApp */,
 				111164052B30518200F01C5E /* Products */,
 				112F369C2B38D83C00016890 /* Frameworks */,
@@ -1290,6 +1293,7 @@
 				112F36492B38D75000016890 /* String+regex.swift in Sources */,
 				112F36452B38D75000016890 /* FormatMatcher.swift in Sources */,
 				112F36622B38D75000016890 /* SettingsCellView.swift in Sources */,
+				114CF8D62B416FFA00FDD6CB /* Collection+safe.swift in Sources */,
 				112F36512B38D75000016890 /* SettingsItemValueModel.swift in Sources */,
 				110DC9F52B3C76660046CBCD /* Config.swift in Sources */,
 				112F36552B38D75000016890 /* SettingsEventFlow.swift in Sources */,
