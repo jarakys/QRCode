@@ -29,6 +29,10 @@ struct DetailedChangeDesignView: View {
                         DetailedChangeDesignCellView(model: model)
                             .allowsHitTesting(false)
                             .disabled(true)
+                            .shadow(color: Color(red: 0, green: 0.3294, blue: 0.4902, opacity: 0.1016),
+                                                radius: 9.656891822814941,
+                                                x: 3.218963861465454,
+                                                y: 3.218963861465454)
                     }
                     
                 case .colorMaskLeaf:
@@ -39,6 +43,10 @@ struct DetailedChangeDesignView: View {
                         DetailedChangeDesignCellView(model: model)
                             .allowsHitTesting(false)
                             .disabled(true)
+                            .shadow(color: Color(red: 0, green: 0.3294, blue: 0.4902, opacity: 0.1016),
+                                                radius: 9.656891822814941,
+                                                x: 3.218963861465454,
+                                                y: 3.218963861465454)
                     }
                     
                 case .colorMaskPixels:
@@ -49,6 +57,10 @@ struct DetailedChangeDesignView: View {
                         DetailedChangeDesignCellView(model: model)
                             .allowsHitTesting(false)
                             .disabled(true)
+                            .shadow(color: Color(red: 0, green: 0.3294, blue: 0.4902, opacity: 0.1016),
+                                                radius: 9.656891822814941,
+                                                x: 3.218963861465454,
+                                                y: 3.218963861465454)
                     }
                     
                 case .colorMaskBackground:
@@ -59,9 +71,17 @@ struct DetailedChangeDesignView: View {
                         DetailedChangeDesignCellView(model: model)
                             .allowsHitTesting(false)
                             .disabled(true)
+                            .shadow(color: Color(red: 0, green: 0.3294, blue: 0.4902, opacity: 0.1016),
+                                                radius: 9.656891822814941,
+                                                x: 3.218963861465454,
+                                                y: 3.218963861465454)
                     }
                     
                 default: DetailedChangeDesignCellView(model: model)
+                        .shadow(color: Color(red: 0, green: 0.3294, blue: 0.4902, opacity: 0.1016),
+                                            radius: 9.656891822814941,
+                                            x: 3.218963861465454,
+                                            y: 3.218963861465454)
                 }
             }.sectionHeader { sectionIdentifier, kind, indexPath in
                 Text(sectionIdentifier.description)
