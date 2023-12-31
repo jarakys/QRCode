@@ -1603,6 +1603,9 @@
         }
       }
     },
+    "Get a free tria" : {
+
+    },
     "Get unlimited access to all functions of the app" : {
       "localizations" : {
         "ar" : {
@@ -1678,9 +1681,6 @@
           }
         }
       }
-    },
-    "Hello, world!" : {
-
     },
     "Hello, World!" : {
 
@@ -2546,11 +2546,13 @@
         }
       }
     },
+    "No commitments, cancel anytime" : {
+
+    },
     "Open in %@" : {
 
     },
     "Open in Safari" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3409,6 +3411,9 @@
           }
         }
       }
+    },
+    "Restore Purchases" : {
+
     },
     "Safari" : {
 
@@ -4665,6 +4670,9 @@
           }
         }
       }
+    },
+    "Terms of Use" : {
+
     },
     "Text" : {
       "localizations" : {

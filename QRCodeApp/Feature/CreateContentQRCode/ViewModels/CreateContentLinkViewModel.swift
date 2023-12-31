@@ -23,6 +23,7 @@ final class CreateContentLinkViewModel: BaseViewModel {
     }
     
     public func createDidTap() {
+        guard !items.map({ $0.text }).joined().isEmpty else { return }
         let finalString = String(format: format.format, arguments: items.map({ $0.text }))
         guard !finalString.isEmpty, !finalString.replacingOccurrences(of: " ", with: "").isEmpty else { return }
         navigationSender.send(.result(finalString: finalString, type: format))
