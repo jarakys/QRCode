@@ -31,7 +31,7 @@ final class CreateContentLinkViewModel: BaseViewModel {
     private func createFormat() {
         switch format {
         case .phone:
-            items.append(TextViewModel(title: String(localized: "Phone number"), placeholder: String(localized: "Phone"), example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Phone"), placeholder: String(localized: "Phone"), example: nil, text: ""))
             
         case .email:
             items.append(TextViewModel(title: String(localized: "To"), placeholder: "user@gmail.com", example: nil, text: ""))
