@@ -387,7 +387,6 @@
 		111163FB2B30518200F01C5E = {
 			isa = PBXGroup;
 			children = (
-				114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */,
 				112F35AC2B38D75000016890 /* QRCodeApp */,
 				111164052B30518200F01C5E /* Products */,
 				112F369C2B38D83C00016890 /* Frameworks */,
@@ -503,6 +502,7 @@
 		112F35C52B38D75000016890 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */,
 				112F35C62B38D75000016890 /* String+localized.swift */,
 				112F35C72B38D75000016890 /* String+regex.swift */,
 				11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */,
