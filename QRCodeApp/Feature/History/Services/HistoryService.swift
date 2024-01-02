@@ -17,7 +17,7 @@ final class HistoryService: NSObject, NSFetchedResultsControllerDelegate {
     override init() {
         let request = NSFetchRequest<QRCodeEntity>(entityName: "QRCodeEntity")
         request.sortDescriptors = [
-            NSSortDescriptor(keyPath: \QRCodeEntity.date, ascending: true)
+            NSSortDescriptor(keyPath: \QRCodeEntity.date, ascending: false)
         ]
         self.fetchedResultsController = .init(fetchRequest: request, managedObjectContext: CoreDataManager.shared.context, sectionNameKeyPath:  #keyPath(QRCodeEntity.formattedDate), cacheName: nil)
         super.init()

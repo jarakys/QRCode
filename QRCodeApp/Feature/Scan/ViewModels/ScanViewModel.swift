@@ -12,6 +12,7 @@ import QRCode
 final class ScanViewModel: BaseViewModel {
     @Published public var isFlashOn = false
     @Published public var isPremium = false
+    @Published public var showPremium = false
     
     public var ad = OpenAd()
     
@@ -19,6 +20,11 @@ final class ScanViewModel: BaseViewModel {
     public let eventSender = PassthroughSubject<ScanViewModel.Event, Never>()
     
     private let keychainStorage = KeychainManager.shared
+    
+    public var scanCount: Int {
+        5
+//        KeychainManager.shared.get(key: .countScans, defaultValue: 0)
+    }
     
     init(navigationSender: PassthroughSubject<ScanEventFlow, Never>) {
         self.navigationSender = navigationSender
@@ -55,6 +61,10 @@ final class ScanViewModel: BaseViewModel {
     }
     
     public func detect(on image: Data) {
+        guard isPremium || scanCount < Config.maxScansCount else {
+            showPremium = true
+            return
+        }
         let qrCodeString = QRCode.DetectQRCode(data: image)
         guard let qrCodeString else { return }
         setRecognized(string: qrCodeString)

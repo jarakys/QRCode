@@ -27,9 +27,9 @@ struct CreateView: View {
                     }
                 
             default:
-                SocialCell(model: model, isPremium: viewModel.isPremium)
+                SocialCell(model: model)
                     .onTapGesture {
-                        guard viewModel.isPremium || !model.type.forPremium else { 
+                        guard viewModel.isPremium || (!model.type.forPremium && viewModel.createCount < Config.maxCreatesCount) else {
                             viewModel.premiumDidTap()
                             return
                         }

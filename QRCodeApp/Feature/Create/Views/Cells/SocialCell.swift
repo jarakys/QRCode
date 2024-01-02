@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SocialCell: View {
     public let model: CreateQRCodeTemplateModel
-    public let isPremium: Bool
+    @State public var isPremium = false
     
     var body: some View {
         VStack(spacing: 8) {
@@ -32,5 +32,8 @@ struct SocialCell: View {
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(.vertical, 8)
+        .onReceive(SubscriptionManager.shared.$isPremium, perform: { value in
+            isPremium = value
+        })
     }
 }

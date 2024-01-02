@@ -22,6 +22,7 @@ final class HistoryViewModel: BaseViewModel {
     @Published public var editType: EditType = .selection
     @Published public var isPremium: Bool = false
     @Published public var shouldEdit = false
+    @Published public var showPremium = false
 
     private var privateItems = [QRCodeEntitySection]()
     
@@ -174,6 +175,10 @@ final class HistoryViewModel: BaseViewModel {
     }
     
     public func editDidTap() {
+        guard isPremium || countCreates < Config.maxCreatesCount else {
+            showPremium = true
+            return
+        }
         guard let first = privateItems.flatMap({ $0.items }).first(where: { selectedItems.contains($0.id) }) else { return }
         navigationSender.send(.editableDetails(model: first))
         shouldEdit = false

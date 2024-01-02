@@ -31,6 +31,9 @@ struct CreateContentLinkQRCodeView: View {
         .padding(.horizontal, 16)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.secondaryBackground)
+        .fullScreenCover(isPresented: $viewModel.showPremium, content: {
+            PaywallView(viewModel: PaywallViewModel())
+        })
     }
 }
 

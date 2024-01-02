@@ -10,9 +10,15 @@ import Combine
 
 final class CreateContentLinkViewModel: BaseViewModel {
     @Published public var items = [TextViewModel]()
+    @Published public var isPremium: Bool = false
+    @Published public var showPremium = false
     public let navigationSender: PassthroughSubject<CreateEventFlow, Never>
     
     private let format: QRCodeFormat
+    
+    private var countCreates: Int {
+        KeychainManager.shared.get(key: .countCreates, defaultValue: 0)
+    }
     
     init(format: QRCodeFormat,
          navigationSender: PassthroughSubject<CreateEventFlow, Never>) {
@@ -22,8 +28,18 @@ final class CreateContentLinkViewModel: BaseViewModel {
         createFormat()
     }
     
+    override func bind() {
+        super.bind()
+        
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
+    }
+    
     public func createDidTap() {
         guard !items.map({ $0.text }).joined().isEmpty else { return }
+        guard isPremium || countCreates < Config.maxCreatesCount else {
+            showPremium = true
+            return
+        }
         let finalString = String(format: format.format, arguments: items.map({ $0.text }))
         guard !finalString.isEmpty, !finalString.replacingOccurrences(of: " ", with: "").isEmpty else { return }
         navigationSender.send(.result(finalString: finalString, type: format))

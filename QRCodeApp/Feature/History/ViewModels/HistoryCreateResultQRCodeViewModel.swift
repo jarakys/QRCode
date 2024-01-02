@@ -40,9 +40,6 @@ final class HistoryCreateResultQRCodeViewModel: CreateResultQRCodeViewModel {
         qrCodeId = qrCodeEntityModel.id
     }
     
-    override func qrCodeAdd() {
-    }
-    
     override func deleteDidTap() {
         do {
             try localStorage.deleteQRCode(id: qrCodeEntityModel.id)

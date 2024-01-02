@@ -87,6 +87,9 @@ struct ScanView: View {
                 }
             })
         }
+        .fullScreenCover(isPresented: $viewModel.showPremium, content: {
+            PaywallView(viewModel: PaywallViewModel())
+        })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Scan")

@@ -30,6 +30,38 @@ final class PaywallViewModel: ObservableObject {
     
     public func getPremiumDidTap() {
         guard let selectedItem else { return }
+        SubscriptionManager.shared.isPremium = true
+    }
+}
+
+struct Paywall2View: View {
+    @StateObject public var viewModel: PaywallViewModel
+    @Environment(\.dismiss) var dismiss
+    
+    var body: some View {
+        VStack {
+            ZStack(alignment: .leading) {
+                HStack {
+                    Spacer()
+                    Image(.closeIcon)
+                        .onTapGesture {
+                            dismiss()
+                        }
+                }
+                Text("QR code reader & scanner")
+                    .font(.system(size: 15, weight: .semibold))
+                    .foregroundStyle(.black)
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            ScrollView {
+                Image(.paywall2Icon)
+                UnlimitedView()
+                    .padding(.top, 4)
+            }
+            Spacer()
+            OfferView(viewModel: viewModel)
+        }
+        .padding(.horizontal, 16)
     }
 }
 
@@ -224,11 +256,12 @@ struct UnlimitedView: View {
     var body: some View {
         HStack {
             Spacer()
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .center, spacing: 12) {
                 Text("Unlimited Access To All Features")
                     .foregroundStyle(.primaryTitle)
                     .font(.system(size: 22, weight: .bold))
                     .multilineTextAlignment(.center)
+                    
                 VStack(alignment: .leading) {
                     HStack(spacing: 8) {
                         Image(.premiumScanIcon)
