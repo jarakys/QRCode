@@ -57,7 +57,7 @@ struct QRCodeApp: App {
                     .onAppear {
                         let standardAppearance = UITabBarAppearance()
                         standardAppearance.backgroundColor = UIColor(Color.gray)
-                        standardAppearance.shadowColor = UIColor(Color.black)
+                        standardAppearance.shadowColor = UIColor(red: 215/255, green: 215/255, blue: 215/255, alpha: 1.0)
                         standardAppearance.backgroundColor = .white
                         UITabBar.appearance().barStyle = .default
                         UITabBar.appearance().barTintColor = .white
