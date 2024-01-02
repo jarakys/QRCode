@@ -6,22 +6,33 @@
 //
 
 import SwiftUI
+import Combine
 
 final class PaywallViewModel: ObservableObject {
     @Published public var items = [OfferViewModel]()
     @Published public var selectedItem: OfferViewModel?
     
+    public let eventSender = PassthroughSubject<PaywallViewModel.Event, Never>()
+    
+    public var closeDidTap: (() -> Void)?
+    
     public var buttonTitle: String {
         selectedItem?.id == "com.id.some2" ? String(localized: "Get a free trial") : String(localized: "Get premium")
     }
     
-    init() {
+    init(closeDidTap: (() -> Void)? = nil) {
+        self.closeDidTap = closeDidTap
         items = [
             OfferViewModel(duration: "12 monthly", save: "Save 80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some1"),
             OfferViewModel(duration: "7 days", save: "Save 80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some2"),
             OfferViewModel(duration: "7 days", save: "80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some3")
         ]
         selectedItem = items.first
+    }
+    
+    public func closeTap() {
+        closeDidTap?()
+        eventSender.send(.dismiss)
     }
     
     public func select(item: OfferViewModel) {
@@ -31,6 +42,13 @@ final class PaywallViewModel: ObservableObject {
     public func getPremiumDidTap() {
         guard let selectedItem else { return }
         SubscriptionManager.shared.isPremium = true
+    }
+}
+
+// MARK: Event
+extension PaywallViewModel {
+    enum Event {
+        case dismiss
     }
 }
 
@@ -45,7 +63,7 @@ struct Paywall2View: View {
                     Spacer()
                     Image(.closeIcon)
                         .onTapGesture {
-                            dismiss()
+                            viewModel.closeTap()
                         }
                 }
                 Text("QR code reader & scanner")
@@ -62,6 +80,9 @@ struct Paywall2View: View {
             OfferView(viewModel: viewModel)
         }
         .padding(.horizontal, 16)
+        .onReceive(viewModel.eventSender, perform: { event in
+            dismiss()
+        })
     }
 }
 
@@ -75,7 +96,7 @@ struct PaywallView: View {
                 HStack {
                     Image(.closeIcon)
                         .onTapGesture {
-                            dismiss()
+                            viewModel.closeTap()
                         }
                     Spacer()
                 }
@@ -93,6 +114,9 @@ struct PaywallView: View {
             OfferView(viewModel: viewModel)
         }
         .padding(.horizontal, 16)
+        .onReceive(viewModel.eventSender, perform: { event in
+            dismiss()
+        })
     }
 }
 

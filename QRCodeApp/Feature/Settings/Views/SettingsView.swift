@@ -40,6 +40,9 @@ struct SettingsView: View {
         .onAppear {
             viewModel.reconfigureOnAppear()
         }
+        .fullScreenCover(isPresented: $viewModel.showPremium, content: {
+            PaywallView(viewModel: PaywallViewModel())
+        })
     }
     
     @ViewBuilder
@@ -50,6 +53,9 @@ struct SettingsView: View {
                           title: settingsItemSubtitleModel.title,
                           subtitle: settingsItemSubtitleModel.subtitle)
             .cornerRadius(10)
+            .onTapGesture {
+                viewModel.showPremiumDidTap()
+            }
             
         case let .license(settingsItemValueModel):
             SettingsValueStringCellView(icon: settingsItemValueModel.icon,

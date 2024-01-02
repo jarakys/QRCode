@@ -11,6 +11,7 @@ import Combine
 final class SettingsViewModel: BaseViewModel {
     @Published public var sections: [SettingsSectionModel<SettingsItemProtocolEraser>] = []
     @Published public var isPremium: Bool = false
+    @Published public var showPremium: Bool = false
     private let localStorageService: LocalStorageService = UserDefaultsService.shared
     private let keychainStorage = KeychainManager.shared
     private let subscriptionManager = SubscriptionManager.shared
@@ -117,6 +118,10 @@ final class SettingsViewModel: BaseViewModel {
         ]
         guard isPremium else { return }
         sections.removeAll(where: { $0.type == .payment })
+    }
+    
+    public func showPremiumDidTap() {
+        showPremium = true
     }
     
     public func languageDidTap() {

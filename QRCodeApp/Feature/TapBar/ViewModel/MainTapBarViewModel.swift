@@ -11,6 +11,7 @@ import Combine
 class MainTapBarViewModel: BaseViewModel {
     @Published public var tabSelection = 0
     @Published public var isPremium = false
+    @Published public var showPremium = false
     
     public var ad = OpenAd()
     
@@ -18,5 +19,9 @@ class MainTapBarViewModel: BaseViewModel {
         super.bind()
         
         SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
+    }
+    
+    public func showPremiumScreen() {
+        showPremium = true
     }
 }

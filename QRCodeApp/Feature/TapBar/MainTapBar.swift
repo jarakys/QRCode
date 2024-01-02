@@ -54,8 +54,16 @@ struct MainTapBar: View {
                 UserDefaultsService.shared.set(key: .isFirstOpen, value: false)
                 return
             }
-            guard !mainTapBarViewModel.isPremium else { return }
-            mainTapBarViewModel.ad.tryToPresentAd()
+            guard !mainTapBarViewModel.isPremium else {
+                return
+            }
+            mainTapBarViewModel.showPremiumScreen()
+        })
+        .fullScreenCover(isPresented: $mainTapBarViewModel.showPremium, content: {
+            PaywallView(viewModel: PaywallViewModel(closeDidTap: { [weak mainTapBarViewModel] in
+                guard mainTapBarViewModel?.isPremium == false else { return }
+                mainTapBarViewModel?.ad.tryToPresentAd()
+            }))
         })
     }
 }
