@@ -12,7 +12,7 @@ final class PaywallViewModel: ObservableObject {
     @Published public var selectedItem: OfferViewModel?
     
     public var buttonTitle: String {
-        selectedItem?.id == "magic id" ? String(localized: "Get a free trial") : String(localized: "Get premium")
+        selectedItem?.id == "com.id.some2" ? String(localized: "Get a free trial") : String(localized: "Get premium")
     }
     
     init() {
