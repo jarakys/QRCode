@@ -44,8 +44,7 @@ struct StartView: View {
                     Image(.startLogoIcon)
                     Image(.scanLineNoShadowIcon)
                         .padding(.top, 24)
-                        .offset(y: moveDown ? 130 : 0)
-                        .animat
+                        .offset(y: moveDown ? 110 : 0)
                         .onChange(of: moveDown, perform: { value in
                             animate()
                             print(moveDown)
