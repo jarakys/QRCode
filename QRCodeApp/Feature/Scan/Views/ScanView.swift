@@ -90,14 +90,6 @@ struct ScanView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Scan")
-        .onAppear(perform: {
-            guard !UserDefaultsService.shared.get(key: .isFirstOpen, defaultValue: true) else {
-                UserDefaultsService.shared.set(key: .isFirstOpen, value: false)
-                return
-            }
-            guard !viewModel.isPremium else { return }
-            viewModel.ad.tryToPresentAd()
-        })
     }
     
     private func playSound() {

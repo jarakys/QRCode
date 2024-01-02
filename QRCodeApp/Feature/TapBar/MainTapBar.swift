@@ -49,5 +49,13 @@ struct MainTapBar: View {
                 .ignoresSafeArea(.keyboard)
         )
         .ignoresSafeArea(.keyboard)
+        .onAppear(perform: {
+            guard !UserDefaultsService.shared.get(key: .isFirstOpen, defaultValue: true) else {
+                UserDefaultsService.shared.set(key: .isFirstOpen, value: false)
+                return
+            }
+            guard !mainTapBarViewModel.isPremium else { return }
+            mainTapBarViewModel.ad.tryToPresentAd()
+        })
     }
 }

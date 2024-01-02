@@ -8,6 +8,15 @@
 import Foundation
 import Combine
 
-class MainTapBarViewModel: ObservableObject {
+class MainTapBarViewModel: BaseViewModel {
     @Published public var tabSelection = 0
+    @Published public var isPremium = false
+    
+    public var ad = OpenAd()
+    
+    override func bind() {
+        super.bind()
+        
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
+    }
 }
