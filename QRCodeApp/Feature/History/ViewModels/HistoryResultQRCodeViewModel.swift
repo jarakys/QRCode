@@ -23,4 +23,8 @@ final class HistoryResultQRCodeViewModel: BaseResultQRCodeViewModel {
         }
         super.init(qrCodeString: qrCodeEntityModel.qrCodeString, localStorage: localStorage, design: design, logo: logo, qrCodeFormat: qrCodeEntityModel.qrCodeFormat)
     }
+    
+    override func getDate() -> Date {
+        qrCodeEntityModel.date
+    }
 }

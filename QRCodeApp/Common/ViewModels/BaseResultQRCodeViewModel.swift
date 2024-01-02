@@ -30,7 +30,9 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     }()
     
     public lazy var dateString: String = { [unowned self] in
-        "15.08.2023"
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        return formatter.string(from: getDate())
     }()
     
     public let design: QRCode.Design
@@ -56,6 +58,10 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         super.bind()
         
         SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
+    }
+    
+    public func getDate() -> Date {
+        Date()
     }
     
     public func share() {
