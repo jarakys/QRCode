@@ -51,9 +51,9 @@ final class HistoryViewModel: BaseViewModel {
     
     public var shouldShowUnlockButton: Bool {
         if selectedType == 0 {
-            return countScans >= Config.maxScansCount
+            return countScans >= Config.maxScansCount && !isPremium
         } else {
-            return countCreates >=  Config.maxCreatesCount
+            return countCreates >=  Config.maxCreatesCount && !isPremium
         }
     }
     
