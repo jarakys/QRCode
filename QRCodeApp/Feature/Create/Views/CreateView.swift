@@ -55,9 +55,9 @@ struct CreateView: View {
                 })
             })
         })
-        .sheet(isPresented: $viewModel.showingSheet) {
-            Text("Premium")
-        }
+        .fullScreenCover(isPresented: $viewModel.showingSheet, content: {
+            PaywallView(viewModel: PaywallViewModel())
+        })
     }
     
     @ViewBuilder
