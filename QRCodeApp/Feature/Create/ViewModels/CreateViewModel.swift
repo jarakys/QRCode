@@ -11,6 +11,7 @@ import Combine
 final class CreateViewModel: BaseViewModel {
     @Published public var items = [CreateQRCodeSectionModel]()
     @Published public var isPremium: Bool = false
+    @Published public var showingSheet: Bool = false
     
     private let navigationSender: PassthroughSubject<CreateEventFlow, Never>
     
@@ -52,7 +53,7 @@ final class CreateViewModel: BaseViewModel {
     }
     
     public func premiumDidTap() {
-        navigationSender.send(.premium)
+        showingSheet.toggle()
     }
     
     override func bind() {

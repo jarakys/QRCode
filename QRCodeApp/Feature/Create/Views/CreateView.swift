@@ -19,14 +19,20 @@ struct CreateView: View {
                 PersonalCell(model: model)
                     .cornerRadius(12)
                     .onTapGesture {
-                        guard viewModel.createCount < Config.maxCreatesCount else { return }
+                        guard viewModel.createCount < Config.maxCreatesCount else {
+                            viewModel.premiumDidTap()
+                            return
+                        }
                         viewModel.templateDidTap(item: model)
                     }
                 
             default:
                 SocialCell(model: model, isPremium: viewModel.isPremium)
                     .onTapGesture {
-                        guard viewModel.isPremium || !model.type.forPremium else { return }
+                        guard viewModel.isPremium || !model.type.forPremium else { 
+                            viewModel.premiumDidTap()
+                            return
+                        }
                         viewModel.templateDidTap(item: model)
                     }
             }
@@ -49,6 +55,9 @@ struct CreateView: View {
                 })
             })
         })
+        .sheet(isPresented: $viewModel.showingSheet) {
+            Text("Premium")
+        }
     }
     
     @ViewBuilder
