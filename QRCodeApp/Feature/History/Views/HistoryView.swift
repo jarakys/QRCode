@@ -33,6 +33,14 @@ struct HistoryView: View {
                 unlockButtonView()
                     .padding(.bottom, 39)
             }
+            if !viewModel.isPremium {
+                AdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/9214589741")
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 50)
+                    .padding(.all, 2)
+                    .background(.adBackground)
+                    .padding(.top, 8)
+            }
         }
         .padding(.horizontal, 16)
         .padding(.top, 8)

@@ -95,6 +95,7 @@ struct ScanView: View {
                 UserDefaultsService.shared.set(key: .isFirstOpen, value: false)
                 return
             }
+            guard !viewModel.isPremium else { return }
             viewModel.ad.tryToPresentAd()
         })
     }
