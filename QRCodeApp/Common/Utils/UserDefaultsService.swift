@@ -8,6 +8,7 @@
 import Foundation
 
 enum LocalStorageKey: String, CaseIterable {
+    case isFirstOpen
     case selectedLanguage
     case beepSelected
     case vibrationSelected
@@ -36,7 +37,7 @@ final class UserDefaultsService: LocalStorageService {
     }
     
     func set<T>(key: LocalStorageKey, value: T) where T : Codable {
-        defaults.set(try? JSONEncoder().encode(value), forKey: key.rawValue)
+        defaults.set(try! JSONEncoder().encode(value), forKey: key.rawValue)
     }
 
     func get(key: LocalStorageKey) -> Any? {

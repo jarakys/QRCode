@@ -8,83 +8,76 @@
 import SwiftUI
 import GoogleMobileAds
 
-protocol BannerViewControllerWidthDelegate: AnyObject {
-  func bannerViewController(_ bannerViewController: BannerViewController, didUpdate width: CGFloat)
+struct AdMobBannerView: UIViewControllerRepresentable {
+
+    private var adUnitId: String
+
+    public init(adUnitId: String) {
+        self.adUnitId = adUnitId
+    }
+
+    func makeUIViewController(context: Context) -> UIViewController {
+        let view = GADBannerView(adSize: GADAdSizeBanner)
+        view.backgroundColor = .colorBackground
+        
+        view.backgroundColor = UIColor(resource: ColorResource.adBackground)
+        let customView = UIView()
+        customView.backgroundColor = UIColor(resource: ColorResource.adBackground)
+        
+        let viewController = UIViewController()
+        view.adUnitID = self.adUnitId
+        view.rootViewController = viewController
+        customView.addSubview(view)
+        viewController.view.addSubview(customView)
+        customView.translatesAutoresizingMaskIntoConstraints = false
+        
+        customView.topAnchor.constraint(equalTo: viewController.view.topAnchor).isActive = true
+        customView.leadingAnchor.constraint(equalTo: viewController.view.leadingAnchor).isActive = true
+        customView.trailingAnchor.constraint(equalTo: viewController.view.trailingAnchor).isActive = true
+        customView.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor).isActive = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.centerXAnchor.constraint(equalTo: customView.centerXAnchor).isActive = true
+        view.load(GADRequest())
+
+        return viewController
+    }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }
 
-class BannerViewController: UIViewController {
-  weak var delegate: BannerViewControllerWidthDelegate?
+struct BigAdMobBannerView: UIViewControllerRepresentable {
 
-  override func viewDidAppear(_ animated: Bool) {
-    super.viewDidAppear(animated)
+    private var adUnitId: String
 
-    // Tell the delegate the initial ad width.
-    delegate?.bannerViewController(
-      self, didUpdate: view.frame.inset(by: view.safeAreaInsets).size.width)
-  }
-
-  override func viewWillTransition(
-    to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator
-  ) {
-    coordinator.animate { _ in
-      // do nothing
-    } completion: { _ in
-      // Notify the delegate of ad width changes.
-      self.delegate?.bannerViewController(
-        self, didUpdate: self.view.frame.inset(by: self.view.safeAreaInsets).size.width)
+    public init(adUnitId: String) {
+        self.adUnitId = adUnitId
     }
-  }
-}
 
-struct BannerView: UIViewControllerRepresentable {
-    @State private var viewWidth: CGFloat = .zero
-    private let bannerView = GADBannerView()
-    private let adUnitID = "ca-app-pub-3940256099942544/2934735716"
-    let delegate = Delegate()
-    
-    class Delegate: NSObject, GADBannerViewDelegate {
-        func bannerViewDidReceiveAd(_ bannerView: GADBannerView) {
-          print("bannerViewDidReceiveAd")
-        }
-
-        func bannerView(_ bannerView: GADBannerView, didFailToReceiveAdWithError error: Error) {
-          print("bannerView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-        }
-
-        func bannerViewDidRecordImpression(_ bannerView: GADBannerView) {
-          print("bannerViewDidRecordImpression")
-        }
-
-        func bannerViewWillPresentScreen(_ bannerView: GADBannerView) {
-          print("bannerViewWillPresentScreen")
-        }
-
-        func bannerViewWillDismissScreen(_ bannerView: GADBannerView) {
-          print("bannerViewWillDIsmissScreen")
-        }
-
-        func bannerViewDidDismissScreen(_ bannerView: GADBannerView) {
-          print("bannerViewDidDismissScreen")
-        }
-    }
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        let bannerViewController = BannerViewController()
-        bannerView.adUnitID = adUnitID
-        bannerView.rootViewController = bannerViewController
-        bannerView.delegate = delegate
-        bannerViewController.view.addSubview(bannerView)
+    func makeUIViewController(context: Context) -> UIViewController {
+        let view = GADBannerView(adSize: GADAdSizeMediumRectangle)
+        view.backgroundColor = .colorBackground
         
-        return bannerViewController
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        guard viewWidth != .zero else { return }
+        view.backgroundColor = UIColor(resource: ColorResource.adBackground)
+        let customView = UIView()
+        customView.backgroundColor = UIColor(resource: ColorResource.adBackground)
         
-        // Request a banner ad with the updated viewWidth.
-        bannerView.adSize = GADCurrentOrientationAnchoredAdaptiveBannerAdSizeWithWidth(viewWidth)
-        bannerView.delegate = delegate
-        bannerView.load(GADRequest())
+        let viewController = UIViewController()
+        view.adUnitID = self.adUnitId
+        view.rootViewController = viewController
+        customView.addSubview(view)
+        viewController.view.addSubview(customView)
+        customView.translatesAutoresizingMaskIntoConstraints = false
         
+        customView.topAnchor.constraint(equalTo: viewController.view.topAnchor).isActive = true
+        customView.leadingAnchor.constraint(equalTo: viewController.view.leadingAnchor).isActive = true
+        customView.trailingAnchor.constraint(equalTo: viewController.view.trailingAnchor).isActive = true
+        customView.bottomAnchor.constraint(equalTo: viewController.view.bottomAnchor).isActive = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.centerXAnchor.constraint(equalTo: customView.centerXAnchor).isActive = true
+        view.load(GADRequest())
+
+        return viewController
     }
+
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
 }

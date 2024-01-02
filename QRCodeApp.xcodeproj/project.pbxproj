@@ -148,6 +148,8 @@
 		114CF8D62B416FFA00FDD6CB /* Collection+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */; };
 		114CF8DC2B4187B000FDD6CB /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */; };
 		114CF8DE2B41896A00FDD6CB /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8DD2B41896A00FDD6CB /* BannerView.swift */; };
+		114CF8E02B4419F000FDD6CB /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 114CF8DF2B4419F000FDD6CB /* GoogleMobileAds */; };
+		114CF8E32B442FEB00FDD6CB /* AdOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8E22B442FEB00FDD6CB /* AdOpen.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
@@ -318,6 +320,7 @@
 		114CF8D32B4063BB00FDD6CB /* antic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = antic.mp3; sourceTree = "<group>"; };
 		114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		114CF8DD2B41896A00FDD6CB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		114CF8E22B442FEB00FDD6CB /* AdOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdOpen.swift; sourceTree = "<group>"; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -344,6 +347,7 @@
 				114CEBB42B3E16930088F3C3 /* CompositionalList in Frameworks */,
 				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
 				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
+				114CF8E02B4419F000FDD6CB /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +442,7 @@
 		112F35B22B38D75000016890 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				114CF8E12B442FE500FDD6CB /* Classes */,
 				114085BD2B3AFDC200487E09 /* Managers */,
 				112F35B32B38D75000016890 /* UI */,
 				112F35B82B38D75000016890 /* ViewModels */,
@@ -1091,6 +1096,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		114CF8E12B442FE500FDD6CB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				114CF8E22B442FEB00FDD6CB /* AdOpen.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1115,6 +1128,7 @@
 				112F36A32B3984B300016890 /* QRCodeDetector */,
 				114CEBB32B3E16930088F3C3 /* CompositionalList */,
 				114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */,
+				114CF8DF2B4419F000FDD6CB /* GoogleMobileAds */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -1200,6 +1214,7 @@
 				112F36532B38D75000016890 /* SettingsSectionType.swift in Sources */,
 				112F363D2B38D75000016890 /* TitledContainerView.swift in Sources */,
 				112F36752B38D75000016890 /* ChangeDesignViewModel.swift in Sources */,
+				114CF8E32B442FEB00FDD6CB /* AdOpen.swift in Sources */,
 				114085B72B3AF77200487E09 /* HistoryEventFlow.swift in Sources */,
 				11EBEABD2B3DCD9A00515558 /* AppDelegate.swift in Sources */,
 				112F36802B38D75000016890 /* CreateResultQRCodeCoordinatorView.swift in Sources */,
@@ -1618,6 +1633,11 @@
 			productName = CompositionalList;
 		};
 		114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		114CF8DF2B4419F000FDD6CB /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;

@@ -16,8 +16,10 @@ class QRCodeContainer {
 class BaseResultQRCodeViewModel: BaseViewModel {
     @Published public var items = [TitledCopyContainerViewModel]()
     @Published private(set) var qrCodeDocument: QRCode.Document
+    @Published public var isPremium = false
     public let qrCodeFormat: QRCodeFormat
     public var qrCodeString: String
+    
     
     public var eventSender = PassthroughSubject<CreateResultQRCodeViewModel.Event, Never>()
     
@@ -48,6 +50,12 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         qrCodeDocument.utf8String = self.qrCodeString
         qrCodeDocument.design = design
         qrCodeDocument.logoTemplate = logo
+    }
+    
+    public override func bind() {
+        super.bind()
+        
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
     }
     
     public func share() {

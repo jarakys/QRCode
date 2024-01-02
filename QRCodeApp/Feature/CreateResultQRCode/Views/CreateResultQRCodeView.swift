@@ -70,12 +70,14 @@ struct CreateResultQRCodeView: View {
                     .cornerRadius(10)
                     .padding(.horizontal, 16)
                     .padding(.top, 10)
-                    HStack {
-                        Text("Ad block")
+                    if !viewModel.isPremium {
+                        AdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/9214589741")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+                            .padding(.all, 2)
+                            .background(.adBackground)
+                            .padding(.top, 24)
                     }
-                    .frame(height: 80)
-                    .background(.white)
-                    .padding(.top, 24)
                     ForEach(viewModel.items, id: \.title) { item in
                         TitledContainerView(title: item.title, value: item.value)
                             .onTapGesture(perform: { [weak item] in
@@ -83,6 +85,7 @@ struct CreateResultQRCodeView: View {
                                 viewModel.eventSender.send(.copied)
                             })
                     }
+                    .padding(.top, 24)
                     .padding(.horizontal, 16)
                 }
                 Spacer()

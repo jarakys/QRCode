@@ -13,6 +13,8 @@ final class ScanViewModel: BaseViewModel {
     @Published public var isFlashOn = false
     @Published public var isPremium = false
     
+    public var ad = OpenAd()
+    
     private let navigationSender: PassthroughSubject<ScanEventFlow, Never>
     public let eventSender = PassthroughSubject<ScanViewModel.Event, Never>()
     
