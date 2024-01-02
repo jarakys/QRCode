@@ -152,6 +152,9 @@
 		114CF8E32B442FEB00FDD6CB /* AdOpen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114CF8E22B442FEB00FDD6CB /* AdOpen.swift */; };
 		115562762B35AE740055C0EC /* SimpleToast in Frameworks */ = {isa = PBXBuildFile; productRef = 115562752B35AE740055C0EC /* SimpleToast */; };
 		115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 115562F92B38BC2C0055C0EC /* KeychainSwift */; };
+		1170AF662B447FC9004255D7 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1170AF652B447FC9004255D7 /* ReceiptParser */; };
+		1170AF682B447FC9004255D7 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 1170AF672B447FC9004255D7 /* RevenueCat */; };
+		1170AF6E2B448012004255D7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1170AF6D2B448012004255D7 /* StoreKit.framework */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
 		11EBEA732B3D7E8700515558 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA722B3D7E8700515558 /* StyleConfig.swift */; };
 		11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */; };
@@ -321,6 +324,7 @@
 		114CF8D52B416FFA00FDD6CB /* Collection+safe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+safe.swift"; sourceTree = "<group>"; };
 		114CF8DD2B41896A00FDD6CB /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		114CF8E22B442FEB00FDD6CB /* AdOpen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdOpen.swift; sourceTree = "<group>"; };
+		1170AF6D2B448012004255D7 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeReaderPreviewLayer.swift; sourceTree = "<group>"; };
 		11EBEA722B3D7E8700515558 /* StyleConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleConfig.swift; sourceTree = "<group>"; };
 		11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+shadowImageNavigationBar.swift"; sourceTree = "<group>"; };
@@ -344,9 +348,12 @@
 				114CF8DC2B4187B000FDD6CB /* GoogleMobileAds in Frameworks */,
 				112F36A42B3984B300016890 /* QRCodeDetector in Frameworks */,
 				112F36932B38D76500016890 /* QRCode in Frameworks */,
+				1170AF6E2B448012004255D7 /* StoreKit.framework in Frameworks */,
 				114CEBB42B3E16930088F3C3 /* CompositionalList in Frameworks */,
 				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
+				1170AF682B447FC9004255D7 /* RevenueCat in Frameworks */,
 				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
+				1170AF662B447FC9004255D7 /* ReceiptParser in Frameworks */,
 				114CF8E02B4419F000FDD6CB /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -932,6 +939,7 @@
 		112F369C2B38D83C00016890 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1170AF6D2B448012004255D7 /* StoreKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1129,6 +1137,8 @@
 				114CEBB32B3E16930088F3C3 /* CompositionalList */,
 				114CF8DB2B4187B000FDD6CB /* GoogleMobileAds */,
 				114CF8DF2B4419F000FDD6CB /* GoogleMobileAds */,
+				1170AF652B447FC9004255D7 /* ReceiptParser */,
+				1170AF672B447FC9004255D7 /* RevenueCat */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -1176,6 +1186,7 @@
 				112F36912B38D76500016890 /* XCRemoteSwiftPackageReference "QRCode" */,
 				114CEBB22B3E16930088F3C3 /* XCLocalSwiftPackageReference "../CompositionalList" */,
 				114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */,
 			);
 			productRefGroup = 111164052B30518200F01C5E /* Products */;
 			projectDirPath = "";
@@ -1615,6 +1626,14 @@
 				minimumVersion = 20.0.0;
 			};
 		};
+		1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RevenueCat/purchases-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.31.6;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1651,6 +1670,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 115562F82B38BC2C0055C0EC /* XCRemoteSwiftPackageReference "keychain-swift" */;
 			productName = KeychainSwift;
+		};
+		1170AF652B447FC9004255D7 /* ReceiptParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = ReceiptParser;
+		};
+		1170AF672B447FC9004255D7 /* RevenueCat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCat;
 		};
 /* End XCSwiftPackageProductDependency section */
 

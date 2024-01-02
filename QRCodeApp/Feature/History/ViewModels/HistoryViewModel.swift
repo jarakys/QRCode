@@ -190,7 +190,7 @@ final class HistoryViewModel: BaseViewModel {
     }
     
     public func unlockDidTap() {
-        
+        showPremium = true
     }
     
     public func selectAll() {

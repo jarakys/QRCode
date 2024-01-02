@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
+import RevenueCat
 
 class AppDelegate: NSObject, UIApplicationDelegate {
     func application(_ application: UIApplication,
@@ -14,6 +15,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 //        FirebaseApp.configure()
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         QRCodeContainer.document.design = .default()
+        Purchases.logLevel = .debug
+            Purchases.configure(withAPIKey: "appl_dxIHeWavHKqQjizlInXWoZipnmp", appUserID: "app762340d612")
         return true
     }
 }

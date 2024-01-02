@@ -8,16 +8,20 @@
 import SwiftUI
 import Combine
 
-final class PaywallViewModel: ObservableObject {
+final class PaywallViewModel: BaseViewModel {
     @Published public var items = [OfferViewModel]()
     @Published public var selectedItem: OfferViewModel?
+    @Published public var isLoading: Bool = false
+    @Published public var isInProgress: Bool = false
+    @Published public var showSucces = false
+    public var error = PassthroughSubject<Error, Never>()
     
     public let eventSender = PassthroughSubject<PaywallViewModel.Event, Never>()
     
     public var closeDidTap: (() -> Void)?
     
     public var buttonTitle: String {
-        selectedItem?.id == "com.id.some2" ? String(localized: "Get a free trial") : String(localized: "Get premium")
+        selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Get premium")
     }
     
     init(closeDidTap: (() -> Void)? = nil) {
@@ -27,7 +31,27 @@ final class PaywallViewModel: ObservableObject {
             OfferViewModel(duration: "7 days", save: "Save 80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some2"),
             OfferViewModel(duration: "7 days", save: "80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some3")
         ]
-        selectedItem = items.first
+    }
+    
+    override func bind() {
+        super.bind()
+        
+        SubscriptionManager.shared.$items.sink(receiveValue: { [weak self] items in
+            guard let self else { return }
+            self.items = items
+            self.selectedItem = items.first(where: { $0.id == "qr_999_1w_3d0" })
+        }).store(in: &cancellable)
+        SubscriptionManager.shared.$isLoading.assign(to: &$isLoading)
+        
+        SubscriptionManager.shared.$buyInProgress.assign(to: &$isInProgress)
+    }
+    
+    public func restore() {
+        Task { @MainActor [weak self] in
+            let result = await SubscriptionManager.shared.restorePurchases()
+            guard result else { return }
+            self?.showSucces = true
+        }
     }
     
     public func closeTap() {
@@ -41,7 +65,12 @@ final class PaywallViewModel: ObservableObject {
     
     public func getPremiumDidTap() {
         guard let selectedItem else { return }
-        SubscriptionManager.shared.isPremium = true
+        Task { @MainActor [weak self] in
+            guard let self else { return }
+            let result = await SubscriptionManager.shared.buy(id: selectedItem.id)
+            guard result else { return }
+            self.showSucces = true
+        }
     }
 }
 
@@ -77,7 +106,13 @@ struct Paywall2View: View {
                     .padding(.top, 4)
             }
             Spacer()
-            OfferView(viewModel: viewModel)
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .tint(.primaryApp)
+            } else {
+                OfferView(viewModel: viewModel)
+            }
         }
         .padding(.horizontal, 16)
         .onReceive(viewModel.eventSender, perform: { event in
@@ -111,7 +146,14 @@ struct PaywallView: View {
                     .padding(.top, 4)
             }
             Spacer()
-            OfferView(viewModel: viewModel)
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .tint(.primaryApp)
+                    .scaleEffect(1.5)
+            } else {
+                OfferView(viewModel: viewModel)
+            }
         }
         .padding(.horizontal, 16)
         .onReceive(viewModel.eventSender, perform: { event in
@@ -141,6 +183,19 @@ struct OfferView: View {
             Button(action: {
                 viewModel.getPremiumDidTap()
             }, label: {
+//                if viewModel.isInProgress {
+//                    HStack {
+//                        Text(viewModel.buttonTitle)
+//                            .font(.system(size: 20, weight: .semibold))
+//                            .foregroundStyle(.white)
+//                            .padding(.vertical, 14)
+//                            .frame(maxWidth: .infinity)
+//                        ProgressView()
+//                            .progressViewStyle(CircularProgressViewStyle())
+//                    }
+//                } else {
+//                   
+//                }
                 Text(viewModel.buttonTitle)
                     .font(.system(size: 20, weight: .semibold))
                     .foregroundStyle(.white)
@@ -151,17 +206,19 @@ struct OfferView: View {
             .background(.primaryApp)
             .cornerRadius(10)
             .padding(.top, 20)
+            .disabled(viewModel.isInProgress)
             Text("No commitments, cancel anytime")
                 .foregroundStyle(.secondaryTitle)
                 .font(.system(size: 11))
                 .padding(.top, 14)
             HStack(alignment: .center) {
-                Link(destination: URL(string: "https://www.apple.com")!, label: {
-                    Text("Restore Purchases")
-                        .foregroundStyle(.secondaryTitle)
-                        .font(.system(size: 11))
-                        .multilineTextAlignment(.center)
-                })
+                Text("Restore Purchases")
+                    .foregroundStyle(.secondaryTitle)
+                    .font(.system(size: 11))
+                    .multilineTextAlignment(.center)
+                    .onTapGesture {
+                        viewModel.restore()
+                    }
                 Link(destination: URL(string: "https://qrscanread.com/terms.html")!, label: {
                     Text("Terms and conditions")
                         .foregroundStyle(.secondaryTitle)

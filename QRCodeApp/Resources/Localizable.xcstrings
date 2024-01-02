@@ -7,6 +7,18 @@
     "%lld of 5" : {
 
     },
+    "1 Month" : {
+
+    },
+    "3 FREE Days" : {
+
+    },
+    "7 Days" : {
+
+    },
+    "12 monthly" : {
+
+    },
     "About us" : {
       "localizations" : {
         "ar" : {
@@ -152,6 +164,9 @@
           }
         }
       }
+    },
+    "Best value" : {
+
     },
     "Body" : {
       "localizations" : {
@@ -2541,6 +2556,9 @@
     "Marker" : {
 
     },
+    "MOST POPULAR" : {
+
+    },
     "Network" : {
 
     },
@@ -2929,6 +2947,15 @@
           }
         }
       }
+    },
+    "pear month" : {
+
+    },
+    "pear week" : {
+
+    },
+    "pear year" : {
+
     },
     "Personal" : {
       "localizations" : {
@@ -3728,6 +3755,15 @@
           }
         }
       }
+    },
+    "Save 53%" : {
+
+    },
+    "SAVE 53%" : {
+
+    },
+    "SAVE 80%" : {
+
     },
     "Scan" : {
       "localizations" : {

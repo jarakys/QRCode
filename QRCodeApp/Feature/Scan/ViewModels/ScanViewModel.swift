@@ -42,7 +42,10 @@ final class ScanViewModel: BaseViewModel {
     }
     
     public func setRecognized(string: String) {
-        print(string)
+        guard isPremium || Config.maxScansCount < scanCount  else {
+            showPremium = true
+            return
+        }
         navigationSender.send(.result(qrCodeString: string))
         let scanCounts = keychainStorage.get(key: .countScans, defaultValue: 0)
         do {
@@ -61,7 +64,7 @@ final class ScanViewModel: BaseViewModel {
     }
     
     public func detect(on image: Data) {
-        guard isPremium || scanCount < Config.maxScansCount else {
+        guard isPremium || Config.maxScansCount < scanCount  else {
             showPremium = true
             return
         }
