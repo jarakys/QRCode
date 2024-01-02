@@ -54,8 +54,8 @@ final class CreateContentLinkViewModel: BaseViewModel {
             items.append(TextViewModel(title: String(localized: "Password"), placeholder: String(localized: "Password"), example: nil, text: ""))
             
         case .location:
-            items.append(TextViewModel(title: String(localized: "Longitude"), placeholder: "Longitude", example: nil, text: ""))
-            items.append(TextViewModel(title: String(localized: "Latitude"), placeholder: "Latitude", example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Longitude"), placeholder: String(localized: "Longitude"), example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Latitude"), placeholder: String(localized: "Latitude"), example: nil, text: ""))
             
         case .telegram:
             items.append(TextViewModel(title: String(localized: "Telegram"), placeholder: "Telegram url", example: nil, text: "https://t.me/"))
