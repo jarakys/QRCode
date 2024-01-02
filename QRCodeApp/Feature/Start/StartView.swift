@@ -22,6 +22,9 @@ final class StartViewModel: ObservableObject {
 struct StartView: View {
     @StateObject public var viewModel: StartViewModel
     
+    @State private var moveDown = false
+    @State private var shouldFlipp = false
+    
     var body: some View {
         ZStack {
             VStack {
@@ -37,7 +40,17 @@ struct StartView: View {
             .frame(maxHeight: .infinity)
             VStack(alignment: .center) {
                 Spacer()
-                Image(.startLogoIcon)
+                ZStack(alignment: .top) {
+                    Image(.startLogoIcon)
+                    Image(.scanLineNoShadowIcon)
+                        .padding(.top, 24)
+                        .offset(y: moveDown ? 130 : 0)
+                        .animat
+                        .onChange(of: moveDown, perform: { value in
+                            animate()
+                            print(moveDown)
+                        })
+                }
                 Spacer()
                 Spacer()
                 Spacer()
@@ -73,6 +86,42 @@ struct StartView: View {
             .frame(maxHeight: .infinity)
         }
         .padding(.horizontal, 16)
+        .onAppear(perform: {
+            withAnimation(.linear(duration: 2).repeatForever(autoreverses: true), {
+                moveDown.toggle()
+            })
+        })
+    }
+    
+    private func animate() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            withAnimation(.linear(duration: 0.2), {
+                shouldFlipp.toggle()
+            })
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+                animate()
+            })
+        })
     }
 }
 
+enum AxistFlip {
+    case horizontal
+    case vertical
+    case baseVertical
+}
+
+extension View {
+    func flipped(_ axis: AxistFlip = .horizontal, anchor: UnitPoint = .center) -> some View {
+        switch axis {
+        case .horizontal:
+            return scaleEffect(CGSize(width: -1, height: 1), anchor: anchor)
+            
+        case .vertical:
+            return scaleEffect(CGSize(width: 1, height: -1), anchor: anchor)
+            
+        case .baseVertical:
+            return scaleEffect(CGSize(width: 1, height: 1), anchor: anchor)
+        }
+    }
+}
