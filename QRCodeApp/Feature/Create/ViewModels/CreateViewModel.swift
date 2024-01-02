@@ -14,6 +14,10 @@ final class CreateViewModel: BaseViewModel {
     
     private let navigationSender: PassthroughSubject<CreateEventFlow, Never>
     
+    public var createCount: Int {
+        KeychainManager.shared.get(key: .countCreates, defaultValue: 0)
+    }
+    
     init(navigationSender: PassthroughSubject<CreateEventFlow, Never>) {
         self.navigationSender = navigationSender
         super.init()
