@@ -23,7 +23,7 @@ final class PaywallViewModel: BaseViewModel {
     public var buttonTitle: String {
         selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Get premium")
     }
-    
+
     init(closeDidTap: (() -> Void)? = nil) {
         self.closeDidTap = closeDidTap
         items = [
@@ -51,6 +51,7 @@ final class PaywallViewModel: BaseViewModel {
             let result = await SubscriptionManager.shared.restorePurchases()
             guard result else { return }
             self?.showSucces = true
+            self?.eventSender.send(.dismiss)
         }
     }
     
@@ -70,6 +71,7 @@ final class PaywallViewModel: BaseViewModel {
             let result = await SubscriptionManager.shared.buy(id: selectedItem.id)
             guard result else { return }
             self.showSucces = true
+            self.eventSender.send(.dismiss)
         }
     }
 }
@@ -103,7 +105,7 @@ struct Paywall2View: View {
                                 viewModel.closeTap()
                             }
                     }
-                    Text("QR code reader & scanner")
+                    Text("QR Сode Reader | Scanner")
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundStyle(.black)
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -152,7 +154,7 @@ struct PaywallView: View {
                             }
                         Spacer()
                     }
-                    Text("QR code reader & scanner")
+                    Text("QR Сode Reader | Scanner")
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundStyle(.black)
                         .frame(maxWidth: .infinity, alignment: .center)

@@ -1781,6 +1781,7 @@
 
     },
     "Help us improve QR code reader & scanner" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1852,6 +1853,22 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "通过选择“允许跟踪”，您可以帮助我们改进"
+          }
+        }
+      }
+    },
+    "Help us improve QR Сode Reader | Scanner" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ساعدنا في تحسين QR Code Scanner | Reader"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "帮助我们改进 二维码生成器 扫描"
           }
         }
       }
@@ -2559,10 +2576,7 @@
     "MOST POPULAR" : {
 
     },
-    "Network" : {
-
-    },
-    "Network name" : {
+    "Name" : {
 
     },
     "Next" : {
@@ -2948,13 +2962,13 @@
         }
       }
     },
-    "pear month" : {
+    "per month" : {
 
     },
-    "pear week" : {
+    "per week" : {
 
     },
-    "pear year" : {
+    "per year" : {
 
     },
     "Personal" : {
@@ -3437,10 +3451,8 @@
     "QR code reader \n& scanner" : {
 
     },
-    "QR code reader & scanner" : {
-
-    },
     "QR code reader & scanner (app name) is designed to cater to all your scanning and QR creation requirements." : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3664,6 +3676,38 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "剩余QR扫描次数"
+          }
+        }
+      }
+    },
+    "QR Сode Reader | Scanner" : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR Code Scanner | Reader"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二维码生成器 扫描"
+          }
+        }
+      }
+    },
+    "QR Сode Reader | Scanner is designed to cater to all your scanning and QR creation requirements." : {
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QR Code Scanner | Reader مصممة لتلبية جميع احتياجاتك في المسح وإنشاء رموز الاستجابة السريعة."
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "二维码生成器 扫描 旨在满足您的所有扫描和 QR 创建要求。"
           }
         }
       }
@@ -4000,6 +4044,7 @@
       }
     },
     "Scan Result" : {
+      "extractionState" : "stale",
       "localizations" : {
         "de" : {
           "stringUnit" : {
@@ -4102,6 +4147,9 @@
           }
         }
       }
+    },
+    "Scanned Result" : {
+
     },
     "Search" : {
       "localizations" : {
@@ -4856,9 +4904,6 @@
           }
         }
       }
-    },
-    "Term and Privacy Policy" : {
-
     },
     "Terms and conditions" : {
       "localizations" : {

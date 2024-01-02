@@ -63,7 +63,7 @@ struct StartView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundStyle(.titleTextField)
                     .font(.system(size: 12))
-                Link("Term and Privacy Policy", destination:
+                Link("Privacy Policy", destination:
                     URL(string: "https://qrscanread.com/privacy.html")!
                 )
                 .font(.system(size: 12))

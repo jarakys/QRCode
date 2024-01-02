@@ -26,18 +26,20 @@ final class SubscriptionManager: ObservableObject {
         Task { @MainActor [unowned self] in
             let offerings = await Purchases.shared.products(["qr_1499_1m", "qr_999_1w_3d0", "qr_4999_1y"])
             products = offerings
-            items.append(OfferViewModel(duration: String(localized: "12 monthly"), save: String(localized: "SAVE 80%"), price: offerings.first(where: { $0.productIdentifier == "qr_4999_1y" })?.localizedPriceString ?? "", per: String(localized: "pear year"), hintSelected: String(localized: "Best value"), id: "qr_4999_1y"))
+            items.append(OfferViewModel(duration: String(localized: "12 monthly"), save: String(localized: "SAVE 80%"), price: offerings.first(where: { $0.productIdentifier == "qr_4999_1y" })?.localizedPriceString ?? "", per: String(localized: "per year"), hintSelected: String(localized: "Best value"), id: "qr_4999_1y"))
             
-            items.append(OfferViewModel(duration: String(localized: "7 Days"), save: String(localized: "3 FREE Days"), price: offerings.first(where: { $0.productIdentifier == "qr_999_1w_3d0" })?.localizedPriceString ?? "", per: String(localized: "pear week"), hintSelected: String(localized: "MOST POPULAR"), id: "qr_999_1w_3d0"))
+            items.append(OfferViewModel(duration: String(localized: "7 Days"), save: String(localized: "3 FREE Days"), price: offerings.first(where: { $0.productIdentifier == "qr_999_1w_3d0" })?.localizedPriceString ?? "", per: String(localized: "per week"), hintSelected: String(localized: "MOST POPULAR"), id: "qr_999_1w_3d0"))
             
-            items.append(OfferViewModel(duration: String(localized: "1 Month"), save: String(localized: "Save 53%"), price: offerings.first(where: { $0.productIdentifier == "qr_1499_1m" })?.localizedPriceString ?? "", per: String(localized: "pear month"), hintSelected: String(localized: "SAVE 53%"), id: "qr_1499_1m"))
+            items.append(OfferViewModel(duration: String(localized: "1 Month"), save: String(localized: "Save 53%"), price: offerings.first(where: { $0.productIdentifier == "qr_1499_1m" })?.localizedPriceString ?? "", per: String(localized: "per month"), hintSelected: String(localized: "SAVE 53%"), id: "qr_1499_1m"))
             
             isLoading = false
         }
     }
     
     public func restorePurchases() async -> Bool {
-        buyInProgress = true
+        await MainActor.run(body: {
+            buyInProgress = true
+        })
         do {
             let info = try await Purchases.shared.restorePurchases()
             await MainActor.run(body: {

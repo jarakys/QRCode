@@ -66,7 +66,7 @@ final class CreateContentLinkViewModel: BaseViewModel {
             items.append(TextViewModel(title: String(localized: "Text"), placeholder: String(localized: "tell us more details..."), example: nil, text: ""))
             
         case .wifi:
-            items.append(TextViewModel(title: String(localized: "Network name"), placeholder: String(localized: "Network"), example: nil, text: ""))
+            items.append(TextViewModel(title: String(localized: "Name"), placeholder: String(localized: "Name"), example: nil, text: ""))
             items.append(TextViewModel(title: String(localized: "Password"), placeholder: String(localized: "Password"), example: nil, text: ""))
             
         case .location:

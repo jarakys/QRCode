@@ -90,7 +90,7 @@ class BaseResultQRCodeViewModel: BaseViewModel {
         case .wifi:
             let wifi = wifiConfigStringToDictionary(qrCodeString)
             
-            items.append(TitledCopyContainerViewModel(title: String(localized: "Network name"), value: wifi["s"] ?? ""))
+            items.append(TitledCopyContainerViewModel(title: String(localized: "Name"), value: wifi["s"] ?? ""))
             items.append(TitledCopyContainerViewModel(title: String(localized: "Password"), value: wifi["p"] ?? ""))
         
         case .phone:

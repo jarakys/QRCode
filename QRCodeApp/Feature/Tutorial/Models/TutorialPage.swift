@@ -24,7 +24,7 @@ enum TutorialPage: String {
     var title: String {
         switch self {
         case .intro:
-            return String(localized: "Help us improve QR code reader & scanner")
+            return String(localized: "Help us improve QR Сode Reader | Scanner")
         case .designedFor:
             return String(localized: "Equipped with a myriad of user-friendly features")
         }
@@ -39,7 +39,7 @@ By opting to "Allow tracking," you play a key role in enhancing the app experien
 Your choice will simplify the enjoyment of our app for others, and you can take pride in being a part of this positive influence
 """)
         case .designedFor:
-            return String(localized: "QR code reader & scanner (app name) is designed to cater to all your scanning and QR creation requirements.")
+            return String(localized: "QR Сode Reader | Scanner is designed to cater to all your scanning and QR creation requirements.")
         }
     }
     

@@ -60,7 +60,7 @@ struct ScanResultQRCodeView: View {
         }
         .frame(maxWidth: .infinity)
         .background(.secondaryBackground)
-        .navigationTitle("Scan Result")
+        .navigationTitle("Scanned Result")
         .navigationBarTitleDisplayMode(.inline)
         .padding(.top, 1)
         .simpleToast(isPresented: $showToast, options: .init(alignment: Alignment.bottom, hideAfter: 0.7), content: {
