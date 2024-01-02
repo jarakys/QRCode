@@ -8,13 +8,15 @@
 import Foundation
 import Combine
 
-final class CreateViewModel: ObservableObject {
+final class CreateViewModel: BaseViewModel {
     @Published public var items = [CreateQRCodeSectionModel]()
+    @Published public var isPremium: Bool = false
     
     private let navigationSender: PassthroughSubject<CreateEventFlow, Never>
     
     init(navigationSender: PassthroughSubject<CreateEventFlow, Never>) {
         self.navigationSender = navigationSender
+        super.init()
         items.append(CreateQRCodeSectionModel(cellIdentifiers:
                                                 [CreateQRCodeTemplateModel(type: .phone),
                                                  CreateQRCodeTemplateModel(type: .email),
@@ -47,5 +49,11 @@ final class CreateViewModel: ObservableObject {
     
     public func premiumDidTap() {
         navigationSender.send(.premium)
+    }
+    
+    override func bind() {
+        super.bind()
+        
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
     }
 }

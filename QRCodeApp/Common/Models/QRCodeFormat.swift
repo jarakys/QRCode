@@ -24,6 +24,55 @@ public enum QRCodeFormat: String, CaseIterable {
     case spotify
     case snapchat
     
+    var forPremium: Bool {
+        switch self {
+        case .phone:
+            return false
+            
+        case .email:
+            return false
+            
+        case .sms:
+            return false
+            
+        case .url:
+            return false
+            
+        case .text:
+            return false
+            
+        case .wifi:
+            return false
+            
+        case .location:
+            return false
+            
+        case .telegram:
+            return true
+            
+        case .facebook:
+            return true
+            
+        case .instagram:
+            return true
+            
+        case .twitter:
+            return true
+            
+        case .whatsApp:
+            return true
+            
+        case .tikTok:
+            return true
+            
+        case .spotify:
+            return true
+            
+        case .snapchat:
+            return true
+        }
+    }
+    
     public var description: String {
         switch self {
         case .phone:
