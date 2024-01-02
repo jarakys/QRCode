@@ -86,32 +86,41 @@ struct Paywall2View: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            ZStack(alignment: .leading) {
-                HStack {
-                    Spacer()
-                    Image(.closeIcon)
-                        .onTapGesture {
-                            viewModel.closeTap()
-                        }
-                }
-                Text("QR code reader & scanner")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(.black)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            }
-            ScrollView {
-                Image(.paywall2Icon)
-                UnlimitedView()
-                    .padding(.top, 4)
-            }
-            Spacer()
-            if viewModel.isLoading {
+        ZStack {
+            if viewModel.isInProgress {
                 ProgressView()
+                    .scaleEffect(2)
                     .progressViewStyle(CircularProgressViewStyle())
                     .tint(.primaryApp)
-            } else {
-                OfferView(viewModel: viewModel)
+                    .zIndex(2)
+            }
+            VStack {
+                ZStack(alignment: .leading) {
+                    HStack {
+                        Spacer()
+                        Image(.closeIcon)
+                            .onTapGesture {
+                                viewModel.closeTap()
+                            }
+                    }
+                    Text("QR code reader & scanner")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                ScrollView {
+                    Image(.paywall2Icon)
+                    UnlimitedView()
+                        .padding(.top, 4)
+                }
+                Spacer()
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .tint(.primaryApp)
+                } else {
+                    OfferView(viewModel: viewModel)
+                }
             }
         }
         .padding(.horizontal, 16)
@@ -126,33 +135,42 @@ struct PaywallView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        VStack {
-            ZStack(alignment: .leading) {
-                HStack {
-                    Image(.closeIcon)
-                        .onTapGesture {
-                            viewModel.closeTap()
-                        }
-                    Spacer()
-                }
-                Text("QR code reader & scanner")
-                    .font(.system(size: 15, weight: .semibold))
-                    .foregroundStyle(.black)
-                    .frame(maxWidth: .infinity, alignment: .center)
-            }
-            ScrollView {
-                Image(.paywall1Icon)
-                UnlimitedView()
-                    .padding(.top, 4)
-            }
-            Spacer()
-            if viewModel.isLoading {
+        ZStack {
+            if viewModel.isInProgress {
                 ProgressView()
+                    .scaleEffect(2)
                     .progressViewStyle(CircularProgressViewStyle())
                     .tint(.primaryApp)
-                    .scaleEffect(1.5)
-            } else {
-                OfferView(viewModel: viewModel)
+                    .zIndex(2)
+            }
+            VStack {
+                ZStack(alignment: .leading) {
+                    HStack {
+                        Image(.closeIcon)
+                            .onTapGesture {
+                                viewModel.closeTap()
+                            }
+                        Spacer()
+                    }
+                    Text("QR code reader & scanner")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                ScrollView {
+                    Image(.paywall1Icon)
+                    UnlimitedView()
+                        .padding(.top, 4)
+                }
+                Spacer()
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .tint(.primaryApp)
+                        .scaleEffect(1.5)
+                } else {
+                    OfferView(viewModel: viewModel)
+                }
             }
         }
         .padding(.horizontal, 16)
