@@ -458,7 +458,80 @@
       }
     },
     "Best value" : {
-
+      "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "أفضل قيمة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bestes Preis"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mejor valor"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meilleur prix"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nilai Terbaik"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベストバリュー"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고의 가치"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Melhor valor"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Лучшая цена"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Найкраща ціна"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giá trị tốt nhất"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "최고의 가치"
+          }
+        }
+      }
     },
     "Body" : {
       "localizations" : {
@@ -611,25 +684,25 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "من خلال الاختيار لـ \"السماح بالتتبع\" ، فأنت تلعب دورًا حاسمًا في تحسين تجربة التطبيق ، مستفيدًا ليس فقط أنت بل جميع المستخدمين.سيسهل اختيارك الاستمتاع بتطبيقنا للآخرين ، ويمكنك الاعتزاز بكونك جزءًا من هذا التأثير الإيجابي."
+            "value" : "من خلال اختيار \"السماح بالتتبع\" ، تلعب دورًا رئيسيًا في تعزيز تجربة التطبيق ، مما يعود بالفائدة لك لا فقط ولكن لجميع المستخدمين.\nستبسط اختياراتك استمتاعنا بتطبيقنا للآخرين ، ويمكنك الاعتزاز بكونك جزءًا من هذا التأثير الإيجابي."
           }
         },
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "zu verbessern. Indem Sie sich für die Option \"Nachverfolgung zulassen\" entscheiden, spielen Sie eine Schlüsselrolle bei der Verbesserung der App, wovon nicht nur Sie selbst, sondern alle Nutzer profitieren. Ihre Entscheidung wird die Nutzung unserer App für andere vereinfachen, und Sie können stolz darauf sein, Teil dieses positiven Einflusses zu sein."
+            "value" : "Indem Sie sich für die Option \"Nachverfolgung zulassen\" entscheiden, spielen Sie eine Schlüsselrolle bei der Verbesserung der App, wovon nicht nur Sie selbst, sondern alle Nutzer profitieren. Ihre Entscheidung wird die Nutzung unserer App für andere vereinfachen, und Sie können stolz darauf sein, Teil dieses positiven Einflusses zu sein."
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Al optar por \"Permitir seguimiento\", juegas un papel clave en mejorar la experiencia de la aplicación, beneficiando no solo a ti mismo sino a todos los usuarios.\nTu elección simplificará el disfrute de nuestra aplicación para otros, y puedes sentirte orgulloso de ser parte de esta influencia positiva.\""
+            "value" : "Al optar por \"Permitir seguimiento\", juegas un papel clave en mejorar la experiencia de la aplicación, beneficiando no solo a ti mismo sino a todos los usuarios.\nTu elección simplificará el disfrute de nuestra aplicación para otros, y puedes sentirte orgulloso de ser parte de esta influencia positiva."
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "en choisissant \"Autoriser le suivi\". Vous jouez un rôle clé dans l'amélioration de l'expérience de l'application, bénéficiant non seulement à vous-même mais à tous les utilisateurs. Votre choix simplifiera le plaisir de notre application pour les autres, et vous pouvez être fier de faire partie de cette influence positive."
+            "value" : "En choisissant l'option \"Autoriser le suivi\", vous jouez un rôle clé dans l'amélioration de l'expérience de l'application, bénéficiant non seulement à vous-même, mais à tous les utilisateurs. Votre choix simplifiera le plaisir de notre application pour les autres, et vous pourrez être fier de faire partie de cette influence positive."
           }
         },
         "id" : {
@@ -665,19 +738,19 @@
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Обравши \"Дозволити відстеження\", ви відіграєте ключову роль у покращенні досвіду використання додатку, що користується не тільки ви, але й усі користувачі. Ваш вибір спростить задоволення нашого додатку для інших, і ви можете пишатися тим, що стали частиною цього позитивного впливу."
+            "value" : "Обравши \"Дозволити відстеження\", ви відіграєте ключову роль у покращенні досвіду використання додатку, яким користуєтесь не тільки ви, але й тисячі інших користувачів. Ваш вибір спростить користування нашим додатком для інших, і ви можете пишатися тим, що стали частиною цього позитивного впливу."
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "bằng cách chọn \"Cho phép theo dõi\", bạn sẽ đóng vai trò quan trọng trong việc nâng cao trải nghiệm ứng dụng, không chỉ là cho bản thân mà còn cho tất cả người dùng. Sự lựa chọn của bạn sẽ đơn giản hóa việc sử dụng ứng dụng của chúng tôi cho người khác, và bạn có thể tự hào vì là một phần của ảnh hưởng tích cực này."
+            "value" : "Bằng cách chọn \"Cho phép theo dõi\", bạn đóng một vai trò quan trọng trong việc nâng cao trải nghiệm ứng dụng, không chỉ là lợi ích cho bản thân mình mà còn cho tất cả người dùng.\nQuyết định của bạn sẽ làm cho việc sử dụng ứng dụng của chúng tôi trở nên đơn giản hơn cho người khác, và bạn có thể tự hào về việc là một phần của tác động tích cực này."
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "的体验，不仅使自己受益，也使所有用户受益。您的选择将简化其他人使用我们应用程序的乐趣，并且您可以为成为这种积极影响的一部分而感到自豪。"
+            "value" : "通过选择 \"允许跟踪\"，您将在增强应用程序体验方面发挥关键作用，不仅使您自己受益，而且使所有用户受益。\n您的选择将简化他人使用我们应用程序的过程，您可以为成为这一积极影响的一部分而感到自豪。"
           }
         }
       }
@@ -1809,31 +1882,31 @@
         "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ausgestattet mit einer Vielzahl benutzerfreundlicher Funktionen ist"
+            "value" : "Ausgestattet mit einer Vielzahl benutzerfreundlicher "
           }
         },
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Equipado con una gran cantidad de características fáciles de usar,"
+            "value" : "Equipado con una gran cantidad de características fáciles de usar"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Équipé d'une myriade de fonctionnalités conviviales,"
+            "value" : "Équipé d'une myriade de fonctionnalités conviviales"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dilengkapi dengan berbagai fitur yang mudah digunakan, "
+            "value" : "Dilengkapi dengan berbagai fitur yang mudah digunakan"
           }
         },
         "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "多数の使いやすい機能を備えた"
+            "value" : "ユーザーフレンドリーな機能を無数に装備"
           }
         },
         "ko" : {
@@ -1845,31 +1918,31 @@
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Equipado com uma infinidade de recursos fáceis de usar,"
+            "value" : "Equipado com uma infinidade de recursos fáceis de usar"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Оборудованный множеством удобных функций,"
+            "value" : "Оборудованный множеством удобных функций"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Оснащений безліччю корисних функцій,"
+            "value" : "Оснащений безліччю корисних функцій"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Trang bị vô số tính năng thân thiện với người dùng, "
+            "value" : "Được trang bị với nhiều tính năng thân thiện với người dùng"
           }
         },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "配备了众多用户友好的功能，"
+            "value" : "配备了众多用户友好的功能"
           }
         }
       }
@@ -2148,7 +2221,7 @@
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Dapatkan percobaan gratis."
+            "value" : "Dapatkan percobaan gratis"
           }
         },
         "ja" : {
@@ -2384,6 +2457,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bantu kami meningkatkan QR Code | Barcode Scanner"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "QRコードリーダー。の改善にご協力ください"
           }
         },
         "ko" : {
@@ -3348,6 +3427,60 @@
     },
     "MOST POPULAR" : {
       "localizations" : {
+        "ar" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "الأكثر شهرة"
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Am beliebtesten"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más popular"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paling Populer"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最も人気"
+          }
+        },
+        "pt-PT" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mais popular"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Самый популярный"
+          }
+        },
+        "uk" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Найпопулярніший"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Phổ biến nhất"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
