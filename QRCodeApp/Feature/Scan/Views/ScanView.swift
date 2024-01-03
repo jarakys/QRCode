@@ -93,7 +93,7 @@ struct ScanView: View {
             })
         }
         .fullScreenCover(isPresented: $viewModel.showPremium, content: {
-            PaywallView(viewModel: PaywallViewModel(shouldStartSession: true))
+            PaywallView(shouldStartSession: true, shouldRequestAd: false)
         })
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitleDisplayMode(.inline)

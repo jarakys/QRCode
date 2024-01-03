@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import RevenueCatUI
 
 final class PaywallViewModel: BaseViewModel {
     @Published public var items = [OfferViewModel]()
@@ -145,53 +146,76 @@ struct Paywall2View: View {
     }
 }
 
+final class PaywallViewModelTest: ObservableObject {
+    public var ad = OpenAd.shared
+}
+
 struct PaywallView: View {
-    @StateObject public var viewModel: PaywallViewModel
+//    @StateObject public var viewModel: PaywallViewModel
     @Environment(\.dismiss) var dismiss
+    @StateObject var viewModel = PaywallViewModelTest()
+    
+    public var shouldStartSession: Bool
+    public var shouldRequestAd: Bool
     
     var body: some View {
-        ZStack {
-            if viewModel.isInProgress {
-                ProgressView()
-                    .scaleEffect(2)
-                    .progressViewStyle(CircularProgressViewStyle())
-                    .tint(.primaryApp)
-                    .zIndex(2)
-            }
-            VStack {
-                ZStack(alignment: .leading) {
-                    HStack {
-                        Image(.closeIcon)
-                            .onTapGesture {
-                                viewModel.closeTap()
-                            }
-                        Spacer()
-                    }
-                    Text("QR Сode Reader | Scanner")
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: .infinity, alignment: .center)
+        RevenueCatUI.PaywallView(displayCloseButton: true)
+            .onRestoreCompleted({ value in
+                SubscriptionManager.shared.isPremium = !value.entitlements.active.isEmpty
+            })
+            .onPurchaseCompleted({ value in
+                SubscriptionManager.shared.isPremium = !value.entitlements.active.isEmpty
+            })
+            .onDisappear(perform: {
+                if shouldStartSession {
+                    PaywallViewModel.sender.send(.shouldStartSession)
                 }
-                ScrollView {
-                    Image(.paywall1Icon)
-                    UnlimitedView()
-                        .padding(.top, 4)
+                if shouldRequestAd, !SubscriptionManager.shared.isPremium {
+                    viewModel.ad.tryToPresentAd()
                 }
-                Spacer()
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .tint(.primaryApp)
-                        .scaleEffect(1.5)
-                } else {
-                    OfferView(viewModel: viewModel)
-                }
-            }
-        }
-        .padding(.horizontal, 16)
-        .onReceive(viewModel.eventSender, perform: { event in
-            dismiss()
-        })
+            })
+//        ZStack {
+//            if viewModel.isInProgress {
+//                ProgressView()
+//                    .scaleEffect(2)
+//                    .progressViewStyle(CircularProgressViewStyle())
+//                    .tint(.primaryApp)
+//                    .zIndex(2)
+//            }
+//            VStack {
+//                ZStack(alignment: .leading) {
+//                    HStack {
+//                        Image(.closeIcon)
+//                            .onTapGesture {
+//                                viewModel.closeTap()
+//                            }
+//                        Spacer()
+//                    }
+//                    Text("QR Сode Reader | Scanner")
+//                        .font(.system(size: 15, weight: .semibold))
+//                        .foregroundStyle(.black)
+//                        .frame(maxWidth: .infinity, alignment: .center)
+//                }
+//                ScrollView {
+//                    Image(.paywall1Icon)
+//                    UnlimitedView()
+//                        .padding(.top, 4)
+//                }
+//                Spacer()
+//                if viewModel.isLoading {
+//                    ProgressView()
+//                        .progressViewStyle(CircularProgressViewStyle())
+//                        .tint(.primaryApp)
+//                        .scaleEffect(1.5)
+//                } else {
+//                    OfferView(viewModel: viewModel)
+//                }
+//            }
+//        }
+//        .padding(.horizontal, 16)
+//        .onReceive(viewModel.eventSender, perform: { event in
+//            dismiss()
+//        })
     }
 }
 

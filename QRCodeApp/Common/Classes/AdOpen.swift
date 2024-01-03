@@ -12,6 +12,8 @@ final class OpenAd: NSObject, GADFullScreenContentDelegate {
    var appOpenAd: GADAppOpenAd?
    var loadTime = Date()
     
+    static let shared = OpenAd()
+    
     
     func requestAppOpenAd(completion: (() -> Void)?) {
         let request = GADRequest()

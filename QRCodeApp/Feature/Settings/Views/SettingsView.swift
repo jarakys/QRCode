@@ -41,7 +41,7 @@ struct SettingsView: View {
             viewModel.reconfigureOnAppear()
         }
         .fullScreenCover(isPresented: $viewModel.showPremium, content: {
-            PaywallView(viewModel: PaywallViewModel())
+            PaywallView(shouldStartSession: false, shouldRequestAd: false)
         })
     }
     

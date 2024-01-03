@@ -50,20 +50,13 @@ struct MainTapBar: View {
         )
         .ignoresSafeArea(.keyboard)
         .onAppear(perform: {
-//            guard !UserDefaultsService.shared.get(key: .isFirstOpen, defaultValue: true) else {
-//                UserDefaultsService.shared.set(key: .isFirstOpen, value: false)
-//                return
-//            }
             guard !mainTapBarViewModel.isPremium else {
                 return
             }
             mainTapBarViewModel.showPremiumScreen()
         })
         .fullScreenCover(isPresented: $mainTapBarViewModel.showPremium, content: {
-            PaywallView(viewModel: PaywallViewModel(closeDidTap: { [weak mainTapBarViewModel] in
-                guard mainTapBarViewModel?.isPremium == false else { return }
-                mainTapBarViewModel?.ad.tryToPresentAd()
-            }))
+            PaywallView(shouldStartSession: false, shouldRequestAd: true)
         })
     }
 }

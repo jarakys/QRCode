@@ -13,8 +13,6 @@ class MainTapBarViewModel: BaseViewModel {
     @Published public var isPremium = false
     @Published public var showPremium = false
     
-    public var ad = OpenAd()
-    
     override func bind() {
         super.bind()
         

@@ -32,7 +32,7 @@ struct CreateContentLinkQRCodeView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.secondaryBackground)
         .fullScreenCover(isPresented: $viewModel.showPremium, content: {
-            PaywallView(viewModel: PaywallViewModel())
+            PaywallView(shouldStartSession: false, shouldRequestAd: false)
         })
     }
 }

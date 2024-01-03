@@ -18,6 +18,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         Purchases.logLevel = .debug
             Purchases.configure(withAPIKey: "appl_dxIHeWavHKqQjizlInXWoZipnmp", appUserID: "app762340d612")
         KeychainManager.shared.keychain.clear()
+        OpenAd.shared.requestAppOpenAd(completion: nil)
         return true
     }
 }

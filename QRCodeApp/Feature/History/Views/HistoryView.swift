@@ -48,7 +48,7 @@ struct HistoryView: View {
         .navigationTitle("History")
         .navigationBarTitleDisplayMode(.inline)
         .fullScreenCover(isPresented: $viewModel.showPremium, content: {
-            PaywallView(viewModel: PaywallViewModel())
+            PaywallView(shouldStartSession: false, shouldRequestAd: false)
         })
         .toolbar(content: {
             if !viewModel.sections.isEmpty {

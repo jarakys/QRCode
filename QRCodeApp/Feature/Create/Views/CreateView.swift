@@ -56,7 +56,7 @@ struct CreateView: View {
             })
         })
         .fullScreenCover(isPresented: $viewModel.showingSheet, content: {
-            PaywallView(viewModel: PaywallViewModel())
+            PaywallView(shouldStartSession: false, shouldRequestAd: false)
         })
     }
     
