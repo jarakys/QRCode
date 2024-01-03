@@ -36,7 +36,7 @@ struct ScanResultQRCodeView: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: 50)
                             .padding(.all, 2)
-                            .background(.adBackground)
+                            .background(.white)
                             .padding(.top, 24)
                     }
                     ForEach(viewModel.items, id: \.title) { item in

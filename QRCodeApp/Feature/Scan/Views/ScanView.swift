@@ -21,7 +21,7 @@ struct ScanView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
                     .padding(.all, 2)
-                    .background(.adBackground)
+                    .background(.white)
             }
             ZStack {
                 QRCodeScanner(callback: { string in

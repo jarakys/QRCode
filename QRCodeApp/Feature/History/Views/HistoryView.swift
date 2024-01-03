@@ -38,7 +38,7 @@ struct HistoryView: View {
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
                     .padding(.all, 2)
-                    .background(.adBackground)
+                    .background(.white)
                     .padding(.top, 8)
             }
         }
