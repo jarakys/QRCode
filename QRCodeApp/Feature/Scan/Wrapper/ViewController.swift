@@ -7,9 +7,8 @@
 
 import QRCodeDetector
 import UIKit
-
+import Combine
 import SwiftUI
-
 import AVFoundation
 
 struct QRCodeScanner: UIViewControllerRepresentable {
@@ -32,6 +31,8 @@ class ViewController: UIViewController {
     private var previewLayer: QRCodeReaderPreviewLayer!
     private let metadataOutput = AVCaptureVideoDataOutput()
     
+    private var cancellable = Set<AnyCancellable>()
+    
     private var isConfigured = false
     
     private var qrCodeString: String?
@@ -47,6 +48,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PaywallViewModel.sender.sink(receiveValue: { [weak self] value in
+            guard value == .shouldStartSession else { return }
+            DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+                self?.captureSession.startRunning()
+            }
+        }).store(in: &cancellable)
     }
     
     override func willMove(toParent parent: UIViewController?) {

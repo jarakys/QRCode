@@ -16,15 +16,20 @@ final class PaywallViewModel: BaseViewModel {
     @Published public var showSucces = false
     public var error = PassthroughSubject<Error, Never>()
     
+    private let shouldStartSession: Bool
+    
     public let eventSender = PassthroughSubject<PaywallViewModel.Event, Never>()
     
     public var closeDidTap: (() -> Void)?
+    
+    static let sender = PassthroughSubject<PaywallViewModel.Event, Never>()
     
     public var buttonTitle: String {
         selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Get premium")
     }
 
-    init(closeDidTap: (() -> Void)? = nil) {
+    init(closeDidTap: (() -> Void)? = nil, shouldStartSession: Bool = false) {
+        self.shouldStartSession = shouldStartSession
         self.closeDidTap = closeDidTap
         items = [
             OfferViewModel(duration: "12 monthly", save: "Save 80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some1"),
@@ -51,12 +56,19 @@ final class PaywallViewModel: BaseViewModel {
             let result = await SubscriptionManager.shared.restorePurchases()
             guard result else { return }
             self?.showSucces = true
+            if self?.shouldStartSession == true {
+                Self.sender.send(.shouldStartSession)
+            }
+            
             self?.eventSender.send(.dismiss)
         }
     }
     
     public func closeTap() {
         closeDidTap?()
+        if shouldStartSession == true {
+            Self.sender.send(.shouldStartSession)
+        }
         eventSender.send(.dismiss)
     }
     
@@ -80,6 +92,7 @@ final class PaywallViewModel: BaseViewModel {
 extension PaywallViewModel {
     enum Event {
         case dismiss
+        case shouldStartSession
     }
 }
 
