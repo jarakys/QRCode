@@ -29,7 +29,7 @@ struct StartView: View {
         ZStack {
             VStack {
                 Spacer()
-                Text("QR code reader \n& scanner")
+                Text("QR Сode Reader | Scanner")
                     .font(.system(size: 28, weight: .bold))
                     .foregroundStyle(.primaryTitle)
                     .multilineTextAlignment(.center)

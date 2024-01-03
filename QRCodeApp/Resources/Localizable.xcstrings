@@ -2432,7 +2432,7 @@
         "ar" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "ساعدنا في تحسين QR Code Scanner | Reader"
+            "value" : "ساعدنا في تحسين\nQR Code Scanner | Reader"
           }
         },
         "de" : {
@@ -2444,19 +2444,19 @@
         "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ayúdanos a mejorar Lector Códigos Qr | Scanner"
+            "value" : "Ayúdanos a mejorar Lector\nCódigos Qr | Scanner"
           }
         },
         "fr" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Aidez-nous à améliorer QR Code Scanner | Generator"
+            "value" : "Aidez-nous à améliorer\nQR Code Scanner | Generator"
           }
         },
         "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Bantu kami meningkatkan QR Code | Barcode Scanner"
+            "value" : "Bantu kami meningkatkan\nQR Code | Barcode Scanner"
           }
         },
         "ja" : {
@@ -2474,25 +2474,25 @@
         "pt-PT" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ajude-nos a melhorar Leitor de Qr Code | Scanner"
+            "value" : "Ajude-nos a melhorar Leitor de\nQr Code | Scanner"
           }
         },
         "ru" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Помогите нам улучшить QR Code Сканер | Генератор"
+            "value" : "Помогите нам улучшить\nQR Code Сканер | Генератор"
           }
         },
         "uk" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Допоможіть нам покращити QR Code Сканер"
+            "value" : "Допоможіть нам покращити\nQR Code Сканер"
           }
         },
         "vi" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Hãy giúp chúng tôi cải thiện Quét Mã Qr | Mã Vạch"
+            "value" : "Hãy giúp chúng tôi cải thiện Quét Mã\nQr | Mã Vạch"
           }
         },
         "zh-Hant" : {
@@ -4697,6 +4697,7 @@
       }
     },
     "QR code reader \n& scanner" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hant" : {
           "stringUnit" : {
