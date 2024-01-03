@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11051D2E2B45BF4500688180 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 11051D2D2B45BF4500688180 /* RevenueCatUI */; };
 		110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */; };
 		110DC9D92B3B1D180046CBCD /* QRCodeEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */; };
 		110DC9DC2B3B1D2E0046CBCD /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */; };
@@ -348,6 +349,7 @@
 				114CF8DC2B4187B000FDD6CB /* GoogleMobileAds in Frameworks */,
 				112F36A42B3984B300016890 /* QRCodeDetector in Frameworks */,
 				112F36932B38D76500016890 /* QRCode in Frameworks */,
+				11051D2E2B45BF4500688180 /* RevenueCatUI in Frameworks */,
 				1170AF6E2B448012004255D7 /* StoreKit.framework in Frameworks */,
 				114CEBB42B3E16930088F3C3 /* CompositionalList in Frameworks */,
 				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
@@ -1139,6 +1141,7 @@
 				114CF8DF2B4419F000FDD6CB /* GoogleMobileAds */,
 				1170AF652B447FC9004255D7 /* ReceiptParser */,
 				1170AF672B447FC9004255D7 /* RevenueCat */,
+				11051D2D2B45BF4500688180 /* RevenueCatUI */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -1637,6 +1640,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		11051D2D2B45BF4500688180 /* RevenueCatUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */;
+			productName = RevenueCatUI;
+		};
 		112F36922B38D76500016890 /* QRCode */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 112F36912B38D76500016890 /* XCRemoteSwiftPackageReference "QRCode" */;

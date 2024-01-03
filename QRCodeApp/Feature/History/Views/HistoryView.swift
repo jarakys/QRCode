@@ -10,7 +10,6 @@ import Combine
 
 struct HistoryView: View {
     @StateObject public var viewModel: HistoryViewModel
-    @State private var multiSelection = Set<UUID>()
     @State var editMode = EditMode.inactive
     var body: some View {
         VStack {

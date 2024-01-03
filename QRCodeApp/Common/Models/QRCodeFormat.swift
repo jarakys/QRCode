@@ -143,7 +143,7 @@ public enum QRCodeFormat: String, CaseIterable {
             return nil
             
         case .location:
-            return nil
+            return String(localized: "Maps")
             
         case .telegram:
             return description
