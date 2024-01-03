@@ -93,6 +93,18 @@ struct HistoryResultQRCodeView: View {
                         .background(.primaryApp)
                         .cornerRadius(10)
                 })
+            } else if viewModel.qrCodeFormat == .text && viewModel.qrCodeString.starts(with: "http") {
+                Button(action: {
+                    UIApplication.shared.open(URL(string: viewModel.qrCodeString)!)
+                }, label: {
+                    Label("Open in Safari", image: "safariIcon")
+                        .font(.system(size: 13, weight: .semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 20)
+                        .padding(.vertical, 12)
+                        .background(.primaryApp)
+                        .cornerRadius(10)
+                })
             }
             
             Button(action: {
