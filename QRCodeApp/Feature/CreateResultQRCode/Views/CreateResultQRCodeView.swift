@@ -75,7 +75,7 @@ struct CreateResultQRCodeView: View {
                             .frame(maxWidth: .infinity)
                             .frame(height: 50)
                             .padding(.all, 2)
-                            .background(.white)
+                            .background(.clear)
                             .padding(.top, 24)
                     }
                     ForEach(viewModel.items, id: \.title) { item in

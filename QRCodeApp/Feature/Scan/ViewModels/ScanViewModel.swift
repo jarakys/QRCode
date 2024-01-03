@@ -22,8 +22,7 @@ final class ScanViewModel: BaseViewModel {
     private let keychainStorage = KeychainManager.shared
     
     public var scanCount: Int {
-        5
-//        KeychainManager.shared.get(key: .countScans, defaultValue: 0)
+        KeychainManager.shared.get(key: .countScans, defaultValue: 0)
     }
     
     init(navigationSender: PassthroughSubject<ScanEventFlow, Never>) {
@@ -42,7 +41,7 @@ final class ScanViewModel: BaseViewModel {
     }
     
     public func setRecognized(string: String) {
-        guard isPremium || Config.maxScansCount < scanCount  else {
+        guard isPremium || Config.maxScansCount > scanCount  else {
             showPremium = true
             return
         }
@@ -64,7 +63,7 @@ final class ScanViewModel: BaseViewModel {
     }
     
     public func detect(on image: Data) {
-        guard isPremium || Config.maxScansCount < scanCount  else {
+        guard isPremium || Config.maxScansCount > scanCount  else {
             showPremium = true
             return
         }

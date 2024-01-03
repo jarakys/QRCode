@@ -20,9 +20,9 @@ struct AdMobBannerView: UIViewControllerRepresentable {
         let view = GADBannerView(adSize: GADAdSizeBanner)
         view.backgroundColor = .colorBackground
         
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = .clear
         let customView = UIView()
-        customView.backgroundColor = UIColor.white
+        customView.backgroundColor = .clear
         
         let viewController = UIViewController()
         view.adUnitID = self.adUnitId

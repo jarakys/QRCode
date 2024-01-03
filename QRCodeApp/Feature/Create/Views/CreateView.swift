@@ -19,7 +19,7 @@ struct CreateView: View {
                 PersonalCell(model: model)
                     .cornerRadius(12)
                     .onTapGesture {
-                        guard viewModel.createCount < Config.maxCreatesCount else {
+                        guard (viewModel.createCount < Config.maxCreatesCount || viewModel.isPremium) else {
                             viewModel.premiumDidTap()
                             return
                         }

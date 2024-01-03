@@ -16,22 +16,27 @@ struct ScanView: View {
     @State var device = AVCaptureDevice.default(for: .video)
     var body: some View {
         VStack(spacing: 0) {
-            if !viewModel.isPremium {
-                AdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/9214589741")
-                    .frame(maxWidth: .infinity)
-                    .frame(height: 50)
-                    .padding(.all, 2)
-                    .background(.white)
-            }
             ZStack {
-                QRCodeScanner(callback: { string in
-                    viewModel.setRecognized(string: string)
-                })
                 VStack {
+                    if !viewModel.isPremium {
+                        AdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/9214589741")
+                            .frame(maxWidth: .infinity)
+                            .frame(height: 50)
+                            .padding(.all, 2)
+                            .background(.clear)
+                            .zIndex(2)
+                    }
                     Text("Place QR code or Barcode in frame")
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundStyle(.titleScan)
                         .frame(maxWidth: .infinity)
+                    Spacer()
+                }
+                .zIndex(2)
+                QRCodeScanner(callback: { string in
+                    viewModel.setRecognized(string: string)
+                })
+                VStack {
                     Spacer()
                     Spacer()
                     HStack(spacing: 16) {

@@ -59,7 +59,6 @@ class ViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        previewLayer?.frame = view.bounds
     }
     
     override func viewDidAppear(_ animated: Bool) {
