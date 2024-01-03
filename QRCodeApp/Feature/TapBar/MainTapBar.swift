@@ -56,7 +56,7 @@ struct MainTapBar: View {
             mainTapBarViewModel.showPremiumScreen()
         })
         .fullScreenCover(isPresented: $mainTapBarViewModel.showPremium, content: {
-            PaywallView(shouldStartSession: false, shouldRequestAd: true)
+            PaywallView(shouldStartSession: true, shouldRequestAd: true)
         })
     }
 }

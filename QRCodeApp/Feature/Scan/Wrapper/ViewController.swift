@@ -34,6 +34,7 @@ class ViewController: UIViewController {
     private var cancellable = Set<AnyCancellable>()
     
     private var isConfigured = false
+    private var shouldStart = false
     
     private var qrCodeString: String?
     private var detector: CIDetector? = CIDetector(ofType: CIDetectorTypeQRCode, context: nil, options: nil)
@@ -51,39 +52,31 @@ class ViewController: UIViewController {
         
         PaywallViewModel.sender.sink(receiveValue: { [weak self] value in
             guard value == .shouldStartSession else { return }
+            self?.shouldStart = true
             DispatchQueue.global(qos: .userInitiated).async { [weak self] in
                 self?.captureSession.startRunning()
             }
         }).store(in: &cancellable)
     }
     
-    override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-        print("moved")
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard isConfigured else { return }
+        guard shouldStart else { return }
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.startRunning()
         }
     }
-    
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-    }
-    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         guard (captureSession?.isRunning ?? false) == false else { return }
         guard !isConfigured else { return }
         configureQRCodeReader()
-        
-        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
-            self?.captureSession.startRunning()
-        }
+//        
+//        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+//            self?.captureSession.startRunning()
+//        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {

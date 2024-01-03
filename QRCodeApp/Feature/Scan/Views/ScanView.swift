@@ -36,6 +36,7 @@ struct ScanView: View {
                 QRCodeScanner(callback: { string in
                     viewModel.setRecognized(string: string)
                 })
+                .background(.black)
                 VStack {
                     Spacer()
                     Spacer()
