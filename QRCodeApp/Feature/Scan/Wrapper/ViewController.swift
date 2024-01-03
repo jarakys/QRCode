@@ -22,6 +22,7 @@ struct QRCodeScanner: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<QRCodeScanner>) {
+        print("update ept")
         // Update the view controller
     }
 }
@@ -54,6 +55,11 @@ class ViewController: UIViewController {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.startRunning()
         }
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        previewLayer?.frame = view.bounds
     }
     
     override func viewDidAppear(_ animated: Bool) {
