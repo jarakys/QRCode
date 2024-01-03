@@ -70,7 +70,25 @@ class BaseResultQRCodeViewModel: BaseViewModel {
     }
     
     public func shareIn(completion: @escaping (String) -> Void) {
-        completion(qrCodeString)
+        var deepLink = qrCodeString
+        switch qrCodeFormat {
+        case .sms:
+            let components = smstoConfigStringToDictionary(deepLink)
+            let phone = components["to"] ?? ""
+            let body = components["body"] ?? ""
+            deepLink = "sms:\(phone)&body=\(body)"
+            
+        case .location:
+            let components = geoConfigStringToDictionary(deepLink)
+            
+            let latitude = components["latitude"] ?? ""
+            let longitude = components["longitude"] ?? ""
+            deepLink = "http://maps.apple.com/?ll=\(latitude),\(longitude)"
+            
+        default: break
+        }
+        
+        completion(deepLink)
     }
     
     public func createFormat() {

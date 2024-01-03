@@ -182,17 +182,9 @@ class ViewController: UIViewController {
 // MARK: - CAAnimationDelegate
 extension ViewController: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        guard let qrCodeString else {
-            animationLayer?.isHidden = true
-            return
-        }
-        DispatchQueue.global(qos: .userInitiated).async {
-            self.captureSession.startRunning()
-            DispatchQueue.main.async {
-                self.animationLayer?.isHidden = true
-                self.callback?(qrCodeString)
-            }
-        }
+        animationLayer?.isHidden = true
+        guard let qrCodeString else { return }
+        callback?(qrCodeString)
     }
 }
 
