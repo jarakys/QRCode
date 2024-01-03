@@ -41,6 +41,14 @@ final class ScanViewModel: BaseViewModel {
     }
     
     public func setRecognized(string: String) {
+        let vibrationSelected = UserDefaultsService.shared.get(key: .vibrationSelected, defaultValue: true)
+        if vibrationSelected {
+            eventSender.send(.vibrate)
+        }
+        let soundSelected = UserDefaultsService.shared.get(key: .beepSelected, defaultValue: false)
+        if soundSelected {
+            eventSender.send(.sound)
+        }
         guard isPremium || Config.maxScansCount > scanCount  else {
             showPremium = true
             return
@@ -51,14 +59,6 @@ final class ScanViewModel: BaseViewModel {
             try keychainStorage.set(key: .countScans, value: scanCounts + 1)
         } catch {
             print("setRecognized keychainStorage countScans error: \(error)")
-        }
-        let vibrationSelected = UserDefaultsService.shared.get(key: .vibrationSelected, defaultValue: true)
-        if vibrationSelected {
-            eventSender.send(.vibrate)
-        }
-        let soundSelected = UserDefaultsService.shared.get(key: .beepSelected, defaultValue: false)
-        if soundSelected {
-            eventSender.send(.sound)
         }
     }
     

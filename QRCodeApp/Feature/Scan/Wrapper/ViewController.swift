@@ -49,6 +49,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func willMove(toParent parent: UIViewController?) {
+        super.willMove(toParent: parent)
+        print("moved")
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard isConfigured else { return }
@@ -60,6 +65,7 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
     }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -77,6 +83,7 @@ class ViewController: UIViewController {
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.stopRunning()
         }
+        print("dissappear")
     }
     
     private func configureQRCodeReader() {
@@ -175,9 +182,17 @@ class ViewController: UIViewController {
 // MARK: - CAAnimationDelegate
 extension ViewController: CAAnimationDelegate {
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        animationLayer?.isHidden = true
-        guard let qrCodeString else { return }
-        callback?(qrCodeString)
+        guard let qrCodeString else {
+            animationLayer?.isHidden = true
+            return
+        }
+        DispatchQueue.global(qos: .userInitiated).async {
+            self.captureSession.startRunning()
+            DispatchQueue.main.async {
+                self.animationLayer?.isHidden = true
+                self.callback?(qrCodeString)
+            }
+        }
     }
 }
 
