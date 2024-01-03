@@ -7,8 +7,6 @@
 
 import SwiftUI
 import Combine
-import RevenueCatUI
-import RevenueCat
 
 final class PaywallViewModel: BaseViewModel {
     @Published public var items = [OfferViewModel]()
@@ -23,7 +21,7 @@ final class PaywallViewModel: BaseViewModel {
     public var closeDidTap: (() -> Void)?
     
     public var buttonTitle: String {
-        selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Continue")
+        selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Get premium")
     }
 
     init(closeDidTap: (() -> Void)? = nil) {
@@ -139,49 +137,48 @@ struct PaywallView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        RevenueCatUI.PaywallView()
-//        ZStack {
-//            if viewModel.isInProgress {
-//                ProgressView()
-//                    .scaleEffect(2)
-//                    .progressViewStyle(CircularProgressViewStyle())
-//                    .tint(.primaryApp)
-//                    .zIndex(2)
-//            }
-//            VStack {
-//                ZStack(alignment: .leading) {
-//                    HStack {
-//                        Image(.closeIcon)
-//                            .onTapGesture {
-//                                viewModel.closeTap()
-//                            }
-//                        Spacer()
-//                    }
-//                    Text("QR Сode Reader | Scanner")
-//                        .font(.system(size: 15, weight: .semibold))
-//                        .foregroundStyle(.black)
-//                        .frame(maxWidth: .infinity, alignment: .center)
-//                }
-//                ScrollView {
-//                    Image(.paywall1Icon)
-//                    UnlimitedView()
-//                        .padding(.top, 4)
-//                }
-//                Spacer()
-//                if viewModel.isLoading {
-//                    ProgressView()
-//                        .progressViewStyle(CircularProgressViewStyle())
-//                        .tint(.primaryApp)
-//                        .scaleEffect(1.5)
-//                } else {
-//                    OfferView(viewModel: viewModel)
-//                }
-//            }
-//        }
-//        .padding(.horizontal, 16)
-//        .onReceive(viewModel.eventSender, perform: { event in
-//            dismiss()
-//        })
+        ZStack {
+            if viewModel.isInProgress {
+                ProgressView()
+                    .scaleEffect(2)
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .tint(.primaryApp)
+                    .zIndex(2)
+            }
+            VStack {
+                ZStack(alignment: .leading) {
+                    HStack {
+                        Image(.closeIcon)
+                            .onTapGesture {
+                                viewModel.closeTap()
+                            }
+                        Spacer()
+                    }
+                    Text("QR Сode Reader | Scanner")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, alignment: .center)
+                }
+                ScrollView {
+                    Image(.paywall1Icon)
+                    UnlimitedView()
+                        .padding(.top, 4)
+                }
+                Spacer()
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .tint(.primaryApp)
+                        .scaleEffect(1.5)
+                } else {
+                    OfferView(viewModel: viewModel)
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .onReceive(viewModel.eventSender, perform: { event in
+            dismiss()
+        })
     }
 }
 
