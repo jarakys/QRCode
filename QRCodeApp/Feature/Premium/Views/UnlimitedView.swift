@@ -15,6 +15,7 @@ final class PaywallViewModel: BaseViewModel {
     @Published public var isLoading: Bool = false
     @Published public var isInProgress: Bool = false
     @Published public var showSucces = false
+    @Published public var metadata: OfferMetadataModel?
     public var error = PassthroughSubject<Error, Never>()
     
     public var ad = OpenAd.shared
@@ -50,7 +51,7 @@ final class PaywallViewModel: BaseViewModel {
             self.selectedItem = items.first(where: { $0.id == "qr_999_1w_3d0" })
         }).store(in: &cancellable)
         SubscriptionManager.shared.$isLoading.assign(to: &$isLoading)
-        
+        SubscriptionManager.shared.$metadata.assign(to: &$metadata)
         SubscriptionManager.shared.$buyInProgress.assign(to: &$isInProgress)
     }
     
@@ -112,32 +113,34 @@ struct Paywall2View: View {
                     .tint(.primaryApp)
                     .zIndex(2)
             }
-            VStack {
-                ZStack(alignment: .leading) {
-                    HStack {
-                        Spacer()
-                        Image(.closeIcon)
-                            .onTapGesture {
-                                viewModel.closeTap()
-                            }
+            if let metadata = viewModel.metadata {
+                VStack {
+                    ZStack(alignment: .leading) {
+                        HStack {
+                            Spacer()
+                            Image(.closeIcon)
+                                .onTapGesture {
+                                    viewModel.closeTap()
+                                }
+                        }
+                        Text("QR Сode Reader | Scanner")
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundStyle(.black)
+                            .frame(maxWidth: .infinity, alignment: .center)
                     }
-                    Text("QR Сode Reader | Scanner")
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                }
-                ScrollView {
-                    Image(.paywall2Icon)
-                    UnlimitedView()
-                        .padding(.top, 4)
-                }
-                Spacer()
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .tint(.primaryApp)
-                } else {
-                    OfferView(viewModel: viewModel)
+                    ScrollView {
+                        Image(metadata.image)
+                        UnlimitedView(viewModel: viewModel)
+                            .padding(.top, 4)
+                    }
+                    Spacer()
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .tint(.primaryApp)
+                    } else {
+                        OfferView(viewModel: viewModel)
+                    }
                 }
             }
         }
@@ -177,41 +180,42 @@ struct PaywallView: View {
 //                }
 //            })
         ZStack {
-            if viewModel.isInProgress {
+            if let metadata = viewModel.metadata {
+                VStack {
+                    ZStack(alignment: .leading) {
+                        HStack {
+                            Image(.closeIcon)
+                                .onTapGesture {
+                                    dismiss()
+                                }
+                            Spacer()
+                        }
+                        Text("QR Сode Reader | Scanner")
+                            .font(.system(size: 15, weight: .semibold))
+                            .foregroundStyle(.black)
+                            .frame(maxWidth: .infinity, alignment: .center)
+                    }
+                    ScrollView {
+                        Image(metadata.image)
+                        UnlimitedView(viewModel: viewModel)
+                            .padding(.top, 4)
+                    }
+                    Spacer()
+                    if viewModel.isLoading {
+                        ProgressView()
+                            .progressViewStyle(CircularProgressViewStyle())
+                            .tint(.primaryApp)
+                            .scaleEffect(1.5)
+                    } else {
+                        OfferView(viewModel: viewModel)
+                    }
+                }
+            } else {
                 ProgressView()
                     .scaleEffect(2)
                     .progressViewStyle(CircularProgressViewStyle())
                     .tint(.primaryApp)
                     .zIndex(2)
-            }
-            VStack {
-                ZStack(alignment: .leading) {
-                    HStack {
-                        Image(.closeIcon)
-                            .onTapGesture {
-                                dismiss()
-                            }
-                        Spacer()
-                    }
-                    Text("QR Сode Reader | Scanner")
-                        .font(.system(size: 15, weight: .semibold))
-                        .foregroundStyle(.black)
-                        .frame(maxWidth: .infinity, alignment: .center)
-                }
-                ScrollView {
-                    Image(.paywall1Icon)
-                    UnlimitedView()
-                        .padding(.top, 4)
-                }
-                Spacer()
-                if viewModel.isLoading {
-                    ProgressView()
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .tint(.primaryApp)
-                        .scaleEffect(1.5)
-                } else {
-                    OfferView(viewModel: viewModel)
-                }
             }
         }
         .padding(.horizontal, 16)
@@ -346,6 +350,7 @@ struct OfferCell: View {
                 .foregroundStyle(.secondaryTitle)
         }
         .padding(.vertical, 17)
+        .frame(width: 105)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -390,8 +395,7 @@ struct SelectedOfferCell: View {
                 .foregroundStyle(.secondaryTitle)
         }
         .padding(.bottom, 17)
-//        .frame(width: 120)
-//        .padding(.horizontal, 12)
+        .frame(width: 108)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -401,43 +405,25 @@ struct SelectedOfferCell: View {
 }
 
 struct UnlimitedView: View {
+    @StateObject public var viewModel: PaywallViewModel
     var body: some View {
         HStack {
             Spacer()
             VStack(alignment: .center, spacing: 12) {
-                Text("Unlimited Access To All Features")
+                Text(viewModel.metadata!.finalTitle)
                     .foregroundStyle(.primaryTitle)
                     .font(.system(size: 22, weight: .bold))
                     .multilineTextAlignment(.center)
                     
                 VStack(alignment: .leading) {
-                    HStack(spacing: 8) {
-                        Image(.premiumScanIcon)
-                        Text("Unlimited Scans QR & Barcodes")
-                            .font(.system(size: 12))
-                            .foregroundStyle(.primaryTitle)
-                            .lineLimit(2)
-                    }
-                    HStack(spacing: 8) {
-                        Image(.premiumDesignIcon)
-                        Text("Custom Designed QR Codes")
-                            .font(.system(size: 12))
-                            .foregroundStyle(.primaryTitle)
-                            .lineLimit(2)
-                    }
-                    HStack(spacing: 8) {
-                        Image(.premiumGenerationIcon)
-                        Text("QR Code Generation for All Categories")
-                            .font(.system(size: 12))
-                            .foregroundStyle(.primaryTitle)
-                            .lineLimit(2)
-                    }
-                    HStack(spacing: 8) {
-                        Image(.noAdsIcon)
-                        Text("No Ads")
-                            .font(.system(size: 12))
-                            .foregroundStyle(.primaryTitle)
-                            .lineLimit(2)
+                    ForEach(viewModel.metadata!.icons, id: \.globalTitle) { item in
+                        HStack(spacing: 8) {
+                            Image(item.icon)
+                            Text(item.finalTitle)
+                                .font(.system(size: 12))
+                                .foregroundStyle(.primaryTitle)
+                                .lineLimit(2)
+                        }
                     }
                 }
                 .lineLimit(2)
@@ -451,5 +437,5 @@ struct UnlimitedView: View {
 }
 
 #Preview {
-    UnlimitedView()
+    UnlimitedView(viewModel: PaywallViewModel())
 }

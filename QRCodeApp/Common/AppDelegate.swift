@@ -17,6 +17,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         QRCodeContainer.document.design = .default()
         Purchases.logLevel = .debug
             Purchases.configure(withAPIKey: "appl_dxIHeWavHKqQjizlInXWoZipnmp", appUserID: "app762340d612")
+        _ = SubscriptionManager.shared
         KeychainManager.shared.keychain.clear()
         OpenAd.shared.requestAppOpenAd(completion: nil)
         return true

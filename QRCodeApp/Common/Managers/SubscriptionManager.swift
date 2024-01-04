@@ -9,6 +9,43 @@ import Foundation
 import Combine
 import RevenueCat
 
+struct ProductMetadataModel: Codable {
+    let duration: [String: String]
+    let globalDuration: String
+    let globalPer: String
+    let globalSelectedHint: String
+    let globalSave: String
+    let id: String
+    let per: [String: String]
+    let platformId: String
+    let save: [String: String]
+    let selectedHint: [String: String]
+}
+
+struct IconMetadataModel: Codable {
+    let icon: String
+    let title: [String: String]
+    let globalTitle: String
+    
+    var finalTitle: String {
+        let locale = Locale.autoupdatingCurrent.languageCode ?? "en_US"
+        return title[locale] ?? globalTitle
+    }
+}
+
+struct OfferMetadataModel: Codable {
+    let title: [String: String]
+    let globalTitle: String
+    let icons: [IconMetadataModel]
+    let products: [ProductMetadataModel]
+    let image: String
+    
+    var finalTitle: String {
+        let locale = Locale.autoupdatingCurrent.languageCode ?? "en_US"
+        return title[locale] ?? globalTitle
+    }
+}
+
 final class SubscriptionManager: ObservableObject {
     static let shared = SubscriptionManager()
     @Published public var isLoading = false
@@ -16,22 +53,33 @@ final class SubscriptionManager: ObservableObject {
     @Published public var buyInProgress: Bool = false
     @Published public var isPremium: Bool = false
     
+    @Published public var metadata: OfferMetadataModel?
+    
     public var error = PassthroughSubject<Error, Never>()
     
-    private var products = [StoreProduct]()
+    private var products = [Package]()
     
     init() {
         isLoading = true
         isPremium = Purchases.shared.cachedCustomerInfo?.activeSubscriptions.isEmpty != true
         Task { @MainActor [unowned self] in
-            let offerings = await Purchases.shared.products(["qr_1499_1m", "qr_999_1w_3d0", "qr_4999_1y"])
-            products = offerings
-            items.append(OfferViewModel(duration: String(localized: "12 monthly"), save: String(localized: "SAVE 80%"), price: offerings.first(where: { $0.productIdentifier == "qr_4999_1y" })?.localizedPriceString ?? "", per: String(localized: "per year"), hintSelected: String(localized: "Best value"), id: "qr_4999_1y"))
+            guard let currentOffer = try await Purchases.shared.offerings().current else {
+                isLoading = false
+                return
+            }
+            guard let offerMetadata: OfferMetadataModel = currentOffer.getMetadataValue(for: "offer") else { return }
+            self.metadata = offerMetadata
+            let locale = Locale.autoupdatingCurrent.languageCode ?? "en_US"
+            products = currentOffer.availablePackages
             
-            items.append(OfferViewModel(duration: String(localized: "7 Days"), save: String(localized: "3 FREE Days"), price: offerings.first(where: { $0.productIdentifier == "qr_999_1w_3d0" })?.localizedPriceString ?? "", per: String(localized: "per week"), hintSelected: String(localized: "MOST POPULAR"), id: "qr_999_1w_3d0"))
-            
-            items.append(OfferViewModel(duration: String(localized: "1 Month"), save: String(localized: "Save 53%"), price: offerings.first(where: { $0.productIdentifier == "qr_1499_1m" })?.localizedPriceString ?? "", per: String(localized: "per month"), hintSelected: String(localized: "SAVE 53%"), id: "qr_1499_1m"))
-            
+            products.enumerated().forEach({ package in
+                let productModel = offerMetadata.products[package.offset]
+                let duration = productModel.duration[locale] ?? productModel.globalDuration
+                let per = productModel.per[locale] ?? productModel.globalPer
+                let selectedHint = productModel.selectedHint[locale] ?? productModel.globalSelectedHint
+                let save = productModel.save[locale] ?? productModel.globalSave
+                items.append(OfferViewModel(duration: duration, save: save, price: package.element.localizedPriceString, per: per, hintSelected: selectedHint, id: package.element.storeProduct.productIdentifier))
+            })
             isLoading = false
         }
     }
@@ -59,12 +107,12 @@ final class SubscriptionManager: ObservableObject {
     }
     
     public func buy(id: String) async -> Bool {
-        guard let item = products.first(where: { $0.productIdentifier == id }) else { return false }
+        guard let item = products.first(where: { $0.storeProduct.productIdentifier == id }) else { return false }
         await MainActor.run(body: {
             buyInProgress = true
         })
         do {
-            let result = try await Purchases.shared.purchase(product: item)
+            let result = try await Purchases.shared.purchase(package: item)
             await MainActor.run(body: {
                 isPremium = !result.customerInfo.activeSubscriptions.isEmpty
                 buyInProgress = false
