@@ -30,6 +30,7 @@ struct ScanView: View {
                         .font(.system(size: 15, weight: .semibold))
                         .foregroundStyle(.titleScan)
                         .frame(maxWidth: .infinity)
+                        .padding(.top, 10)
                     Spacer()
                 }
                 .zIndex(2)

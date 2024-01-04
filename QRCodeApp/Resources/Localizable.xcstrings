@@ -2225,6 +2225,7 @@
       }
     },
     "Get a free trial" : {
+      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

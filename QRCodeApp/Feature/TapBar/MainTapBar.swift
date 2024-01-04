@@ -51,6 +51,7 @@ struct MainTapBar: View {
         .ignoresSafeArea(.keyboard)
         .onAppear(perform: {
             guard !mainTapBarViewModel.isPremium else {
+                ViewController.shouldStart = true
                 return
             }
             mainTapBarViewModel.showPremiumScreen()

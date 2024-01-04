@@ -20,6 +20,8 @@ struct ProductMetadataModel: Codable {
     let platformId: String
     let save: [String: String]
     let selectedHint: [String: String]
+    let globalBuyButtonTitle: String
+    let buyButtonTitle: [String: String]
 }
 
 struct IconMetadataModel: Codable {
@@ -78,7 +80,8 @@ final class SubscriptionManager: ObservableObject {
                 let per = productModel.per[locale] ?? productModel.globalPer
                 let selectedHint = productModel.selectedHint[locale] ?? productModel.globalSelectedHint
                 let save = productModel.save[locale] ?? productModel.globalSave
-                items.append(OfferViewModel(duration: duration, save: save, price: package.element.localizedPriceString, per: per, hintSelected: selectedHint, id: package.element.storeProduct.productIdentifier))
+                let buyButtonTitle = productModel.buyButtonTitle[locale] ?? productModel.globalBuyButtonTitle
+                items.append(OfferViewModel(duration: duration, save: save, price: package.element.localizedPriceString, per: per, hintSelected: selectedHint, id: package.element.storeProduct.productIdentifier, buyButtonTitle: buyButtonTitle))
             })
             isLoading = false
         }

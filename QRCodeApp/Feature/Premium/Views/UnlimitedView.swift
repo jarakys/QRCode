@@ -29,17 +29,12 @@ final class PaywallViewModel: BaseViewModel {
     static let sender = PassthroughSubject<PaywallViewModel.Event, Never>()
     
     public var buttonTitle: String {
-        selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Continue")
+        selectedItem?.buyButtonTitle ?? String(localized: "Continue")
     }
 
     init(closeDidTap: (() -> Void)? = nil, shouldStartSession: Bool = false) {
         self.shouldStartSession = shouldStartSession
         self.closeDidTap = closeDidTap
-        items = [
-            OfferViewModel(duration: "12 monthly", save: "Save 80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some1"),
-            OfferViewModel(duration: "7 days", save: "Save 80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some2"),
-            OfferViewModel(duration: "7 days", save: "80%", price: "$59.99", per: "Year", hintSelected: "Most popular", id: "com.id.some3")
-        ]
     }
     
     override func bind() {
@@ -227,6 +222,10 @@ struct PaywallView: View {
                 viewModel.ad.tryToPresentAd()
             }
         })
+        .onReceive(viewModel.eventSender, perform: { event in
+            guard event == .dismiss else { return }
+            dismiss()
+        })
     }
 }
 
@@ -312,8 +311,9 @@ final class OfferViewModel: ObservableObject {
     public let per: String
     public let hintSelected: String
     public let id: String
+    public let buyButtonTitle: String
     
-    init(isSelected: Bool = false, duration: String, save: String, price: String, per: String, hintSelected: String, id: String) {
+    init(isSelected: Bool = false, duration: String, save: String, price: String, per: String, hintSelected: String, id: String, buyButtonTitle: String) {
         self.isSelected = isSelected
         self.duration = duration
         self.save = save
@@ -321,6 +321,7 @@ final class OfferViewModel: ObservableObject {
         self.per = per
         self.hintSelected = hintSelected
         self.id = id
+        self.buyButtonTitle = buyButtonTitle
     }
 }
 
