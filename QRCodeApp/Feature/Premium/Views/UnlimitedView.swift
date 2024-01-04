@@ -189,7 +189,7 @@ struct PaywallView: View {
                     HStack {
                         Image(.closeIcon)
                             .onTapGesture {
-                                viewModel.closeTap()
+                                dismiss()
                             }
                         Spacer()
                     }
@@ -426,7 +426,7 @@ struct UnlimitedView: View {
                             .lineLimit(2)
                     }
                     HStack(spacing: 8) {
-                        Image(.premiumDesignIcon)
+                        Image(.premiumGenerationIcon)
                         Text("QR Code Generation for All Categories")
                             .font(.system(size: 12))
                             .foregroundStyle(.primaryTitle)

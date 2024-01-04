@@ -22,7 +22,7 @@ final class OpenAd: NSObject, GADFullScreenContentDelegate {
                           orientation: UIInterfaceOrientation.portrait,
                           completionHandler: { (appOpenAdIn, _) in
             self.appOpenAd = appOpenAdIn
-            self.appOpenAd!.fullScreenContentDelegate = self
+            self.appOpenAd?.fullScreenContentDelegate = self
             self.loadTime = Date()
             completion?()
         })

@@ -63,9 +63,17 @@ struct StartView: View {
                     .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundStyle(.titleTextField)
                     .font(.system(size: 12))
-                Link("Privacy Policy", destination:
-                    URL(string: "https://qrscanread.com/privacy.html")!
-                )
+                HStack(alignment: .center, spacing: 0) {
+                    Link(String(localized: "Privacy Policy1"), destination:
+                        URL(string: "https://qrscanread.com/privacy.html")!
+                    )
+                    Text(",")
+                        .frame(width: 2)
+                    Link("Terms of use", destination:
+                            URL(string: "https://qrscanread.com/terms.html")!
+                    )
+                    .padding(.leading, 8)
+                }
                 .font(.system(size: 12))
                 .padding(.bottom, 30)
                 Button(action: {
