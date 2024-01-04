@@ -2268,9 +2268,6 @@
         }
       }
     },
-    "Get premium" : {
-
-    },
     "Get unlimited access to all functions of the app" : {
       "localizations" : {
         "ar" : {
@@ -2439,6 +2436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Helfen Sie uns, QR Сode Scanner | Reader zu verbessern"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Help us improve\nQR Сode Reader | Scanner"
           }
         },
         "es" : {

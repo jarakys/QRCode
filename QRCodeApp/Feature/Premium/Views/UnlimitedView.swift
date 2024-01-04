@@ -17,6 +17,8 @@ final class PaywallViewModel: BaseViewModel {
     @Published public var showSucces = false
     public var error = PassthroughSubject<Error, Never>()
     
+    public var ad = OpenAd.shared
+    
     private let shouldStartSession: Bool
     
     public let eventSender = PassthroughSubject<PaywallViewModel.Event, Never>()
@@ -26,7 +28,7 @@ final class PaywallViewModel: BaseViewModel {
     static let sender = PassthroughSubject<PaywallViewModel.Event, Never>()
     
     public var buttonTitle: String {
-        selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Get premium")
+        selectedItem?.id == "qr_999_1w_3d0" ? String(localized: "Get a free trial") : String(localized: "Continue")
     }
 
     init(closeDidTap: (() -> Void)? = nil, shouldStartSession: Bool = false) {
@@ -151,71 +153,76 @@ final class PaywallViewModelTest: ObservableObject {
 }
 
 struct PaywallView: View {
-//    @StateObject public var viewModel: PaywallViewModel
+    @StateObject public var viewModel = PaywallViewModel()
     @Environment(\.dismiss) var dismiss
-    @StateObject var viewModel = PaywallViewModelTest()
+//    @StateObject var viewModel = PaywallViewModelTest()
     
     public var shouldStartSession: Bool
     public var shouldRequestAd: Bool
     
     var body: some View {
-        RevenueCatUI.PaywallView(displayCloseButton: true)
-            .onRestoreCompleted({ value in
-                SubscriptionManager.shared.isPremium = !value.entitlements.active.isEmpty
-            })
-            .onPurchaseCompleted({ value in
-                SubscriptionManager.shared.isPremium = !value.entitlements.active.isEmpty
-            })
-            .onDisappear(perform: {
-                if shouldStartSession {
-                    PaywallViewModel.sender.send(.shouldStartSession)
+//        RevenueCatUI.PaywallView(displayCloseButton: true)
+//            .onRestoreCompleted({ value in
+//                SubscriptionManager.shared.isPremium = !value.entitlements.active.isEmpty
+//            })
+//            .onPurchaseCompleted({ value in
+//                SubscriptionManager.shared.isPremium = !value.entitlements.active.isEmpty
+//            })
+//            .onDisappear(perform: {
+//                if shouldStartSession {
+//                    PaywallViewModel.sender.send(.shouldStartSession)
+//                }
+//                if shouldRequestAd, !SubscriptionManager.shared.isPremium {
+//                    viewModel.ad.tryToPresentAd()
+//                }
+//            })
+        ZStack {
+            if viewModel.isInProgress {
+                ProgressView()
+                    .scaleEffect(2)
+                    .progressViewStyle(CircularProgressViewStyle())
+                    .tint(.primaryApp)
+                    .zIndex(2)
+            }
+            VStack {
+                ZStack(alignment: .leading) {
+                    HStack {
+                        Image(.closeIcon)
+                            .onTapGesture {
+                                viewModel.closeTap()
+                            }
+                        Spacer()
+                    }
+                    Text("QR Сode Reader | Scanner")
+                        .font(.system(size: 15, weight: .semibold))
+                        .foregroundStyle(.black)
+                        .frame(maxWidth: .infinity, alignment: .center)
                 }
-                if shouldRequestAd, !SubscriptionManager.shared.isPremium {
-                    viewModel.ad.tryToPresentAd()
+                ScrollView {
+                    Image(.paywall1Icon)
+                    UnlimitedView()
+                        .padding(.top, 4)
                 }
-            })
-//        ZStack {
-//            if viewModel.isInProgress {
-//                ProgressView()
-//                    .scaleEffect(2)
-//                    .progressViewStyle(CircularProgressViewStyle())
-//                    .tint(.primaryApp)
-//                    .zIndex(2)
-//            }
-//            VStack {
-//                ZStack(alignment: .leading) {
-//                    HStack {
-//                        Image(.closeIcon)
-//                            .onTapGesture {
-//                                viewModel.closeTap()
-//                            }
-//                        Spacer()
-//                    }
-//                    Text("QR Сode Reader | Scanner")
-//                        .font(.system(size: 15, weight: .semibold))
-//                        .foregroundStyle(.black)
-//                        .frame(maxWidth: .infinity, alignment: .center)
-//                }
-//                ScrollView {
-//                    Image(.paywall1Icon)
-//                    UnlimitedView()
-//                        .padding(.top, 4)
-//                }
-//                Spacer()
-//                if viewModel.isLoading {
-//                    ProgressView()
-//                        .progressViewStyle(CircularProgressViewStyle())
-//                        .tint(.primaryApp)
-//                        .scaleEffect(1.5)
-//                } else {
-//                    OfferView(viewModel: viewModel)
-//                }
-//            }
-//        }
-//        .padding(.horizontal, 16)
-//        .onReceive(viewModel.eventSender, perform: { event in
-//            dismiss()
-//        })
+                Spacer()
+                if viewModel.isLoading {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .tint(.primaryApp)
+                        .scaleEffect(1.5)
+                } else {
+                    OfferView(viewModel: viewModel)
+                }
+            }
+        }
+        .padding(.horizontal, 16)
+        .onDisappear(perform: {
+            if shouldStartSession {
+                PaywallViewModel.sender.send(.shouldStartSession)
+            }
+            if shouldRequestAd, !SubscriptionManager.shared.isPremium {
+                viewModel.ad.tryToPresentAd()
+            }
+        })
     }
 }
 
@@ -328,6 +335,7 @@ struct OfferCell: View {
                 .cornerRadius(3)
                 .foregroundStyle(.white)
                 .padding(.top, 4)
+                .padding(.horizontal, 6)
             Text(viewModel.price)
                 .font(.system(size: 15, weight: .regular))
                 .foregroundStyle(.primaryTitle)
@@ -338,7 +346,6 @@ struct OfferCell: View {
                 .foregroundStyle(.secondaryTitle)
         }
         .padding(.vertical, 17)
-        .frame(width: 105)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -360,6 +367,7 @@ struct SelectedOfferCell: View {
                 .padding(.top, 4)
                 .padding(.bottom, 2)
                 .background(.primaryApp)
+                .minimumScaleFactor(0.9)
             Text(viewModel.duration)
                 .font(.system(size: 11))
                 .foregroundStyle(.primaryTitle)
@@ -371,6 +379,7 @@ struct SelectedOfferCell: View {
                 .cornerRadius(3)
                 .foregroundStyle(.white)
                 .padding(.top, 4)
+                .padding(.horizontal, 6)
             Text(viewModel.price)
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundStyle(.primaryTitle)
@@ -381,7 +390,8 @@ struct SelectedOfferCell: View {
                 .foregroundStyle(.secondaryTitle)
         }
         .padding(.bottom, 17)
-        .frame(width: 108)
+//        .frame(width: 120)
+//        .padding(.horizontal, 12)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
