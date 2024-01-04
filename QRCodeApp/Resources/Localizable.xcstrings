@@ -11,7 +11,6 @@
 
     },
     "1 Month" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -88,7 +87,6 @@
       }
     },
     "3 FREE Days" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -165,7 +163,6 @@
       }
     },
     "7 Days" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -242,7 +239,6 @@
       }
     },
     "12 monthly" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -465,7 +461,6 @@
       }
     },
     "Best value" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -1681,7 +1676,6 @@
       }
     },
     "Custom Designed QR Codes" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3462,7 +3456,6 @@
       }
     },
     "MOST POPULAR" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3613,7 +3606,6 @@
       }
     },
     "No Ads" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -3994,7 +3986,6 @@
       }
     },
     "per month" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4071,7 +4062,6 @@
       }
     },
     "per week" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4148,7 +4138,6 @@
       }
     },
     "per year" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -4755,7 +4744,6 @@
 
     },
     "QR Code Generation for All Categories" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5385,7 +5373,6 @@
       }
     },
     "Save 53%" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5462,7 +5449,6 @@
       }
     },
     "SAVE 53%" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -5539,7 +5525,6 @@
       }
     },
     "SAVE 80%" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {
@@ -7352,7 +7337,6 @@
       }
     },
     "Unlimited Scans QR & Barcodes" : {
-      "extractionState" : "stale",
       "localizations" : {
         "ar" : {
           "stringUnit" : {

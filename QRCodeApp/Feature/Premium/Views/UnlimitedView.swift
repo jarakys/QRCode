@@ -341,6 +341,8 @@ struct OfferCell: View {
                 .foregroundStyle(.white)
                 .padding(.top, 4)
                 .padding(.horizontal, 6)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
             Text(viewModel.price)
                 .font(.system(size: 15, weight: .regular))
                 .foregroundStyle(.primaryTitle)
@@ -351,7 +353,7 @@ struct OfferCell: View {
                 .foregroundStyle(.secondaryTitle)
         }
         .padding(.vertical, 17)
-        .frame(width: 105)
+        .frame(width: 112)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)
@@ -373,7 +375,8 @@ struct SelectedOfferCell: View {
                 .padding(.top, 4)
                 .padding(.bottom, 2)
                 .background(.primaryApp)
-                .minimumScaleFactor(0.9)
+                .minimumScaleFactor(0.8)
+                .lineLimit(1)
             Text(viewModel.duration)
                 .font(.system(size: 11))
                 .foregroundStyle(.primaryTitle)
@@ -385,7 +388,8 @@ struct SelectedOfferCell: View {
                 .cornerRadius(3)
                 .foregroundStyle(.white)
                 .padding(.top, 4)
-                .padding(.horizontal, 6)
+                .lineLimit(1)
+//                .minimumScaleFactor(0.8)
             Text(viewModel.price)
                 .font(.system(size: 16, weight: .semibold))
                 .foregroundStyle(.primaryTitle)
@@ -396,7 +400,7 @@ struct SelectedOfferCell: View {
                 .foregroundStyle(.secondaryTitle)
         }
         .padding(.bottom, 17)
-        .frame(width: 108)
+        .frame(width: 118)
         .cornerRadius(10)
         .overlay(
             RoundedRectangle(cornerRadius: 10)

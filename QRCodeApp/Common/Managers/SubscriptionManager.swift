@@ -10,16 +10,7 @@ import Combine
 import RevenueCat
 
 struct ProductMetadataModel: Codable {
-    let duration: [String: String]
-    let globalDuration: String
-    let globalPer: String
-    let globalSelectedHint: String
-    let globalSave: String
-    let id: String
-    let per: [String: String]
     let platformId: String
-    let save: [String: String]
-    let selectedHint: [String: String]
     let globalBuyButtonTitle: String
     let buyButtonTitle: [String: String]
 }
@@ -38,7 +29,12 @@ struct IconMetadataModel: Codable {
 struct OfferMetadataModel: Codable {
     let title: [String: String]
     let globalTitle: String
-    let icons: [IconMetadataModel]
+    let icons: [IconMetadataModel] = [
+        IconMetadataModel(icon: "premiumScanIcon", title: [:], globalTitle: String(localized: "Unlimited Scans QR & Barcodes")),
+        IconMetadataModel(icon: "premiumDesignIcon", title: [:], globalTitle: String(localized: "Custom Designed QR Codes")),
+        IconMetadataModel(icon: "premiumGenerationIcon", title: [:], globalTitle: String(localized: "QR Code Generation for All Categories")),
+        IconMetadataModel(icon: "noAdsIcon", title: [:], globalTitle: String(localized: "No Ads"))
+    ]
     let products: [ProductMetadataModel]
     let image: String
     
@@ -63,7 +59,7 @@ final class SubscriptionManager: ObservableObject {
     
     init() {
         isLoading = true
-        isPremium = Purchases.shared.cachedCustomerInfo?.activeSubscriptions.isEmpty != true
+        isPremium = false//Purchases.shared.cachedCustomerInfo?.activeSubscriptions.isEmpty != true
         Task { @MainActor [unowned self] in
             guard let currentOffer = try await Purchases.shared.offerings().current else {
                 isLoading = false
@@ -73,13 +69,16 @@ final class SubscriptionManager: ObservableObject {
             self.metadata = offerMetadata
             let locale = Locale.autoupdatingCurrent.languageCode ?? "en_US"
             products = currentOffer.availablePackages
-            
+            let durations = [String(localized: "12 monthly"), String(localized: "7 Days"), String(localized: "1 Month")]
+            let pers = [String(localized: "per year"), String(localized: "per week"), String(localized: "per month")]
+            let selectedHints = [String(localized: "Best value"), String(localized: "MOST POPULAR"), String(localized: "SAVE 53%")]
+            let saves = [String(localized: "SAVE 80%"), String(localized: "3 FREE Days"), String(localized: "Save 53%")]
             products.enumerated().forEach({ package in
                 let productModel = offerMetadata.products[package.offset]
-                let duration = productModel.duration[locale] ?? productModel.globalDuration
-                let per = productModel.per[locale] ?? productModel.globalPer
-                let selectedHint = productModel.selectedHint[locale] ?? productModel.globalSelectedHint
-                let save = productModel.save[locale] ?? productModel.globalSave
+                let duration = durations[package.offset]
+                let per = pers[package.offset]
+                let selectedHint = selectedHints[package.offset]
+                let save = saves[package.offset]
                 let buyButtonTitle = productModel.buyButtonTitle[locale] ?? productModel.globalBuyButtonTitle
                 items.append(OfferViewModel(duration: duration, save: save, price: package.element.localizedPriceString, per: per, hintSelected: selectedHint, id: package.element.storeProduct.productIdentifier, buyButtonTitle: buyButtonTitle))
             })
