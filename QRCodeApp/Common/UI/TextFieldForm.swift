@@ -24,8 +24,9 @@ struct TextFieldForm: View {
                 }
             }
             if !SubscriptionManager.shared.isPremium {
-                BigAdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/6300978111")
+                BigAdMobBannerView(adUnitId: "ca-app-pub-4295606907432979/5196526328")
                     .padding(.top, 24)
+                    .background(.clear)
             }
         }
     }

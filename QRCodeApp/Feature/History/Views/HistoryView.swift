@@ -33,7 +33,7 @@ struct HistoryView: View {
                     .padding(.bottom, 39)
             }
             if !viewModel.isPremium {
-                AdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/9214589741")
+                AdMobBannerView(adUnitId: "ca-app-pub-4295606907432979/5196526328")
                     .frame(maxWidth: .infinity)
                     .frame(height: 50)
                     .padding(.all, 2)

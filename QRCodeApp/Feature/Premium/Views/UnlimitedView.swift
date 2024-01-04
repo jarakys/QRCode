@@ -180,7 +180,7 @@ struct PaywallView: View {
 //                }
 //            })
         ZStack {
-            if let metadata = viewModel.metadata {
+            if let metadata = viewModel.metadata, !viewModel.isInProgress {
                 VStack {
                     ZStack(alignment: .leading) {
                         HStack {

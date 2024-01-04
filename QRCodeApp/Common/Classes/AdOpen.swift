@@ -17,7 +17,7 @@ final class OpenAd: NSObject, GADFullScreenContentDelegate {
     
     func requestAppOpenAd(completion: (() -> Void)?) {
         let request = GADRequest()
-        GADAppOpenAd.load(withAdUnitID: "ca-app-pub-3940256099942544/9257395921",
+        GADAppOpenAd.load(withAdUnitID: "ca-app-pub-4295606907432979/9006621270",
                           request: request,
                           orientation: UIInterfaceOrientation.portrait,
                           completionHandler: { (appOpenAdIn, _) in

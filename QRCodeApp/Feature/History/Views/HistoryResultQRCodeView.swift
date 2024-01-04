@@ -32,7 +32,7 @@ struct HistoryResultQRCodeView: View {
                         .font(.system(size: 13))
                         .foregroundStyle(.titleTextField)
                     if !viewModel.isPremium {
-                        AdMobBannerView(adUnitId: "ca-app-pub-3940256099942544/9214589741")
+                        AdMobBannerView(adUnitId: "ca-app-pub-4295606907432979/51965263281")
                             .frame(maxWidth: .infinity)
                             .frame(height: 50)
                             .padding(.all, 2)
