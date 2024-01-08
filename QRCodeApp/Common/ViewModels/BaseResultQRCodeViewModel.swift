@@ -85,6 +85,12 @@ class BaseResultQRCodeViewModel: BaseViewModel {
             let longitude = components["longitude"] ?? ""
             deepLink = "http://maps.apple.com/?ll=\(latitude),\(longitude)"
             
+        case .url:
+            let componentns = urlConfigStringToDictionary(deepLink)
+            
+            let url = componentns["url"] ?? ""
+            deepLink = url
+            
         default: break
         }
         
