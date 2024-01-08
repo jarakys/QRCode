@@ -7,7 +7,6 @@
 
 import SwiftUI
 import Combine
-import RevenueCatUI
 
 final class PaywallViewModel: BaseViewModel {
     @Published public var items = [OfferViewModel]()

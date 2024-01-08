@@ -40,7 +40,12 @@ final class CreateContentLinkViewModel: BaseViewModel {
             showPremium = true
             return
         }
-        let finalString = String(format: format.format, arguments: items.map({ $0.text }))
+        var items = items.map({ $0.text })
+        if format == .wifi {
+            items.insert("", at: 1)
+            items.insert("", at: 3)
+        }
+        let finalString = String(format: format.format, arguments: items)
         guard !finalString.isEmpty, !finalString.replacingOccurrences(of: " ", with: "").isEmpty else { return }
         navigationSender.send(.result(finalString: finalString, type: format))
     }

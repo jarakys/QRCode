@@ -458,8 +458,8 @@
             filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "makeUIViewController(context:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -474,8 +474,8 @@
             filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "makeUIViewController(context:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -490,9 +490,9 @@
             filePath = "QRCodeApp/Common/ViewModels/BaseResultQRCodeViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
-            landmarkName = "createFormat()"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "share()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -570,105 +570,9 @@
             filePath = "QRCodeApp/Feature/History/ViewModels/HistoryViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "155"
-            endingLineNumber = "155"
-            landmarkName = "editListDidTap(isEditing:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6CB31D45-FF66-46DC-AD01-D3A450385B7C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QRCodeApp/Feature/History/ViewModels/HistoryViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "editListDidTap(isEditing:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1A7BB97-D0F4-477D-889A-30333BF64715"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QRCodeApp/Feature/History/ViewModels/HistoryViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "bind()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2C5B52F7-16C8-4655-98E1-3A6B33FE10EB"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QRCodeApp/Feature/History/ViewModels/HistoryViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "createDidTap()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "776E6913-B824-48FB-8F27-E26B26D76988"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QRCodeApp/Feature/History/Views/HistoryView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "169"
-            endingLineNumber = "169"
-            landmarkName = "emptyState()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF99E939-FDC4-466C-96AE-571175EB62F3"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QRCodeApp/Feature/History/Views/HistoryView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "164"
-            endingLineNumber = "164"
-            landmarkName = "emptyState()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "38B919BE-0387-4B33-A86C-E4EBF77C8B11"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "QRCodeApp/Feature/History/ViewModels/HistoryViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
-            landmarkName = "scanDidTap()"
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "filter(sortType:items:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -676,7 +580,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "55ABA0C6-5361-4A4F-B6F3-B9076769C881"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
@@ -686,13 +590,45 @@
             endingLineNumber = "38"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "55ABA0C6-5361-4A4F-B6F3-B9076769C881 - fd608fb87809356"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (QRCodeApp.HistoryEventFlow) -&gt; () in QRCodeApp.HistoryCoordinatorView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "708">
+               </Location>
+               <Location
+                  uuid = "55ABA0C6-5361-4A4F-B6F3-B9076769C881 - fd608fb87809356"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (QRCodeApp.HistoryEventFlow) -&gt; () in QRCodeApp.HistoryCoordinatorView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "616">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "DEBDCD20-A82E-4FD1-BA58-9DF8B21A9230"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
@@ -702,6 +638,2672 @@
             endingLineNumber = "41"
             landmarkName = "body"
             landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "DEBDCD20-A82E-4FD1-BA58-9DF8B21A9230 - fd608fb878093c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (QRCodeApp.HistoryEventFlow) -&gt; () in QRCodeApp.HistoryCoordinatorView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "764">
+               </Location>
+               <Location
+                  uuid = "DEBDCD20-A82E-4FD1-BA58-9DF8B21A9230 - fd608fb878093c9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (QRCodeApp.HistoryEventFlow) -&gt; () in QRCodeApp.HistoryCoordinatorView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "42"
+                  endingLineNumber = "42"
+                  offsetFromSymbolStart = "672">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D03ED208-320B-4F37-8F4C-F3D40664A7BB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/CreateResultQRCode/Views/DetailedChangeDesignView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B9CACAF-A2C2-40B7-924B-4399F9E6D1CC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "104"
+            endingLineNumber = "104"
+            landmarkName = "bind()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4B9CACAF-A2C2-40B7-924B-4399F9E6D1CC - c0c03c8d05667f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "836">
+               </Location>
+               <Location
+                  uuid = "4B9CACAF-A2C2-40B7-924B-4399F9E6D1CC - c0c03c8d05667f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+               <Location
+                  uuid = "4B9CACAF-A2C2-40B7-924B-4399F9E6D1CC - c0c03c8d05667f40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "115"
+                  endingLineNumber = "115"
+                  offsetFromSymbolStart = "1620">
+               </Location>
+               <Location
+                  uuid = "4B9CACAF-A2C2-40B7-924B-4399F9E6D1CC - c0c03c8d05667f02"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (QRCodeApp.ResultEventBus) -&gt; () in QRCodeApp.CreateResultQRCodeViewModel.bind() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/ViewModels/CreateResultQRCodeViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
+                  offsetFromSymbolStart = "1120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "98F38D51-140B-4A4C-B1E4-C1ED8A0DDA99"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "281"
+            endingLineNumber = "281"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB4BD397-D671-4CF0-833E-BA5C5483A552"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "280"
+            endingLineNumber = "280"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DDA38F1E-B86C-4B35-A959-573A8E07FF52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC26BBE8-436A-49C5-972D-9048A7DEB060"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CF8985B7-8912-47F5-82AD-3107C85B5012"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "258"
+            endingLineNumber = "258"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CF8985B7-8912-47F5-82AD-3107C85B5012 - 7845853dd17b4bf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CIImage, Swift.Array&lt;__C.CIQRCodeFeature&gt;) -&gt; () in QRCodeApp.ViewController2.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "2348">
+               </Location>
+               <Location
+                  uuid = "CF8985B7-8912-47F5-82AD-3107C85B5012 - 7845853dd17b4bf1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CIImage, Swift.Array&lt;__C.CIQRCodeFeature&gt;) -&gt; () in QRCodeApp.ViewController2.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "2344">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DEAB0756-0C5B-422F-88F5-0D503F55B761"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "254"
+            endingLineNumber = "254"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DEAB0756-0C5B-422F-88F5-0D503F55B761 - 7845853dd17b4d21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CIImage, Swift.Array&lt;__C.CIQRCodeFeature&gt;) -&gt; () in QRCodeApp.ViewController2.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "250"
+                  endingLineNumber = "250"
+                  offsetFromSymbolStart = "1856">
+               </Location>
+               <Location
+                  uuid = "DEAB0756-0C5B-422F-88F5-0D503F55B761 - 7845853dd17b4d0e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CIImage, Swift.Array&lt;__C.CIQRCodeFeature&gt;) -&gt; () in QRCodeApp.ViewController2.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "251"
+                  endingLineNumber = "251"
+                  offsetFromSymbolStart = "1756">
+               </Location>
+               <Location
+                  uuid = "DEAB0756-0C5B-422F-88F5-0D503F55B761 - 7845853dd17b4cad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CIImage, Swift.Array&lt;__C.CIQRCodeFeature&gt;) -&gt; () in QRCodeApp.ViewController2.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "1756">
+               </Location>
+               <Location
+                  uuid = "DEAB0756-0C5B-422F-88F5-0D503F55B761 - 7845853dd17b4cad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.CIImage, Swift.Array&lt;__C.CIQRCodeFeature&gt;) -&gt; () in QRCodeApp.ViewController2.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "254"
+                  endingLineNumber = "254"
+                  offsetFromSymbolStart = "1096">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9E769CBB-03BA-450B-81D8-53D807F145F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "isInsideLayer(fullImage:feature:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "9E769CBB-03BA-450B-81D8-53D807F145F0 - bbb284bb251aa643"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.isInsideLayer(fullImage: __C.CIImage, feature: __C.CIQRCodeFeature) -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1104">
+               </Location>
+               <Location
+                  uuid = "9E769CBB-03BA-450B-81D8-53D807F145F0 - bbb284bb251aa643"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.isInsideLayer(fullImage: __C.CIImage, feature: __C.CIQRCodeFeature) -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1096">
+               </Location>
+               <Location
+                  uuid = "9E769CBB-03BA-450B-81D8-53D807F145F0 - bbb284bb251aa643"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.isInsideLayer(fullImage: __C.CIImage, feature: __C.CIQRCodeFeature) -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1112">
+               </Location>
+               <Location
+                  uuid = "9E769CBB-03BA-450B-81D8-53D807F145F0 - bbb284bb251aa643"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.isInsideLayer(fullImage: __C.CIImage, feature: __C.CIQRCodeFeature) -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "146"
+                  endingLineNumber = "146"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+               <Location
+                  uuid = "9E769CBB-03BA-450B-81D8-53D807F145F0 - bbb284bb251aa5b1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.isInsideLayer(fullImage: __C.CIImage, feature: __C.CIQRCodeFeature) -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "1192">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "07BB1AA7-10DB-4C15-AB68-18544A8026F9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/QRCodeApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "07BB1AA7-10DB-4C15-AB68-18544A8026F9 - 589368e9a7878d5a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "516">
+               </Location>
+               <Location
+                  uuid = "07BB1AA7-10DB-4C15-AB68-18544A8026F9 - 9da0dc7876704cf8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "07BB1AA7-10DB-4C15-AB68-18544A8026F9 - f20296187d4df049"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "showIsPremium.getter : Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "07BB1AA7-10DB-4C15-AB68-18544A8026F9 - f63c22f5480b9baa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in implicit closure #1 () -&gt; QRCodeApp.StartViewModel in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0CABD73-0CC9-408B-99C6-E80F2F538579"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/QRCodeApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B0CABD73-0CC9-408B-99C6-E80F2F538579 - 9da0dc7876704d19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "B0CABD73-0CC9-408B-99C6-E80F2F538579 - f63c22f5480b9baa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in implicit closure #1 () -&gt; QRCodeApp.StartViewModel in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "B0CABD73-0CC9-408B-99C6-E80F2F538579 - f63c22f5480b9b89"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in implicit closure #1 () -&gt; QRCodeApp.StartViewModel in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "80">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2D90782D-56D9-484C-B4A9-B60B6FFC66C9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/QRCodeApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "2D90782D-56D9-484C-B4A9-B60B6FFC66C9 - 589368e9a7878d9c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "364">
+               </Location>
+               <Location
+                  uuid = "2D90782D-56D9-484C-B4A9-B60B6FFC66C9 - 740a44e8fdc19fa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tutorialPassed.getter : Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "2D90782D-56D9-484C-B4A9-B60B6FFC66C9 - 39d2734e23bc4da5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "tutorialPassed.setter : Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "2D90782D-56D9-484C-B4A9-B60B6FFC66C9 - 9da0dc7876704cd7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "244">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "54D3E1AE-1C83-401C-A162-E102739A0346"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/QRCodeApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "54D3E1AE-1C83-401C-A162-E102739A0346 - 9da0dc7876704d19"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "252">
+               </Location>
+               <Location
+                  uuid = "54D3E1AE-1C83-401C-A162-E102739A0346 - 9da0dc7876704cf8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "54D3E1AE-1C83-401C-A162-E102739A0346 - 9da0dc7876704d9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "968">
+               </Location>
+               <Location
+                  uuid = "54D3E1AE-1C83-401C-A162-E102739A0346 - 1d525ba19da9949c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in implicit closure #2 () -&gt; QRCodeApp.TutorialViewModel in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  uuid = "54D3E1AE-1C83-401C-A162-E102739A0346 - 1d525ba19da9949c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in implicit closure #2 () -&gt; QRCodeApp.TutorialViewModel in closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "44"
+                  endingLineNumber = "44"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CA835170-2B08-44CE-B7B8-AD0AA3B05AAD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/QRCodeApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "CA835170-2B08-44CE-B7B8-AD0AA3B05AAD - 9da0dc7876704d9d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "752">
+               </Location>
+               <Location
+                  uuid = "CA835170-2B08-44CE-B7B8-AD0AA3B05AAD - 9da0dc7876704a22"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "1628">
+               </Location>
+               <Location
+                  uuid = "CA835170-2B08-44CE-B7B8-AD0AA3B05AAD - 9da0dc7876704a85"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "1628">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B046392B-2FDB-469F-8A87-3D778133076A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/QRCodeApp.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "B046392B-2FDB-469F-8A87-3D778133076A - 9da0dc7876704a64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2020">
+               </Location>
+               <Location
+                  uuid = "B046392B-2FDB-469F-8A87-3D778133076A - 9da0dc7876704a64"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "2316">
+               </Location>
+               <Location
+                  uuid = "B046392B-2FDB-469F-8A87-3D778133076A - 9da0dc7876704ac7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI._ConditionalContent&lt;SwiftUI._ConditionalContent&lt;QRCodeApp.StartView, QRCodeApp.TutorialView&gt;, SwiftUI._ConditionalContent&lt;SwiftUI.Text, &lt;&lt;opaque return type of SwiftUI.View.onAppear(perform: Swift.Optional&lt;() -&gt; ()&gt;) -&gt; some&gt;&gt;.0&gt;&gt; in QRCodeApp.QRCodeApp.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/QRCodeApp.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "2316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3DA55CFC-B2B6-4784-A7E1-8A825C574712"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "shareSection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3DA55CFC-B2B6-4784-A7E1-8A825C574712 - 79ea14434faee02a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "3DA55CFC-B2B6-4784-A7E1-8A825C574712 - 79ea14434faee0ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "3DA55CFC-B2B6-4784-A7E1-8A825C574712 - 79ea14434faee0ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "3DA55CFC-B2B6-4784-A7E1-8A825C574712 - 79ea14434faee153"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "3DA55CFC-B2B6-4784-A7E1-8A825C574712 - 79ea14434faee153"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "shareSection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 1d4fb3f74055fae2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "126"
+                  endingLineNumber = "126"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 79ea14434faee02a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "127"
+                  endingLineNumber = "127"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 1d4fb3f74055fa66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "130"
+                  endingLineNumber = "130"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 79ea14434faee0ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 79ea14434faee0ae"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "131"
+                  endingLineNumber = "131"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 1d4fb3f74055fbc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 79ea14434faee153"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 79ea14434faee153"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "134"
+                  endingLineNumber = "134"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "11228191-36DE-4F04-A977-1A8EF5C833AF - 1d4fb3f74055fbc5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.CreateResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/CreateResultQRCode/Views/CreateResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "133"
+                  endingLineNumber = "133"
+                  offsetFromSymbolStart = "92">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D34F027B-0A0A-40D4-BAA1-0F56478DBF5B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/ViewModels/BaseResultQRCodeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "91"
+            endingLineNumber = "91"
+            landmarkName = "shareIn(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "923F853F-5B81-4C41-A269-421752A1012A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "shareSection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "923F853F-5B81-4C41-A269-421752A1012A - fe928829868f9494"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "176">
+               </Location>
+               <Location
+                  uuid = "923F853F-5B81-4C41-A269-421752A1012A - fe928829868f9494"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "224">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "99438D9F-DC34-4735-A22A-4971729E1106"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/ViewModels/BaseResultQRCodeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "wifiConfigStringToDictionary(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EBFAFEB8-DA3E-48F4-B475-7E1B8D956671"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/ViewModels/BaseResultQRCodeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "206"
+            endingLineNumber = "206"
+            landmarkName = "wifiConfigStringToDictionary(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8016350C-0FCC-468E-B61B-22237CFCA00E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/ViewModels/BaseResultQRCodeViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "209"
+            endingLineNumber = "209"
+            landmarkName = "wifiConfigStringToDictionary(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "shareSection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785 - 5fb7e60df11cdd93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "928">
+               </Location>
+               <Location
+                  uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785 - 4c0db462dbcc8df1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785 - 3737321bc49ae819"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785 - 3737321bc49ae819"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "95"
+                  endingLineNumber = "95"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785 - 3737321bc49ae8bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "BDFC75D0-76F5-4688-A68A-A64CE361F785 - 3737321bc49ae8bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 () -&gt; () in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "156">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E9DDC465-D002-4409-ABC2-166A03A272E2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "shareSection()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "E9DDC465-D002-4409-ABC2-166A03A272E2 - dbcafafcdfbca196"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "832">
+               </Location>
+               <Location
+                  uuid = "E9DDC465-D002-4409-ABC2-166A03A272E2 - cfde7bbd5f2d5038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "912">
+               </Location>
+               <Location
+                  uuid = "E9DDC465-D002-4409-ABC2-166A03A272E2 - cfde7bbd5f2d5038"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "100"
+                  endingLineNumber = "100"
+                  offsetFromSymbolStart = "1164">
+               </Location>
+               <Location
+                  uuid = "E9DDC465-D002-4409-ABC2-166A03A272E2 - cfde7bbd5f2d51db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "912">
+               </Location>
+               <Location
+                  uuid = "E9DDC465-D002-4409-ABC2-166A03A272E2 - cfde7bbd5f2d51db"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #4 () -&gt; &lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0 in closure #1 () -&gt; SwiftUI.TupleView&lt;(Swift.Optional&lt;SwiftUI._ConditionalContent&lt;SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;&gt;&gt;, SwiftUI.Button&lt;&lt;&lt;opaque return type of SwiftUI.View.cornerRadius(_: CoreGraphics.CGFloat, antialiased: Swift.Bool) -&gt; some&gt;&gt;.0&gt;)&gt; in QRCodeApp.ScanResultQRCodeView.shareSection() -&gt; some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ScanResult/Views/ScanResultQRCodeView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "103"
+                  endingLineNumber = "103"
+                  offsetFromSymbolStart = "1164">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3AEA4E4E-1A25-4590-9054-A3B808D9E701"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Classes/AdOpen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "tryToPresentAd()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3AEA4E4E-1A25-4590-9054-A3B808D9E701 - b0751214cf36189b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.OpenAd.tryToPresentAd() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Classes/AdOpen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "476">
+               </Location>
+               <Location
+                  uuid = "3AEA4E4E-1A25-4590-9054-A3B808D9E701 - 969a170c160bdb8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in QRCodeApp.OpenAd.tryToPresentAd() -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Classes/AdOpen.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EF4F2726-1A01-40F1-AD4B-E10472718126"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Classes/AdOpen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "tryToPresentAd()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E1ECEA55-3EC2-4F73-9CBE-8B7C7691362A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Classes/AdOpen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "ad(_:didFailToPresentFullScreenContentWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D0EAE656-7E51-41C1-B858-96F136CEF98F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Classes/AdOpen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "adDidDismissFullScreenContent(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9107307B-038D-47D1-9A7A-CD0CB4D6B61A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Classes/AdOpen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "requestAppOpenAd(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "919E901B-2A3C-45AC-9314-5E16AC373FFC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Start/StartView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "025E27E1-5D0C-4FD9-A79C-AB9B5E4809BF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Create/Views/CreateView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "025E27E1-5D0C-4FD9-A79C-AB9B5E4809BF - b5fd7cb3dcea96e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (QRCodeApp.CreateQRCodeTemplateModel, Foundation.IndexPath) -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in QRCodeApp.CreateView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Create/Views/CreateView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "384">
+               </Location>
+               <Location
+                  uuid = "025E27E1-5D0C-4FD9-A79C-AB9B5E4809BF - b5fd7cb3dcea96e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (QRCodeApp.CreateQRCodeTemplateModel, Foundation.IndexPath) -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in QRCodeApp.CreateView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Create/Views/CreateView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
+                  offsetFromSymbolStart = "72">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F79A1266-95C8-4AE8-897D-E309562AF4A3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Classes/AdOpen.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "ad(_:didFailToPresentFullScreenContentWithError:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "58C2CC12-ED9D-414F-B0BC-76A4D2CFC2A8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Create/Views/CreateView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5E65BD60-7BDE-46EA-9B2B-E9A7D6465AF1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Create/Views/CreateView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "body"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "5E65BD60-7BDE-46EA-9B2B-E9A7D6465AF1 - b5fd7cb3dcea96c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (QRCodeApp.CreateQRCodeTemplateModel, Foundation.IndexPath) -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in QRCodeApp.CreateView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Create/Views/CreateView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "412">
+               </Location>
+               <Location
+                  uuid = "5E65BD60-7BDE-46EA-9B2B-E9A7D6465AF1 - b5fd7cb3dcea96c6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 () -&gt; () in closure #1 (QRCodeApp.CreateQRCodeTemplateModel, Foundation.IndexPath) -&gt; SwiftUI._ConditionalContent&lt;&lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0, &lt;&lt;opaque return type of SwiftUI.View.onTapGesture(count: Swift.Int, perform: () -&gt; ()) -&gt; some&gt;&gt;.0&gt; in QRCodeApp.CreateView.body.getter : some"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Create/Views/CreateView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "176">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "354A0A10-2067-41CC-93DB-2EBBF97D23D5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/History/Views/HistoryCoordinatorView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "63FF2EA3-D0D1-4E07-B430-FAF74FF058A1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/History/ViewModels/HistoryViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
+            landmarkName = "itemDidTap(model:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F548C70-953C-47C1-B03D-4550DD017A52"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Premium/Views/UnlimitedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "getPremiumDidTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D685DD01-6DFF-4B5D-8E3C-3F8A4322E170"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Premium/Views/UnlimitedView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "getPremiumDidTap()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C09D23D4-8A16-411D-855E-C29B38A6F92C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Create/Views/Cells/SocialCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "body"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "14F91F73-10AA-4F41-B9D4-55B9DBF478F3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Settings/Views/SettingsView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "cellFabic(item:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "64D16EB9-7E01-48EB-AF80-4C7C4852370D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "64D16EB9-7E01-48EB-AF80-4C7C4852370D - e1937219f28d33fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "64D16EB9-7E01-48EB-AF80-4C7C4852370D - e1937219f28d33fc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "612">
+               </Location>
+               <Location
+                  uuid = "64D16EB9-7E01-48EB-AF80-4C7C4852370D - e1937219f28d28a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "840">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A728C376-6882-4F45-98BD-5D3461AC2541"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "buy(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B6433AE4-DD51-4925-8ABE-C5812C896CE3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "buy(id:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7D989C80-C39D-4DEF-9E77-EA9E5C10BB8F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "buy(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7D989C80-C39D-4DEF-9E77-EA9E5C10BB8F - c30bf31d29ebdc90"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "7D989C80-C39D-4DEF-9E77-EA9E5C10BB8F - e7cb2694f85129d0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "7D989C80-C39D-4DEF-9E77-EA9E5C10BB8F - 9dae5ad461338048"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "7D989C80-C39D-4DEF-9E77-EA9E5C10BB8F - 9dae5ad461338096"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "7D989C80-C39D-4DEF-9E77-EA9E5C10BB8F - 355e1d38cb446b41"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #3 @Swift.MainActor @Sendable () -&gt; () in QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "67"
+                  endingLineNumber = "67"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
+            landmarkName = "buy(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - 90de5d6859b85442"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "256">
+               </Location>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - 7670747b1d2f2102"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "156">
+               </Location>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - e7cb2694f851290e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - 9dae5ad461338048"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - fb070268a3d79309"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) await resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - bd1c650d05d55e87"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(10) suspend resume partial function for QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "1AA51882-4A3C-4A54-B98B-EB4C0E38929F - 9e02f4f9b3cf8297"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (RevenueCat.StoreProduct) -&gt; Swift.Bool in QRCodeApp.SubscriptionManager.buy(id: Swift.String) async -&gt; Swift.Bool"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "43990764-76FA-49D3-85A0-A3451001132F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "43990764-76FA-49D3-85A0-A3451001132F - ef729d7f571b80b9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "43990764-76FA-49D3-85A0-A3451001132F - ef729d7f571b8f7b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.viewDidAppear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "75"
+                  endingLineNumber = "75"
+                  offsetFromSymbolStart = "324">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A70DDCB0-C06F-424A-950D-9B7B75F43610"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "viewDidAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2808BC45-3D6A-461C-8A78-713B048BA091"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "updateUIViewController(_:context:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52C0C19F-5119-4EE4-BAAF-15C0F3FD48DB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "setRecognized(string:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "52C0C19F-5119-4EE4-BAAF-15C0F3FD48DB - e121ce8cfc60a353"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ScanViewModel.setRecognized(string: Swift.String) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "804">
+               </Location>
+               <Location
+                  uuid = "52C0C19F-5119-4EE4-BAAF-15C0F3FD48DB - e121ce8cfc60a3b0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ScanViewModel.setRecognized(string: Swift.String) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "804">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2714884-0EAD-4350-AFB6-81F5861AD5EA"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setRecognized(string:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D2714884-0EAD-4350-AFB6-81F5861AD5EA - e121ce8cfc60a2f6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ScanViewModel.setRecognized(string: Swift.String) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "52"
+                  endingLineNumber = "52"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "D2714884-0EAD-4350-AFB6-81F5861AD5EA - e121ce8cfc60a2d7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ScanViewModel.setRecognized(string: Swift.String) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "51"
+                  endingLineNumber = "51"
+                  offsetFromSymbolStart = "388">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D441985D-DEA7-4EA4-B51C-27E6F1BAD114"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "setRecognized(string:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D441985D-DEA7-4EA4-B51C-27E6F1BAD114 - e121ce8cfc60a315"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ScanViewModel.setRecognized(string: Swift.String) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "D441985D-DEA7-4EA4-B51C-27E6F1BAD114 - e121ce8cfc60a372"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ScanViewModel.setRecognized(string: Swift.String) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/ViewModels/ScanViewModel.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "212">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3C1AFFF1-C58A-48AC-9A19-803097298107"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "89"
+            endingLineNumber = "89"
+            landmarkName = "viewWillDisappear(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3C1AFFF1-C58A-48AC-9A19-803097298107 - c9c8c3d7197cbb01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () -&gt; () in QRCodeApp.ViewController.viewWillDisappear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "344">
+               </Location>
+               <Location
+                  uuid = "3C1AFFF1-C58A-48AC-9A19-803097298107 - 219d6e33910358bd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "QRCodeApp.ViewController.viewWillDisappear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "416">
+               </Location>
+               <Location
+                  uuid = "3C1AFFF1-C58A-48AC-9A19-803097298107 - c9c8c3d7197cbb01"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable () -&gt; () in QRCodeApp.ViewController.viewWillDisappear(Swift.Bool) -&gt; ()"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Feature/Scan/Wrapper/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - 7c002418db1ae407"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - a261549bf953444a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - b91a7a1bad65a805"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - 576f51e5fa510e7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - 576f51e5fa510e7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "66"
+                  endingLineNumber = "66"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - 7c002418db1ae5c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - a261549bf953458c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "40">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - b91a7a1bad65a9c3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - 576f51e5fa510fbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "64">
+               </Location>
+               <Location
+                  uuid = "673B6F67-8EBB-4F1F-A12B-9BE349214581 - 576f51e5fa510fbc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(4) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "68"
+                  endingLineNumber = "68"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1B1C1EA0-4A11-4608-BE6A-D8ECDF3F5972"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "init()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1B1C1EA0-4A11-4608-BE6A-D8ECDF3F5972 - b91a7a1bad65a981"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "1B1C1EA0-4A11-4608-BE6A-D8ECDF3F5972 - b91a7a1bad65a981"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "800">
+               </Location>
+               <Location
+                  uuid = "1B1C1EA0-4A11-4608-BE6A-D8ECDF3F5972 - b91a7a1bad65a94f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "1B1C1EA0-4A11-4608-BE6A-D8ECDF3F5972 - b91a7a1bad65a94f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for closure #1 @Sendable () async throws -&gt; () in QRCodeApp.SubscriptionManager.init() -&gt; QRCodeApp.SubscriptionManager"
+                  moduleName = "QRCodeApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyrylochernov/Desktop/VYBE/QRCode/QRCodeApp/Common/Managers/SubscriptionManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
+                  offsetFromSymbolStart = "800">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A15CFAC-96A2-4B38-A83E-0A1CC99F80F1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "10D04369-766D-4838-ACF5-591C62E51E78"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B849F790-1B69-4FAA-9520-19F2F9ABC979"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "init()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF96C813-1BBD-44FE-B275-FCC55233D63C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "QRCodeApp/Common/Managers/SubscriptionManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "init()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

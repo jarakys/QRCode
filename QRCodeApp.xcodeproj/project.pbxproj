@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		11051D2E2B45BF4500688180 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = 11051D2D2B45BF4500688180 /* RevenueCatUI */; };
 		110DC9D72B3B1D0A0046CBCD /* QRCodeEntitySection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D62B3B1D0A0046CBCD /* QRCodeEntitySection.swift */; };
 		110DC9D92B3B1D180046CBCD /* QRCodeEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9D82B3B1D180046CBCD /* QRCodeEntityModel.swift */; };
 		110DC9DC2B3B1D2E0046CBCD /* HistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110DC9DB2B3B1D2E0046CBCD /* HistoryService.swift */; };
@@ -156,6 +155,11 @@
 		1170AF662B447FC9004255D7 /* ReceiptParser in Frameworks */ = {isa = PBXBuildFile; productRef = 1170AF652B447FC9004255D7 /* ReceiptParser */; };
 		1170AF682B447FC9004255D7 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = 1170AF672B447FC9004255D7 /* RevenueCat */; };
 		1170AF6E2B448012004255D7 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1170AF6D2B448012004255D7 /* StoreKit.framework */; };
+		11E9A6272B4BEAC600D9A301 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11E9A6262B4BEAC600D9A301 /* FirebaseAnalytics */; };
+		11E9A6292B4BEAC600D9A301 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 11E9A6282B4BEAC600D9A301 /* FirebaseAnalyticsOnDeviceConversion */; };
+		11E9A62B2B4BEAC600D9A301 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 11E9A62A2B4BEAC600D9A301 /* FirebaseAnalyticsSwift */; };
+		11E9A62D2B4BEAC600D9A301 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 11E9A62C2B4BEAC600D9A301 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		11E9A6372B4BEAC600D9A301 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 11E9A6362B4BEAC600D9A301 /* FirebaseCrashlytics */; };
 		11EBEA712B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA702B3CCC9300515558 /* QRCodeReaderPreviewLayer.swift */; };
 		11EBEA732B3D7E8700515558 /* StyleConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA722B3D7E8700515558 /* StyleConfig.swift */; };
 		11EBEA752B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EBEA742B3D820D00515558 /* UIColor+shadowImageNavigationBar.swift */; };
@@ -347,15 +351,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				114CF8DC2B4187B000FDD6CB /* GoogleMobileAds in Frameworks */,
+				11E9A62D2B4BEAC600D9A301 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				112F36A42B3984B300016890 /* QRCodeDetector in Frameworks */,
+				11E9A6272B4BEAC600D9A301 /* FirebaseAnalytics in Frameworks */,
+				11E9A6292B4BEAC600D9A301 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				11E9A62B2B4BEAC600D9A301 /* FirebaseAnalyticsSwift in Frameworks */,
 				112F36932B38D76500016890 /* QRCode in Frameworks */,
-				11051D2E2B45BF4500688180 /* RevenueCatUI in Frameworks */,
 				1170AF6E2B448012004255D7 /* StoreKit.framework in Frameworks */,
 				114CEBB42B3E16930088F3C3 /* CompositionalList in Frameworks */,
 				115562FA2B38BC2C0055C0EC /* KeychainSwift in Frameworks */,
 				1170AF682B447FC9004255D7 /* RevenueCat in Frameworks */,
 				115562762B35AE740055C0EC /* SimpleToast in Frameworks */,
 				1170AF662B447FC9004255D7 /* ReceiptParser in Frameworks */,
+				11E9A6372B4BEAC600D9A301 /* FirebaseCrashlytics in Frameworks */,
 				114CF8E02B4419F000FDD6CB /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1125,6 +1133,7 @@
 				111164012B30518200F01C5E /* Frameworks */,
 				111164022B30518200F01C5E /* Resources */,
 				112F369B2B38D76F00016890 /* Embed Frameworks */,
+				11E9A64E2B4BEB6100D9A301 /* Crashlytics */,
 			);
 			buildRules = (
 			);
@@ -1141,7 +1150,11 @@
 				114CF8DF2B4419F000FDD6CB /* GoogleMobileAds */,
 				1170AF652B447FC9004255D7 /* ReceiptParser */,
 				1170AF672B447FC9004255D7 /* RevenueCat */,
-				11051D2D2B45BF4500688180 /* RevenueCatUI */,
+				11E9A6262B4BEAC600D9A301 /* FirebaseAnalytics */,
+				11E9A6282B4BEAC600D9A301 /* FirebaseAnalyticsOnDeviceConversion */,
+				11E9A62A2B4BEAC600D9A301 /* FirebaseAnalyticsSwift */,
+				11E9A62C2B4BEAC600D9A301 /* FirebaseAnalyticsWithoutAdIdSupport */,
+				11E9A6362B4BEAC600D9A301 /* FirebaseCrashlytics */,
 			);
 			productName = QRCode;
 			productReference = 111164042B30518200F01C5E /* QRCodeApp.app */;
@@ -1190,6 +1203,7 @@
 				114CEBB22B3E16930088F3C3 /* XCLocalSwiftPackageReference "../CompositionalList" */,
 				114CF8DA2B4187B000FDD6CB /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 				1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */,
+				11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 111164052B30518200F01C5E /* Products */;
 			projectDirPath = "";
@@ -1214,6 +1228,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		11E9A64E2B4BEB6100D9A301 /* Crashlytics */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}",
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist",
+				"$(TARGET_BUILD_DIR)/$(UNLOCALIZED_RESOURCES_FOLDER_PATH)/GoogleService-Info.plist",
+				"$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)",
+			);
+			name = Crashlytics;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${BUILD_DIR%/Build/*}/SourcePackages/checkouts/firebase-ios-sdk/Crashlytics/run\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		111164002B30518200F01C5E /* Sources */ = {
@@ -1498,6 +1538,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"QRCodeApp/Preview Content\"";
 				DEVELOPMENT_TEAM = CLACNL3XK9;
 				ENABLE_PREVIEWS = YES;
@@ -1509,8 +1550,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1522,9 +1563,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qrscanread.qrcodereaderscanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1547,8 +1591,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1560,9 +1604,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qrscanread.qrcodereaderscanner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -1637,14 +1684,17 @@
 				minimumVersion = 4.31.6;
 			};
 		};
+		11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.19.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		11051D2D2B45BF4500688180 /* RevenueCatUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */;
-			productName = RevenueCatUI;
-		};
 		112F36922B38D76500016890 /* QRCode */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 112F36912B38D76500016890 /* XCRemoteSwiftPackageReference "QRCode" */;
@@ -1688,6 +1738,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1170AF642B447FC9004255D7 /* XCRemoteSwiftPackageReference "purchases-ios" */;
 			productName = RevenueCat;
+		};
+		11E9A6262B4BEAC600D9A301 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		11E9A6282B4BEAC600D9A301 /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		11E9A62A2B4BEAC600D9A301 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		11E9A62C2B4BEAC600D9A301 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		11E9A6362B4BEAC600D9A301 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 11E9A6252B4BEAC600D9A301 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 

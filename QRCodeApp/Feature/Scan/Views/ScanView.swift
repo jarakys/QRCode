@@ -8,6 +8,7 @@
 import SwiftUI
 import PhotosUI
 import Combine
+import CoreHaptics
 
 struct ScanView: View {
     @StateObject public var viewModel: ScanViewModel
@@ -65,7 +66,8 @@ struct ScanView: View {
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .onReceive(viewModel.$isFlashOn, perform: { value in
+        .onReceive(viewModel.$isFlashOn.dropFirst(), perform: { value in
+            guard device?.hasTorch == true && device?.isTorchAvailable == true else { return }
             try? device?.lockForConfiguration()
             device?.torchMode = value ? AVCaptureDevice.TorchMode.on : AVCaptureDevice.TorchMode.off
             device?.unlockForConfiguration()
@@ -73,6 +75,7 @@ struct ScanView: View {
         .onReceive(viewModel.eventSender, perform: { event in
             switch event {
             case .vibrate:
+                guard isVibrationSupported() else { return }
                 AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             
             case .sound:
@@ -100,6 +103,10 @@ struct ScanView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Scan")
+    }
+    
+    private func isVibrationSupported() -> Bool {
+        CHHapticEngine.capabilitiesForHardware().supportsHaptics
     }
     
     private func playSound() {
