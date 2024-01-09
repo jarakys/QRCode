@@ -25,6 +25,28 @@ enum DesignElements: Hashable, DesignIconProtocol {
     case colorMaskPixels
     case colorMaskEye
     
+    var isForPremium: Bool {
+        switch self {
+        case .squareBody, .roundedBody:
+            return false
+            
+        case .circleBody:
+            return true
+            
+        case .squareMarker, .roundedMarker:
+            return false
+            
+        case .leafMarker, .circleMarker, .roundedPointingInMarker:
+            return true
+            
+        case .logo(let image):
+            return !["forkLogoIcon", "twitterLogoIcon"].contains(image)
+            
+        case .colorMaskBackground, .colorMaskLeaf, .colorMaskPixels, .colorMaskEye:
+            return false
+        }
+    }
+    
     private var iconName: String {
         switch self {
         case .circleBody:

@@ -11,6 +11,8 @@ import Combine
 final class ChangeDesignViewModel: BaseViewModel {
     @Published public var items = [ChangeDesignSectionModel(cellIdentifiers: QRCodeDesign.allCases.map({ SelectableQRCodeDesign(isSelected: $0 == .default, item: $0) }), sectionIdentifier: 1)]
     @Published public var selectedItem: SelectableQRCodeDesign?
+    @Published public var isPremium = false
+    @Published public var showingSheet = false
     
     private let navigationSender: PassthroughSubject<ResultEventFlow, Never>
     private let communicationBus: PassthroughSubject<ResultEventBus, Never>
@@ -32,6 +34,15 @@ final class ChangeDesignViewModel: BaseViewModel {
         selectedItem?.isSelected = true
     }
     
+    override func bind() {
+        super.bind()
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
+    }
+    
+    public func premium() {
+        showingSheet = true
+    }
+    
     public func save() {
         guard let selectedItem else { 
             navigationSender.send(.back)
@@ -39,7 +50,6 @@ final class ChangeDesignViewModel: BaseViewModel {
         }
         navigationSender.send(.detailedChangeDesign(qrCodeString: qrCodeString, qrCodeDesign: selectedItem.item))
         communicationBus.send(.designChanged(model: QRCodeDesignModel(logo: selectedItem.item.logo, design: selectedItem.item.qrCodeDesign)))
-//        navigationSender.send(.back)
     }
     
     public func cancel() {

@@ -11,6 +11,7 @@ import QRCode
 protocol DesignIconProtocol {
     var designIcon: String { get }
     var color: String? { get }
+    var isForPremium: Bool { get }
 }
 
 enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
@@ -28,7 +29,11 @@ enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
     case snapchat
     case phone2
     case heart
-    case circle
+//    case circle
+    
+    var isForPremium: Bool {
+        self != .default
+    }
     
     var designIcon: String {
         "\(self.rawValue)DesignIcon"
@@ -82,8 +87,8 @@ enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
         case .heart:
             return .heart()
             
-        case .circle:
-            return .default()
+//        case .circle:
+//            return .default()
         }
     }
     
@@ -131,8 +136,8 @@ enum QRCodeDesign: String, CaseIterable, DesignIconProtocol {
         case .heart:
             return .heart()
             
-        case .circle:
-            return nil
+//        case .circle:
+//            return nil
         }
     }
 }

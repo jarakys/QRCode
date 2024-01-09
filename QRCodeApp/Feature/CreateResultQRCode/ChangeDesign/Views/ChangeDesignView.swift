@@ -24,6 +24,10 @@ struct ChangeDesignView: View {
             EmptyView()
         }
         .selectedItem { item in
+            guard !item.item.isForPremium || viewModel.isPremium else { 
+                viewModel.premium()
+                return
+            }
             viewModel.didClick(on: item)
         }
         .customLayout(.designChanged(sections: [1]))
@@ -50,6 +54,9 @@ struct ChangeDesignView: View {
                 .fontWeight(.semibold)
                 .foregroundStyle(.tint)
             })
+        })
+        .fullScreenCover(isPresented: $viewModel.showingSheet, content: {
+            PaywallView(shouldStartSession: false, shouldRequestAd: false)
         })
     }
 }

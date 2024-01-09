@@ -59,7 +59,7 @@ final class SubscriptionManager: ObservableObject {
     
     init() {
         isLoading = true
-        isPremium = false//Purchases.shared.cachedCustomerInfo?.activeSubscriptions.isEmpty != true
+        isPremium = Purchases.shared.cachedCustomerInfo?.activeSubscriptions.isEmpty != true
         Task { @MainActor [unowned self] in
             guard let currentOffer = try await Purchases.shared.offerings().current else {
                 isLoading = false

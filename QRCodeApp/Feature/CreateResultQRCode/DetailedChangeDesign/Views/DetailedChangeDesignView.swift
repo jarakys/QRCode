@@ -91,6 +91,7 @@ struct DetailedChangeDesignView: View {
                     .padding(.leading, -12)
             }
             .selectedItem { item in
+                
                 viewModel.didClick(on: item)
             }
             .customLayout(.composed())
@@ -118,5 +119,8 @@ struct DetailedChangeDesignView: View {
             })
         }
         .background(.secondaryBackground)
+        .fullScreenCover(isPresented: $viewModel.showSheet, content: {
+            PaywallView(shouldStartSession: false, shouldRequestAd: false)
+        })
     }
 }

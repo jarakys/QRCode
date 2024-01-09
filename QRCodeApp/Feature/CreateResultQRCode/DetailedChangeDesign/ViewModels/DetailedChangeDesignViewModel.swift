@@ -22,6 +22,8 @@ final class DetailedChangeDesignViewModel: BaseViewModel {
     @Published public var leftColor: Color = .qrCodeDefault
     @Published public var pixelColor: Color = .qrCodeDefault
     @Published public var backgroundColor: Color = .qrCodeDefault
+    @Published public var showSheet = false
+    @Published public var isPremium = false
     
     private var selectedBody: DesignElementViewModel
     private var selectedMarker: DesignElementViewModel
@@ -126,9 +128,15 @@ final class DetailedChangeDesignViewModel: BaseViewModel {
             self.qrDocument.design.style.background = QRCode.FillStyle.Solid(cgColor)
             self.qrDocument.setHasChanged()
         }).store(in: &cancellable)
+        
+        SubscriptionManager.shared.$isPremium.assign(to: &$isPremium)
     }
     
     public func didClick(on item: DesignElementViewModel) {
+        guard isPremium || !item.item.isForPremium else {
+            showSheet = true
+            return
+        }
         switch item.item {
         case .circleBody, .squareBody, .roundedBody:
             selectBody(item: item)
