@@ -17,9 +17,21 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         GADMobileAds.sharedInstance().start(completionHandler: nil)
         QRCodeContainer.document.design = .default()
         Purchases.logLevel = .debug
-            Purchases.configure(withAPIKey: "appl_dxIHeWavHKqQjizlInXWoZipnmp", appUserID: "app762340d612")
+        Purchases.configure(withAPIKey: "appl_dxIHeWavHKqQjizlInXWoZipnmp")
+//            Purchases.configure(withAPIKey: "appl_dxIHeWavHKqQjizlInXWoZipnmp", appUserID: "app762340d612")
         _ = SubscriptionManager.shared
+        Purchases.shared.delegate = self
         OpenAd.shared.requestAppOpenAd(completion: nil)
         return true
+    }
+    
+    
+}
+
+extension AppDelegate: PurchasesDelegate {
+    func purchases(_ purchases: Purchases, receivedUpdated customerInfo: CustomerInfo) {
+        SubscriptionManager.shared.isPremium = !customerInfo.entitlements.activeInCurrentEnvironment.isEmpty
+        print("[test] \(customerInfo.entitlements.active.mapValues({ $0.isActive }))")
+        // handle any changes to customerInfo
     }
 }

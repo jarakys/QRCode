@@ -59,13 +59,19 @@ final class SubscriptionManager: ObservableObject {
     
     init() {
         isLoading = true
-        isPremium = Purchases.shared.cachedCustomerInfo?.activeSubscriptions.isEmpty != true
+        Purchases.shared.invalidateCustomerInfoCache()
+        isPremium = (Purchases.shared.cachedCustomerInfo?.entitlements.activeInCurrentEnvironment.isEmpty ?? true) == false
+        print("[test] \(Purchases.shared.cachedCustomerInfo?.entitlements.active.mapValues({ $0.originalPurchaseDate }))")
         Task { @MainActor [unowned self] in
             guard let currentOffer = try await Purchases.shared.offerings().current else {
                 isLoading = false
                 return
             }
             guard let offerMetadata: OfferMetadataModel = currentOffer.getMetadataValue(for: "offer") else { return }
+            let customerInfo = try await Purchases.shared.customerInfo()
+            print("[test] \(customerInfo.entitlements.activeInCurrentEnvironment.mapValues({ $0.isActive }))")
+            print("[test] \(customerInfo.activeSubscriptions)")
+            isPremium = !customerInfo.entitlements.activeInCurrentEnvironment.isEmpty
             self.metadata = offerMetadata
             let locale = Locale.autoupdatingCurrent.languageCode ?? "en_US"
             products = currentOffer.availablePackages
